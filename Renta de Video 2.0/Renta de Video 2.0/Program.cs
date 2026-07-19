@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Renta_de_Video_2._0.Resources;
+using System;
 using System.Windows.Forms;
 
 namespace Renta_de_Video_2._0
@@ -16,7 +14,7 @@ namespace Renta_de_Video_2._0
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FormWalkthriught1());
         }
     }
 }

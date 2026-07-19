@@ -1,17 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\andre\\source\\repos\\Renta de Video 2.0\\",
+  "WorkspaceRootPath": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\ProyectoAsis22k26VHS\\Renta de Video 2.0\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0574DC84-B067-4D5B-9DA5-ECC94AA89DA4}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\andre\\source\\repos\\renta de video 2.0\\renta de video 2.0\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0574DC84-B067-4D5B-9DA5-ECC94AA89DA4}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\andre\\onedrive\\documents\\nuevo semestre ia\\analisis de sistemas ii\\proyectoasis22k26vhs\\renta de video 2.0\\renta de video 2.0\\formwalkthriught3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0574DC84-B067-4D5B-9DA5-ECC94AA89DA4}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\formwalkthriught3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0574DC84-B067-4D5B-9DA5-ECC94AA89DA4}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\andre\\onedrive\\documents\\nuevo semestre ia\\analisis de sistemas ii\\proyectoasis22k26vhs\\renta de video 2.0\\renta de video 2.0\\formwalkthriught2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0574DC84-B067-4D5B-9DA5-ECC94AA89DA4}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\formwalkthriught2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0574DC84-B067-4D5B-9DA5-ECC94AA89DA4}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\andre\\onedrive\\documents\\nuevo semestre ia\\analisis de sistemas ii\\proyectoasis22k26vhs\\renta de video 2.0\\renta de video 2.0\\formwalkthriught1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0574DC84-B067-4D5B-9DA5-ECC94AA89DA4}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\formwalkthriught1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0574DC84-B067-4D5B-9DA5-ECC94AA89DA4}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\andre\\onedrive\\documents\\nuevo semestre ia\\analisis de sistemas ii\\proyectoasis22k26vhs\\renta de video 2.0\\renta de video 2.0\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0574DC84-B067-4D5B-9DA5-ECC94AA89DA4}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|Renta de Video 2.0||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{0574DC84-B067-4D5B-9DA5-ECC94AA89DA4}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\andre\\onedrive\\documents\\nuevo semestre ia\\analisis de sistemas ii\\proyectoasis22k26vhs\\renta de video 2.0\\renta de video 2.0\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0574DC84-B067-4D5B-9DA5-ECC94AA89DA4}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0574DC84-B067-4D5B-9DA5-ECC94AA89DA4}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\andre\\source\\repos\\renta de video 2.0\\renta de video 2.0\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
-      "RelativeMoniker": "D:0:0:{0574DC84-B067-4D5B-9DA5-ECC94AA89DA4}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+      "AbsoluteMoniker": "D:0:0:{0574DC84-B067-4D5B-9DA5-ECC94AA89DA4}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\andre\\onedrive\\documents\\nuevo semestre ia\\analisis de sistemas ii\\proyectoasis22k26vhs\\renta de video 2.0\\renta de video 2.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0574DC84-B067-4D5B-9DA5-ECC94AA89DA4}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,27 +38,78 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Renta de Video 2.0",
-              "DocumentMoniker": "C:\\Users\\andre\\source\\repos\\Renta de Video 2.0\\Renta de Video 2.0\\Renta de Video 2.0.csproj",
-              "RelativeDocumentMoniker": "Renta de Video 2.0\\Renta de Video 2.0.csproj",
-              "ToolTip": "C:\\Users\\andre\\source\\repos\\Renta de Video 2.0\\Renta de Video 2.0\\Renta de Video 2.0.csproj",
-              "RelativeToolTip": "Renta de Video 2.0\\Renta de Video 2.0.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-07-18T23:32:31.919Z",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\ProyectoAsis22k26VHS\\Renta de Video 2.0\\Renta de Video 2.0\\Program.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\Program.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\ProyectoAsis22k26VHS\\Renta de Video 2.0\\Renta de Video 2.0\\Program.cs",
+              "RelativeToolTip": "Renta de Video 2.0\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-19T01:53:35.888Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "FormWalkthriught3.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\ProyectoAsis22k26VHS\\Renta de Video 2.0\\Renta de Video 2.0\\FormWalkthriught3.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\FormWalkthriught3.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\ProyectoAsis22k26VHS\\Renta de Video 2.0\\Renta de Video 2.0\\FormWalkthriught3.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Renta de Video 2.0\\FormWalkthriught3.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-19T02:57:19.884Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormWalkthriught2.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\ProyectoAsis22k26VHS\\Renta de Video 2.0\\Renta de Video 2.0\\FormWalkthriught2.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\FormWalkthriught2.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\ProyectoAsis22k26VHS\\Renta de Video 2.0\\Renta de Video 2.0\\FormWalkthriught2.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Renta de Video 2.0\\FormWalkthriught2.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-19T02:37:53.29Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormWalkthriught1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\ProyectoAsis22k26VHS\\Renta de Video 2.0\\Renta de Video 2.0\\FormWalkthriught1.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\FormWalkthriught1.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\ProyectoAsis22k26VHS\\Renta de Video 2.0\\Renta de Video 2.0\\FormWalkthriught1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Renta de Video 2.0\\FormWalkthriught1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-19T01:41:02.286Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\andre\\source\\repos\\Renta de Video 2.0\\Renta de Video 2.0\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\ProyectoAsis22k26VHS\\Renta de Video 2.0\\Renta de Video 2.0\\Form1.cs",
               "RelativeDocumentMoniker": "Renta de Video 2.0\\Form1.cs",
-              "ToolTip": "C:\\Users\\andre\\source\\repos\\Renta de Video 2.0\\Renta de Video 2.0\\Form1.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\ProyectoAsis22k26VHS\\Renta de Video 2.0\\Renta de Video 2.0\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "Renta de Video 2.0\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-18T23:10:32.061Z",
+              "WhenOpened": "2026-07-19T01:29:11.781Z",
               "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\ProyectoAsis22k26VHS\\Renta de Video 2.0\\Renta de Video 2.0\\Form1.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\Form1.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\ProyectoAsis22k26VHS\\Renta de Video 2.0\\Renta de Video 2.0\\Form1.cs",
+              "RelativeToolTip": "Renta de Video 2.0\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-19T01:21:37.86Z",
+              "EditorCaption": ""
             }
           ]
         }

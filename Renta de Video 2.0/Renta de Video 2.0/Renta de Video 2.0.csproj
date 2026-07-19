@@ -52,10 +52,37 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormWalkthriught2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWalkthriught2.Designer.cs">
+      <DependentUpon>FormWalkthriught2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWalkthriught3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWalkthriught3.Designer.cs">
+      <DependentUpon>FormWalkthriught3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FormWalkthriught1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWalkthriught1.Designer.cs">
+      <DependentUpon>FormWalkthriught1.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWalkthriught1.resx">
+      <DependentUpon>FormWalkthriught1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWalkthriught2.resx">
+      <DependentUpon>FormWalkthriught2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWalkthriught3.resx">
+      <DependentUpon>FormWalkthriught3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
