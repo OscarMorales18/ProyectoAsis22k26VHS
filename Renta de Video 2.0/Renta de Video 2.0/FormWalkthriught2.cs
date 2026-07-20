@@ -22,5 +22,15 @@ namespace Renta_de_Video_2._0
             new FormWalkthriught3().Show();
             this.Hide();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
