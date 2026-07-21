@@ -82,17 +82,47 @@
     <Compile Include="Gestion Empleados.Designer.cs">
       <DependentUpon>Gestion Empleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="InventarioLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventarioLista.Designer.cs">
+      <DependentUpon>InventarioLista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventarioRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventarioRegistro.Designer.cs">
+      <DependentUpon>InventarioRegistro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lista Facturas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Lista Facturas.Designer.cs">
       <DependentUpon>Lista Facturas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu.Designer.cs">
+      <DependentUpon>menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mora Pendiente PC.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Mora Pendiente PC.Designer.cs">
       <DependentUpon>Mora Pendiente PC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevaRenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevaRenta.Designer.cs">
+      <DependentUpon>NuevaRenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -123,11 +153,26 @@
     <EmbeddedResource Include="Gestion Empleados.resx">
       <DependentUpon>Gestion Empleados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InventarioLista.resx">
+      <DependentUpon>InventarioLista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventarioRegistro.resx">
+      <DependentUpon>InventarioRegistro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lista Facturas.resx">
       <DependentUpon>Lista Facturas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menu.resx">
+      <DependentUpon>menu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mora Pendiente PC.resx">
       <DependentUpon>Mora Pendiente PC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevaRenta.resx">
+      <DependentUpon>NuevaRenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -14,7 +14,7 @@ namespace Renta_de_Video_2._0
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormWalkthriught1());
+            Application.Run(new NuevaRenta());
         }
     }
 }
