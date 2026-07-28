@@ -1,0 +1,83 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <RootNamespace>Renta_de_Video_2._0</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <StartupObject></StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="obj\Debug\net9.0-windows\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\net9.0-windows\Renta de Video 2.0.AssemblyInfo.cs" />
+    <Compile Include="obj\Debug\net9.0-windows\Renta de Video 2.0.GlobalUsings.g.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="obj\Debug\net9.0-windows\Renta de Video 2.0.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\net9.0-windows\Renta de Video 2.0.designer.deps.json" />
+    <Content Include="obj\Debug\net9.0-windows\Renta de Video 2.0.designer.runtimeconfig.json" />
+    <Content Include="obj\project.assets.json" />
+    <Content Include="obj\Renta de Video 2.0.csproj.nuget.dgspec.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="obj\Debug\net9.0-windows\apphost.exe" />
+    <None Include="obj\Debug\net9.0-windows\refint\Renta de Video 2.0.dll" />
+    <None Include="obj\Debug\net9.0-windows\ref\Renta de Video 2.0.dll" />
+    <None Include="obj\Debug\net9.0-windows\Renta de Video 2.0.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\net9.0-windows\Renta de Video 2.0.assets.cache" />
+    <None Include="obj\Debug\net9.0-windows\Renta de Video 2.0.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\net9.0-windows\Renta de Video 2.0.csproj.BuildWithSkipAnalyzers" />
+    <None Include="obj\Debug\net9.0-windows\Renta de Video 2.0.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\net9.0-windows\Renta de Video 2.0.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\net9.0-windows\Renta de Video 2.0.dll" />
+    <None Include="obj\Debug\net9.0-windows\Renta de Video 2.0.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="obj\Debug\net9.0-windows\Renta de Video 2.0.genruntimeconfig.cache" />
+    <None Include="obj\Debug\net9.0-windows\Renta de Video 2.0.pdb" />
+    <None Include="obj\Debug\net9.0-windows\Renta de.6C08B52A.Up2Date" />
+    <None Include="obj\Debug\net9.0-windows\Renta_de_Video_2._0.Detalle_De_Factura.resources" />
+    <None Include="obj\Debug\net9.0-windows\Renta_de_Video_2._0.Devolucion.resources" />
+    <None Include="obj\Debug\net9.0-windows\Renta_de_Video_2._0.Form1.resources" />
+    <None Include="obj\Debug\net9.0-windows\Renta_de_Video_2._0.FormWalkthriught2.resources" />
+    <None Include="obj\Debug\net9.0-windows\Renta_de_Video_2._0.FormWalkthriught3.resources" />
+    <None Include="obj\Debug\net9.0-windows\Renta_de_Video_2._0.Gestion_Empleados.resources" />
+    <None Include="obj\Debug\net9.0-windows\Renta_de_Video_2._0.InventarioLista.resources" />
+    <None Include="obj\Debug\net9.0-windows\Renta_de_Video_2._0.InventarioRegistro.resources" />
+    <None Include="obj\Debug\net9.0-windows\Renta_de_Video_2._0.Lista_Facturas.resources" />
+    <None Include="obj\Debug\net9.0-windows\Renta_de_Video_2._0.Login.resources" />
+    <None Include="obj\Debug\net9.0-windows\Renta_de_Video_2._0.menu.resources" />
+    <None Include="obj\Debug\net9.0-windows\Renta_de_Video_2._0.Mora_Pendiente_PC.resources" />
+    <None Include="obj\Debug\net9.0-windows\Renta_de_Video_2._0.NuevaRenta.resources" />
+    <None Include="obj\Debug\net9.0-windows\Renta_de_Video_2._0.Properties.Resources.resources" />
+    <None Include="obj\Debug\net9.0-windows\Renta_de_Video_2._0.Resources.FormWalkthriught1.resources" />
+    <None Include="obj\Debug\net9.0-windows\TempPE\Properties.Resources.Designer.cs.dll" />
+    <None Include="obj\project.nuget.cache" />
+    <None Include="obj\Renta de Video 2.0.csproj.nuget.g.props" />
+    <None Include="obj\Renta de Video 2.0.csproj.nuget.g.targets" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.0.2" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
