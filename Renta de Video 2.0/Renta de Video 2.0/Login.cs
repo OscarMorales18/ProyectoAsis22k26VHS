@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Renta_de_Video_2._0.Resources;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,7 @@ namespace Renta_de_Video_2._0
 
         private void Login_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -30,6 +31,12 @@ namespace Renta_de_Video_2._0
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new Gestion_Empleados().Show();
+            this.Hide();
         }
     }
 }

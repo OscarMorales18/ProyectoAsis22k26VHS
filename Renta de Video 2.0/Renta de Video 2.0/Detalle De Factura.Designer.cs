@@ -28,185 +28,179 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Video = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio_Renta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mora = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 59);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 26);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Codigo";
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.AutoSize = true;
-            this.panel2.BackColor = System.Drawing.Color.Maroon;
-            this.panel2.Location = new System.Drawing.Point(0, 642);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1225, 31);
-            this.panel2.TabIndex = 16;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.AutoSize = true;
-            this.panel1.BackColor = System.Drawing.Color.Maroon;
-            this.panel1.Location = new System.Drawing.Point(-3, -10);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1228, 56);
-            this.panel1.TabIndex = 15;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 192);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 26);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Cliente";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 335);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 26);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "Fecha";
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Detalle_De_Factura));
+            dataGridView1 = new DataGridView();
+            Video = new DataGridViewTextBoxColumn();
+            Precio_Renta = new DataGridViewTextBoxColumn();
+            Mora = new DataGridViewTextBoxColumn();
+            Subtotal = new DataGridViewTextBoxColumn();
+            Regresar = new Button();
+            pictureBox1 = new PictureBox();
+            Fecha = new TextBox();
+            Cliente = new TextBox();
+            Codigo = new TextBox();
+            TotalPagar = new TextBox();
+            pictureBox2 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Video,
-            this.Precio_Renta,
-            this.Mora,
-            this.Subtotal});
-            this.dataGridView1.Location = new System.Drawing.Point(654, 59);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(556, 150);
-            this.dataGridView1.TabIndex = 20;
+            dataGridView1.BackgroundColor = Color.FromArgb(64, 0, 0);
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Video, Precio_Renta, Mora, Subtotal });
+            dataGridView1.GridColor = SystemColors.WindowText;
+            dataGridView1.Location = new Point(484, 122);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 24;
+            dataGridView1.Size = new Size(554, 68);
+            dataGridView1.TabIndex = 20;
             // 
             // Video
             // 
-            this.Video.HeaderText = "Video";
-            this.Video.MinimumWidth = 6;
-            this.Video.Name = "Video";
-            this.Video.Width = 125;
+            Video.HeaderText = "Video";
+            Video.MinimumWidth = 6;
+            Video.Name = "Video";
+            Video.Width = 125;
             // 
             // Precio_Renta
             // 
-            this.Precio_Renta.HeaderText = "Precio_Renta";
-            this.Precio_Renta.MinimumWidth = 6;
-            this.Precio_Renta.Name = "Precio_Renta";
-            this.Precio_Renta.Width = 125;
+            Precio_Renta.HeaderText = "Precio_Renta";
+            Precio_Renta.MinimumWidth = 6;
+            Precio_Renta.Name = "Precio_Renta";
+            Precio_Renta.Width = 125;
             // 
             // Mora
             // 
-            this.Mora.HeaderText = "Mora";
-            this.Mora.MinimumWidth = 6;
-            this.Mora.Name = "Mora";
-            this.Mora.Width = 125;
+            Mora.HeaderText = "Mora";
+            Mora.MinimumWidth = 6;
+            Mora.Name = "Mora";
+            Mora.Width = 125;
             // 
             // Subtotal
             // 
-            this.Subtotal.HeaderText = "Subtotal";
-            this.Subtotal.MinimumWidth = 6;
-            this.Subtotal.Name = "Subtotal";
-            this.Subtotal.Width = 125;
+            Subtotal.HeaderText = "Subtotal";
+            Subtotal.MinimumWidth = 6;
+            Subtotal.Name = "Subtotal";
+            Subtotal.Width = 125;
             // 
-            // label4
+            // Regresar
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(858, 246);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(159, 26);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "Total a pagar";
+            Regresar.BackColor = Color.DarkOrange;
+            Regresar.Cursor = Cursors.Hand;
+            Regresar.FlatStyle = FlatStyle.Popup;
+            Regresar.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Regresar.Location = new Point(946, 279);
+            Regresar.Name = "Regresar";
+            Regresar.Size = new Size(102, 36);
+            Regresar.TabIndex = 22;
+            Regresar.Text = "Regresar";
+            Regresar.UseVisualStyleBackColor = false;
+            Regresar.Click += button2_Click;
             // 
-            // button2
+            // pictureBox1
             // 
-            this.button2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button2.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(874, 435);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 38);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Regresar";
-            this.button2.UseVisualStyleBackColor = false;
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Dock = DockStyle.Fill;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(1069, 622);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 39;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
+            // Fecha
+            // 
+            Fecha.BackColor = Color.FromArgb(42, 18, 11);
+            Fecha.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Fecha.Location = new Point(77, 163);
+            Fecha.Name = "Fecha";
+            Fecha.Size = new Size(158, 27);
+            Fecha.TabIndex = 40;
+            Fecha.TextChanged += Fecha_TextChanged;
+            // 
+            // Cliente
+            // 
+            Cliente.BackColor = Color.FromArgb(42, 18, 11);
+            Cliente.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Cliente.Location = new Point(77, 122);
+            Cliente.Name = "Cliente";
+            Cliente.Size = new Size(158, 27);
+            Cliente.TabIndex = 41;
+            Cliente.TextChanged += Cliente_TextChanged;
+            // 
+            // Codigo
+            // 
+            Codigo.BackColor = Color.FromArgb(42, 18, 11);
+            Codigo.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Codigo.Location = new Point(77, 79);
+            Codigo.Name = "Codigo";
+            Codigo.Size = new Size(158, 27);
+            Codigo.TabIndex = 42;
+            Codigo.TextChanged += Codigo_TextChanged;
+            // 
+            // TotalPagar
+            // 
+            TotalPagar.BackColor = Color.FromArgb(42, 18, 11);
+            TotalPagar.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TotalPagar.Location = new Point(890, 235);
+            TotalPagar.Name = "TotalPagar";
+            TotalPagar.Size = new Size(158, 27);
+            TotalPagar.TabIndex = 43;
+            TotalPagar.TextChanged += TotalPagar_TextChanged;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.FromArgb(42, 0, 0);
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(0, 435);
+            pictureBox2.Margin = new Padding(4, 3, 4, 3);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(192, 187);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 46;
+            pictureBox2.TabStop = false;
             // 
             // Detalle_De_Factura
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1222, 663);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Name = "Detalle_De_Factura";
-            this.Text = "Detalle_De_Factura";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1069, 622);
+            Controls.Add(pictureBox2);
+            Controls.Add(TotalPagar);
+            Controls.Add(Codigo);
+            Controls.Add(Cliente);
+            Controls.Add(Fecha);
+            Controls.Add(Regresar);
+            Controls.Add(dataGridView1);
+            Controls.Add(pictureBox1);
+            Name = "Detalle_De_Factura";
+            Text = "Detalle_De_Factura";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Video;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio_Renta;
         private System.Windows.Forms.DataGridViewTextBoxColumn Mora;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Regresar;
+        private PictureBox pictureBox1;
+        private TextBox Fecha;
+        private TextBox Cliente;
+        private TextBox Codigo;
+        private TextBox TotalPagar;
+        private PictureBox pictureBox2;
     }
 }
