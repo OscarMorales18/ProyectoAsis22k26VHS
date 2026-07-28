@@ -1,0 +1,309 @@
+﻿namespace Renta_de_Video_2._0
+{
+    partial class menu
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menu));
+            MenuVertical = new Panel();
+            iconmin = new PictureBox();
+            button5 = new Button();
+            iconcerrar = new PictureBox();
+            button4 = new Button();
+            button3 = new Button();
+            button2 = new Button();
+            button6 = new Button();
+            pictureBox1 = new PictureBox();
+            btninicio = new Button();
+            BarraTitulo = new Panel();
+            btnSlide = new PictureBox();
+            panelContenedor = new Panel();
+            MenuVertical.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)iconmin).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)iconcerrar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            BarraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)btnSlide).BeginInit();
+            SuspendLayout();
+            // 
+            // MenuVertical
+            // 
+            MenuVertical.BackColor = Color.FromArgb(34, 9, 1);
+            MenuVertical.Controls.Add(iconmin);
+            MenuVertical.Controls.Add(button5);
+            MenuVertical.Controls.Add(iconcerrar);
+            MenuVertical.Controls.Add(button4);
+            MenuVertical.Controls.Add(button3);
+            MenuVertical.Controls.Add(button2);
+            MenuVertical.Controls.Add(button6);
+            MenuVertical.Controls.Add(pictureBox1);
+            MenuVertical.Controls.Add(btninicio);
+            MenuVertical.Dock = DockStyle.Left;
+            MenuVertical.Location = new Point(0, 0);
+            MenuVertical.Margin = new Padding(4, 3, 4, 3);
+            MenuVertical.Name = "MenuVertical";
+            MenuVertical.Size = new Size(250, 750);
+            MenuVertical.TabIndex = 0;
+            MenuVertical.Paint += MenuVertical_Paint;
+            // 
+            // iconmin
+            // 
+            iconmin.Image = (Image)resources.GetObject("iconmin.Image");
+            iconmin.Location = new Point(30, 675);
+            iconmin.Name = "iconmin";
+            iconmin.Size = new Size(25, 25);
+            iconmin.SizeMode = PictureBoxSizeMode.StretchImage;
+            iconmin.TabIndex = 7;
+            iconmin.TabStop = false;
+            iconmin.Click += iconmin_Click;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.FromArgb(246, 170, 28);
+            button5.FlatAppearance.BorderColor = Color.FromArgb(246, 170, 28);
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatAppearance.MouseDownBackColor = Color.Black;
+            button5.FlatAppearance.MouseOverBackColor = Color.White;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Font = new Font("Lucida Bright", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button5.ForeColor = Color.Black;
+            button5.Image = (Image)resources.GetObject("button5.Image");
+            button5.ImageAlign = ContentAlignment.MiddleLeft;
+            button5.Location = new Point(5, 416);
+            button5.Margin = new Padding(4, 3, 4, 3);
+            button5.Name = "button5";
+            button5.Size = new Size(242, 42);
+            button5.TabIndex = 6;
+            button5.Text = "      GESTIÓN DE USUARIOS";
+            button5.UseVisualStyleBackColor = false;
+            // 
+            // iconcerrar
+            // 
+            iconcerrar.Image = (Image)resources.GetObject("iconcerrar.Image");
+            iconcerrar.Location = new Point(3, 675);
+            iconcerrar.Name = "iconcerrar";
+            iconcerrar.Size = new Size(25, 25);
+            iconcerrar.SizeMode = PictureBoxSizeMode.StretchImage;
+            iconcerrar.TabIndex = 6;
+            iconcerrar.TabStop = false;
+            iconcerrar.Click += iconcerrar_Click;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.FromArgb(246, 170, 28);
+            button4.FlatAppearance.BorderColor = Color.FromArgb(246, 170, 28);
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatAppearance.MouseDownBackColor = Color.Black;
+            button4.FlatAppearance.MouseOverBackColor = Color.White;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Lucida Bright", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button4.ForeColor = Color.Black;
+            button4.Image = (Image)resources.GetObject("button4.Image");
+            button4.ImageAlign = ContentAlignment.MiddleLeft;
+            button4.Location = new Point(5, 355);
+            button4.Margin = new Padding(4, 3, 4, 3);
+            button4.Name = "button4";
+            button4.Size = new Size(242, 42);
+            button4.TabIndex = 5;
+            button4.Text = "       FACTURACIÓN/MORAS";
+            button4.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.FromArgb(246, 170, 28);
+            button3.FlatAppearance.BorderColor = Color.FromArgb(246, 170, 28);
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatAppearance.MouseDownBackColor = Color.Black;
+            button3.FlatAppearance.MouseOverBackColor = Color.White;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Lucida Bright", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button3.ForeColor = Color.Black;
+            button3.Image = (Image)resources.GetObject("button3.Image");
+            button3.ImageAlign = ContentAlignment.MiddleLeft;
+            button3.Location = new Point(4, 297);
+            button3.Margin = new Padding(4, 3, 4, 3);
+            button3.Name = "button3";
+            button3.Size = new Size(242, 42);
+            button3.TabIndex = 4;
+            button3.Text = "        RENTAS/DEVOLUCIONES";
+            button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(246, 170, 28);
+            button2.FlatAppearance.BorderColor = Color.FromArgb(246, 170, 28);
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatAppearance.MouseDownBackColor = Color.Black;
+            button2.FlatAppearance.MouseOverBackColor = Color.White;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.Black;
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.ImageAlign = ContentAlignment.MiddleLeft;
+            button2.Location = new Point(4, 240);
+            button2.Margin = new Padding(4, 3, 4, 3);
+            button2.Name = "button2";
+            button2.Size = new Size(242, 42);
+            button2.TabIndex = 3;
+            button2.Text = "INVENTARIO";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click_1;
+            // 
+            // button6
+            // 
+            button6.BackColor = Color.FromArgb(246, 170, 28);
+            button6.FlatAppearance.BorderColor = Color.FromArgb(246, 170, 28);
+            button6.FlatAppearance.BorderSize = 0;
+            button6.FlatAppearance.MouseDownBackColor = Color.Black;
+            button6.FlatAppearance.MouseOverBackColor = Color.White;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button6.ForeColor = Color.Black;
+            button6.Image = (Image)resources.GetObject("button6.Image");
+            button6.ImageAlign = ContentAlignment.MiddleLeft;
+            button6.Location = new Point(3, 179);
+            button6.Margin = new Padding(4, 3, 4, 3);
+            button6.Name = "button6";
+            button6.Size = new Size(242, 42);
+            button6.TabIndex = 2;
+            button6.Text = "         CLIENTES/MEMBRESIAS";
+            button6.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Cursor = Cursors.Hand;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(5, 10);
+            pictureBox1.Margin = new Padding(4, 3, 4, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(237, 76);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
+            // btninicio
+            // 
+            btninicio.BackColor = Color.FromArgb(246, 170, 28);
+            btninicio.FlatAppearance.BorderColor = Color.FromArgb(246, 170, 28);
+            btninicio.FlatAppearance.BorderSize = 0;
+            btninicio.FlatAppearance.MouseDownBackColor = Color.Black;
+            btninicio.FlatAppearance.MouseOverBackColor = Color.White;
+            btninicio.FlatStyle = FlatStyle.Flat;
+            btninicio.Font = new Font("Lucida Bright", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btninicio.ForeColor = Color.Black;
+            btninicio.Image = (Image)resources.GetObject("btninicio.Image");
+            btninicio.ImageAlign = ContentAlignment.MiddleLeft;
+            btninicio.Location = new Point(4, 122);
+            btninicio.Margin = new Padding(4, 3, 4, 3);
+            btninicio.Name = "btninicio";
+            btninicio.Size = new Size(242, 42);
+            btninicio.TabIndex = 1;
+            btninicio.Text = "INICIO";
+            btninicio.UseVisualStyleBackColor = false;
+            btninicio.Click += button1_Click;
+            // 
+            // BarraTitulo
+            // 
+            BarraTitulo.BackColor = Color.FromArgb(34, 9, 1);
+            BarraTitulo.Controls.Add(btnSlide);
+            BarraTitulo.Dock = DockStyle.Top;
+            BarraTitulo.Location = new Point(250, 0);
+            BarraTitulo.Margin = new Padding(4, 3, 4, 3);
+            BarraTitulo.Name = "BarraTitulo";
+            BarraTitulo.Size = new Size(1136, 50);
+            BarraTitulo.TabIndex = 1;
+            BarraTitulo.Paint += BarraTitulo_Paint;
+            BarraTitulo.MouseDown += BarraTitulo_MouseDown;
+            // 
+            // btnSlide
+            // 
+            btnSlide.BackColor = Color.Transparent;
+            btnSlide.Image = (Image)resources.GetObject("btnSlide.Image");
+            btnSlide.Location = new Point(7, 10);
+            btnSlide.Margin = new Padding(4, 3, 4, 3);
+            btnSlide.Name = "btnSlide";
+            btnSlide.Size = new Size(30, 30);
+            btnSlide.SizeMode = PictureBoxSizeMode.AutoSize;
+            btnSlide.TabIndex = 0;
+            btnSlide.TabStop = false;
+            btnSlide.Click += btnSlide_Click;
+            // 
+            // panelContenedor
+            // 
+            panelContenedor.BackColor = Color.FromArgb(98, 23, 8);
+            panelContenedor.Cursor = Cursors.Hand;
+            panelContenedor.Dock = DockStyle.Fill;
+            panelContenedor.Location = new Point(250, 50);
+            panelContenedor.Margin = new Padding(4, 3, 4, 3);
+            panelContenedor.Name = "panelContenedor";
+            panelContenedor.Size = new Size(1136, 700);
+            panelContenedor.TabIndex = 2;
+            panelContenedor.Paint += panelContenedor_Paint;
+            // 
+            // menu
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
+            ClientSize = new Size(1386, 750);
+            Controls.Add(panelContenedor);
+            Controls.Add(BarraTitulo);
+            Controls.Add(MenuVertical);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 3, 4, 3);
+            Name = "menu";
+            StartPosition = FormStartPosition.Manual;
+            Text = "Form1";
+            MenuVertical.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)iconmin).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iconcerrar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            BarraTitulo.ResumeLayout(false);
+            BarraTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)btnSlide).EndInit();
+            ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel MenuVertical;
+        private System.Windows.Forms.Panel BarraTitulo;
+        private System.Windows.Forms.Panel panelContenedor;
+        private System.Windows.Forms.PictureBox btnSlide;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btninicio;
+        private PictureBox iconmin;
+        private PictureBox iconcerrar;
+        private Button button6;
+        private Button button3;
+        private Button button2;
+        private Button button4;
+        private Button button5;
+    }
+}
