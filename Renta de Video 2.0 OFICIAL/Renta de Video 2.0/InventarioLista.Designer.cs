@@ -57,6 +57,7 @@
             pictureBox3 = new PictureBox();
             dgwVideo = new DataGridView();
             lblConteo = new Label();
+            button1 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -70,6 +71,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(34, 9, 1);
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(cmbGenero);
             panel1.Controls.Add(cmbClasificacion);
@@ -444,6 +446,20 @@
             lblConteo.TabIndex = 0;
             lblConteo.Text = "MOSTRANDO # VIDEOS";
             // 
+            // button1
+            // 
+            button1.BackColor = Color.DarkOrange;
+            button1.Cursor = Cursors.Hand;
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(784, 17);
+            button1.Name = "button1";
+            button1.Size = new Size(179, 48);
+            button1.TabIndex = 24;
+            button1.Text = "REPORTE";
+            button1.UseVisualStyleBackColor = false;
+            // 
             // InventarioLista
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -502,5 +518,6 @@
         private Panel panel3;
         private Button btnGuardar;
         private PictureBox pictureBox4;
+        private Button button1;
     }
 }

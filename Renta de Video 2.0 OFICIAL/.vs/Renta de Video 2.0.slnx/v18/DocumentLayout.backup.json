@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Sofia PC\\Desktop\\INGENIERO\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\sofia pc\\desktop\\ingeniero\\proyectoasis22k26vhs\\renta de video 2.0 oficial\\renta de video 2.0\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\sofia pc\\desktop\\ingeniero\\proyectoasis22k26vhs\\renta de video 2.0 oficial\\renta de video 2.0\\inventariolista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\inventariolista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +18,35 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InventarioLista.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Sofia PC\\Desktop\\INGENIERO\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\InventarioLista.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\InventarioLista.cs",
+              "ToolTip": "C:\\Users\\Sofia PC\\Desktop\\INGENIERO\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\InventarioLista.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Renta de Video 2.0\\InventarioLista.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-01T18:52:37.719Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "menu.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Sofia PC\\Desktop\\INGENIERO\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\menu.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\menu.cs",
+              "ToolTip": "C:\\Users\\Sofia PC\\Desktop\\INGENIERO\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\menu.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Renta de Video 2.0\\menu.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-01T17:24:08.746Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }

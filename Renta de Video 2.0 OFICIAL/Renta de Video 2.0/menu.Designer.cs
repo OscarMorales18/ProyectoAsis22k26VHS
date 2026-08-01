@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menu));
             MenuVertical = new Panel();
+            button1 = new Button();
             iconmin = new PictureBox();
             button5 = new Button();
             iconcerrar = new PictureBox();
@@ -53,6 +54,7 @@
             // MenuVertical
             // 
             MenuVertical.BackColor = Color.FromArgb(34, 9, 1);
+            MenuVertical.Controls.Add(button1);
             MenuVertical.Controls.Add(iconmin);
             MenuVertical.Controls.Add(button5);
             MenuVertical.Controls.Add(iconcerrar);
@@ -69,6 +71,26 @@
             MenuVertical.Size = new Size(250, 750);
             MenuVertical.TabIndex = 0;
             MenuVertical.Paint += MenuVertical_Paint;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(246, 170, 28);
+            button1.FlatAppearance.BorderColor = Color.FromArgb(246, 170, 28);
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.Black;
+            button1.FlatAppearance.MouseOverBackColor = Color.White;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Lucida Bright", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.Black;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(5, 474);
+            button1.Margin = new Padding(4, 3, 4, 3);
+            button1.Name = "button1";
+            button1.Size = new Size(242, 42);
+            button1.TabIndex = 8;
+            button1.Text = "      SEGURIDAD DEL SISTEMA";
+            button1.UseVisualStyleBackColor = false;
             // 
             // iconmin
             // 
@@ -305,5 +327,6 @@
         private Button button2;
         private Button button4;
         private Button button5;
+        private Button button1;
     }
 }
