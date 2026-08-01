@@ -361,6 +361,23 @@
           }
         }
       },
+      "MySqlConnector/2.6.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.2"
+        },
+        "compile": {
+          "lib/net9.0/MySqlConnector.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/MySqlConnector.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.native.System.Data.SqlClient.sni/4.4.0": {
         "type": "package",
         "dependencies": {
@@ -1080,6 +1097,37 @@
         "microsoft.sqlserver.server.nuspec"
       ]
     },
+    "MySqlConnector/2.6.1": {
+      "sha512": "MzNSfnHWBc0Mo3zVbYxG+556zuex9obs8NYtwcPCwFahel40e49stH+osjX4k/doEHp4LT/zTtGdax4nlGWhcw==",
+      "type": "package",
+      "path": "mysqlconnector/2.6.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net10.0/MySqlConnector.dll",
+        "lib/net10.0/MySqlConnector.xml",
+        "lib/net462/MySqlConnector.dll",
+        "lib/net462/MySqlConnector.xml",
+        "lib/net471/MySqlConnector.dll",
+        "lib/net471/MySqlConnector.xml",
+        "lib/net48/MySqlConnector.dll",
+        "lib/net48/MySqlConnector.xml",
+        "lib/net6.0/MySqlConnector.dll",
+        "lib/net6.0/MySqlConnector.xml",
+        "lib/net8.0/MySqlConnector.dll",
+        "lib/net8.0/MySqlConnector.xml",
+        "lib/net9.0/MySqlConnector.dll",
+        "lib/net9.0/MySqlConnector.xml",
+        "lib/netstandard2.0/MySqlConnector.dll",
+        "lib/netstandard2.0/MySqlConnector.xml",
+        "lib/netstandard2.1/MySqlConnector.dll",
+        "lib/netstandard2.1/MySqlConnector.xml",
+        "logo.png",
+        "mysqlconnector.2.6.1.nupkg.sha512",
+        "mysqlconnector.nuspec"
+      ]
+    },
     "runtime.native.System.Data.SqlClient.sni/4.4.0": {
       "sha512": "A8v6PGmk+UGbfWo5Ixup0lPM4swuSwOiayJExZwKIOjTlFFQIsu3QnDXECosBEyrWSPryxBVrdqtJyhK3BaupQ==",
       "type": "package",
@@ -1335,6 +1383,7 @@
   "projectFileDependencyGroups": {
     "net9.0-windows": [
       "Microsoft.Data.SqlClient >= 7.0.2",
+      "MySqlConnector >= 2.6.1",
       "System.Data.SqlClient >= 4.9.1"
     ]
   },
@@ -1345,11 +1394,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sofia PC\\Downloads\\Renta de Video 2.0 - copia\\Renta de Video 2.0\\Renta de Video 2.0.csproj",
+      "projectUniqueName": "C:\\Users\\Sofia PC\\Downloads\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Renta de Video 2.0.csproj",
       "projectName": "Renta de Video 2.0",
-      "projectPath": "C:\\Users\\Sofia PC\\Downloads\\Renta de Video 2.0 - copia\\Renta de Video 2.0\\Renta de Video 2.0.csproj",
+      "projectPath": "C:\\Users\\Sofia PC\\Downloads\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Renta de Video 2.0.csproj",
       "packagesPath": "C:\\Users\\Sofia PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sofia PC\\Downloads\\Renta de Video 2.0 - copia\\Renta de Video 2.0\\obj\\",
+      "outputPath": "C:\\Users\\Sofia PC\\Downloads\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1393,6 +1442,10 @@
           "Microsoft.Data.SqlClient": {
             "target": "Package",
             "version": "[7.0.2, )"
+          },
+          "MySqlConnector": {
+            "target": "Package",
+            "version": "[2.6.1, )"
           },
           "System.Data.SqlClient": {
             "target": "Package",

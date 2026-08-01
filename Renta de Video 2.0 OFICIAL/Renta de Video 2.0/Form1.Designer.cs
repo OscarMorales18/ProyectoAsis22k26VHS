@@ -29,48 +29,48 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.SuspendLayout();
+            pictureBox3 = new PictureBox();
+            label1 = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            SuspendLayout();
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(115, 63);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(185, 265);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
+            pictureBox3.BackColor = Color.Transparent;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(86, 53);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(162, 248);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 4;
+            pictureBox3.TabStop = false;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Fax", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(61, 262);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 55);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "PopFlix";
-            this.label1.Click += new System.EventHandler(this.label1_Click_2);
+            label1.AutoSize = true;
+            label1.Font = new Font("Lucida Fax", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Gold;
+            label1.Location = new Point(53, 246);
+            label1.Name = "label1";
+            label1.Size = new Size(208, 55);
+            label1.TabIndex = 5;
+            label1.Text = "PopFlix";
+            label1.Click += label1_Click_2;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Maroon;
-            this.ClientSize = new System.Drawing.Size(400, 574);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox3);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Maroon;
+            ClientSize = new Size(350, 538);
+            Controls.Add(label1);
+            Controls.Add(pictureBox3);
+            Name = "Form1";
+            Text = "Form1";
+            Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 

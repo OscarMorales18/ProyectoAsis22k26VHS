@@ -177,6 +177,7 @@
             Controls.Add(pictureBox1);
             Name = "Lista_Facturas";
             Text = "Lista_Facturas";
+            Load += Lista_Facturas_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

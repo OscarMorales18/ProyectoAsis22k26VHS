@@ -10,13 +10,32 @@
     <StartupObject></StartupObject>
   </PropertyGroup>
 
+	
+	
   <ItemGroup>
-    <Compile Include="obj\Debug\net9.0-windows\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" />
-    <Compile Include="obj\Debug\net9.0-windows\Renta de Video 2.0.AssemblyInfo.cs" />
-    <Compile Include="obj\Debug\net9.0-windows\Renta de Video 2.0.GlobalUsings.g.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <Content Include="bin\Debug\imagenes\buscar.png" />
+    <Content Include="bin\Debug\imagenes\casa %282%29.png" />
+    <Content Include="bin\Debug\imagenes\cerrar.png" />
+    <Content Include="bin\Debug\imagenes\claqueta.png" />
+    <Content Include="bin\Debug\imagenes\cliente %282%29.png" />
+    <Content Include="bin\Debug\imagenes\devolucion.png" />
+    <Content Include="bin\Debug\imagenes\editar.png" />
+    <Content Include="bin\Debug\imagenes\eliminar.png" />
+    <Content Include="bin\Debug\imagenes\gestion.png" />
+    <Content Include="bin\Debug\imagenes\logo.png" />
+    <Content Include="bin\Debug\imagenes\logonombreh.PNG" />
+    <Content Include="bin\Debug\imagenes\mascotamov.gif" />
+    <Content Include="bin\Debug\imagenes\menuham.png" />
+    <Content Include="bin\Debug\imagenes\minimi.png" />
+    <Content Include="bin\Debug\imagenes\minimizar.png" />
+    <Content Include="bin\Debug\imagenes\nombrelogo.png" />
+    <Content Include="bin\Debug\imagenes\ojo.png" />
+    <Content Include="bin\Debug\imagenes\salario.png" />
+    <Content Include="bin\Debug\imagenes\salir.png" />
+    <Content Include="bin\Debug\imagenes\usuario.png" />
+    <Content Include="bin\Debug\imagenes\video.png" />
+    <Content Include="bin\Debug\net9.0-windows\Renta de Video 2.0.deps.json" />
+    <Content Include="bin\Debug\net9.0-windows\Renta de Video 2.0.runtimeconfig.json" />
     <Content Include="obj\Debug\net9.0-windows\Renta de Video 2.0.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\net9.0-windows\Renta de Video 2.0.designer.deps.json" />
     <Content Include="obj\Debug\net9.0-windows\Renta de Video 2.0.designer.runtimeconfig.json" />
@@ -25,6 +44,52 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="bin\Debug\net9.0-windows\cs\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Debug\net9.0-windows\de\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Debug\net9.0-windows\es\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Debug\net9.0-windows\fr\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Debug\net9.0-windows\it\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Debug\net9.0-windows\ja\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Debug\net9.0-windows\ko\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Debug\net9.0-windows\Microsoft.Bcl.Cryptography.dll" />
+    <None Include="bin\Debug\net9.0-windows\Microsoft.Data.SqlClient.dll" />
+    <None Include="bin\Debug\net9.0-windows\Microsoft.Data.SqlClient.Extensions.Abstractions.dll" />
+    <None Include="bin\Debug\net9.0-windows\Microsoft.Data.SqlClient.Internal.Logging.dll" />
+    <None Include="bin\Debug\net9.0-windows\Microsoft.Extensions.Caching.Abstractions.dll" />
+    <None Include="bin\Debug\net9.0-windows\Microsoft.Extensions.Caching.Memory.dll" />
+    <None Include="bin\Debug\net9.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll" />
+    <None Include="bin\Debug\net9.0-windows\Microsoft.Extensions.Logging.Abstractions.dll" />
+    <None Include="bin\Debug\net9.0-windows\Microsoft.Extensions.Options.dll" />
+    <None Include="bin\Debug\net9.0-windows\Microsoft.Extensions.Primitives.dll" />
+    <None Include="bin\Debug\net9.0-windows\Microsoft.IdentityModel.Abstractions.dll" />
+    <None Include="bin\Debug\net9.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll" />
+    <None Include="bin\Debug\net9.0-windows\Microsoft.IdentityModel.Logging.dll" />
+    <None Include="bin\Debug\net9.0-windows\Microsoft.IdentityModel.Protocols.dll" />
+    <None Include="bin\Debug\net9.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" />
+    <None Include="bin\Debug\net9.0-windows\Microsoft.IdentityModel.Tokens.dll" />
+    <None Include="bin\Debug\net9.0-windows\Microsoft.SqlServer.Server.dll" />
+    <None Include="bin\Debug\net9.0-windows\MySqlConnector.dll" />
+    <None Include="bin\Debug\net9.0-windows\pl\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Debug\net9.0-windows\pt-BR\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Debug\net9.0-windows\Renta de Video 2.0.dll" />
+    <None Include="bin\Debug\net9.0-windows\Renta de Video 2.0.exe" />
+    <None Include="bin\Debug\net9.0-windows\Renta de Video 2.0.pdb" />
+    <None Include="bin\Debug\net9.0-windows\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll" />
+    <None Include="bin\Debug\net9.0-windows\runtimes\unix\lib\net9.0\Microsoft.Data.SqlClient.dll" />
+    <None Include="bin\Debug\net9.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll" />
+    <None Include="bin\Debug\net9.0-windows\runtimes\win-arm64\native\sni.dll" />
+    <None Include="bin\Debug\net9.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll" />
+    <None Include="bin\Debug\net9.0-windows\runtimes\win-x64\native\sni.dll" />
+    <None Include="bin\Debug\net9.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll" />
+    <None Include="bin\Debug\net9.0-windows\runtimes\win-x86\native\sni.dll" />
+    <None Include="bin\Debug\net9.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll" />
+    <None Include="bin\Debug\net9.0-windows\runtimes\win\lib\net9.0\Microsoft.Data.SqlClient.dll" />
+    <None Include="bin\Debug\net9.0-windows\ru\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Debug\net9.0-windows\System.Data.SqlClient.dll" />
+    <None Include="bin\Debug\net9.0-windows\System.IdentityModel.Tokens.Jwt.dll" />
+    <None Include="bin\Debug\net9.0-windows\tr\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Debug\net9.0-windows\zh-Hans\Microsoft.Data.SqlClient.resources.dll" />
+    <None Include="bin\Debug\net9.0-windows\zh-Hant\Microsoft.Data.SqlClient.resources.dll" />
     <None Include="obj\Debug\net9.0-windows\apphost.exe" />
     <None Include="obj\Debug\net9.0-windows\refint\Renta de Video 2.0.dll" />
     <None Include="obj\Debug\net9.0-windows\ref\Renta de Video 2.0.dll" />
@@ -62,6 +127,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Data.SqlClient" Version="7.0.2" />
+    <PackageReference Include="MySqlConnector" Version="2.6.1" />
     <PackageReference Include="System.Data.SqlClient" Version="4.9.1" />
   </ItemGroup>
 

@@ -69,5 +69,10 @@ namespace Renta_de_Video_2._0
             }
 
         }
+
+        private void Lista_Facturas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
