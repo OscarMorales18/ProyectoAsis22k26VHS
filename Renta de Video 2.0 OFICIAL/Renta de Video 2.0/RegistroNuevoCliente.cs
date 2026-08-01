@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,14 +9,14 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Renta_de_Video_2._0.Clases;
 
 namespace Renta_de_Video_2._0.Resources
 {
-    public partial class FormWalkthriught1 : Form
+    public partial class RegistroNuevoCliente : Form
     {
-        // contador para ir generando los codigos de membresia (MEM-0001, MEM-0002...)
         private static int contadorMembresias = 1;
-        public FormWalkthriught1()
+        public RegistroNuevoCliente()
         {
             InitializeComponent();
         }
@@ -36,7 +36,7 @@ namespace Renta_de_Video_2._0.Resources
 
         }
 
-        private void FormWalkthriught1_Load(object sender, EventArgs e)
+        private void RegistroNuevoCliente_Load(object sender, EventArgs e)
         {
 
         }
@@ -70,37 +70,57 @@ namespace Renta_de_Video_2._0.Resources
         {
             try
             {
-                // valido que no venga vacio el nombre
+                // manejo de errores de cada campo Andre Gonzalez 9959-23-3117
                 if (string.IsNullOrWhiteSpace(NombreCompleto.Text))
-                    throw new Exception("El nombre completo es obligatorio.");
+                        throw new Exception("El nombre completo es obligatorio.");
 
-                // quito espacios y me fijo que el dpi tenga los 13 numeros
                 string dpiLimpio = DPI.Text.Replace(" ", "");
+             
                 if (dpiLimpio.Length != 13 || !dpiLimpio.All(char.IsDigit))
-                    throw new Exception("El DPI debe tener 13 dígitos numéricos.");
+                throw new Exception("El DPI debe tener 13 dígitos numéricos.");
 
-                // mismo caso pero para el telefono, 8 digitos sin el guion
-                string telLimpio = Telefono.Text.Replace("-", "");
+                    string telLimpio = Telefono.Text.Replace("-", "");
+           
                 if (telLimpio.Length != 8 || !telLimpio.All(char.IsDigit))
                     throw new Exception("El teléfono debe tener 8 dígitos.");
 
+               
                 if (string.IsNullOrWhiteSpace(Direccion.Text))
-                    throw new Exception("La dirección es obligatoria.");
+                        throw new Exception("La dirección es obligatoria.");
 
+            
                 if (!Regex.IsMatch(Correo.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
                     throw new Exception("Ingresa un correo electrónico válido.");
 
+                // encadenacion form con Base de datose del cliente Andre Gonzalez 9959-23-3117
+                MCliente nuevoCliente = new MCliente
+                {
+                    Nombre = NombreCompleto.Text,
+                    Dpi = dpiLimpio,
+                    Telefono = telLimpio,
+                    Direccion = Direccion.Text,
+                    Correo = Correo.Text
+                };
+
+              
+                ClienteConsultas consultas = new ClienteConsultas();
+                    bool clienteGuardado = consultas.AgregarCliente(nuevoCliente);
+
+                // manejo de error guardado en base de datos Andre Gonzalez 9959-23-3117
+                if (!clienteGuardado)
+                throw new Exception("No se pudo guardar el cliente en la base de datos.");
+
+               
                 string nuevoCodigo = "MEM-" + contadorMembresias.ToString("D4");
                 contadorMembresias++;
                 Codigo_de_membresia.Text = nuevoCodigo;
 
-                MessageBox.Show("Cliente registrado correctamente.\nCódigo de membresía: " + nuevoCodigo,
+                MessageBox.Show("Cliente registrado correctamente en la base de datos.\nCódigo de membresía: " + nuevoCodigo,
                     "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            // manejo de error Andre Gonzalez 9959-23-3117
             catch (Exception ex)
             {
-                // aqui cae cualquiera de los throw de arriba (o algun error que no contemple)
-                // y en vez de que se caiga el programa solo muestro el mensaje
                 MessageBox.Show(ex.Message, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 

@@ -1,6 +1,6 @@
 ﻿namespace Renta_de_Video_2._0.Resources
 {
-    partial class FormWalkthriught1
+    partial class RegistroNuevoCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormWalkthriught1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroNuevoCliente));
             pictureBox3 = new PictureBox();
             DPI = new TextBox();
             Telefono = new TextBox();
@@ -141,7 +141,7 @@
             NombreCompleto.TabIndex = 25;
             NombreCompleto.TextChanged += NombreCompleto_TextChanged;
             // 
-            // FormWalkthriught1
+            // RegistroNuevoCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -156,9 +156,9 @@
             Controls.Add(Telefono);
             Controls.Add(DPI);
             Controls.Add(pictureBox3);
-            Name = "FormWalkthriught1";
-            Text = "FormWalkthriught1";
-            Load += FormWalkthriught1_Load;
+            Name = "RegistroNuevoCliente";
+            Text = "Registro de Nuevo Cliente";
+            Load += RegistroNuevoCliente_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
