@@ -47,12 +47,11 @@
             dvg_facturas.BackgroundColor = Color.FromArgb(42, 0, 0);
             dvg_facturas.BorderStyle = BorderStyle.None;
             dvg_facturas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dvg_facturas.Location = new Point(159, 237);
-            dvg_facturas.Margin = new Padding(3, 4, 3, 4);
+            dvg_facturas.Location = new Point(139, 178);
             dvg_facturas.Name = "dvg_facturas";
             dvg_facturas.RowHeadersWidth = 51;
             dvg_facturas.RowTemplate.Height = 24;
-            dvg_facturas.Size = new Size(919, 188);
+            dvg_facturas.Size = new Size(804, 141);
             dvg_facturas.TabIndex = 13;
             // 
             // porcliente
@@ -60,10 +59,9 @@
             porcliente.BackColor = Color.FromArgb(42, 18, 11);
             porcliente.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             porcliente.ForeColor = SystemColors.Window;
-            porcliente.Location = new Point(897, 68);
-            porcliente.Margin = new Padding(3, 4, 3, 4);
+            porcliente.Location = new Point(785, 51);
             porcliente.Name = "porcliente";
-            porcliente.Size = new Size(180, 32);
+            porcliente.Size = new Size(158, 27);
             porcliente.TabIndex = 16;
             porcliente.TextChanged += porcliente_TextChanged;
             // 
@@ -72,10 +70,9 @@
             Buscar.BackColor = Color.DarkOrange;
             Buscar.FlatStyle = FlatStyle.Popup;
             Buscar.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Buscar.Location = new Point(1085, 68);
-            Buscar.Margin = new Padding(3, 4, 3, 4);
+            Buscar.Location = new Point(949, 51);
             Buscar.Name = "Buscar";
-            Buscar.Size = new Size(81, 52);
+            Buscar.Size = new Size(71, 39);
             Buscar.TabIndex = 17;
             Buscar.Text = "Buscar";
             Buscar.UseVisualStyleBackColor = false;
@@ -87,10 +84,9 @@
             verdetalle.Cursor = Cursors.Hand;
             verdetalle.FlatStyle = FlatStyle.Popup;
             verdetalle.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            verdetalle.Location = new Point(526, 157);
-            verdetalle.Margin = new Padding(3, 4, 3, 4);
+            verdetalle.Location = new Point(458, 100);
             verdetalle.Name = "verdetalle";
-            verdetalle.Size = new Size(168, 56);
+            verdetalle.Size = new Size(147, 42);
             verdetalle.TabIndex = 18;
             verdetalle.Text = "Ver Detalle";
             verdetalle.UseVisualStyleBackColor = false;
@@ -102,9 +98,8 @@
             pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1221, 837);
+            pictureBox1.Size = new Size(1068, 562);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 36;
             pictureBox1.TabStop = false;
@@ -113,26 +108,25 @@
             // 
             pictureBox2.BackColor = Color.FromArgb(42, 0, 0);
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(493, 433);
-            pictureBox2.Margin = new Padding(5, 4, 5, 4);
+            pictureBox2.Location = new Point(431, 325);
+            pictureBox2.Margin = new Padding(4, 3, 4, 3);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(219, 249);
+            pictureBox2.Size = new Size(192, 187);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 43;
             pictureBox2.TabStop = false;
             // 
             // Lista_Facturas
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1221, 837);
+            ClientSize = new Size(1068, 562);
             Controls.Add(pictureBox2);
             Controls.Add(verdetalle);
             Controls.Add(Buscar);
             Controls.Add(porcliente);
             Controls.Add(dvg_facturas);
             Controls.Add(pictureBox1);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "Lista_Facturas";
             Text = "Lista_Facturas";
             Load += Lista_Facturas_Load;

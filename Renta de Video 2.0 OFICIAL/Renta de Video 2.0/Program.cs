@@ -1,3 +1,5 @@
+using Renta_de_Video_2._0.Resources;
+
 namespace Renta_de_Video_2._0
 {
     internal static class Program

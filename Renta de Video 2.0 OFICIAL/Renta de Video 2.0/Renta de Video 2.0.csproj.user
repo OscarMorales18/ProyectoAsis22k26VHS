@@ -10,9 +10,6 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormWalkthriught1.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="FormWalkthriught2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -41,6 +38,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="NuevaRenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="RegistroNuevoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
