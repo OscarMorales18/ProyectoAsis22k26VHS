@@ -31,31 +31,35 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gestion_Empleados));
             cmbRol = new ComboBox();
             cmbEstado = new ComboBox();
-            dataGridView1 = new DataGridView();
+            dvgUsuarios = new DataGridView();
             Codigo = new DataGridViewTextBoxColumn();
-            Nombre = new DataGridViewTextBoxColumn();
             Usuario = new DataGridViewTextBoxColumn();
+            Contraseña = new DataGridViewTextBoxColumn();
+            Id_Empleado = new DataGridViewTextBoxColumn();
             Rol = new DataGridViewTextBoxColumn();
             Estado = new DataGridViewTextBoxColumn();
-            eliminar = new Button();
-            guardar = new Button();
-            agregar = new Button();
-            editar = new Button();
+            btn_eliminar = new Button();
+            btn_guardar = new Button();
+            btn_agregar = new Button();
+            btn_editar = new Button();
             pictureBox1 = new PictureBox();
-            NombreCompleto = new TextBox();
-            contra = new TextBox();
-            usu = new TextBox();
+            txt_idemple = new TextBox();
+            txt_contra = new TextBox();
+            txt_usu = new TextBox();
             pictureBox2 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            txt_busca = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)dvgUsuarios).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // cmbRol
             // 
-            cmbRol.BackColor = Color.FromArgb(42, 18, 11);
+            cmbRol.BackColor = Color.White;
+            cmbRol.ForeColor = Color.FromArgb(53, 0, 1);
             cmbRol.FormattingEnabled = true;
-            cmbRol.Location = new Point(50, 342);
+            cmbRol.Items.AddRange(new object[] { "Empleado", "Administrador" });
+            cmbRol.Location = new Point(54, 369);
             cmbRol.Name = "cmbRol";
             cmbRol.Size = new Size(106, 23);
             cmbRol.TabIndex = 29;
@@ -63,24 +67,26 @@
             // 
             // cmbEstado
             // 
-            cmbEstado.BackColor = Color.FromArgb(42, 18, 11);
+            cmbEstado.BackColor = Color.White;
+            cmbEstado.ForeColor = Color.FromArgb(53, 0, 1);
             cmbEstado.FormattingEnabled = true;
-            cmbEstado.Location = new Point(50, 401);
+            cmbEstado.Items.AddRange(new object[] { "Activo", "Retirado" });
+            cmbEstado.Location = new Point(54, 428);
             cmbEstado.Name = "cmbEstado";
             cmbEstado.Size = new Size(106, 23);
             cmbEstado.TabIndex = 31;
             cmbEstado.SelectedIndexChanged += cmbEstado_SelectedIndexChanged;
             // 
-            // dataGridView1
+            // dvgUsuarios
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Codigo, Nombre, Usuario, Rol, Estado });
-            dataGridView1.Location = new Point(437, 156);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 24;
-            dataGridView1.Size = new Size(593, 141);
-            dataGridView1.TabIndex = 32;
+            dvgUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dvgUsuarios.Columns.AddRange(new DataGridViewColumn[] { Codigo, Usuario, Contraseña, Id_Empleado, Rol, Estado });
+            dvgUsuarios.Location = new Point(437, 156);
+            dvgUsuarios.Name = "dvgUsuarios";
+            dvgUsuarios.RowHeadersWidth = 51;
+            dvgUsuarios.RowTemplate.Height = 24;
+            dvgUsuarios.Size = new Size(593, 254);
+            dvgUsuarios.TabIndex = 32;
             // 
             // Codigo
             // 
@@ -89,19 +95,22 @@
             Codigo.Name = "Codigo";
             Codigo.Width = 125;
             // 
-            // Nombre
-            // 
-            Nombre.HeaderText = "Nombre";
-            Nombre.MinimumWidth = 6;
-            Nombre.Name = "Nombre";
-            Nombre.Width = 125;
-            // 
             // Usuario
             // 
             Usuario.HeaderText = "Usuario";
             Usuario.MinimumWidth = 6;
             Usuario.Name = "Usuario";
             Usuario.Width = 125;
+            // 
+            // Contraseña
+            // 
+            Contraseña.HeaderText = "Contraseña";
+            Contraseña.Name = "Contraseña";
+            // 
+            // Id_Empleado
+            // 
+            Id_Empleado.HeaderText = "ID_Empleado";
+            Id_Empleado.Name = "Id_Empleado";
             // 
             // Rol
             // 
@@ -117,57 +126,57 @@
             Estado.Name = "Estado";
             Estado.Width = 125;
             // 
-            // eliminar
+            // btn_eliminar
             // 
-            eliminar.BackColor = Color.IndianRed;
-            eliminar.FlatStyle = FlatStyle.Popup;
-            eliminar.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            eliminar.Location = new Point(50, 546);
-            eliminar.Name = "eliminar";
-            eliminar.Size = new Size(163, 41);
-            eliminar.TabIndex = 33;
-            eliminar.Text = "Eliminar";
-            eliminar.UseVisualStyleBackColor = false;
-            eliminar.Click += eliminar_Click;
+            btn_eliminar.BackColor = Color.FromArgb(246, 170, 28);
+            btn_eliminar.FlatStyle = FlatStyle.Popup;
+            btn_eliminar.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_eliminar.Location = new Point(62, 566);
+            btn_eliminar.Name = "btn_eliminar";
+            btn_eliminar.Size = new Size(163, 41);
+            btn_eliminar.TabIndex = 33;
+            btn_eliminar.Text = "Eliminar";
+            btn_eliminar.UseVisualStyleBackColor = false;
+            btn_eliminar.Click += eliminar_Click;
             // 
-            // guardar
+            // btn_guardar
             // 
-            guardar.BackColor = Color.DarkOrange;
-            guardar.FlatStyle = FlatStyle.Popup;
-            guardar.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guardar.Location = new Point(219, 546);
-            guardar.Name = "guardar";
-            guardar.Size = new Size(161, 41);
-            guardar.TabIndex = 34;
-            guardar.Text = "Guardar";
-            guardar.UseVisualStyleBackColor = false;
-            guardar.Click += guardar_Click;
+            btn_guardar.BackColor = Color.FromArgb(246, 170, 28);
+            btn_guardar.FlatStyle = FlatStyle.Popup;
+            btn_guardar.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_guardar.Location = new Point(231, 566);
+            btn_guardar.Name = "btn_guardar";
+            btn_guardar.Size = new Size(161, 41);
+            btn_guardar.TabIndex = 34;
+            btn_guardar.Text = "Guardar";
+            btn_guardar.UseVisualStyleBackColor = false;
+            btn_guardar.Click += guardar_Click;
             // 
-            // agregar
+            // btn_agregar
             // 
-            agregar.BackColor = Color.OliveDrab;
-            agregar.FlatStyle = FlatStyle.Popup;
-            agregar.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            agregar.Location = new Point(50, 499);
-            agregar.Name = "agregar";
-            agregar.Size = new Size(163, 41);
-            agregar.TabIndex = 35;
-            agregar.Text = "Agregar";
-            agregar.UseVisualStyleBackColor = false;
-            agregar.Click += agregar_Click;
+            btn_agregar.BackColor = Color.FromArgb(246, 170, 28);
+            btn_agregar.FlatStyle = FlatStyle.Popup;
+            btn_agregar.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_agregar.Location = new Point(62, 519);
+            btn_agregar.Name = "btn_agregar";
+            btn_agregar.Size = new Size(163, 41);
+            btn_agregar.TabIndex = 35;
+            btn_agregar.Text = "Agregar";
+            btn_agregar.UseVisualStyleBackColor = false;
+            btn_agregar.Click += agregar_Click;
             // 
-            // editar
+            // btn_editar
             // 
-            editar.BackColor = Color.LightSeaGreen;
-            editar.FlatStyle = FlatStyle.Popup;
-            editar.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            editar.Location = new Point(219, 499);
-            editar.Name = "editar";
-            editar.Size = new Size(161, 41);
-            editar.TabIndex = 36;
-            editar.Text = "Editar";
-            editar.UseVisualStyleBackColor = false;
-            editar.Click += editar_Click;
+            btn_editar.BackColor = Color.FromArgb(246, 170, 28);
+            btn_editar.FlatStyle = FlatStyle.Popup;
+            btn_editar.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_editar.Location = new Point(231, 519);
+            btn_editar.Name = "btn_editar";
+            btn_editar.Size = new Size(161, 41);
+            btn_editar.TabIndex = 36;
+            btn_editar.Text = "Editar";
+            btn_editar.UseVisualStyleBackColor = false;
+            btn_editar.Click += editar_Click;
             // 
             // pictureBox1
             // 
@@ -180,36 +189,37 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 38;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
-            // NombreCompleto
+            // txt_idemple
             // 
-            NombreCompleto.BackColor = Color.FromArgb(42, 18, 11);
-            NombreCompleto.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            NombreCompleto.Location = new Point(50, 270);
-            NombreCompleto.Name = "NombreCompleto";
-            NombreCompleto.Size = new Size(317, 27);
-            NombreCompleto.TabIndex = 40;
-            NombreCompleto.TextChanged += NombreCompleto_TextChanged;
+            txt_idemple.BackColor = Color.FromArgb(42, 18, 11);
+            txt_idemple.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_idemple.Location = new Point(54, 316);
+            txt_idemple.Name = "txt_idemple";
+            txt_idemple.Size = new Size(317, 27);
+            txt_idemple.TabIndex = 40;
+            txt_idemple.TextChanged += NombreCompleto_TextChanged;
             // 
-            // contra
+            // txt_contra
             // 
-            contra.BackColor = Color.FromArgb(42, 18, 11);
-            contra.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            contra.Location = new Point(50, 215);
-            contra.Name = "contra";
-            contra.Size = new Size(317, 27);
-            contra.TabIndex = 41;
-            contra.TextChanged += contra_TextChanged;
+            txt_contra.BackColor = Color.FromArgb(42, 18, 11);
+            txt_contra.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_contra.Location = new Point(54, 261);
+            txt_contra.Name = "txt_contra";
+            txt_contra.Size = new Size(317, 27);
+            txt_contra.TabIndex = 41;
+            txt_contra.TextChanged += contra_TextChanged;
             // 
-            // usu
+            // txt_usu
             // 
-            usu.BackColor = Color.FromArgb(42, 18, 11);
-            usu.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            usu.Location = new Point(50, 156);
-            usu.Name = "usu";
-            usu.Size = new Size(317, 27);
-            usu.TabIndex = 42;
-            usu.TextChanged += usu_TextChanged;
+            txt_usu.BackColor = Color.FromArgb(42, 18, 11);
+            txt_usu.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_usu.Location = new Point(54, 202);
+            txt_usu.Name = "txt_usu";
+            txt_usu.Size = new Size(317, 27);
+            txt_usu.TabIndex = 42;
+            txt_usu.TextChanged += usu_TextChanged;
             // 
             // pictureBox2
             // 
@@ -223,26 +233,38 @@
             pictureBox2.TabIndex = 45;
             pictureBox2.TabStop = false;
             // 
+            // txt_busca
+            // 
+            txt_busca.BackColor = Color.FromArgb(42, 18, 11);
+            txt_busca.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_busca.ForeColor = SystemColors.Info;
+            txt_busca.Location = new Point(492, 441);
+            txt_busca.Name = "txt_busca";
+            txt_busca.Size = new Size(317, 27);
+            txt_busca.TabIndex = 46;
+            txt_busca.TextChanged += txt_busca_TextChanged;
+            // 
             // Gestion_Empleados
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1067, 628);
+            Controls.Add(txt_busca);
             Controls.Add(pictureBox2);
-            Controls.Add(usu);
-            Controls.Add(contra);
-            Controls.Add(NombreCompleto);
-            Controls.Add(editar);
-            Controls.Add(agregar);
-            Controls.Add(guardar);
-            Controls.Add(eliminar);
-            Controls.Add(dataGridView1);
+            Controls.Add(txt_usu);
+            Controls.Add(txt_contra);
+            Controls.Add(txt_idemple);
+            Controls.Add(btn_editar);
+            Controls.Add(btn_agregar);
+            Controls.Add(btn_guardar);
+            Controls.Add(btn_eliminar);
+            Controls.Add(dvgUsuarios);
             Controls.Add(cmbEstado);
             Controls.Add(cmbRol);
             Controls.Add(pictureBox1);
             Name = "Gestion_Empleados";
             Text = "Gestion_Empleados";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dvgUsuarios).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
@@ -253,20 +275,22 @@
         #endregion
         private System.Windows.Forms.ComboBox cmbRol;
         private System.Windows.Forms.ComboBox cmbEstado;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Usuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Rol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.Button eliminar;
-        private System.Windows.Forms.Button guardar;
-        private System.Windows.Forms.Button agregar;
-        private System.Windows.Forms.Button editar;
+        private System.Windows.Forms.DataGridView dvgUsuarios;
+        private System.Windows.Forms.Button btn_eliminar;
+        private System.Windows.Forms.Button btn_guardar;
+        private System.Windows.Forms.Button btn_agregar;
+        private System.Windows.Forms.Button btn_editar;
         private PictureBox pictureBox1;
-        private TextBox NombreCompleto;
-        private TextBox contra;
-        private TextBox usu;
+        private TextBox txt_idemple;
+        private TextBox txt_contra;
+        private TextBox txt_usu;
         private PictureBox pictureBox2;
+        private DataGridViewTextBoxColumn Codigo;
+        private DataGridViewTextBoxColumn Usuario;
+        private DataGridViewTextBoxColumn Contraseña;
+        private DataGridViewTextBoxColumn Id_Empleado;
+        private DataGridViewTextBoxColumn Rol;
+        private DataGridViewTextBoxColumn Estado;
+        private TextBox txt_busca;
     }
 }
