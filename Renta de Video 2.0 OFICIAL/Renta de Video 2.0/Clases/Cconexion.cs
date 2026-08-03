@@ -9,9 +9,9 @@ namespace Renta_de_Video_2._0.Clases
         MySqlConnection conex = new MySqlConnection();
 
         static String servidor = "localhost";
-        static String bd = "rentavideovhs";
-        static String usuario = "video";
-        static String contrasenia = "12345";
+        static String bd = "RentaVideoVHS";
+        static String usuario = "root";             
+        static String contrasenia = "Josue2608"; 
 
         String cadenaConexion =
         "Server=" + servidor + ";" +

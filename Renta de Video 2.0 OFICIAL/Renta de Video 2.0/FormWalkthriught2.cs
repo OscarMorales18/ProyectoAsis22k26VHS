@@ -1,4 +1,5 @@
-﻿using Renta_de_Video_2._0.Resources;
+﻿using Renta_de_Video_2._0.Clases;
+using Renta_de_Video_2._0.Resources;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,12 @@ namespace Renta_de_Video_2._0
         public FormWalkthriught2()
         {
             InitializeComponent();
+
+            if (SesionUsuario.Rol == "Empleado")
+            {
+                button2.Visible = false;
+                button3.Visible = false;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,6 +53,16 @@ namespace Renta_de_Video_2._0
             }
         }
 
+
+        private void AbrirFormInPanel(object Formhijo)
+        {
+            menu menuPrincipal = Application.OpenForms.OfType<menu>().FirstOrDefault();
+            if (menuPrincipal != null)
+            {
+                menuPrincipal.AbrirFormInPanel(Formhijo);
+            }
+        }
+
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -65,5 +82,21 @@ namespace Renta_de_Video_2._0
         {
 
         }
+
+
+        private void panelContenedor_Paint(object sender, PaintEventArgs e) { }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new FormWalkthriught3());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new RegistroNuevoCliente());
+        }
+
+
+
+
     }
 }

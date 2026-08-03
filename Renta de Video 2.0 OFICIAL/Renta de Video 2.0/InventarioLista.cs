@@ -26,8 +26,6 @@ namespace Renta_de_Video_2._0
 
         }
 
-
-
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 
@@ -47,6 +45,7 @@ namespace Renta_de_Video_2._0
         {
 
         }
+
         // llenado de texbox - (Evelyn Andrade 9959-23-1224)
         private void dgwVideo_SelectionChanged(object sender, EventArgs e)
         {
@@ -63,7 +62,8 @@ namespace Renta_de_Video_2._0
                 txtEstado.Text = fila.Cells["estado"].Value.ToString();
             }
         }
-       //(Evelyn Andrade 9959-23-1224)
+
+        //(Evelyn Andrade 9959-23-1224)
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             Cvideos objetoVideo = new Cvideos();
@@ -79,7 +79,6 @@ namespace Renta_de_Video_2._0
             if (cmbClasificacion.SelectedItem.ToString() == "clasificacion")
             {
                 objetoVideo.mostrarVideos(dgwVideo);
-
             }
             else
             {
@@ -207,15 +206,22 @@ namespace Renta_de_Video_2._0
 
                 objetoVideo.mostrarVideos(dgwVideo);
                 actualizarConteo();
-
             }
         }
+
         //abre form InventarioRegistro Evelyn Andrade 9959-23-1224
         private void btnNuevoVideo_Click(object sender, EventArgs e)
         {
-            InventarioRegistro formulario = new InventarioRegistro();
-            formulario.Show();
-            this.Hide();
+            Form menuPrincipal = Application.OpenForms["menu"];
+            if (menuPrincipal is menu formMenu)
+            {
+                formMenu.AbrirFormInPanel(new InventarioRegistro());
+            }
+        }
+
+        private void lblConteo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,13 +1,15 @@
-﻿using System;
+﻿using Renta_de_Video_2._0.Clases;       // Referencia a la clase SesionUsuario
+using Renta_de_Video_2._0.Resources;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;  // Librería para mover ventana por la barra de título
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;  // libreria para el menu barra de titulo
 
 namespace Renta_de_Video_2._0
 {
@@ -16,6 +18,75 @@ namespace Renta_de_Video_2._0
         public menu()
         {
             InitializeComponent();
+
+            // 1. Aplica permisos según el rol del usuario conectado (Victor Samayoa 0901-23-3424)
+            AplicarPermisos();
+            CargarDatosUsuario();
+
+            // 2. Vincula los eventos Clic de todos los botones con sus correspondientes formularios
+            btninicio.Click += btninicio_Click;
+            button6.Click += btnClientes_Click;
+            button2.Click += btnInventario_Click;
+            button3.Click += btnRentas_Click;
+            button4.Click += btnFacturacion_Click;
+            button5.Click += btnUsuarios_Click;
+            button1.Click += btnSeguridad_Click;
+        }
+
+        private void menu_Load(object sender, EventArgs e)
+        {
+            AplicarPermisos();
+            CargarDatosUsuario();
+        }
+
+        private void CargarDatosUsuario()
+        {
+            lblNombreUsuario.Text = SesionUsuario.Usuario;
+            lblRol.Text = SesionUsuario.Rol;
+        }
+
+        // Método para ocultar/mostrar botones del menú según el rol (Victor Samayoa 0901-23-3424)
+        private void AplicarPermisos()
+        {
+            string rol = SesionUsuario.Rol;
+
+            switch (rol)
+            {
+                case "Empleado":
+                    btninicio.Enabled = true; // inicio
+                    button6.Enabled = true;   // clientes y membresias
+                    button2.Enabled = true;   // inventario
+                    button3.Enabled = true;   // rentas y devoluciones
+                    button4.Enabled = true;   // facturacion y mora
+                    button5.Enabled = false;  // gestion de usuarios (desactivado)
+                    button1.Enabled = false;  // seguridad del sistema (desactivado)
+
+                    break;
+
+                case "Administrador":
+                    btninicio.Enabled = true; // inicio
+                    button6.Enabled = true;   // clientes y membresias
+                    button2.Enabled = true;   // inventario
+                    button3.Enabled = true;   // rentas y devoluciones
+                    button4.Enabled = true;   // facturacion y mora
+                    button5.Enabled = true;   // gestion de usuarios 
+                    button1.Enabled = false;  // seguridad del sistema (desactivado)
+                    break;
+
+                case "Auditor":
+                    btninicio.Enabled = true; // inicio
+                    button6.Enabled = true;   // clientes y membresias
+                    button2.Enabled = true;   // inventario
+                    button3.Enabled = true;   // rentas y devoluciones
+                    button4.Enabled = true;   // facturacion y mora
+                    button5.Enabled = true;   // gestion de usuarios 
+                    button1.Enabled = true;   // seguridad del sistema 
+                    break;
+
+                default:
+                    MessageBox.Show("Rol no reconocido o sesión no válida.", "Error de Permisos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    break;
+            }
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -23,7 +94,7 @@ namespace Renta_de_Video_2._0
         [DllImport("user32.dll", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam);
 
-        //evento del menu hamburguesa (Evelyn Andrade 9959-23-1224)
+        // Evento del menú hamburguesa - (Evelyn Andrade 9959-23-1224)
         private void btnSlide_Click(object sender, EventArgs e)
         {
             if (MenuVertical.Width == 250)
@@ -34,39 +105,8 @@ namespace Renta_de_Video_2._0
                 MenuVertical.Width = 250;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelContenedor_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        //boton Inventario (Evelyn Andrade 9959-23-1224)
-        private void AbrirFormInPanel(object Formhijo)
+        // Método para cargar formularios dentro del Panel Contenedor (Evelyn Andrade 9959-23-1224)
+        public void AbrirFormInPanel(object Formhijo)
         {
             if (this.panelContenedor.Controls.Count > 0)
                 this.panelContenedor.Controls.RemoveAt(0);
@@ -76,54 +116,105 @@ namespace Renta_de_Video_2._0
             this.panelContenedor.Controls.Add(fh);
             this.panelContenedor.Tag = fh;
             fh.Show();
-
         }
-        private void button1_Click(object sender, EventArgs e)
+
+        // 1 inicio (Victor Samayoa 0901-23-3424)
+        private void btninicio_Click(object sender, EventArgs e)
         {
-
+            if (this.panelContenedor.Controls.Count > 0)
+                this.panelContenedor.Controls.RemoveAt(0);
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        // 2 clientes (Victor Samayoa 0901-23-3424)
+        private void btnClientes_Click(object sender, EventArgs e)
         {
-
+            AbrirFormInPanel(new FormWalkthriught2());
         }
 
-        private void BarraTitulo_Paint(object sender, PaintEventArgs e)
+        // 3 inventario (Victor Samayoa 0901-23-3424)
+        private void btnInventario_Click(object sender, EventArgs e)
         {
-
+            AbrirFormInPanel(new InventarioLista());
         }
 
-        private void MenuVertical_Paint(object sender, PaintEventArgs e)
+        // 4 rentas (Victor Samayoa 0901-23-3424)
+        private void btnRentas_Click(object sender, EventArgs e)
         {
-
+            AbrirFormInPanel(new NuevaRenta());
         }
-        //evento del boton cerrar (Evelyn Andrade 9959-23-1224)
+
+        // 5 facturación (Victor Samayoa 0901-23-3424)
+        private void btnFacturacion_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new Lista_Facturas());
+        }
+
+        // 6 gestión de usuarios (Victor Samayoa 0901-23-3424)
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new Gestion_Empleados());
+        }
+
+        // 7 seguridad del sistema (Victor Samayoa 0901-23-3424)
+        private void btnSeguridad_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new FormWalkthriught2());
+        }
+
+        // Métodos secundarios dejados por compatibilidad
+        private void button1_Click(object sender, EventArgs e) { }
+        private void button2_Click_1(object sender, EventArgs e) { }
+        private void button2_Click(object sender, EventArgs e) { }
+
+        // Evento cerrar ventana (Evelyn Andrade 9959-23-1224)
         private void iconcerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-        //evento minimizar  (Evelyn Andrade 9959-23-1224)
+
+        // Evento minimizar (Evelyn Andrade 9959-23-1224)
         private void iconmin_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-
-        //estas funciones es para manejar la ventana a cualquier posicion (Evelyn Andrade 9959-23-1224)
+        // Mover ventana con el mouse (Evelyn Andrade 9959-23-1224)
         private void BarraTitulo_MouseDown(object sender, MouseEventArgs e)
         {
             RealeaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
+        private void label1_Click(object sender, EventArgs e) { }
+        private void panelContenedor_Paint(object sender, PaintEventArgs e) { }
+        private void pictureBox1_Click(object sender, EventArgs e) { }
+        private void BarraTitulo_Paint(object sender, PaintEventArgs e) { }
+        private void MenuVertical_Paint(object sender, PaintEventArgs e) { }
+        private void label1_Click_1(object sender, EventArgs e) { }
 
-        }
+        // Métodos requeridos por las referencias en menu.Designer.cs
+        private void label1_Click_2(object sender, EventArgs e) { }
+        private void label1_Click_3(object sender, EventArgs e) { }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new InventarioLista());
+            DialogResult confirmacion = MessageBox.Show(
+                "¿Está seguro de que desea cerrar la sesión actual?",
+                "Cerrar Sesión",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (confirmacion == DialogResult.Yes)
+            {
+                SesionUsuario.Usuario = string.Empty;
+                SesionUsuario.Rol = string.Empty;
+
+                Login loginForm = new Login();
+                loginForm.Show();
+
+                this.Close();
+            }
         }
     }
 }
