@@ -15,7 +15,6 @@ namespace Renta_de_Video_2._0.Resources
 {
     public partial class RegistroNuevoCliente : Form
     {
-        private static int contadorMembresias = 1;
         public RegistroNuevoCliente()
         {
             InitializeComponent();
@@ -72,27 +71,27 @@ namespace Renta_de_Video_2._0.Resources
             {
                 // manejo de errores de cada campo Andre Gonzalez 9959-23-3117
                 if (string.IsNullOrWhiteSpace(NombreCompleto.Text))
-                    throw new Exception("El nombre completo es obligatorio.");
+                        throw new Exception("El nombre completo es obligatorio.");
 
                 string dpiLimpio = DPI.Text.Replace(" ", "");
-
+             
                 if (dpiLimpio.Length != 13 || !dpiLimpio.All(char.IsDigit))
-                    throw new Exception("El DPI debe tener 13 dígitos numéricos.");
+                throw new Exception("El DPI debe tener 13 dígitos numéricos.");
 
-                string telLimpio = Telefono.Text.Replace("-", "");
-
+                    string telLimpio = Telefono.Text.Replace("-", "");
+           
                 if (telLimpio.Length != 8 || !telLimpio.All(char.IsDigit))
                     throw new Exception("El teléfono debe tener 8 dígitos.");
 
-
+               
                 if (string.IsNullOrWhiteSpace(Direccion.Text))
-                    throw new Exception("La dirección es obligatoria.");
+                        throw new Exception("La dirección es obligatoria.");
 
-
+            
                 if (!Regex.IsMatch(Correo.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
                     throw new Exception("Ingresa un correo electrónico válido.");
 
-                // encadenacion form con Base de datos del cliente Andre Gonzalez 9959-23-3117
+                // encadenacion form con Base de datose del cliente Andre Gonzalez 9959-23-3117
                 MCliente nuevoCliente = new MCliente
                 {
                     Nombre = NombreCompleto.Text,
@@ -102,17 +101,16 @@ namespace Renta_de_Video_2._0.Resources
                     Correo = Correo.Text
                 };
 
-
+              
                 ClienteConsultas consultas = new ClienteConsultas();
-                bool clienteGuardado = consultas.AgregarCliente(nuevoCliente);
+                    int idMembresia = consultas.AgregarCliente(nuevoCliente);
 
                 // manejo de error guardado en base de datos Andre Gonzalez 9959-23-3117
-                if (!clienteGuardado)
-                    throw new Exception("No se pudo guardar el cliente en la base de datos.");
+                if (idMembresia <= 0)
+                throw new Exception("No se pudo guardar el cliente en la base de datos.");
 
 
-                string nuevoCodigo = "MEM-" + contadorMembresias.ToString("D4");
-                contadorMembresias++;
+                string nuevoCodigo = "MEM-" + idMembresia.ToString("D4");
                 Codigo_de_membresia.Text = nuevoCodigo;
 
                 MessageBox.Show("Cliente registrado correctamente en la base de datos.\nCódigo de membresía: " + nuevoCodigo,
@@ -155,11 +153,6 @@ namespace Renta_de_Video_2._0.Resources
         private void NombreCompleto_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }
