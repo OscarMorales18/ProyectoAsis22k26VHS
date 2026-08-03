@@ -41,6 +41,7 @@
             Codigo = new TextBox();
             TotalPagar = new TextBox();
             pictureBox2 = new PictureBox();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -52,12 +53,11 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Video, Precio_Renta, Mora, Subtotal });
             dataGridView1.GridColor = SystemColors.WindowText;
-            dataGridView1.Location = new Point(564, 158);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
+            dataGridView1.Location = new Point(494, 118);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 24;
-            dataGridView1.Size = new Size(633, 91);
+            dataGridView1.Size = new Size(554, 68);
             dataGridView1.TabIndex = 20;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -91,14 +91,14 @@
             // 
             // Regresar
             // 
+            Regresar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             Regresar.BackColor = Color.DarkOrange;
             Regresar.Cursor = Cursors.Hand;
             Regresar.FlatStyle = FlatStyle.Popup;
             Regresar.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Regresar.Location = new Point(1081, 372);
-            Regresar.Margin = new Padding(3, 4, 3, 4);
+            Regresar.Location = new Point(940, 263);
             Regresar.Name = "Regresar";
-            Regresar.Size = new Size(117, 48);
+            Regresar.Size = new Size(246, 36);
             Regresar.TabIndex = 22;
             Regresar.Text = "Regresar";
             Regresar.UseVisualStyleBackColor = false;
@@ -110,9 +110,8 @@
             pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1222, 829);
+            pictureBox1.Size = new Size(1213, 591);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 39;
             pictureBox1.TabStop = false;
@@ -122,10 +121,9 @@
             // 
             Fecha.BackColor = Color.FromArgb(42, 18, 11);
             Fecha.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Fecha.Location = new Point(88, 217);
-            Fecha.Margin = new Padding(3, 4, 3, 4);
+            Fecha.Location = new Point(77, 163);
             Fecha.Name = "Fecha";
-            Fecha.Size = new Size(180, 32);
+            Fecha.Size = new Size(158, 27);
             Fecha.TabIndex = 40;
             Fecha.TextChanged += Fecha_TextChanged;
             // 
@@ -133,10 +131,9 @@
             // 
             Cliente.BackColor = Color.FromArgb(42, 18, 11);
             Cliente.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Cliente.Location = new Point(88, 163);
-            Cliente.Margin = new Padding(3, 4, 3, 4);
+            Cliente.Location = new Point(77, 122);
             Cliente.Name = "Cliente";
-            Cliente.Size = new Size(180, 32);
+            Cliente.Size = new Size(158, 27);
             Cliente.TabIndex = 41;
             Cliente.TextChanged += Cliente_TextChanged;
             // 
@@ -144,10 +141,9 @@
             // 
             Codigo.BackColor = Color.FromArgb(42, 18, 11);
             Codigo.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Codigo.Location = new Point(88, 105);
-            Codigo.Margin = new Padding(3, 4, 3, 4);
+            Codigo.Location = new Point(77, 79);
             Codigo.Name = "Codigo";
-            Codigo.Size = new Size(180, 32);
+            Codigo.Size = new Size(158, 27);
             Codigo.TabIndex = 42;
             Codigo.TextChanged += Codigo_TextChanged;
             // 
@@ -155,10 +151,9 @@
             // 
             TotalPagar.BackColor = Color.FromArgb(42, 18, 11);
             TotalPagar.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            TotalPagar.Location = new Point(1017, 313);
-            TotalPagar.Margin = new Padding(3, 4, 3, 4);
+            TotalPagar.Location = new Point(890, 220);
             TotalPagar.Name = "TotalPagar";
-            TotalPagar.Size = new Size(180, 32);
+            TotalPagar.Size = new Size(158, 27);
             TotalPagar.TabIndex = 43;
             TotalPagar.TextChanged += TotalPagar_TextChanged;
             // 
@@ -166,19 +161,33 @@
             // 
             pictureBox2.BackColor = Color.FromArgb(42, 0, 0);
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(0, 580);
-            pictureBox2.Margin = new Padding(5, 4, 5, 4);
+            pictureBox2.Location = new Point(0, 435);
+            pictureBox2.Margin = new Padding(4, 3, 4, 3);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(219, 249);
+            pictureBox2.Size = new Size(192, 187);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 46;
             pictureBox2.TabStop = false;
             // 
+            // button2
+            // 
+            button2.BackColor = Color.White;
+            button2.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.Location = new Point(1013, 12);
+            button2.Margin = new Padding(4, 3, 4, 3);
+            button2.Name = "button2";
+            button2.Size = new Size(35, 27);
+            button2.TabIndex = 47;
+            button2.Text = "X";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click_1;
+            // 
             // Detalle_De_Factura
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1222, 829);
+            ClientSize = new Size(1213, 591);
+            Controls.Add(button2);
             Controls.Add(pictureBox2);
             Controls.Add(TotalPagar);
             Controls.Add(Codigo);
@@ -187,7 +196,7 @@
             Controls.Add(Regresar);
             Controls.Add(dataGridView1);
             Controls.Add(pictureBox1);
-            Margin = new Padding(3, 4, 3, 4);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Detalle_De_Factura";
             Text = "Detalle_De_Factura";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -211,5 +220,6 @@
         private TextBox Codigo;
         private TextBox TotalPagar;
         private PictureBox pictureBox2;
+        private Button button2;
     }
 }

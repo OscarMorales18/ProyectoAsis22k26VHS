@@ -269,7 +269,7 @@ namespace Renta_de_Video_2._0
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void txt_busca_TextChanged(object sender, EventArgs e)

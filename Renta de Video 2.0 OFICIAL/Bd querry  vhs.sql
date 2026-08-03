@@ -103,7 +103,7 @@ FOREIGN KEY (id_empleado) REFERENCES empleado(id_empleado) ON UPDATE CASCADE ON 
 
 -- esta parte fue con IA
 
-CONSTRAINT chk_usuario_rol CHECK (rol IN ('Empleado', 'Administrador'))
+CONSTRAINT chk_usuario_rol CHECK (rol IN ('Empleado', 'Administrador', 'Auditor'))
 
 
 );

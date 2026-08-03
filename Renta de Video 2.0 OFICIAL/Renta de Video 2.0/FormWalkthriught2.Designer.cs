@@ -52,10 +52,9 @@
             button1.Cursor = Cursors.Hand;
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(161, 536);
-            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Location = new Point(141, 402);
             button1.Name = "button1";
-            button1.Size = new Size(129, 79);
+            button1.Size = new Size(113, 59);
             button1.TabIndex = 7;
             button1.Text = "Buscar";
             button1.UseVisualStyleBackColor = false;
@@ -67,9 +66,8 @@
             pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1221, 841);
+            pictureBox1.Size = new Size(1068, 562);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 19;
             pictureBox1.TabStop = false;
@@ -79,10 +77,9 @@
             Codigo_Membresia.BackColor = Color.FromArgb(70, 0, 0);
             Codigo_Membresia.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Codigo_Membresia.ForeColor = Color.White;
-            Codigo_Membresia.Location = new Point(25, 424);
-            Codigo_Membresia.Margin = new Padding(3, 4, 3, 4);
+            Codigo_Membresia.Location = new Point(22, 318);
             Codigo_Membresia.Name = "Codigo_Membresia";
-            Codigo_Membresia.Size = new Size(276, 32);
+            Codigo_Membresia.Size = new Size(242, 27);
             Codigo_Membresia.TabIndex = 20;
             Codigo_Membresia.TextChanged += Codigo_Membresia_TextChanged;
             // 
@@ -90,10 +87,10 @@
             // 
             pictureBox2.BackColor = Color.FromArgb(42, 0, 0);
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(131, 607);
-            pictureBox2.Margin = new Padding(5, 4, 5, 4);
+            pictureBox2.Location = new Point(115, 455);
+            pictureBox2.Margin = new Padding(4, 3, 4, 3);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(193, 234);
+            pictureBox2.Size = new Size(169, 176);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 25;
             pictureBox2.TabStop = false;
@@ -102,11 +99,10 @@
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Nombre, DPI, Telefono, Direccion, Correo });
-            dataGridView1.Location = new Point(488, 440);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
+            dataGridView1.Location = new Point(427, 330);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(672, 200);
+            dataGridView1.Size = new Size(588, 150);
             dataGridView1.TabIndex = 26;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -151,10 +147,9 @@
             button2.Cursor = Cursors.Hand;
             button2.FlatStyle = FlatStyle.Popup;
             button2.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(695, 84);
-            button2.Margin = new Padding(3, 4, 3, 4);
+            button2.Location = new Point(608, 63);
             button2.Name = "button2";
-            button2.Size = new Size(110, 72);
+            button2.Size = new Size(96, 54);
             button2.TabIndex = 27;
             button2.Text = "Registro Cliente";
             button2.UseVisualStyleBackColor = false;
@@ -166,10 +161,9 @@
             button3.Cursor = Cursors.Hand;
             button3.FlatStyle = FlatStyle.Popup;
             button3.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.Location = new Point(904, 84);
-            button3.Margin = new Padding(3, 4, 3, 4);
+            button3.Location = new Point(791, 63);
             button3.Name = "button3";
-            button3.Size = new Size(110, 72);
+            button3.Size = new Size(96, 54);
             button3.TabIndex = 28;
             button3.Text = "Detalle Cliente";
             button3.UseVisualStyleBackColor = false;
@@ -177,10 +171,10 @@
             // 
             // FormWalkthriught2
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1221, 841);
+            ClientSize = new Size(1068, 562);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(dataGridView1);
@@ -188,7 +182,7 @@
             Controls.Add(Codigo_Membresia);
             Controls.Add(button1);
             Controls.Add(pictureBox1);
-            Margin = new Padding(3, 4, 3, 4);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FormWalkthriught2";
             Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

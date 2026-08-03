@@ -42,6 +42,7 @@
             totalmora = new TextBox();
             Buscar_cliente = new TextBox();
             pictureBox2 = new PictureBox();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -49,12 +50,13 @@
             // 
             // Buscar
             // 
+            Buscar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             Buscar.BackColor = Color.DarkOrange;
             Buscar.FlatStyle = FlatStyle.Popup;
             Buscar.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Buscar.Location = new Point(540, 121);
             Buscar.Name = "Buscar";
-            Buscar.Size = new Size(102, 36);
+            Buscar.Size = new Size(248, 0);
             Buscar.TabIndex = 23;
             Buscar.Text = "Buscar";
             Buscar.UseVisualStyleBackColor = false;
@@ -140,7 +142,7 @@
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1067, 627);
+            pictureBox1.Size = new Size(1213, 591);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 37;
             pictureBox1.TabStop = false;
@@ -177,11 +179,25 @@
             pictureBox2.TabIndex = 44;
             pictureBox2.TabStop = false;
             // 
+            // button2
+            // 
+            button2.BackColor = Color.White;
+            button2.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.Location = new Point(982, 12);
+            button2.Margin = new Padding(4, 3, 4, 3);
+            button2.Name = "button2";
+            button2.Size = new Size(35, 27);
+            button2.TabIndex = 45;
+            button2.Text = "X";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
             // Mora_Pendiente_PC
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1067, 627);
+            ClientSize = new Size(1213, 591);
+            Controls.Add(button2);
             Controls.Add(pictureBox2);
             Controls.Add(Buscar_cliente);
             Controls.Add(totalmora);
@@ -190,6 +206,7 @@
             Controls.Add(dataGridView1);
             Controls.Add(Buscar);
             Controls.Add(pictureBox1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Mora_Pendiente_PC";
             Text = "Mora_Pendiente_PC";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -214,5 +231,6 @@
         private TextBox totalmora;
         private TextBox Buscar_cliente;
         private PictureBox pictureBox2;
+        private Button button2;
     }
 }

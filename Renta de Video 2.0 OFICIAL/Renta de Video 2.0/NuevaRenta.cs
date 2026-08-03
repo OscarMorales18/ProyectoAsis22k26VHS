@@ -26,5 +26,10 @@ namespace Renta_de_Video_2._0
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

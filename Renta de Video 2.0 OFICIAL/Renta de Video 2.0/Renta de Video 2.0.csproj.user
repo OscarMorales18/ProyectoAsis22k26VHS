@@ -7,16 +7,13 @@
     <Compile Update="Devolucion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="FormWalkthriught2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormWalkthriught3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Gestion Empleados.cs">
+    <Compile Update="Gestion Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="InventarioLista.cs">

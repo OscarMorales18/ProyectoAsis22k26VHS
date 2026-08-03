@@ -10,8 +10,8 @@ namespace Renta_de_Video_2._0.Clases
 
         static String servidor = "localhost";
         static String bd = "RentaVideoVHS";
-        static String usuario = "root";             
-        static String contrasenia = "Josue2608"; 
+        static String usuario = "video";             
+        static String contrasenia = "12345"; 
 
         String cadenaConexion =
         "Server=" + servidor + ";" +

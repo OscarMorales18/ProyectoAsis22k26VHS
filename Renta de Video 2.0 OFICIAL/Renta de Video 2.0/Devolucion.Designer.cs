@@ -28,146 +28,140 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Listadevideos = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            panel1 = new Panel();
+            panel2 = new Panel();
+            textBox1 = new TextBox();
+            label1 = new Label();
+            Listadevideos = new ListBox();
+            button1 = new Button();
+            label2 = new Label();
+            dateTimePicker1 = new DateTimePicker();
+            label3 = new Label();
+            button2 = new Button();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.AutoSize = true;
-            this.panel1.BackColor = System.Drawing.Color.Maroon;
-            this.panel1.Location = new System.Drawing.Point(-6, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1228, 56);
-            this.panel1.TabIndex = 5;
+            panel1.Anchor = AnchorStyles.None;
+            panel1.AutoSize = true;
+            panel1.BackColor = Color.Maroon;
+            panel1.Location = new Point(-5, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1074, 52);
+            panel1.TabIndex = 5;
             // 
             // panel2
             // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.AutoSize = true;
-            this.panel2.BackColor = System.Drawing.Color.Maroon;
-            this.panel2.Location = new System.Drawing.Point(-3, 652);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1225, 31);
-            this.panel2.TabIndex = 10;
+            panel2.Anchor = AnchorStyles.None;
+            panel2.AutoSize = true;
+            panel2.BackColor = Color.Maroon;
+            panel2.Location = new Point(-3, 611);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1072, 29);
+            panel2.TabIndex = 10;
             // 
             // textBox1
             // 
-            this.textBox1.ForeColor = System.Drawing.Color.Transparent;
-            this.textBox1.Location = new System.Drawing.Point(17, 117);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(251, 22);
-            this.textBox1.TabIndex = 13;
+            textBox1.ForeColor = Color.Transparent;
+            textBox1.Location = new Point(15, 110);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(220, 23);
+            textBox1.TabIndex = 13;
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 69);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(256, 26);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Codigo de Membresia";
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label1.AutoSize = true;
+            label1.BackColor = Color.White;
+            label1.Font = new Font("Lucida Bright", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(10, 65);
+            label1.Name = "label1";
+            label1.Size = new Size(210, 22);
+            label1.TabIndex = 12;
+            label1.Text = "Codigo de Membresia";
             // 
             // Listadevideos
             // 
-            this.Listadevideos.FormattingEnabled = true;
-            this.Listadevideos.ItemHeight = 16;
-            this.Listadevideos.Location = new System.Drawing.Point(17, 226);
-            this.Listadevideos.Name = "Listadevideos";
-            this.Listadevideos.Size = new System.Drawing.Size(280, 212);
-            this.Listadevideos.TabIndex = 14;
+            Listadevideos.FormattingEnabled = true;
+            Listadevideos.Location = new Point(15, 212);
+            Listadevideos.Name = "Listadevideos";
+            Listadevideos.Size = new Size(246, 199);
+            Listadevideos.TabIndex = 14;
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(83, 160);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 38);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = false;
+            button1.BackColor = Color.WhiteSmoke;
+            button1.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.Location = new Point(73, 150);
+            button1.Name = "button1";
+            button1.Size = new Size(102, 36);
+            button1.TabIndex = 15;
+            button1.Text = "Buscar";
+            button1.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 481);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(254, 26);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Fecha de Devolucion ";
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label2.AutoSize = true;
+            label2.BackColor = Color.White;
+            label2.Font = new Font("Lucida Bright", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(10, 451);
+            label2.Name = "label2";
+            label2.Size = new Size(207, 22);
+            label2.TabIndex = 16;
+            label2.Text = "Fecha de Devolucion ";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(17, 535);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 17;
+            dateTimePicker1.Location = new Point(15, 502);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(176, 23);
+            dateTimePicker1.TabIndex = 17;
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(976, 226);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(196, 26);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Cálculo de mora";
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label3.AutoSize = true;
+            label3.BackColor = Color.White;
+            label3.Font = new Font("Lucida Bright", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(854, 212);
+            label3.Name = "label3";
+            label3.Size = new Size(164, 22);
+            label3.TabIndex = 18;
+            label3.Text = "Cálculo de mora";
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button2.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(953, 519);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(219, 38);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Confirmar Devolucion";
-            this.button2.UseVisualStyleBackColor = false;
+            button2.BackColor = Color.WhiteSmoke;
+            button2.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.Location = new Point(834, 487);
+            button2.Name = "button2";
+            button2.Size = new Size(192, 36);
+            button2.TabIndex = 19;
+            button2.Text = "Confirmar Devolucion";
+            button2.UseVisualStyleBackColor = false;
             // 
             // Devolucion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1223, 695);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.Listadevideos);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Name = "Devolucion";
-            this.Text = "Devolucion";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            ClientSize = new Size(1070, 652);
+            Controls.Add(button2);
+            Controls.Add(label3);
+            Controls.Add(dateTimePicker1);
+            Controls.Add(label2);
+            Controls.Add(button1);
+            Controls.Add(Listadevideos);
+            Controls.Add(textBox1);
+            Controls.Add(label1);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "Devolucion";
+            Text = "Devolucion";
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InventarioLista));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             panel1 = new Panel();
             button1 = new Button();
             pictureBox2 = new PictureBox();
@@ -82,9 +82,8 @@
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1511, 153);
+            panel1.Size = new Size(1213, 115);
             panel1.TabIndex = 0;
             // 
             // button1
@@ -94,10 +93,9 @@
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(1078, 7);
-            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Location = new Point(943, 5);
             button1.Name = "button1";
-            button1.Size = new Size(205, 64);
+            button1.Size = new Size(179, 48);
             button1.TabIndex = 24;
             button1.Text = "REPORTE";
             button1.UseVisualStyleBackColor = false;
@@ -105,10 +103,9 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(142, 103);
-            pictureBox2.Margin = new Padding(3, 4, 3, 4);
+            pictureBox2.Location = new Point(124, 77);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(34, 40);
+            pictureBox2.Size = new Size(30, 30);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 4;
             pictureBox2.TabStop = false;
@@ -122,10 +119,9 @@
             cmbGenero.ForeColor = Color.FromArgb(34, 9, 1);
             cmbGenero.FormattingEnabled = true;
             cmbGenero.Items.AddRange(new object[] { "Todos los géneros", "Terror", "Comedia", "Drama", "Acción", "Familiar", "Suspenso" });
-            cmbGenero.Location = new Point(795, 105);
-            cmbGenero.Margin = new Padding(3, 4, 3, 4);
+            cmbGenero.Location = new Point(696, 79);
             cmbGenero.Name = "cmbGenero";
-            cmbGenero.Size = new Size(265, 25);
+            cmbGenero.Size = new Size(232, 23);
             cmbGenero.TabIndex = 5;
             cmbGenero.SelectedIndexChanged += cmbGenero_SelectedIndexChanged;
             // 
@@ -139,10 +135,9 @@
             cmbClasificacion.ForeColor = Color.FromArgb(34, 9, 1);
             cmbClasificacion.FormattingEnabled = true;
             cmbClasificacion.Items.AddRange(new object[] { "clasificacion", "G", "PG", "PG-13" });
-            cmbClasificacion.Location = new Point(507, 103);
-            cmbClasificacion.Margin = new Padding(3, 4, 3, 4);
+            cmbClasificacion.Location = new Point(444, 77);
             cmbClasificacion.Name = "cmbClasificacion";
-            cmbClasificacion.Size = new Size(265, 26);
+            cmbClasificacion.Size = new Size(232, 23);
             cmbClasificacion.TabIndex = 6;
             cmbClasificacion.SelectedIndexChanged += cmbEstado_SelectedIndexChanged;
             // 
@@ -154,10 +149,9 @@
             btnNuevoVideo.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnNuevoVideo.Image = (Image)resources.GetObject("btnNuevoVideo.Image");
             btnNuevoVideo.ImageAlign = ContentAlignment.MiddleLeft;
-            btnNuevoVideo.Location = new Point(1078, 79);
-            btnNuevoVideo.Margin = new Padding(3, 4, 3, 4);
+            btnNuevoVideo.Location = new Point(943, 59);
             btnNuevoVideo.Name = "btnNuevoVideo";
-            btnNuevoVideo.Size = new Size(205, 64);
+            btnNuevoVideo.Size = new Size(179, 48);
             btnNuevoVideo.TabIndex = 23;
             btnNuevoVideo.Text = "       NUEVO VIDEO";
             btnNuevoVideo.UseVisualStyleBackColor = false;
@@ -166,10 +160,9 @@
             // txtBuscar
             // 
             txtBuscar.Font = new Font("Lucida Bright", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtBuscar.Location = new Point(181, 105);
-            txtBuscar.Margin = new Padding(3, 4, 3, 4);
+            txtBuscar.Location = new Point(158, 79);
             txtBuscar.Name = "txtBuscar";
-            txtBuscar.Size = new Size(298, 31);
+            txtBuscar.Size = new Size(261, 26);
             txtBuscar.TabIndex = 3;
             txtBuscar.TextAlign = HorizontalAlignment.Center;
             txtBuscar.TextChanged += txtBuscar_TextChanged;
@@ -177,10 +170,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(35, 28);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(31, 21);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(57, 67);
+            pictureBox1.Size = new Size(50, 50);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
@@ -190,9 +182,9 @@
             label2.AutoSize = true;
             label2.Font = new Font("Lucida Bright", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(126, 67);
+            label2.Location = new Point(110, 50);
             label2.Name = "label2";
-            label2.Size = new Size(499, 17);
+            label2.Size = new Size(386, 15);
             label2.TabIndex = 1;
             label2.Text = "CÁTALOGO COMPLETO DE CINTAS VHS DISPONIBLES EN TIENDA";
             // 
@@ -202,9 +194,9 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Rockwell Condensed", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(246, 170, 28);
-            label1.Location = new Point(126, 12);
+            label1.Location = new Point(110, 9);
             label1.Name = "label1";
-            label1.Size = new Size(245, 51);
+            label1.Size = new Size(195, 41);
             label1.TabIndex = 0;
             label1.Text = "INVENTARIO";
             label1.Click += label1_Click;
@@ -221,10 +213,10 @@
             btnEliminar.ForeColor = Color.Black;
             btnEliminar.Image = (Image)resources.GetObject("btnEliminar.Image");
             btnEliminar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnEliminar.Location = new Point(35, 557);
-            btnEliminar.Margin = new Padding(5, 4, 5, 4);
+            btnEliminar.Location = new Point(31, 418);
+            btnEliminar.Margin = new Padding(4, 3, 4, 3);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(55, 64);
+            btnEliminar.Size = new Size(48, 48);
             btnEliminar.TabIndex = 4;
             btnEliminar.UseVisualStyleBackColor = false;
             btnEliminar.Click += btnEliminar_Click;
@@ -241,10 +233,10 @@
             btnEditar.ForeColor = Color.Black;
             btnEditar.Image = (Image)resources.GetObject("btnEditar.Image");
             btnEditar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnEditar.Location = new Point(106, 557);
-            btnEditar.Margin = new Padding(5, 4, 5, 4);
+            btnEditar.Location = new Point(93, 418);
+            btnEditar.Margin = new Padding(4, 3, 4, 3);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(55, 64);
+            btnEditar.Size = new Size(48, 48);
             btnEditar.TabIndex = 3;
             btnEditar.UseVisualStyleBackColor = false;
             btnEditar.Click += btnEditar_Click;
@@ -259,10 +251,9 @@
             panel2.Controls.Add(dgwVideo);
             panel2.Controls.Add(lblConteo);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(0, 153);
-            panel2.Margin = new Padding(3, 4, 3, 4);
+            panel2.Location = new Point(0, 115);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1511, 780);
+            panel2.Size = new Size(1213, 476);
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
             // 
@@ -278,10 +269,10 @@
             btnGuardar.ForeColor = Color.Black;
             btnGuardar.Image = (Image)resources.GetObject("btnGuardar.Image");
             btnGuardar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnGuardar.Location = new Point(175, 557);
-            btnGuardar.Margin = new Padding(5, 4, 5, 4);
+            btnGuardar.Location = new Point(153, 418);
+            btnGuardar.Margin = new Padding(4, 3, 4, 3);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(55, 64);
+            btnGuardar.Size = new Size(48, 48);
             btnGuardar.TabIndex = 40;
             btnGuardar.UseVisualStyleBackColor = false;
             btnGuardar.Visible = false;
@@ -299,20 +290,18 @@
             panel3.Controls.Add(txtDirector);
             panel3.Controls.Add(pictureBox3);
             panel3.Dock = DockStyle.Right;
-            panel3.Location = new Point(972, 0);
-            panel3.Margin = new Padding(3, 4, 3, 4);
+            panel3.Location = new Point(741, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(539, 780);
+            panel3.Size = new Size(472, 476);
             panel3.TabIndex = 39;
             // 
             // pictureBox4
             // 
             pictureBox4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(437, 19);
-            pictureBox4.Margin = new Padding(3, 4, 3, 4);
+            pictureBox4.Location = new Point(382, 14);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(73, 86);
+            pictureBox4.Size = new Size(64, 64);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 41;
             pictureBox4.TabStop = false;
@@ -323,11 +312,10 @@
             txtEstado.BorderStyle = BorderStyle.FixedSingle;
             txtEstado.Font = new Font("Lucida Bright", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtEstado.ForeColor = Color.Black;
-            txtEstado.Location = new Point(230, 648);
-            txtEstado.Margin = new Padding(3, 4, 3, 4);
+            txtEstado.Location = new Point(201, 486);
             txtEstado.Multiline = true;
             txtEstado.Name = "txtEstado";
-            txtEstado.Size = new Size(280, 38);
+            txtEstado.Size = new Size(245, 29);
             txtEstado.TabIndex = 38;
             txtEstado.TextAlign = HorizontalAlignment.Center;
             // 
@@ -337,11 +325,10 @@
             txtCodigo.BorderStyle = BorderStyle.FixedSingle;
             txtCodigo.Font = new Font("Lucida Bright", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtCodigo.ForeColor = Color.Black;
-            txtCodigo.Location = new Point(230, 113);
-            txtCodigo.Margin = new Padding(3, 4, 3, 4);
+            txtCodigo.Location = new Point(201, 85);
             txtCodigo.Multiline = true;
             txtCodigo.Name = "txtCodigo";
-            txtCodigo.Size = new Size(280, 38);
+            txtCodigo.Size = new Size(245, 29);
             txtCodigo.TabIndex = 25;
             txtCodigo.TextAlign = HorizontalAlignment.Center;
             txtCodigo.TextChanged += textBox2_TextChanged;
@@ -352,11 +339,10 @@
             txtCopias.BorderStyle = BorderStyle.FixedSingle;
             txtCopias.Font = new Font("Lucida Bright", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtCopias.ForeColor = Color.Black;
-            txtCopias.Location = new Point(230, 557);
-            txtCopias.Margin = new Padding(3, 4, 3, 4);
+            txtCopias.Location = new Point(201, 418);
             txtCopias.Multiline = true;
             txtCopias.Name = "txtCopias";
-            txtCopias.Size = new Size(280, 38);
+            txtCopias.Size = new Size(245, 29);
             txtCopias.TabIndex = 37;
             txtCopias.TextAlign = HorizontalAlignment.Center;
             // 
@@ -366,11 +352,10 @@
             txtTitulo.BorderStyle = BorderStyle.FixedSingle;
             txtTitulo.Font = new Font("Lucida Bright", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtTitulo.ForeColor = Color.Black;
-            txtTitulo.Location = new Point(230, 203);
-            txtTitulo.Margin = new Padding(3, 4, 3, 4);
+            txtTitulo.Location = new Point(201, 152);
             txtTitulo.Multiline = true;
             txtTitulo.Name = "txtTitulo";
-            txtTitulo.Size = new Size(280, 38);
+            txtTitulo.Size = new Size(245, 29);
             txtTitulo.TabIndex = 33;
             txtTitulo.TextAlign = HorizontalAlignment.Center;
             // 
@@ -380,11 +365,10 @@
             txtAnio.BorderStyle = BorderStyle.FixedSingle;
             txtAnio.Font = new Font("Lucida Bright", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtAnio.ForeColor = Color.Black;
-            txtAnio.Location = new Point(230, 473);
-            txtAnio.Margin = new Padding(3, 4, 3, 4);
+            txtAnio.Location = new Point(201, 355);
             txtAnio.Multiline = true;
             txtAnio.Name = "txtAnio";
-            txtAnio.Size = new Size(280, 38);
+            txtAnio.Size = new Size(245, 29);
             txtAnio.TabIndex = 36;
             txtAnio.TextAlign = HorizontalAlignment.Center;
             // 
@@ -394,11 +378,10 @@
             txtGenero.BorderStyle = BorderStyle.FixedSingle;
             txtGenero.Font = new Font("Lucida Bright", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtGenero.ForeColor = Color.Black;
-            txtGenero.Location = new Point(230, 293);
-            txtGenero.Margin = new Padding(3, 4, 3, 4);
+            txtGenero.Location = new Point(201, 220);
             txtGenero.Multiline = true;
             txtGenero.Name = "txtGenero";
-            txtGenero.Size = new Size(280, 38);
+            txtGenero.Size = new Size(245, 29);
             txtGenero.TabIndex = 34;
             txtGenero.TextAlign = HorizontalAlignment.Center;
             // 
@@ -408,11 +391,10 @@
             txtDirector.BorderStyle = BorderStyle.FixedSingle;
             txtDirector.Font = new Font("Lucida Bright", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtDirector.ForeColor = Color.Black;
-            txtDirector.Location = new Point(230, 385);
-            txtDirector.Margin = new Padding(3, 4, 3, 4);
+            txtDirector.Location = new Point(201, 289);
             txtDirector.Multiline = true;
             txtDirector.Name = "txtDirector";
-            txtDirector.Size = new Size(280, 38);
+            txtDirector.Size = new Size(245, 29);
             txtDirector.TabIndex = 35;
             txtDirector.TextAlign = HorizontalAlignment.Center;
             // 
@@ -420,10 +402,9 @@
             // 
             pictureBox3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(45, 0);
-            pictureBox3.Margin = new Padding(3, 4, 3, 4);
+            pictureBox3.Location = new Point(39, 0);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(491, 780);
+            pictureBox3.Size = new Size(430, 585);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 24;
             pictureBox3.TabStop = false;
@@ -436,38 +417,37 @@
             dgwVideo.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgwVideo.BackgroundColor = Color.White;
             dgwVideo.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(34, 9, 1);
-            dataGridViewCellStyle1.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(98, 23, 8);
-            dataGridViewCellStyle1.SelectionForeColor = Color.White;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgwVideo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(34, 9, 1);
+            dataGridViewCellStyle4.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(98, 23, 8);
+            dataGridViewCellStyle4.SelectionForeColor = Color.White;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgwVideo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgwVideo.ColumnHeadersHeight = 29;
             dgwVideo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dgwVideo.EnableHeadersVisualStyles = false;
             dgwVideo.GridColor = Color.Black;
-            dgwVideo.Location = new Point(12, 83);
-            dgwVideo.Margin = new Padding(3, 4, 3, 4);
+            dgwVideo.Location = new Point(10, 62);
             dgwVideo.Name = "dgwVideo";
             dgwVideo.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(246, 170, 28);
-            dataGridViewCellStyle2.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(34, 9, 1);
-            dataGridViewCellStyle2.SelectionForeColor = Color.White;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgwVideo.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(246, 170, 28);
+            dataGridViewCellStyle5.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(34, 9, 1);
+            dataGridViewCellStyle5.SelectionForeColor = Color.White;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgwVideo.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dgwVideo.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Lucida Bright", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(246, 170, 28);
-            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
-            dgwVideo.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            dgwVideo.Size = new Size(767, 457);
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Lucida Bright", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle6.ForeColor = Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(246, 170, 28);
+            dataGridViewCellStyle6.SelectionForeColor = Color.Black;
+            dgwVideo.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dgwVideo.Size = new Size(671, 343);
             dgwVideo.TabIndex = 8;
             dgwVideo.SelectionChanged += dgwVideo_SelectionChanged;
             // 
@@ -476,23 +456,23 @@
             lblConteo.AutoSize = true;
             lblConteo.Font = new Font("Rockwell Condensed", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblConteo.ForeColor = Color.White;
-            lblConteo.Location = new Point(23, 44);
+            lblConteo.Location = new Point(20, 33);
             lblConteo.Name = "lblConteo";
-            lblConteo.Size = new Size(198, 24);
+            lblConteo.Size = new Size(159, 19);
             lblConteo.TabIndex = 0;
             lblConteo.Text = "MOSTRANDO # VIDEOS";
             lblConteo.Click += lblConteo_Click;
             // 
             // InventarioLista
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(246, 170, 28);
-            ClientSize = new Size(1511, 933);
+            ClientSize = new Size(1213, 591);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(5, 4, 5, 4);
+            Margin = new Padding(4, 3, 4, 3);
             Name = "InventarioLista";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "InventarioLista";

@@ -72,23 +72,23 @@ namespace Renta_de_Video_2._0.Resources
             {
                 // manejo de errores de cada campo Andre Gonzalez 9959-23-3117
                 if (string.IsNullOrWhiteSpace(NombreCompleto.Text))
-                        throw new Exception("El nombre completo es obligatorio.");
+                    throw new Exception("El nombre completo es obligatorio.");
 
                 string dpiLimpio = DPI.Text.Replace(" ", "");
-             
-                if (dpiLimpio.Length != 13 || !dpiLimpio.All(char.IsDigit))
-                throw new Exception("El DPI debe tener 13 dígitos numéricos.");
 
-                    string telLimpio = Telefono.Text.Replace("-", "");
-           
+                if (dpiLimpio.Length != 13 || !dpiLimpio.All(char.IsDigit))
+                    throw new Exception("El DPI debe tener 13 dígitos numéricos.");
+
+                string telLimpio = Telefono.Text.Replace("-", "");
+
                 if (telLimpio.Length != 8 || !telLimpio.All(char.IsDigit))
                     throw new Exception("El teléfono debe tener 8 dígitos.");
 
-               
-                if (string.IsNullOrWhiteSpace(Direccion.Text))
-                        throw new Exception("La dirección es obligatoria.");
 
-            
+                if (string.IsNullOrWhiteSpace(Direccion.Text))
+                    throw new Exception("La dirección es obligatoria.");
+
+
                 if (!Regex.IsMatch(Correo.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
                     throw new Exception("Ingresa un correo electrónico válido.");
 
@@ -102,15 +102,15 @@ namespace Renta_de_Video_2._0.Resources
                     Correo = Correo.Text
                 };
 
-              
+
                 ClienteConsultas consultas = new ClienteConsultas();
-                    bool clienteGuardado = consultas.AgregarCliente(nuevoCliente);
+                bool clienteGuardado = consultas.AgregarCliente(nuevoCliente);
 
                 // manejo de error guardado en base de datos Andre Gonzalez 9959-23-3117
                 if (!clienteGuardado)
-                throw new Exception("No se pudo guardar el cliente en la base de datos.");
+                    throw new Exception("No se pudo guardar el cliente en la base de datos.");
 
-               
+
                 string nuevoCodigo = "MEM-" + contadorMembresias.ToString("D4");
                 contadorMembresias++;
                 Codigo_de_membresia.Text = nuevoCodigo;
@@ -155,6 +155,11 @@ namespace Renta_de_Video_2._0.Resources
         private void NombreCompleto_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
