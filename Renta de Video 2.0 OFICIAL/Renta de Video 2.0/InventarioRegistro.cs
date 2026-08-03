@@ -16,5 +16,25 @@ namespace Renta_de_Video_2._0
         {
             InitializeComponent();
         }
+
+        private void panelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void InventarioRegistro_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        // Regresar a la lista dentro del mismo panel del menú
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Form menuPrincipal = Application.OpenForms["menu"];
+            if (menuPrincipal is menu formMenu)
+            {
+                formMenu.AbrirFormInPanel(new InventarioLista());
+            }
+        }
     }
 }

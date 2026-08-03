@@ -92,7 +92,7 @@ namespace Renta_de_Video_2._0.Resources
                 if (!Regex.IsMatch(Correo.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
                     throw new Exception("Ingresa un correo electrónico válido.");
 
-                // encadenacion form con Base de datose del cliente Andre Gonzalez 9959-23-3117
+                // encadenacion form con Base de datos del cliente Andre Gonzalez 9959-23-3117
                 MCliente nuevoCliente = new MCliente
                 {
                     Nombre = NombreCompleto.Text,

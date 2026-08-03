@@ -21,14 +21,13 @@ namespace Renta_de_Video_2._0.Clases
         public List<Cusuario> getUsuarios(string filtro)
         {
             string QUERY = "SELECT * FROM usuario ";
-            // Asegurarse de no acumular resultados de llamadas previas
             mUsuarios.Clear();
             MySqlDataReader mReader = null;
+
             try
             {
-                if (filtro != "")
+                if (!string.IsNullOrEmpty(filtro))
                 {
-                    // Usar CONCAT para convertir columnas numéricas a texto y permitir LIKE
                     QUERY += " WHERE " +
                         "CONCAT(id_usuario) LIKE '%" + filtro + "%' OR " +
                         "usuario LIKE '%" + filtro + "%' OR " +
@@ -38,7 +37,6 @@ namespace Renta_de_Video_2._0.Clases
                         "estado LIKE '%" + filtro + "%'";
                 }
 
-                // Registro para depuración: mostrar la consulta que se ejecuta
                 System.Diagnostics.Debug.WriteLine("CusuarioCRUD.getUsuarios - QUERY: " + QUERY);
 
                 MySqlCommand mComando = new MySqlCommand(QUERY);
@@ -49,8 +47,7 @@ namespace Renta_de_Video_2._0.Clases
                 while (mReader.Read())
                 {
                     mUsuario = new Cusuario();
-                    // Usar los nombres reales de columna devueltos por la consulta
-                    // Obtener índices de columnas y leer usando ordinales (más seguro)
+
                     int idxId = mReader.GetOrdinal("id_usuario");
                     int idxUsuario = mReader.GetOrdinal("usuario");
                     int idxContrasena = mReader.GetOrdinal("contrasena");
@@ -62,46 +59,96 @@ namespace Renta_de_Video_2._0.Clases
                     mUsuario.contrasena = mReader.IsDBNull(idxContrasena) ? string.Empty : mReader.GetString(idxContrasena);
                     mUsuario.id_empleado = mReader.GetUInt64(idxIdEmpleado);
                     mUsuario.rol = mReader.IsDBNull(idxRol) ? string.Empty : mReader.GetString(idxRol);
-                    // Leer estado de forma robusta: obtener el valor y convertir a string luego tomar primer carácter
+
                     object estadoVal = mReader.GetValue(mReader.GetOrdinal("estado"));
                     string estadoStr = estadoVal != null ? estadoVal.ToString() : string.Empty;
                     mUsuario.estado = !string.IsNullOrEmpty(estadoStr) ? estadoStr[0] : '\0';
+
                     mUsuarios.Add(mUsuario);
                 }
 
                 mReader.Close();
-                // Asegurarse de cerrar la conexión después de usar el reader
                 conexionMysql.cerrarConexion();
             }
             catch (Exception)
             {
-
+                conexionMysql.cerrarConexion();
                 throw;
             }
-
 
             return mUsuarios;
         }
 
         internal bool agregarUsuario(Cusuario mUsuario)
         {
-            string INSERT = "INSERT INTO usuario (usuario, contrasena, id_empleado, rol, estado) VALUES (@usuario, @contrasena, @id_empleado, @rol, @estado)";
+            try
+            {
+                string INSERT = "INSERT INTO usuario (usuario, contrasena, id_empleado, rol, estado) VALUES (@usuario, @contrasena, @id_empleado, @rol, @estado)";
 
-            MySqlCommand mCommand = new MySqlCommand(INSERT, conexionMysql.establecerConexion());
-            mCommand.Parameters.AddWithValue("@usuario", mUsuario.usuario);
-            mCommand.Parameters.AddWithValue("@contrasena", mUsuario.contrasena);
-            mCommand.Parameters.AddWithValue("@id_empleado", mUsuario.id_empleado);
-            mCommand.Parameters.AddWithValue("@rol", mUsuario.rol);
+                MySqlCommand mCommand = new MySqlCommand(INSERT, conexionMysql.establecerConexion());
+                mCommand.Parameters.AddWithValue("@usuario", mUsuario.usuario);
+                mCommand.Parameters.AddWithValue("@contrasena", mUsuario.contrasena);
+                mCommand.Parameters.AddWithValue("@id_empleado", mUsuario.id_empleado);
+                mCommand.Parameters.AddWithValue("@rol", mUsuario.rol);
 
-            // Enviar 'estado' como valor numérico (TINYINT) en lugar de char para evitar errores de longitud
-            var pEstado = mCommand.CreateParameter();
-            pEstado.ParameterName = "@estado";
-            // Usar DbType.Byte para mapear a TINYINT en la base de datos de forma segura
-            pEstado.DbType = System.Data.DbType.Byte;
-            pEstado.Value = (mUsuario.estado == '1') ? (byte)1 : (byte)0;
-            mCommand.Parameters.Add(pEstado);
+                var pEstado = mCommand.CreateParameter();
+                pEstado.ParameterName = "@estado";
+                pEstado.DbType = System.Data.DbType.Byte;
+                pEstado.Value = (mUsuario.estado == '1') ? (byte)1 : (byte)0;
+                mCommand.Parameters.Add(pEstado);
 
-            return mCommand.ExecuteNonQuery() > 0;
+                bool resultado = mCommand.ExecuteNonQuery() > 0;
+                conexionMysql.cerrarConexion();
+
+                return resultado;
+            }
+            catch (Exception)
+            {
+                conexionMysql.cerrarConexion();
+                throw;
+            }
+        }
+
+        public bool validarLogin(string usuarioIngresado, string contrasenaIngresada)
+        {
+            string QUERY = "SELECT * FROM usuario WHERE usuario = @usuario AND contrasena = @contrasena AND (estado = 1 OR estado = '1') LIMIT 1";
+
+            try
+            {
+                MySqlCommand mComando = new MySqlCommand(QUERY, conexionMysql.establecerConexion());
+                mComando.Parameters.AddWithValue("@usuario", usuarioIngresado);
+                mComando.Parameters.AddWithValue("@contrasena", contrasenaIngresada);
+
+                MySqlDataReader mReader = mComando.ExecuteReader();
+
+                if (mReader.Read())
+                {
+                    // Llenar las propiedades de la clase estática SesionUsuario
+                    SesionUsuario.IdUsuario = mReader.GetUInt64(mReader.GetOrdinal("id_usuario"));
+                    SesionUsuario.Usuario = mReader.IsDBNull(mReader.GetOrdinal("usuario")) ? string.Empty : mReader.GetString(mReader.GetOrdinal("usuario"));
+                    SesionUsuario.Rol = mReader.IsDBNull(mReader.GetOrdinal("rol")) ? string.Empty : mReader.GetString(mReader.GetOrdinal("rol"));
+                    SesionUsuario.IdEmpleado = mReader.GetUInt64(mReader.GetOrdinal("id_empleado"));
+
+                    mReader.Close();
+                    conexionMysql.cerrarConexion();
+                    return true; // Usuario autenticado
+                }
+
+                mReader.Close();
+                conexionMysql.cerrarConexion();
+                return false; // Credenciales incorrectas o usuario inactivo
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine("Error en validarLogin: " + ex.Message);
+                conexionMysql.cerrarConexion();
+                throw;
+            }
+        }
+
+        public bool ValidarUsuario(string usuarioIngresado, string contrasenaIngresada)
+        {
+            return validarLogin(usuarioIngresado, contrasenaIngresada);
         }
     }
 }

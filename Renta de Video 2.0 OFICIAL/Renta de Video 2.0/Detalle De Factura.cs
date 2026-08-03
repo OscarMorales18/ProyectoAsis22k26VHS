@@ -77,5 +77,10 @@ namespace Renta_de_Video_2._0
         {
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
