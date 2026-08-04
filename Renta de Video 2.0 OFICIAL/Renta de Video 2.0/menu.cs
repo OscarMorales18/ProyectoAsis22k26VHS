@@ -158,7 +158,7 @@ namespace Renta_de_Video_2._0
         // 7 seguridad del sistema (Victor Samayoa 0901-23-3424)
         private void btnSeguridad_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new FormWalkthriught2());
+            AbrirFormInPanel(new Auditoria());
         }
 
         // Métodos secundarios dejados por compatibilidad

@@ -29,13 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gestion_Empleados));
-            cmbRol = new ComboBox();
-            cmbEstado = new ComboBox();
-            dvgUsuarios = new DataGridView();
-            Codigo = new DataGridViewTextBoxColumn();
+            cmb_rol = new ComboBox();
+            cmb_estado = new ComboBox();
+            dgv_usuarios = new DataGridView();
             Usuario = new DataGridViewTextBoxColumn();
             Contraseña = new DataGridViewTextBoxColumn();
-            Id_Empleado = new DataGridViewTextBoxColumn();
+            CodigoEmpleado = new DataGridViewTextBoxColumn();
             Rol = new DataGridViewTextBoxColumn();
             Estado = new DataGridViewTextBoxColumn();
             btn_eliminar = new Button();
@@ -43,103 +42,87 @@
             btn_agregar = new Button();
             btn_editar = new Button();
             pictureBox1 = new PictureBox();
-            txt_idemple = new TextBox();
-            txt_contra = new TextBox();
-            txt_usu = new TextBox();
+            txt_idempleado = new TextBox();
+            txt_contrasena = new TextBox();
+            txt_usuario = new TextBox();
             pictureBox2 = new PictureBox();
-            txt_busca = new TextBox();
-            button2 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dvgUsuarios).BeginInit();
+            label1 = new Label();
+            lblNombreUsuario = new Label();
+            lblRol = new Label();
+            ((System.ComponentModel.ISupportInitialize)dgv_usuarios).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
-            // cmbRol
+            // cmb_rol
             // 
-            cmbRol.BackColor = Color.White;
-            cmbRol.ForeColor = Color.FromArgb(53, 0, 1);
-            cmbRol.FormattingEnabled = true;
-            cmbRol.Items.AddRange(new object[] { "Empleado", "Administrador" });
-            cmbRol.Location = new Point(54, 305);
-            cmbRol.Name = "cmbRol";
-            cmbRol.Size = new Size(106, 23);
-            cmbRol.TabIndex = 29;
-            cmbRol.SelectedIndexChanged += cmbRol_SelectedIndexChanged;
+            cmb_rol.BackColor = Color.FromArgb(42, 18, 11);
+            cmb_rol.ForeColor = SystemColors.Info;
+            cmb_rol.FormattingEnabled = true;
+            cmb_rol.Items.AddRange(new object[] { "Empleado", "Administrador", "Auditor" });
+            cmb_rol.Location = new Point(61, 429);
+            cmb_rol.Name = "cmb_rol";
+            cmb_rol.Size = new Size(106, 23);
+            cmb_rol.TabIndex = 29;
             // 
-            // cmbEstado
+            // cmb_estado
             // 
-            cmbEstado.BackColor = Color.White;
-            cmbEstado.ForeColor = Color.FromArgb(53, 0, 1);
-            cmbEstado.FormattingEnabled = true;
-            cmbEstado.Items.AddRange(new object[] { "Activo", "Retirado" });
-            cmbEstado.Location = new Point(54, 371);
-            cmbEstado.Name = "cmbEstado";
-            cmbEstado.Size = new Size(106, 23);
-            cmbEstado.TabIndex = 31;
-            cmbEstado.SelectedIndexChanged += cmbEstado_SelectedIndexChanged;
+            cmb_estado.BackColor = Color.FromArgb(42, 18, 11);
+            cmb_estado.ForeColor = SystemColors.Info;
+            cmb_estado.FormattingEnabled = true;
+            cmb_estado.Items.AddRange(new object[] { "1", "0" });
+            cmb_estado.Location = new Point(61, 500);
+            cmb_estado.Name = "cmb_estado";
+            cmb_estado.Size = new Size(106, 23);
+            cmb_estado.TabIndex = 31;
             // 
-            // dvgUsuarios
+            // dgv_usuarios
             // 
-            dvgUsuarios.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dvgUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dvgUsuarios.Columns.AddRange(new DataGridViewColumn[] { Codigo, Usuario, Contraseña, Id_Empleado, Rol, Estado });
-            dvgUsuarios.Location = new Point(437, 156);
-            dvgUsuarios.Name = "dvgUsuarios";
-            dvgUsuarios.RowHeadersWidth = 51;
-            dvgUsuarios.RowTemplate.Height = 24;
-            dvgUsuarios.Size = new Size(739, 283);
-            dvgUsuarios.TabIndex = 32;
-            // 
-            // Codigo
-            // 
-            Codigo.HeaderText = "Codigo";
-            Codigo.MinimumWidth = 6;
-            Codigo.Name = "Codigo";
-            Codigo.Width = 125;
+            dgv_usuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_usuarios.Columns.AddRange(new DataGridViewColumn[] { Usuario, Contraseña, CodigoEmpleado, Rol, Estado });
+            dgv_usuarios.Location = new Point(457, 175);
+            dgv_usuarios.Name = "dgv_usuarios";
+            dgv_usuarios.RowHeadersWidth = 51;
+            dgv_usuarios.RowTemplate.Height = 24;
+            dgv_usuarios.Size = new Size(670, 254);
+            dgv_usuarios.TabIndex = 32;
             // 
             // Usuario
             // 
             Usuario.HeaderText = "Usuario";
             Usuario.MinimumWidth = 6;
             Usuario.Name = "Usuario";
-            Usuario.Width = 125;
+            Usuario.Width = 115;
             // 
             // Contraseña
             // 
             Contraseña.HeaderText = "Contraseña";
-            Contraseña.MinimumWidth = 6;
             Contraseña.Name = "Contraseña";
-            Contraseña.Width = 125;
             // 
-            // Id_Empleado
+            // CodigoEmpleado
             // 
-            Id_Empleado.HeaderText = "ID_Empleado";
-            Id_Empleado.MinimumWidth = 6;
-            Id_Empleado.Name = "Id_Empleado";
-            Id_Empleado.Width = 125;
+            CodigoEmpleado.HeaderText = "CodigoEmpleado";
+            CodigoEmpleado.Name = "CodigoEmpleado";
+            CodigoEmpleado.Width = 140;
             // 
             // Rol
             // 
             Rol.HeaderText = "Rol";
-            Rol.MinimumWidth = 6;
             Rol.Name = "Rol";
-            Rol.Width = 125;
             // 
             // Estado
             // 
             Estado.HeaderText = "Estado";
-            Estado.MinimumWidth = 6;
             Estado.Name = "Estado";
-            Estado.Width = 125;
             // 
             // btn_eliminar
             // 
-            btn_eliminar.BackColor = Color.FromArgb(246, 170, 28);
+            btn_eliminar.BackColor = Color.FromArgb(247, 170, 28);
             btn_eliminar.FlatStyle = FlatStyle.Popup;
             btn_eliminar.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_eliminar.Location = new Point(87, 534);
+            btn_eliminar.Location = new Point(61, 622);
             btn_eliminar.Name = "btn_eliminar";
-            btn_eliminar.Size = new Size(151, 38);
+            btn_eliminar.Size = new Size(163, 41);
             btn_eliminar.TabIndex = 33;
             btn_eliminar.Text = "Eliminar";
             btn_eliminar.UseVisualStyleBackColor = false;
@@ -147,12 +130,12 @@
             // 
             // btn_guardar
             // 
-            btn_guardar.BackColor = Color.FromArgb(246, 170, 28);
+            btn_guardar.BackColor = Color.FromArgb(247, 170, 28);
             btn_guardar.FlatStyle = FlatStyle.Popup;
             btn_guardar.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_guardar.Location = new Point(271, 544);
+            btn_guardar.Location = new Point(230, 622);
             btn_guardar.Name = "btn_guardar";
-            btn_guardar.Size = new Size(141, 35);
+            btn_guardar.Size = new Size(161, 41);
             btn_guardar.TabIndex = 34;
             btn_guardar.Text = "Guardar";
             btn_guardar.UseVisualStyleBackColor = false;
@@ -160,12 +143,12 @@
             // 
             // btn_agregar
             // 
-            btn_agregar.BackColor = Color.FromArgb(246, 170, 28);
+            btn_agregar.BackColor = Color.FromArgb(247, 170, 28);
             btn_agregar.FlatStyle = FlatStyle.Popup;
             btn_agregar.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_agregar.Location = new Point(87, 491);
+            btn_agregar.Location = new Point(61, 575);
             btn_agregar.Name = "btn_agregar";
-            btn_agregar.Size = new Size(148, 39);
+            btn_agregar.Size = new Size(163, 41);
             btn_agregar.TabIndex = 35;
             btn_agregar.Text = "Agregar";
             btn_agregar.UseVisualStyleBackColor = false;
@@ -173,12 +156,12 @@
             // 
             // btn_editar
             // 
-            btn_editar.BackColor = Color.FromArgb(246, 170, 28);
+            btn_editar.BackColor = Color.FromArgb(247, 170, 28);
             btn_editar.FlatStyle = FlatStyle.Popup;
             btn_editar.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_editar.Location = new Point(271, 493);
+            btn_editar.Location = new Point(230, 575);
             btn_editar.Name = "btn_editar";
-            btn_editar.Size = new Size(141, 37);
+            btn_editar.Size = new Size(161, 41);
             btn_editar.TabIndex = 36;
             btn_editar.Text = "Editar";
             btn_editar.UseVisualStyleBackColor = false;
@@ -191,102 +174,113 @@
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1213, 591);
+            pictureBox1.Size = new Size(1067, 628);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 38;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
-            // txt_idemple
+            // txt_idempleado
             // 
-            txt_idemple.BackColor = Color.FromArgb(42, 18, 11);
-            txt_idemple.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txt_idemple.Location = new Point(54, 256);
-            txt_idemple.Name = "txt_idemple";
-            txt_idemple.Size = new Size(317, 27);
-            txt_idemple.TabIndex = 40;
-            txt_idemple.TextChanged += NombreCompleto_TextChanged;
+            txt_idempleado.BackColor = Color.FromArgb(42, 18, 11);
+            txt_idempleado.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_idempleado.ForeColor = SystemColors.Info;
+            txt_idempleado.Location = new Point(61, 364);
+            txt_idempleado.Name = "txt_idempleado";
+            txt_idempleado.Size = new Size(317, 27);
+            txt_idempleado.TabIndex = 40;
+        
+            // txt_contrasena
+
+            txt_contrasena.BackColor = Color.FromArgb(42, 18, 11);
+            txt_contrasena.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_contrasena.ForeColor = SystemColors.Info;
+            txt_contrasena.Location = new Point(61, 304);
+            txt_contrasena.Name = "txt_contrasena";
+            txt_contrasena.Size = new Size(317, 27);
+            txt_contrasena.TabIndex = 41;
             // 
-            // txt_contra
+            // txt_usuario
             // 
-            txt_contra.BackColor = Color.FromArgb(42, 18, 11);
-            txt_contra.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txt_contra.Location = new Point(54, 192);
-            txt_contra.Name = "txt_contra";
-            txt_contra.Size = new Size(317, 27);
-            txt_contra.TabIndex = 41;
-            txt_contra.TextChanged += contra_TextChanged;
-            // 
-            // txt_usu
-            // 
-            txt_usu.BackColor = Color.FromArgb(42, 18, 11);
-            txt_usu.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txt_usu.Location = new Point(54, 132);
-            txt_usu.Name = "txt_usu";
-            txt_usu.Size = new Size(317, 27);
-            txt_usu.TabIndex = 42;
-            txt_usu.TextChanged += usu_TextChanged;
+            txt_usuario.BackColor = Color.FromArgb(42, 18, 11);
+            txt_usuario.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_usuario.ForeColor = SystemColors.Info;
+            txt_usuario.Location = new Point(61, 235);
+            txt_usuario.Name = "txt_usuario";
+            txt_usuario.Size = new Size(317, 27);
+            txt_usuario.TabIndex = 42;
             // 
             // pictureBox2
             // 
-            pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox2.BackColor = Color.FromArgb(42, 0, 0);
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(982, 470);
+            pictureBox2.Location = new Point(875, 441);
             pictureBox2.Margin = new Padding(4, 3, 4, 3);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(133, 102);
+            pictureBox2.Size = new Size(192, 187);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 45;
             pictureBox2.TabStop = false;
             // 
-            // txt_busca
+            // label1
             // 
-            txt_busca.BackColor = Color.FromArgb(42, 18, 11);
-            txt_busca.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txt_busca.ForeColor = SystemColors.Info;
-            txt_busca.Location = new Point(571, 470);
-            txt_busca.Name = "txt_busca";
-            txt_busca.Size = new Size(317, 27);
-            txt_busca.TabIndex = 46;
-            txt_busca.TextChanged += txt_busca_TextChanged;
+            label1.BackColor = Color.FromArgb(30, 9, 7);
+            label1.ForeColor = Color.FromArgb(247, 170, 28);
+            label1.Location = new Point(184, 500);
+            label1.Name = "label1";
+            label1.Size = new Size(81, 33);
+            label1.TabIndex = 46;
+            label1.Text = "1 = Activo\r\n0 = No Activo";
+            label1.TextAlign = ContentAlignment.TopCenter;
             // 
-            // button2
+            // lblNombreUsuario
             // 
-            button2.BackColor = Color.White;
-            button2.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(982, 12);
-            button2.Margin = new Padding(4, 3, 4, 3);
-            button2.Name = "button2";
-            button2.Size = new Size(35, 27);
-            button2.TabIndex = 47;
-            button2.Text = "X";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            lblNombreUsuario.AutoSize = true;
+            lblNombreUsuario.Font = new Font("Lucida Bright", 11.25F, FontStyle.Bold);
+            lblNombreUsuario.ForeColor = Color.FromArgb(246, 170, 28);
+            lblNombreUsuario.Location = new Point(809, 9);
+            lblNombreUsuario.Name = "lblNombreUsuario";
+            lblNombreUsuario.Size = new Size(134, 17);
+            lblNombreUsuario.TabIndex = 47;
+            lblNombreUsuario.Text = "Nombre Usuario";
+            lblNombreUsuario.Visible = false;
+            // 
+            // lblRol
+            // 
+            lblRol.AutoSize = true;
+            lblRol.Font = new Font("Lucida Bright", 11.25F, FontStyle.Bold);
+            lblRol.ForeColor = Color.FromArgb(246, 170, 28);
+            lblRol.Location = new Point(809, 26);
+            lblRol.Name = "lblRol";
+            lblRol.Size = new Size(33, 17);
+            lblRol.TabIndex = 48;
+            lblRol.Text = "Rol";
+            lblRol.Visible = false;
             // 
             // Gestion_Empleados
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1213, 591);
-            Controls.Add(button2);
-            Controls.Add(btn_eliminar);
-            Controls.Add(txt_busca);
+            ClientSize = new Size(1067, 628);
+            Controls.Add(lblRol);
+            Controls.Add(lblNombreUsuario);
+            Controls.Add(label1);
             Controls.Add(pictureBox2);
-            Controls.Add(txt_usu);
-            Controls.Add(txt_contra);
-            Controls.Add(txt_idemple);
+            Controls.Add(txt_usuario);
+            Controls.Add(txt_contrasena);
+            Controls.Add(txt_idempleado);
             Controls.Add(btn_editar);
             Controls.Add(btn_agregar);
             Controls.Add(btn_guardar);
-            Controls.Add(dvgUsuarios);
-            Controls.Add(cmbEstado);
-            Controls.Add(cmbRol);
+            Controls.Add(btn_eliminar);
+            Controls.Add(dgv_usuarios);
+            Controls.Add(cmb_estado);
+            Controls.Add(cmb_rol);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Gestion_Empleados";
             Text = "Gestion_Empleados";
-            ((System.ComponentModel.ISupportInitialize)dvgUsuarios).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_usuarios).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
@@ -294,31 +288,26 @@
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
         #endregion
-        private System.Windows.Forms.ComboBox cmbRol;
-        private System.Windows.Forms.ComboBox cmbEstado;
-        private System.Windows.Forms.DataGridView dvgUsuarios;
+        private System.Windows.Forms.ComboBox cmb_rol;
+        private System.Windows.Forms.ComboBox cmb_estado;
+        private System.Windows.Forms.DataGridView dgv_usuarios;
         private System.Windows.Forms.Button btn_eliminar;
         private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.Button btn_agregar;
         private System.Windows.Forms.Button btn_editar;
         private PictureBox pictureBox1;
-        private TextBox txt_idemple;
-        private TextBox txt_contra;
-        private TextBox txt_usu;
+        private TextBox txt_idempleado;
+        private TextBox txt_contrasena;
+        private TextBox txt_usuario;
         private PictureBox pictureBox2;
-        private DataGridViewTextBoxColumn Codigo;
+        private Label label1;
         private DataGridViewTextBoxColumn Usuario;
         private DataGridViewTextBoxColumn Contraseña;
-        private DataGridViewTextBoxColumn Id_Empleado;
+        private DataGridViewTextBoxColumn CodigoEmpleado;
         private DataGridViewTextBoxColumn Rol;
         private DataGridViewTextBoxColumn Estado;
-        private TextBox txt_busca;
-        private Button button2;
+        private Label lblNombreUsuario;
+        private Label lblRol;
     }
 }

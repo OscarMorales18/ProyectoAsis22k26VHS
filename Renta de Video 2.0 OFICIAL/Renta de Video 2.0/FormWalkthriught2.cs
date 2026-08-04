@@ -1,6 +1,4 @@
-﻿using Renta_de_Video_2._0.Clases;
-using Renta_de_Video_2._0.Resources;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySqlConnector;
+using Renta_de_Video_2._0.Clases;
+using Renta_de_Video_2._0.Resources;
 
 namespace Renta_de_Video_2._0
 {
@@ -29,22 +30,61 @@ namespace Renta_de_Video_2._0
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(Codigo_Membresia.Text))
+                string entrada = Codigo_Membresia.Text.Trim();
+
+                if (string.IsNullOrWhiteSpace(entrada))
                     throw new Exception("Ingresa un código de membresía para buscar.");
 
-                if (!Codigo_Membresia.Text.StartsWith("MEM-"))
-                    throw new Exception("El código de membresía debe tener el formato MEM-0000.");
+                // Si el usuario escribe solo un número (ej: "1"), se auto-formatea a "MEM-0001"
+                string codigoBuscado = entrada;
+                if (int.TryParse(entrada, out int idNum))
+                {
+                    codigoBuscado = "MEM-" + idNum.ToString("D4");
+                    Codigo_Membresia.Text = codigoBuscado; // Auto-completa el cuadro de texto
+                }
 
                 dataGridView1.Rows.Clear();
 
-                // Datos de ejemplo simulados (mientras no hay base de datos real)
-                if (Codigo_Membresia.Text == "MEM-0001")
+                Cconexion c = new Cconexion();
+                MySqlConnection conn = c.establecerConexion();
+
+                try
                 {
-                    dataGridView1.Rows.Add("Ana Gómez", "1234567890123", "12345678", "Zona 1, Ciudad", "ana@correo.com");
+                    string query = @"SELECT nombre, dpi, telefono, direccion, correo 
+                            FROM cliente 
+                            WHERE codigo_membresia = @codigo 
+                               OR id_cliente = @idNum";
+
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@codigo", codigoBuscado);
+                    cmd.Parameters.AddWithValue("@idNum", int.TryParse(entrada, out int id) ? id : 0);
+
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        bool encontrado = false;
+
+                        while (reader.Read())
+                        {
+                            encontrado = true;
+                            dataGridView1.Rows.Add(
+                                reader.IsDBNull(0) ? "" : reader.GetString("nombre"),
+                                reader.IsDBNull(1) ? "" : reader.GetString("dpi"),
+                                reader.IsDBNull(2) ? "" : reader.GetString("telefono"),
+                                reader.IsDBNull(3) ? "" : reader.GetString("direccion"),
+                                reader.IsDBNull(4) ? "" : reader.GetString("correo")
+                            );
+                        }
+
+                        if (!encontrado)
+                        {
+                            MessageBox.Show("No se encontró ningún cliente con la membresía " + codigoBuscado,
+                                            "Sin resultados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
                 }
-                else
+                finally
                 {
-                    throw new Exception("No se encontró ningún cliente con ese código de membresía.");
+                    c.cerrarConexion();
                 }
             }
             catch (Exception ex)
@@ -52,7 +92,6 @@ namespace Renta_de_Video_2._0
                 MessageBox.Show(ex.Message, "Error de búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
 
         private void AbrirFormInPanel(object Formhijo)
         {
@@ -63,28 +102,16 @@ namespace Renta_de_Video_2._0
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
+        private void label2_Click(object sender, EventArgs e) { }
 
-        }
+        private void label3_Click(object sender, EventArgs e) { }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
+        private void Codigo_Membresia_TextChanged(object sender, EventArgs e) { }
 
-        }
-
-        private void Codigo_Membresia_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
 
         private void panelContenedor_Paint(object sender, PaintEventArgs e) { }
+
         private void button3_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new FormWalkthriught3());
@@ -94,9 +121,5 @@ namespace Renta_de_Video_2._0
         {
             AbrirFormInPanel(new RegistroNuevoCliente());
         }
-
-
-
-
     }
 }

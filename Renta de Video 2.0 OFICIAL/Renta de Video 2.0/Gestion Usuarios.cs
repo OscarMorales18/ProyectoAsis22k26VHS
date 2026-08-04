@@ -1,5 +1,4 @@
-﻿using Renta_de_Video_2._0.Clases;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,283 +7,315 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySqlConnector;
+using Renta_de_Video_2._0.Clases;
 
 namespace Renta_de_Video_2._0
 {
     public partial class Gestion_Empleados : Form
     {
-        private List<Cusuario> mUsuarios;
-        private Cusuario mUsuario;
-        private CusuarioCRUD mUsuariosCRUD;
+        // Variable para almacenar el usuario en edición - Oscar Morales 9959-23-3070
+        private string usuarioEnEdicion = null;
+
         public Gestion_Empleados()
         {
             InitializeComponent();
-            mUsuarios = new List<Cusuario>();
-            mUsuariosCRUD = new CusuarioCRUD();
-
-            cargarUsuarios();
+            this.Load += Cargar_Usuarios;
+            CargarDatosUsuario();
+            AplicarPermisos();
         }
 
-        private void cargarUsuarios(string filtro = "")
+        private void Cargar_Usuarios(object sender, EventArgs e)
         {
-            dvgUsuarios.Rows.Clear();
-            dvgUsuarios.Refresh();
-            mUsuarios.Clear();
-            mUsuarios = mUsuariosCRUD.getUsuarios(filtro);
+            CargarUsuarios();
+        }
 
-            mUsuario = new Cusuario(); 
+        private void CargarDatosUsuario()
+        {
+            lblNombreUsuario.Text = SesionUsuario.Usuario;
+            lblRol.Text = SesionUsuario.Rol;
+        }
 
-            for (int i = 0; i < mUsuarios.Count(); i++)
+        private void AplicarPermisos()
+        {
+            string rol = SesionUsuario.Rol;
+            switch (rol)
             {
-                dvgUsuarios.RowTemplate.Height = 20;
-                // Convertir valores a string al añadir a columnas tipo texto para evitar InvalidCastException
-                dvgUsuarios.Rows.Add(
-                    mUsuarios[i].id.ToString(),
-                    mUsuarios[i].usuario ?? string.Empty,
-                    mUsuarios[i].contrasena ?? string.Empty,
-                    mUsuarios[i].id_empleado.ToString(),
-                    mUsuarios[i].rol ?? string.Empty,
-                    mUsuarios[i].estado.ToString());
+                case "Administrador":
+                    btn_eliminar.Enabled = false;
+                    break;
+
+                case "Auditor":
+                    btn_eliminar.Enabled = true;
+                    break;
+
+                default:
+                    MessageBox.Show("Rol no reconocido o sesión no válida.", "Error de Permisos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    break;
             }
         }
 
-        private void Gestion_Empleados_Load(object sender, EventArgs e)
+        // Cargamos los datos a la tabla - Oscar Morales 9959-23-3070
+        private void CargarUsuarios()
         {
-            cmbRol.Items.AddRange(new string[] { "Admin", "Empleado" });
-            cmbEstado.Items.AddRange(new string[] { "Activo", "Inactivo" });
+            dgv_usuarios.Rows.Clear();
 
-            // Añadir filas de ejemplo con el orden correcto de columnas: Codigo, Usuario, Contraseña, Id_Empleado, Rol, Estado
-            dvgUsuarios.Rows.Add("U001", "Andre Gonzalez", "agonzalez", "1", "Admin", "Activo");
-            dvgUsuarios.Rows.Add("U002", "Karla Ruiz", "kruiz", "2", "Empleado", "Activo");
+            Cconexion c = new Cconexion();
+            MySqlConnection conn = c.establecerConexion();
+
+            try
+            {
+                string query = "SELECT usuario, contrasena, id_empleado, rol, estado FROM usuario";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        dgv_usuarios.Rows.Add(
+                            reader.GetString("usuario"),
+                            reader.GetString("contrasena"),
+                            reader.GetInt32("id_empleado"),
+                            reader.GetString("rol"),
+                            reader.GetBoolean("estado") ? "1" : "0"
+                        );
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar usuarios.\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                c.cerrarConexion();
+            }
         }
 
-        // metodo compartido para no repetir las mismas validaciones en cada boton
+        // Validación de campos antes de agregar o editar un usuario - Oscar Morales 9959-23-3070
         private bool ValidarCampos()
         {
-            if (string.IsNullOrWhiteSpace(txt_usu.Text))
+            if (string.IsNullOrWhiteSpace(txt_usuario.Text))
                 throw new Exception("El usuario es obligatorio.");
-            if (string.IsNullOrWhiteSpace(txt_contra.Text))
+            if (string.IsNullOrWhiteSpace(txt_contrasena.Text))
                 throw new Exception("La contraseña es obligatoria.");
-            if (string.IsNullOrWhiteSpace(txt_idemple.Text))
-                throw new Exception("El Id del empleado es obligatorio.");
-            if (cmbRol.SelectedItem == null)
+            if (string.IsNullOrWhiteSpace(txt_idempleado.Text))
+                throw new Exception("El código de empleado es obligatorio.");
+            if (cmb_rol.SelectedItem == null)
                 throw new Exception("Selecciona un rol.");
-            if (cmbEstado.SelectedItem == null)
+            if (cmb_estado.SelectedItem == null)
                 throw new Exception("Selecciona un estado.");
             return true;
         }
 
-
-
-        private void usu_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void contra_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NombreCompleto_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        // Boton para aceptar el registro de un usuario - Oscar Morales 9959-23-3070
         private void agregar_Click(object sender, EventArgs e)
         {
-            // valida los campos y agrega el nuevo usuario a la tabla
             try
             {
                 ValidarCampos();
 
-                // Validación explícita del Id de empleado antes de proceder
-                if (string.IsNullOrWhiteSpace(txt_idemple.Text) || !ulong.TryParse(txt_idemple.Text.Trim(), out var idEmp))
+                if (!int.TryParse(txt_idempleado.Text, out int idEmpleado))
                 {
-                    MessageBox.Show("Introduzca un Id de empleado válido antes de agregar.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("El código de empleado debe ser un número.", "Dato inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                // Preparar el objeto mUsuario con valores correctos
-                mUsuario = new Cusuario();
-                mUsuario.usuario = txt_usu.Text?.Trim() ?? string.Empty;
-                // Si existe un campo de contraseña en el formulario, asignarlo aquí; si no, dejar vacío
+                Cconexion c = new Cconexion();
+                MySqlConnection conn = c.establecerConexion();
+
+                // CONFIGURAR USUARIO DE AUDITORÍA PARA MYSQL
+                Cauditoria.ConfigurarUsuarioBD(conn);
+
                 try
                 {
-                    var found = Controls.Find("txt_contra", true);
-                    if (found != null && found.Length > 0 && found[0] is TextBox tb)
-                        mUsuario.contrasena = tb.Text.Trim();
-                }
-                catch { }
-                mUsuario.id_empleado = idEmp;
-                // Normalizar rol desde el combo (ajustar si necesita mapeo específico)
-                mUsuario.rol = cmbRol.Text?.Trim() ?? string.Empty;
-                // Estado como char '1' o '0'
-                mUsuario.estado = cmbEstado.Text.Trim().StartsWith("A", StringComparison.OrdinalIgnoreCase) ? '1' : '0';
+                    string queryCheck = "SELECT COUNT(*) FROM empleado WHERE id_empleado = @id";
+                    MySqlCommand cmdCheck = new MySqlCommand(queryCheck, conn);
+                    cmdCheck.Parameters.AddWithValue("@id", idEmpleado);
+                    long existe = (long)cmdCheck.ExecuteScalar();
 
-                // Añadir fila al DataGridView con el orden: Usuario, Contraseña, ID_Empleado, Rol, Estado
-                dvgUsuarios.Rows.Add(mUsuario.usuario, mUsuario.contrasena ?? string.Empty, mUsuario.id_empleado, mUsuario.rol, mUsuario.estado == '1' ? "1" : "0");
-                MessageBox.Show("Usuario agregado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (existe == 0)
+                    {
+                        MessageBox.Show("No existe ningún empleado con ese código.", "Empleado no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    string query = @"INSERT INTO usuario (usuario, contrasena, id_empleado, rol, estado) 
+                                  VALUES (@usuario, @contrasena, @id_empleado, @rol, @estado)";
+
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@usuario", txt_usuario.Text);
+                    cmd.Parameters.AddWithValue("@contrasena", txt_contrasena.Text);
+                    cmd.Parameters.AddWithValue("@id_empleado", idEmpleado);
+                    cmd.Parameters.AddWithValue("@rol", cmb_rol.Text);
+                    cmd.Parameters.AddWithValue("@estado", cmb_estado.Text == "1");
+
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Usuario agregado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    CargarUsuarios();
+                    LimpiarCampos();
+                }
+                finally
+                {
+                    c.cerrarConexion();
+                }
             }
-            // si ValidarCampos lanza el error, se atrapa aqui
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-            cargarDatosUsuario();
-
-            if (mUsuariosCRUD.agregarUsuario(mUsuario))
-            {
-                MessageBox.Show("Usuario agregado a la base de datos correctamente.");
-                cargarUsuarios();
-                LimpiarCampos();
-            }
-            else
-            {
-                MessageBox.Show("Error al agregar el usuario a la base de datos.");
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
-        private void LimpiarCampos()
-        {
-            txt_usu.Text = "";
-            txt_contra.Text = "";
-            txt_idemple.Text = "";
-            cmbRol.SelectedIndex = -1;
-            cmbEstado.SelectedIndex = -1;
-        }
-
-        private void cargarDatosUsuario()
-        {
-            mUsuario.usuario = txt_usu.Text.Trim();
-            mUsuario.contrasena = txt_contra.Text.Trim();
-
-            // Parse seguro del Id de empleado para evitar FormatException
-            var idText = txt_idemple.Text.Trim();
-            if (!ulong.TryParse(idText, out var idEmpleado))
-            {
-                // Como se valida previamente en agregar_Click, aquí fijamos 0 como valor por defecto
-                // o se puede manejar de otra forma (lanzar excepción controlada)
-                idEmpleado = 0;
-            }
-            mUsuario.id_empleado = idEmpleado;
-
-            mUsuario.rol = cmbRol.Text.Trim();
-            var estadoText = cmbEstado.Text.Trim().ToLowerInvariant();
-            // Mapear texto del estado a '1' (Activo) o '0' (Retirado) para guardar en BD
-            if (estadoText == "activo" || estadoText == "a" || estadoText == "1")
-            {
-                mUsuario.estado = '1';
-            }
-            else if (estadoText == "retirado" || estadoText == "r" || estadoText == "0")
-            {
-                mUsuario.estado = '0';
-            }
-            else
-            {
-                // Valor por defecto si el texto no coincide
-                mUsuario.estado = '0';
-            }
-
-        }
-
+        // Boton para seleccionar el registro de un usuario - Oscar Morales 9959-23-3070
         private void editar_Click(object sender, EventArgs e)
         {
-            // exige una fila seleccionada, valida los campos y actualiza esa fila
             try
             {
-                if (dvgUsuarios.SelectedRows.Count == 0)
+                if (dgv_usuarios.SelectedRows.Count == 0)
                     throw new Exception("Selecciona un usuario de la tabla para editar.");
 
-                ValidarCampos();
-                DataGridViewRow fila = dvgUsuarios.SelectedRows[0];
-                // Mantener la columna Id_Empleado (índice 3) intacta si no hay control para editarla
-                fila.Cells[1].Value = txt_idemple.Text;
-                fila.Cells[2].Value = txt_usu.Text;
-                fila.Cells[4].Value = cmbRol.Text;
-                fila.Cells[5].Value = cmbEstado.Text;
+                DataGridViewRow fila = dgv_usuarios.SelectedRows[0];
 
-                MessageBox.Show("Usuario actualizado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                usuarioEnEdicion = fila.Cells["Usuario"].Value.ToString();
+
+                txt_usuario.Text = fila.Cells["Usuario"].Value.ToString();
+                txt_contrasena.Text = fila.Cells["Contraseña"].Value.ToString();
+                txt_idempleado.Text = fila.Cells["CodigoEmpleado"].Value.ToString();
+                cmb_rol.Text = fila.Cells["Rol"].Value.ToString();
+                cmb_estado.Text = fila.Cells["Estado"].Value.ToString();
+
+                btn_eliminar.Enabled = false;
             }
-            // atrapa la falta de seleccion o cualquier error de ValidarCampos
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
         }
 
+        // Boton para eliminar el registro de un usuario - Oscar Morales 9959-23-3070
         private void eliminar_Click(object sender, EventArgs e)
         {
-            // pide confirmacion antes de borrar la fila seleccionada
             try
             {
-                if (dvgUsuarios.SelectedRows.Count == 0)
+                if (dgv_usuarios.SelectedRows.Count == 0)
                     throw new Exception("Selecciona un usuario de la tabla para eliminar.");
 
                 DialogResult respuesta = MessageBox.Show("¿Seguro que quieres eliminar este usuario?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (respuesta == DialogResult.Yes)
                 {
-                    dvgUsuarios.Rows.Remove(dvgUsuarios.SelectedRows[0]);
+                    string Seleccionusu = dgv_usuarios.SelectedRows[0].Cells["Usuario"].Value.ToString();
+                    Cconexion c = new Cconexion();
+                    MySqlConnection conn = c.establecerConexion();
+
+                    // CONFIGURAR USUARIO DE AUDITORÍA PARA MYSQL
+                    Cauditoria.ConfigurarUsuarioBD(conn);
+
+                    try
+                    {
+                        string query = "DELETE FROM usuario WHERE usuario = @usuario";
+                        MySqlCommand cmd = new MySqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@usuario", Seleccionusu);
+                        cmd.ExecuteNonQuery();
+
+                        MessageBox.Show("Usuario eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        CargarUsuarios();
+                    }
+                    finally
+                    {
+                        c.cerrarConexion();
+                    }
                 }
             }
-            // por si no hay fila seleccionada
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
         }
 
         private void guardar_Click(object sender, EventArgs e)
         {
-            // valida antes de confirmar que los cambios quedaron guardados
             try
             {
                 ValidarCampos();
-                MessageBox.Show("Los cambios se guardaron correctamente.", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                if (usuarioEnEdicion == null)
+                {
+                    MessageBox.Show("Primero selecciona un usuario de la tabla y presiona Editar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (!int.TryParse(txt_idempleado.Text, out int idEmpleado))
+                {
+                    MessageBox.Show("El código de empleado debe ser un número.", "Dato inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                Cconexion c = new Cconexion();
+                MySqlConnection conn = c.establecerConexion();
+
+                // configuramos el usuario de auditoría para MySQL - Oscar Morales 9959-23-3070
+                Cauditoria.ConfigurarUsuarioBD(conn);
+
+                try
+                {
+                    string queryCheck = "SELECT COUNT(*) FROM empleado WHERE id_empleado = @id";
+                    MySqlCommand cmdCheck = new MySqlCommand(queryCheck, conn);
+                    cmdCheck.Parameters.AddWithValue("@id", idEmpleado);
+                    long existe = (long)cmdCheck.ExecuteScalar();
+
+                    if (existe == 0)
+                    {
+                        MessageBox.Show("No existe ningún empleado con ese código.", "Empleado no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    string query = @"UPDATE usuario 
+                                  SET usuario = @usuario, contrasena = @contrasena, id_empleado = @id_empleado, rol = @rol, estado = @estado
+                                  WHERE usuario = @usuarioOriginal";
+
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@usuario", txt_usuario.Text);
+                    cmd.Parameters.AddWithValue("@contrasena", txt_contrasena.Text);
+                    cmd.Parameters.AddWithValue("@id_empleado", idEmpleado);
+                    cmd.Parameters.AddWithValue("@rol", cmb_rol.Text);
+                    cmd.Parameters.AddWithValue("@estado", cmb_estado.Text == "1");
+                    cmd.Parameters.AddWithValue("@usuarioOriginal", usuarioEnEdicion);
+
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Los cambios se guardaron correctamente.", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    usuarioEnEdicion = null;
+                    LimpiarCampos();
+                    CargarUsuarios();
+                    btn_eliminar.Enabled = true;
+                }
+                finally
+                {
+                    c.cerrarConexion();
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
         }
 
-        private void cmbRol_SelectedIndexChanged(object sender, EventArgs e)
+        // Método para limpiar los campos del formulario - Oscar Morales 9959-23-3070
+        private void LimpiarCampos()
         {
-
-        }
-
-        private void cmbEstado_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            txt_usuario.Clear();
+            txt_contrasena.Clear();
+            txt_idempleado.Clear();
+            cmb_rol.SelectedIndex = -1;
+            cmb_estado.SelectedIndex = -1;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void txt_busca_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                string filtro = txt_busca.Text.Trim();
-                System.Diagnostics.Debug.WriteLine($"Gestion_Empleados: buscar filtro='{filtro}'");
-                cargarUsuarios(filtro);
-            }
-            catch (Exception ex)
-            {
-                // Mostrar error sin cerrar la ventana
-                MessageBox.Show("Error al buscar usuarios: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
         }
     }
 }

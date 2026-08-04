@@ -1,30 +1,46 @@
 ﻿using MySqlConnector;
 using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace Renta_de_Video_2._0.Clases
 {
     internal class Cconexion
     {
-        MySqlConnection conex = new MySqlConnection();
+        private MySqlConnection conex = new MySqlConnection();
 
         static String servidor = "localhost";
         static String bd = "RentaVideoVHS";
-        static String usuario = "video";             
-        static String contrasenia = "12345"; 
+        static String usuario = "root";
+        static String contrasenia = "Josue2608";
 
-        String cadenaConexion =
-        "Server=" + servidor + ";" +
-        "Database=" + bd + ";" +
-        "User ID=" + usuario + ";" +
-        "Password=" + contrasenia + ";";
+     
+        private String cadenaConexion =
+            "Server=" + servidor + ";" +
+            "Database=" + bd + ";" +
+            "User ID=" + usuario + ";" +
+            "Password=" + contrasenia + ";" +
+            "Allow User Variables=True;";
 
         public MySqlConnection establecerConexion()
         {
             try
             {
-                conex.ConnectionString = cadenaConexion;
-                conex.Open();
+                // Se abre la conexión si no está abierta
+                if (conex.State != ConnectionState.Open)
+                {
+                    conex.ConnectionString = cadenaConexion;
+                    conex.Open();
+                }
+
+                // se asigna el usuario actual en la sesión a la variable de MySQL
+                string usuarioActual = string.IsNullOrWhiteSpace(SesionUsuario.Usuario) ? "Sistema" : SesionUsuario.Usuario;
+
+                using (MySqlCommand cmdUser = new MySqlCommand("SET @app_usuario = @usr;", conex))
+                {
+                    cmdUser.Parameters.AddWithValue("@usr", usuarioActual);
+                    cmdUser.ExecuteNonQuery();
+                }
             }
             catch (Exception ex)
             {
@@ -36,7 +52,7 @@ namespace Renta_de_Video_2._0.Clases
 
         public void cerrarConexion()
         {
-            if (conex.State == System.Data.ConnectionState.Open)
+            if (conex.State == ConnectionState.Open)
             {
                 conex.Close();
             }

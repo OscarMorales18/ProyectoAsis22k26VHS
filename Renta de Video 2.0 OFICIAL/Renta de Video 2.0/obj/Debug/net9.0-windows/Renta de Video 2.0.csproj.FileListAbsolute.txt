@@ -203,7 +203,6 @@ C:\Users\josue\Desktop\Renta de Video 2.0 OFICIAL\Renta de Video 2.0\bin\Debug\n
 C:\Users\josue\Desktop\Renta de Video 2.0 OFICIAL\Renta de Video 2.0\bin\Debug\net9.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
 C:\Users\josue\Desktop\Renta de Video 2.0 OFICIAL\Renta de Video 2.0\obj\Debug\net9.0-windows\Renta_de_Video_2._0.Detalle_De_Factura.resources
 C:\Users\josue\Desktop\Renta de Video 2.0 OFICIAL\Renta de Video 2.0\obj\Debug\net9.0-windows\Renta_de_Video_2._0.Devolucion.resources
-C:\Users\josue\Desktop\Renta de Video 2.0 OFICIAL\Renta de Video 2.0\obj\Debug\net9.0-windows\Renta_de_Video_2._0.Form1.resources
 C:\Users\josue\Desktop\Renta de Video 2.0 OFICIAL\Renta de Video 2.0\obj\Debug\net9.0-windows\Renta_de_Video_2._0.FormWalkthriught2.resources
 C:\Users\josue\Desktop\Renta de Video 2.0 OFICIAL\Renta de Video 2.0\obj\Debug\net9.0-windows\Renta_de_Video_2._0.FormWalkthriught3.resources
 C:\Users\josue\Desktop\Renta de Video 2.0 OFICIAL\Renta de Video 2.0\obj\Debug\net9.0-windows\Renta_de_Video_2._0.Gestion_Empleados.resources
@@ -298,3 +297,4 @@ C:\Users\Sofia PC\Downloads\MAQUETA5\Renta de Video 2.0 OFICIAL\Renta de Video 2
 C:\Users\Sofia PC\Downloads\MAQUETA5\Renta de Video 2.0 OFICIAL\Renta de Video 2.0\obj\Debug\net9.0-windows\Renta de Video 2.0.pdb
 C:\Users\Sofia PC\Downloads\MAQUETA5\Renta de Video 2.0 OFICIAL\Renta de Video 2.0\obj\Debug\net9.0-windows\Renta de Video 2.0.genruntimeconfig.cache
 C:\Users\Sofia PC\Downloads\MAQUETA5\Renta de Video 2.0 OFICIAL\Renta de Video 2.0\obj\Debug\net9.0-windows\ref\Renta de Video 2.0.dll
+C:\Users\josue\Desktop\Renta de Video 2.0 OFICIAL\Renta de Video 2.0\obj\Debug\net9.0-windows\Renta_de_Video_2._0.Auditoria.resources
