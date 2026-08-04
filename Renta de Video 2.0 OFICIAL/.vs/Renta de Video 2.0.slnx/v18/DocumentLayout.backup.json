@@ -1,105 +1,112 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\",
+  "WorkspaceRootPath": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\registronuevocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\registronuevocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\josue\\desktop\\renta de video 2.0 oficial\\renta de video 2.0\\formwalkthriught2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\formwalkthriught2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\josue\\desktop\\renta de video 2.0 oficial\\renta de video 2.0\\clases\\clienteconsultas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\clases\\clienteconsultas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\josue\\desktop\\renta de video 2.0 oficial\\renta de video 2.0\\registronuevocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\josue\\desktop\\trabajito2\\proyectoasis22k26vhs\\renta de video 2.0 oficial\\renta de video 2.0\\registronuevocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\registronuevocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\formwalkthriught2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\formwalkthriught2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\josue\\desktop\\trabajito2\\proyectoasis22k26vhs\\renta de video 2.0 oficial\\renta de video 2.0\\renta de video 2.0.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\renta de video 2.0.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\devolucion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\devolucion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\josue\\desktop\\trabajito2\\proyectoasis22k26vhs\\renta de video 2.0 oficial\\renta de video 2.0\\formwalkthriught2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\formwalkthriught2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\detalle de factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\detalle de factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\josue\\desktop\\renta de video 2.0 oficial\\renta de video 2.0\\auditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\auditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\inventarioregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\inventarioregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\josue\\desktop\\renta de video 2.0 oficial\\renta de video 2.0\\gestion usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\gestion usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\inventariolista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\inventariolista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\josue\\desktop\\renta de video 2.0 oficial\\renta de video 2.0\\clases\\cconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\clases\\cconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\josue\\desktop\\renta de video 2.0 oficial\\renta de video 2.0\\clases\\cauditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\clases\\cauditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\josue\\desktop\\renta de video 2.0 oficial\\renta de video 2.0\\gestion usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\gestion usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\josue\\desktop\\renta de video 2.0 oficial\\renta de video 2.0\\gestion usuarios.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\gestion usuarios.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\josue\\desktop\\renta de video 2.0 oficial\\renta de video 2.0\\auditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\auditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\josue\\desktop\\renta de video 2.0 oficial\\renta de video 2.0\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\lista facturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\lista facturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\josue\\desktop\\renta de video 2.0 oficial\\renta de video 2.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\nuevarenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\nuevarenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\mora pendiente pc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\mora pendiente pc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\josue\\desktop\\renta de video 2.0 oficial\\renta de video 2.0\\lista facturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\lista facturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\josue\\desktop\\renta de video 2.0 oficial\\renta de video 2.0\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\josue\\desktop\\trabajito2\\proyectoasis22k26vhs\\renta de video 2.0 oficial\\renta de video 2.0\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\josue\\desktop\\trabajito2\\proyectoasis22k26vhs\\renta de video 2.0 oficial\\renta de video 2.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\josue\\desktop\\trabajito2\\proyectoasis22k26vhs\\renta de video 2.0 oficial\\renta de video 2.0\\registronuevocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\registronuevocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\josue\\desktop\\trabajito2\\proyectoasis22k26vhs\\renta de video 2.0 oficial\\renta de video 2.0\\clases\\clienteconsultas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\clases\\clienteconsultas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\formwalkthriught2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\formwalkthriught2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\devolucion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\devolucion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\detalle de factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\detalle de factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\auditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\auditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\inventarioregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\inventarioregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\gestion usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\gestion usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\inventariolista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\inventariolista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\josue\\desktop\\trabajito2\\proyectoasis22k26vhs\\renta de video 2.0 oficial\\renta de video 2.0\\clases\\cconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\clases\\cconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\josue\\desktop\\trabajito2\\proyectoasis22k26vhs\\renta de video 2.0 oficial\\renta de video 2.0\\clases\\cauditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\clases\\cauditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\josue\\desktop\\trabajito2\\proyectoasis22k26vhs\\renta de video 2.0 oficial\\renta de video 2.0\\gestion usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\gestion usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\josue\\desktop\\trabajito2\\proyectoasis22k26vhs\\renta de video 2.0 oficial\\renta de video 2.0\\gestion usuarios.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\gestion usuarios.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\josue\\desktop\\trabajito2\\proyectoasis22k26vhs\\renta de video 2.0 oficial\\renta de video 2.0\\auditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\auditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\josue\\desktop\\trabajito2\\proyectoasis22k26vhs\\renta de video 2.0 oficial\\renta de video 2.0\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\lista facturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\lista facturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\nuevarenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\nuevarenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\mora pendiente pc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\mora pendiente pc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\josue\\desktop\\trabajito2\\proyectoasis22k26vhs\\renta de video 2.0 oficial\\renta de video 2.0\\lista facturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\lista facturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -110,44 +117,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAAHgNAAAAAAAAAADwv4ENAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2026-08-04T15:59:15.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Renta de Video 2.0",
+              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Renta de Video 2.0.csproj",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\Renta de Video 2.0.csproj",
+              "ToolTip": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Renta de Video 2.0.csproj",
+              "RelativeToolTip": "Renta de Video 2.0\\Renta de Video 2.0.csproj",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-08-04T15:58:19.854Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormWalkthriught2.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\FormWalkthriught2.cs",
-              "RelativeDocumentMoniker": "Renta de Video 2.0\\FormWalkthriught2.cs",
-              "ToolTip": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\FormWalkthriught2.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Renta de Video 2.0\\FormWalkthriught2.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T15:30:59.397Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "FormWalkthriught2.cs",
-              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\FormWalkthriught2.cs",
+              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\FormWalkthriught2.cs",
               "RelativeDocumentMoniker": "Renta de Video 2.0\\FormWalkthriught2.cs",
-              "ToolTip": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\FormWalkthriught2.cs",
+              "ToolTip": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\FormWalkthriught2.cs",
               "RelativeToolTip": "Renta de Video 2.0\\FormWalkthriught2.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAiwF0AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAiwHkAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-04T00:57:16.709Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "RegistroNuevoCliente.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\RegistroNuevoCliente.cs",
+              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\RegistroNuevoCliente.cs",
               "RelativeDocumentMoniker": "Renta de Video 2.0\\RegistroNuevoCliente.cs",
-              "ToolTip": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\RegistroNuevoCliente.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\RegistroNuevoCliente.cs [Dise\u00F1o]",
               "RelativeToolTip": "Renta de Video 2.0\\RegistroNuevoCliente.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-03T15:30:44.223Z",
@@ -155,174 +176,200 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "RegistroNuevoCliente.cs",
-              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\RegistroNuevoCliente.cs",
+              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\RegistroNuevoCliente.cs",
               "RelativeDocumentMoniker": "Renta de Video 2.0\\RegistroNuevoCliente.cs",
-              "ToolTip": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\RegistroNuevoCliente.cs",
+              "ToolTip": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\RegistroNuevoCliente.cs",
               "RelativeToolTip": "Renta de Video 2.0\\RegistroNuevoCliente.cs",
-              "ViewState": "AgIAAI0AAAAAAAAAAAAUwJ0AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAAAAJ0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-03T20:13:30.195Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "ClienteConsultas.cs",
-              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Clases\\ClienteConsultas.cs",
+              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Clases\\ClienteConsultas.cs",
               "RelativeDocumentMoniker": "Renta de Video 2.0\\Clases\\ClienteConsultas.cs",
-              "ToolTip": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Clases\\ClienteConsultas.cs",
+              "ToolTip": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Clases\\ClienteConsultas.cs",
               "RelativeToolTip": "Renta de Video 2.0\\Clases\\ClienteConsultas.cs",
               "ViewState": "AgIAACwAAAAAAAAAAAAiwDoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T20:37:56.922Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-03T20:37:56.922Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Devolucion.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Devolucion.cs",
-              "RelativeDocumentMoniker": "Renta de Video 2.0\\Devolucion.cs",
-              "ToolTip": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Devolucion.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Renta de Video 2.0\\Devolucion.cs [Dise\u00F1o]",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Program.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\Program.cs",
+              "ToolTip": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Program.cs",
+              "RelativeToolTip": "Renta de Video 2.0\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T15:30:57.552Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-08-03T15:13:16.164Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Detalle De Factura.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Detalle De Factura.cs",
-              "RelativeDocumentMoniker": "Renta de Video 2.0\\Detalle De Factura.cs",
-              "ToolTip": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Detalle De Factura.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Renta de Video 2.0\\Detalle De Factura.cs [Dise\u00F1o]",
+              "DocumentIndex": 4,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Login.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\Login.cs",
+              "ToolTip": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Login.cs",
+              "RelativeToolTip": "Renta de Video 2.0\\Login.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAkwAEAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T15:30:54.455Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Auditoria.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Auditoria.cs",
-              "RelativeDocumentMoniker": "Renta de Video 2.0\\Auditoria.cs",
-              "ToolTip": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Auditoria.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Renta de Video 2.0\\Auditoria.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-04T13:40:01.333Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-08-03T14:15:59.023Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "InventarioRegistro.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\InventarioRegistro.cs",
-              "RelativeDocumentMoniker": "Renta de Video 2.0\\InventarioRegistro.cs",
-              "ToolTip": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\InventarioRegistro.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Renta de Video 2.0\\InventarioRegistro.cs [Dise\u00F1o]",
+              "Title": "FormWalkthriught2.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\FormWalkthriught2.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\FormWalkthriught2.cs",
+              "ToolTip": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\FormWalkthriught2.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Renta de Video 2.0\\FormWalkthriught2.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T14:54:18.729Z",
+              "WhenOpened": "2026-08-03T15:30:59.397Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "Gestion Usuarios.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Gestion Usuarios.cs",
-              "RelativeDocumentMoniker": "Renta de Video 2.0\\Gestion Usuarios.cs",
-              "ToolTip": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Gestion Usuarios.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Renta de Video 2.0\\Gestion Usuarios.cs [Dise\u00F1o]",
+              "Title": "Devolucion.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Devolucion.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\Devolucion.cs",
+              "ToolTip": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Devolucion.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Devolucion.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-04T13:12:55.018Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-08-03T15:30:57.552Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "InventarioLista.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\InventarioLista.cs",
-              "RelativeDocumentMoniker": "Renta de Video 2.0\\InventarioLista.cs",
-              "ToolTip": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\InventarioLista.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Renta de Video 2.0\\InventarioLista.cs [Dise\u00F1o]",
+              "Title": "Detalle De Factura.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Detalle De Factura.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\Detalle De Factura.cs",
+              "ToolTip": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Detalle De Factura.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Detalle De Factura.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T15:26:25.444Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-08-03T15:30:54.455Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "Cconexion.cs",
-              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Clases\\Cconexion.cs",
-              "RelativeDocumentMoniker": "Renta de Video 2.0\\Clases\\Cconexion.cs",
-              "ToolTip": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Clases\\Cconexion.cs",
-              "RelativeToolTip": "Renta de Video 2.0\\Clases\\Cconexion.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAYwCMAAABSAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-04T14:03:24.467Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Gestion Usuarios.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Gestion Usuarios.Designer.cs",
-              "RelativeDocumentMoniker": "Renta de Video 2.0\\Gestion Usuarios.Designer.cs",
-              "ToolTip": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Gestion Usuarios.Designer.cs",
-              "RelativeToolTip": "Renta de Video 2.0\\Gestion Usuarios.Designer.cs",
-              "ViewState": "AgIAAJAAAAAA9jx/2lwgwNEAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T20:59:52.241Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Auditoria.cs",
-              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Auditoria.cs",
+              "Title": "Auditoria.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Auditoria.cs",
               "RelativeDocumentMoniker": "Renta de Video 2.0\\Auditoria.cs",
-              "ToolTip": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Auditoria.cs",
-              "RelativeToolTip": "Renta de Video 2.0\\Auditoria.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAUwCUAAAABAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Auditoria.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Auditoria.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-04T13:40:05.34Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-04T13:40:01.333Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "Cauditoria.cs",
-              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Clases\\Cauditoria.cs",
-              "RelativeDocumentMoniker": "Renta de Video 2.0\\Clases\\Cauditoria.cs",
-              "ToolTip": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Clases\\Cauditoria.cs",
-              "RelativeToolTip": "Renta de Video 2.0\\Clases\\Cauditoria.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAiwBsAAAAJAAAAAAAAAA==",
+              "Title": "InventarioRegistro.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\InventarioRegistro.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\InventarioRegistro.cs",
+              "ToolTip": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\InventarioRegistro.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\InventarioRegistro.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-04T13:40:46.089Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-03T14:54:18.729Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "Gestion Usuarios.cs",
-              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Gestion Usuarios.cs",
+              "Title": "Gestion Usuarios.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Gestion Usuarios.cs",
               "RelativeDocumentMoniker": "Renta de Video 2.0\\Gestion Usuarios.cs",
-              "ToolTip": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Gestion Usuarios.cs",
-              "RelativeToolTip": "Renta de Video 2.0\\Gestion Usuarios.cs",
-              "ViewState": "AgIAAPoAAAAAAAAAAAAiwAIBAAA1AAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Gestion Usuarios.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Gestion Usuarios.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-04T13:17:06.39Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-04T13:12:55.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "InventarioLista.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\InventarioLista.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\InventarioLista.cs",
+              "ToolTip": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\InventarioLista.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\InventarioLista.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-03T15:26:25.444Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Cconexion.cs",
+              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Clases\\Cconexion.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\Clases\\Cconexion.cs",
+              "ToolTip": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Clases\\Cconexion.cs",
+              "RelativeToolTip": "Renta de Video 2.0\\Clases\\Cconexion.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAYwCMAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T14:03:24.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Gestion Usuarios.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Gestion Usuarios.Designer.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\Gestion Usuarios.Designer.cs",
+              "ToolTip": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Gestion Usuarios.Designer.cs",
+              "RelativeToolTip": "Renta de Video 2.0\\Gestion Usuarios.Designer.cs",
+              "ViewState": "AgIAAJAAAAAA9jx/2lwgwNEAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-03T20:59:52.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Auditoria.cs",
+              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Auditoria.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\Auditoria.cs",
+              "ToolTip": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Auditoria.cs",
+              "RelativeToolTip": "Renta de Video 2.0\\Auditoria.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAUwCUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T13:40:05.34Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
+              "Title": "Cauditoria.cs",
+              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Clases\\Cauditoria.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\Clases\\Cauditoria.cs",
+              "ToolTip": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Clases\\Cauditoria.cs",
+              "RelativeToolTip": "Renta de Video 2.0\\Clases\\Cauditoria.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAiwBsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T13:40:46.089Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Gestion Usuarios.cs",
+              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Gestion Usuarios.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\Gestion Usuarios.cs",
+              "ToolTip": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Gestion Usuarios.cs",
+              "RelativeToolTip": "Renta de Video 2.0\\Gestion Usuarios.cs",
+              "ViewState": "AgIAAPoAAAAAAAAAAAAiwAIBAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T13:17:06.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "menu.cs",
-              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\menu.cs",
+              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\menu.cs",
               "RelativeDocumentMoniker": "Renta de Video 2.0\\menu.cs",
-              "ToolTip": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\menu.cs",
+              "ToolTip": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\menu.cs",
               "RelativeToolTip": "Renta de Video 2.0\\menu.cs",
               "ViewState": "AgIAAJYAAAAAAAAAAAAAAJoAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -331,67 +378,56 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "menu.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\menu.cs",
+              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\menu.cs",
               "RelativeDocumentMoniker": "Renta de Video 2.0\\menu.cs",
-              "ToolTip": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\menu.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "Renta de Video 2.0\\menu.cs [Dise\u00F1o]*",
+              "ToolTip": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\menu.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Renta de Video 2.0\\menu.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-02T23:42:15.969Z"
+              "WhenOpened": "2026-08-02T23:42:15.969Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "Lista Facturas.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Lista Facturas.cs",
+              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Lista Facturas.cs",
               "RelativeDocumentMoniker": "Renta de Video 2.0\\Lista Facturas.cs",
               "ToolTip": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Lista Facturas.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Renta de Video 2.0\\Lista Facturas.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Lista Facturas.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-03T01:59:08.963Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Program.cs",
-              "RelativeDocumentMoniker": "Renta de Video 2.0\\Program.cs",
-              "ToolTip": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Program.cs",
-              "RelativeToolTip": "Renta de Video 2.0\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T15:13:16.164Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "NuevaRenta.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\NuevaRenta.cs",
+              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\NuevaRenta.cs",
               "RelativeDocumentMoniker": "Renta de Video 2.0\\NuevaRenta.cs",
               "ToolTip": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\NuevaRenta.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Renta de Video 2.0\\NuevaRenta.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\NuevaRenta.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-03T15:30:40.939Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "Mora Pendiente PC.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Mora Pendiente PC.cs",
+              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Mora Pendiente PC.cs",
               "RelativeDocumentMoniker": "Renta de Video 2.0\\Mora Pendiente PC.cs",
               "ToolTip": "C:\\Users\\Sofia PC\\Downloads\\MAQUETA5\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Mora Pendiente PC.cs [Dise\u00F1o]",
-              "RelativeToolTip": "..\\..\\..\\Sofia PC\\Downloads\\MAQUETA5\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Mora Pendiente PC.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Sofia PC\\Downloads\\MAQUETA5\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Mora Pendiente PC.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-03T14:55:46.775Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "Lista Facturas.cs",
-              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Lista Facturas.cs",
+              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Lista Facturas.cs",
               "RelativeDocumentMoniker": "Renta de Video 2.0\\Lista Facturas.cs",
-              "ToolTip": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Lista Facturas.cs",
+              "ToolTip": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Lista Facturas.cs",
               "RelativeToolTip": "Renta de Video 2.0\\Lista Facturas.cs",
               "ViewState": "AgIAAD0AAAAAAAAAAAA0wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -399,27 +435,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Login.cs",
-              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Login.cs",
-              "RelativeDocumentMoniker": "Renta de Video 2.0\\Login.cs",
-              "ToolTip": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Login.cs",
-              "RelativeToolTip": "Renta de Video 2.0\\Login.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAAAFcAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T14:15:59.023Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "Login.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Login.cs",
+              "DocumentMoniker": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Login.cs",
               "RelativeDocumentMoniker": "Renta de Video 2.0\\Login.cs",
-              "ToolTip": "C:\\Users\\Sofia PC\\Downloads\\MAQUETA5\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Login.cs [Dise\u00F1o]",
-              "RelativeToolTip": "..\\..\\..\\Sofia PC\\Downloads\\MAQUETA5\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Login.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Login.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Renta de Video 2.0\\Login.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-02T23:47:48.207Z"
+              "WhenOpened": "2026-08-02T23:47:48.207Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }

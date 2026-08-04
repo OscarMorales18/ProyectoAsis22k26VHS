@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Renta de Video 2.0")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+81590af82a82365ea6f954846331350b73b1c00d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Renta de Video 2.0")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Renta de Video 2.0")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

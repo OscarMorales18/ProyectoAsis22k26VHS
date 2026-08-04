@@ -48,8 +48,9 @@
             pictureBox3.Dock = DockStyle.Fill;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
             pictureBox3.Location = new Point(0, 0);
+            pictureBox3.Margin = new Padding(3, 4, 3, 4);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(1064, 622);
+            pictureBox3.Size = new Size(1216, 829);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 16;
             pictureBox3.TabStop = false;
@@ -59,9 +60,10 @@
             // 
             DPI.BackColor = Color.FromArgb(70, 0, 0);
             DPI.ForeColor = Color.Transparent;
-            DPI.Location = new Point(36, 231);
+            DPI.Location = new Point(41, 357);
+            DPI.Margin = new Padding(3, 4, 3, 4);
             DPI.Name = "DPI";
-            DPI.Size = new Size(534, 23);
+            DPI.Size = new Size(610, 27);
             DPI.TabIndex = 18;
             DPI.TextChanged += DPI_TextChanged;
             // 
@@ -69,9 +71,10 @@
             // 
             Telefono.BackColor = Color.FromArgb(70, 0, 0);
             Telefono.ForeColor = Color.Transparent;
-            Telefono.Location = new Point(36, 318);
+            Telefono.Location = new Point(41, 473);
+            Telefono.Margin = new Padding(3, 4, 3, 4);
             Telefono.Name = "Telefono";
-            Telefono.Size = new Size(534, 23);
+            Telefono.Size = new Size(610, 27);
             Telefono.TabIndex = 19;
             Telefono.TextChanged += Telefono_TextChanged;
             // 
@@ -79,9 +82,10 @@
             // 
             Direccion.BackColor = Color.FromArgb(70, 0, 0);
             Direccion.ForeColor = Color.Transparent;
-            Direccion.Location = new Point(36, 392);
+            Direccion.Location = new Point(41, 611);
+            Direccion.Margin = new Padding(3, 4, 3, 4);
             Direccion.Name = "Direccion";
-            Direccion.Size = new Size(534, 23);
+            Direccion.Size = new Size(610, 27);
             Direccion.TabIndex = 20;
             Direccion.TextChanged += Direccion_TextChanged;
             // 
@@ -89,9 +93,10 @@
             // 
             Correo.BackColor = Color.FromArgb(70, 0, 0);
             Correo.ForeColor = Color.Transparent;
-            Correo.Location = new Point(36, 468);
+            Correo.Location = new Point(41, 712);
+            Correo.Margin = new Padding(3, 4, 3, 4);
             Correo.Name = "Correo";
-            Correo.Size = new Size(534, 23);
+            Correo.Size = new Size(610, 27);
             Correo.TabIndex = 21;
             Correo.TextChanged += Correo_TextChanged;
             // 
@@ -99,9 +104,10 @@
             // 
             Codigo_de_membresia.BackColor = Color.FromArgb(70, 0, 0);
             Codigo_de_membresia.ForeColor = Color.Transparent;
-            Codigo_de_membresia.Location = new Point(36, 533);
+            Codigo_de_membresia.Location = new Point(41, 827);
+            Codigo_de_membresia.Margin = new Padding(3, 4, 3, 4);
             Codigo_de_membresia.Name = "Codigo_de_membresia";
-            Codigo_de_membresia.Size = new Size(534, 23);
+            Codigo_de_membresia.Size = new Size(610, 27);
             Codigo_de_membresia.TabIndex = 22;
             Codigo_de_membresia.TextChanged += Codigo_de_membresia_TextChanged;
             // 
@@ -111,9 +117,10 @@
             Guardar_registro_cliente.Cursor = Cursors.Hand;
             Guardar_registro_cliente.FlatStyle = FlatStyle.Popup;
             Guardar_registro_cliente.Font = new Font("Lucida Bright", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Guardar_registro_cliente.Location = new Point(654, 533);
+            Guardar_registro_cliente.Location = new Point(794, 854);
+            Guardar_registro_cliente.Margin = new Padding(3, 4, 3, 4);
             Guardar_registro_cliente.Name = "Guardar_registro_cliente";
-            Guardar_registro_cliente.Size = new Size(382, 64);
+            Guardar_registro_cliente.Size = new Size(491, 85);
             Guardar_registro_cliente.TabIndex = 23;
             Guardar_registro_cliente.Text = "Guardar";
             Guardar_registro_cliente.UseVisualStyleBackColor = false;
@@ -123,10 +130,10 @@
             // 
             pictureBox2.BackColor = Color.FromArgb(42, 0, 0);
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(752, 173);
-            pictureBox2.Margin = new Padding(4, 3, 4, 3);
+            pictureBox2.Location = new Point(915, 289);
+            pictureBox2.Margin = new Padding(5, 4, 5, 4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(192, 187);
+            pictureBox2.Size = new Size(261, 281);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 24;
             pictureBox2.TabStop = false;
@@ -135,18 +142,19 @@
             // 
             NombreCompleto.BackColor = Color.FromArgb(70, 0, 0);
             NombreCompleto.ForeColor = Color.Transparent;
-            NombreCompleto.Location = new Point(36, 153);
+            NombreCompleto.Location = new Point(41, 229);
+            NombreCompleto.Margin = new Padding(3, 4, 3, 4);
             NombreCompleto.Name = "NombreCompleto";
-            NombreCompleto.Size = new Size(534, 23);
+            NombreCompleto.Size = new Size(610, 27);
             NombreCompleto.TabIndex = 25;
             NombreCompleto.TextChanged += NombreCompleto_TextChanged;
             // 
             // RegistroNuevoCliente
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1064, 622);
+            ClientSize = new Size(1216, 829);
             Controls.Add(NombreCompleto);
             Controls.Add(pictureBox2);
             Controls.Add(Guardar_registro_cliente);
@@ -156,6 +164,8 @@
             Controls.Add(Telefono);
             Controls.Add(DPI);
             Controls.Add(pictureBox3);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "RegistroNuevoCliente";
             Text = "Registro de Nuevo Cliente";
             Load += RegistroNuevoCliente_Load;

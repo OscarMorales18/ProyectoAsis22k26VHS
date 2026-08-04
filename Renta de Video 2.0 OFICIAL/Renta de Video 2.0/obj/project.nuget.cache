@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wpJ4nOGQFNY=",
+  "dgSpecHash": "3VEdKLiuhJ4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\josue\\Desktop\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Renta de Video 2.0.csproj",
+  "projectFilePath": "C:\\Users\\josue\\Desktop\\Trabajito2\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Renta de Video 2.0.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\josue\\.nuget\\packages\\microsoft.bcl.cryptography\\9.0.13\\microsoft.bcl.cryptography.9.0.13.nupkg.sha512",
     "C:\\Users\\josue\\.nuget\\packages\\microsoft.data.sqlclient\\7.0.2\\microsoft.data.sqlclient.7.0.2.nupkg.sha512",
