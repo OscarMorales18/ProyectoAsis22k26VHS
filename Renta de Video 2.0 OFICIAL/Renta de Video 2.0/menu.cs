@@ -102,21 +102,56 @@ namespace Renta_de_Video_2._0
                 MenuVertical.Width = 64;
             }
             else
+            {
                 MenuVertical.Width = 250;
+            }
+
+            CentrarFormulario();
         }
 
         // Método para cargar formularios dentro del Panel Contenedor (Evelyn Andrade 9959-23-1224)
-        public void AbrirFormInPanel(object Formhijo)
+        public void AbrirFormInPanel(Form formulario)
         {
-            if (this.panelContenedor.Controls.Count > 0)
-                this.panelContenedor.Controls.RemoveAt(0);
-            Form fh = Formhijo as Form;
-            fh.TopLevel = false;
-            fh.Dock = DockStyle.Fill;
-            this.panelContenedor.Controls.Add(fh);
-            this.panelContenedor.Tag = fh;
-            fh.Show();
+            panelContenedor.Controls.Clear();
+
+            formulario.TopLevel = false;
+            formulario.FormBorderStyle = FormBorderStyle.None;
+            formulario.StartPosition = FormStartPosition.Manual;
+
+            panelContenedor.Controls.Add(formulario);
+
+            formulario.Location = new Point(
+                (panelContenedor.Width - formulario.Width) / 2,
+                (panelContenedor.Height - formulario.Height) / 2
+            );
+
+            panelContenedor.Tag = formulario;
+
+            formulario.Show();
         }
+
+        //centrar los form 
+
+        private void CentrarFormulario()
+        {
+            if (panelContenedor.Controls.Count > 0)
+            {
+                Form frm = panelContenedor.Controls[0] as Form;
+
+                if (frm != null)
+                {
+                    frm.Location = new Point(
+                        (panelContenedor.Width - frm.Width) / 2,
+                        (panelContenedor.Height - frm.Height) / 2
+                    );
+                }
+            }
+        }
+
+
+
+
+
 
         // 1 inicio (Victor Samayoa 0901-23-3424)
         private void btninicio_Click(object sender, EventArgs e)

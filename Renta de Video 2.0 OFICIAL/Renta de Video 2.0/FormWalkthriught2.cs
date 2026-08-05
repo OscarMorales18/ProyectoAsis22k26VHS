@@ -93,12 +93,14 @@ namespace Renta_de_Video_2._0
             }
         }
 
-        private void AbrirFormInPanel(object Formhijo)
+        //abrir al menu
+        private void AbrirFormInPanel(Form formulario)
         {
             menu menuPrincipal = Application.OpenForms.OfType<menu>().FirstOrDefault();
+
             if (menuPrincipal != null)
             {
-                menuPrincipal.AbrirFormInPanel(Formhijo);
+                menuPrincipal.AbrirFormInPanel(formulario);
             }
         }
 

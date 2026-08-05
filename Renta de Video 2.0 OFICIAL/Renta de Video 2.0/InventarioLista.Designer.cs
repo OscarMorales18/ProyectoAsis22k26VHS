@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InventarioLista));
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             panel1 = new Panel();
             button1 = new Button();
             pictureBox2 = new PictureBox();
@@ -83,7 +83,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1213, 115);
+            panel1.Size = new Size(1136, 115);
             panel1.TabIndex = 0;
             // 
             // button1
@@ -253,7 +253,7 @@
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 115);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1213, 476);
+            panel2.Size = new Size(1136, 623);
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
             // 
@@ -290,9 +290,9 @@
             panel3.Controls.Add(txtDirector);
             panel3.Controls.Add(pictureBox3);
             panel3.Dock = DockStyle.Right;
-            panel3.Location = new Point(741, 0);
+            panel3.Location = new Point(664, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(472, 476);
+            panel3.Size = new Size(472, 623);
             panel3.TabIndex = 39;
             // 
             // pictureBox4
@@ -417,14 +417,14 @@
             dgwVideo.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgwVideo.BackgroundColor = Color.White;
             dgwVideo.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(34, 9, 1);
-            dataGridViewCellStyle4.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle4.ForeColor = Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(98, 23, 8);
-            dataGridViewCellStyle4.SelectionForeColor = Color.White;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgwVideo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(34, 9, 1);
+            dataGridViewCellStyle1.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(98, 23, 8);
+            dataGridViewCellStyle1.SelectionForeColor = Color.White;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgwVideo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgwVideo.ColumnHeadersHeight = 29;
             dgwVideo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dgwVideo.EnableHeadersVisualStyles = false;
@@ -432,21 +432,21 @@
             dgwVideo.Location = new Point(10, 62);
             dgwVideo.Name = "dgwVideo";
             dgwVideo.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(246, 170, 28);
-            dataGridViewCellStyle5.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(34, 9, 1);
-            dataGridViewCellStyle5.SelectionForeColor = Color.White;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dgwVideo.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(246, 170, 28);
+            dataGridViewCellStyle2.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(34, 9, 1);
+            dataGridViewCellStyle2.SelectionForeColor = Color.White;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgwVideo.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgwVideo.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.BackColor = Color.White;
-            dataGridViewCellStyle6.Font = new Font("Lucida Bright", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle6.ForeColor = Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(246, 170, 28);
-            dataGridViewCellStyle6.SelectionForeColor = Color.Black;
-            dgwVideo.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Lucida Bright", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(246, 170, 28);
+            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
+            dgwVideo.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dgwVideo.Size = new Size(671, 343);
             dgwVideo.TabIndex = 8;
             dgwVideo.SelectionChanged += dgwVideo_SelectionChanged;
@@ -468,7 +468,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(246, 170, 28);
-            ClientSize = new Size(1213, 591);
+            ClientSize = new Size(1136, 738);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;

@@ -41,5 +41,10 @@ namespace Renta_de_Video_2._0
         {
             Application.Exit();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
