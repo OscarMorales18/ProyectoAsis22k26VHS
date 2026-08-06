@@ -29,177 +29,168 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Detalle_De_Factura));
-            dataGridView1 = new DataGridView();
-            Video = new DataGridViewTextBoxColumn();
-            Precio_Renta = new DataGridViewTextBoxColumn();
-            Mora = new DataGridViewTextBoxColumn();
-            Subtotal = new DataGridViewTextBoxColumn();
-            Regresar = new Button();
+            dgv_detalleFactura = new DataGridView();
+            btn_regresar = new Button();
             pictureBox1 = new PictureBox();
-            Fecha = new TextBox();
-            Cliente = new TextBox();
-            Codigo = new TextBox();
-            TotalPagar = new TextBox();
+            txt_fecha = new TextBox();
+            txt_cliente = new TextBox();
+            txt_codigo = new TextBox();
+            txt_totalPagar = new TextBox();
             pictureBox2 = new PictureBox();
-            button2 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            btn_salir = new Button();
+            btn_buscar = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgv_detalleFactura).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgv_detalleFactura
             // 
-            dataGridView1.BackgroundColor = Color.FromArgb(64, 0, 0);
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Video, Precio_Renta, Mora, Subtotal });
-            dataGridView1.GridColor = SystemColors.WindowText;
-            dataGridView1.Location = new Point(494, 118);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 24;
-            dataGridView1.Size = new Size(554, 68);
-            dataGridView1.TabIndex = 20;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dgv_detalleFactura.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            dgv_detalleFactura.BackgroundColor = Color.FromArgb(64, 0, 0);
+            dgv_detalleFactura.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_detalleFactura.GridColor = SystemColors.WindowText;
+            dgv_detalleFactura.Location = new Point(549, 75);
+            dgv_detalleFactura.Margin = new Padding(3, 4, 3, 4);
+            dgv_detalleFactura.Name = "dgv_detalleFactura";
+            dgv_detalleFactura.RowHeadersWidth = 51;
+            dgv_detalleFactura.RowTemplate.Height = 24;
+            dgv_detalleFactura.Size = new Size(633, 120);
+            dgv_detalleFactura.TabIndex = 20;
             // 
-            // Video
+            // btn_regresar
             // 
-            Video.HeaderText = "Video";
-            Video.MinimumWidth = 6;
-            Video.Name = "Video";
-            Video.Width = 125;
-            // 
-            // Precio_Renta
-            // 
-            Precio_Renta.HeaderText = "Precio_Renta";
-            Precio_Renta.MinimumWidth = 6;
-            Precio_Renta.Name = "Precio_Renta";
-            Precio_Renta.Width = 125;
-            // 
-            // Mora
-            // 
-            Mora.HeaderText = "Mora";
-            Mora.MinimumWidth = 6;
-            Mora.Name = "Mora";
-            Mora.Width = 125;
-            // 
-            // Subtotal
-            // 
-            Subtotal.HeaderText = "Subtotal";
-            Subtotal.MinimumWidth = 6;
-            Subtotal.Name = "Subtotal";
-            Subtotal.Width = 125;
-            // 
-            // Regresar
-            // 
-            Regresar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            Regresar.BackColor = Color.DarkOrange;
-            Regresar.Cursor = Cursors.Hand;
-            Regresar.FlatStyle = FlatStyle.Popup;
-            Regresar.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Regresar.Location = new Point(940, 263);
-            Regresar.Name = "Regresar";
-            Regresar.Size = new Size(246, 36);
-            Regresar.TabIndex = 22;
-            Regresar.Text = "Regresar";
-            Regresar.UseVisualStyleBackColor = false;
-            Regresar.Click += button2_Click;
+            btn_regresar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btn_regresar.BackColor = Color.DarkOrange;
+            btn_regresar.Cursor = Cursors.Hand;
+            btn_regresar.FlatStyle = FlatStyle.Popup;
+            btn_regresar.Font = new Font("Lucida Bright", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_regresar.Location = new Point(1074, 252);
+            btn_regresar.Margin = new Padding(3, 4, 3, 4);
+            btn_regresar.Name = "btn_regresar";
+            btn_regresar.Size = new Size(108, 48);
+            btn_regresar.TabIndex = 22;
+            btn_regresar.Text = "Regresar";
+            btn_regresar.UseVisualStyleBackColor = false;
+            btn_regresar.Click += OnRegresar_Click;
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Dock = DockStyle.Fill;
+            pictureBox1.Enabled = false;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(1213, 591);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 39;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
-            // Fecha
+            // txt_fecha
             // 
-            Fecha.BackColor = Color.FromArgb(42, 18, 11);
-            Fecha.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Fecha.Location = new Point(77, 163);
-            Fecha.Name = "Fecha";
-            Fecha.Size = new Size(158, 27);
-            Fecha.TabIndex = 40;
-            Fecha.TextChanged += Fecha_TextChanged;
+            txt_fecha.BackColor = Color.FromArgb(42, 18, 11);
+            txt_fecha.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_fecha.ForeColor = Color.White;
+            txt_fecha.Location = new Point(88, 145);
+            txt_fecha.Margin = new Padding(3, 4, 3, 4);
+            txt_fecha.Name = "txt_fecha";
+            txt_fecha.Size = new Size(180, 32);
+            txt_fecha.TabIndex = 40;
             // 
-            // Cliente
+            // txt_cliente
             // 
-            Cliente.BackColor = Color.FromArgb(42, 18, 11);
-            Cliente.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Cliente.Location = new Point(77, 122);
-            Cliente.Name = "Cliente";
-            Cliente.Size = new Size(158, 27);
-            Cliente.TabIndex = 41;
-            Cliente.TextChanged += Cliente_TextChanged;
+            txt_cliente.BackColor = Color.FromArgb(42, 18, 11);
+            txt_cliente.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_cliente.ForeColor = Color.White;
+            txt_cliente.Location = new Point(88, 105);
+            txt_cliente.Margin = new Padding(3, 4, 3, 4);
+            txt_cliente.Name = "txt_cliente";
+            txt_cliente.Size = new Size(180, 32);
+            txt_cliente.TabIndex = 41;
             // 
-            // Codigo
+            // txt_codigo
             // 
-            Codigo.BackColor = Color.FromArgb(42, 18, 11);
-            Codigo.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Codigo.Location = new Point(77, 79);
-            Codigo.Name = "Codigo";
-            Codigo.Size = new Size(158, 27);
-            Codigo.TabIndex = 42;
-            Codigo.TextChanged += Codigo_TextChanged;
+            txt_codigo.BackColor = Color.FromArgb(42, 18, 11);
+            txt_codigo.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_codigo.ForeColor = Color.White;
+            txt_codigo.Location = new Point(88, 65);
+            txt_codigo.Margin = new Padding(3, 4, 3, 4);
+            txt_codigo.Name = "txt_codigo";
+            txt_codigo.Size = new Size(180, 32);
+            txt_codigo.TabIndex = 42;
             // 
-            // TotalPagar
+            // txt_totalPagar
             // 
-            TotalPagar.BackColor = Color.FromArgb(42, 18, 11);
-            TotalPagar.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            TotalPagar.Location = new Point(890, 220);
-            TotalPagar.Name = "TotalPagar";
-            TotalPagar.Size = new Size(158, 27);
-            TotalPagar.TabIndex = 43;
-            TotalPagar.TextChanged += TotalPagar_TextChanged;
+            txt_totalPagar.BackColor = Color.FromArgb(42, 18, 11);
+            txt_totalPagar.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_totalPagar.ForeColor = Color.White;
+            txt_totalPagar.Location = new Point(904, 203);
+            txt_totalPagar.Margin = new Padding(3, 4, 3, 4);
+            txt_totalPagar.Name = "txt_totalPagar";
+            txt_totalPagar.ReadOnly = true;
+            txt_totalPagar.Size = new Size(180, 32);
+            txt_totalPagar.TabIndex = 43;
             // 
             // pictureBox2
             // 
             pictureBox2.BackColor = Color.FromArgb(42, 0, 0);
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(0, 435);
-            pictureBox2.Margin = new Padding(4, 3, 4, 3);
+            pictureBox2.Location = new Point(0, 342);
+            pictureBox2.Margin = new Padding(5, 4, 5, 4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(192, 187);
+            pictureBox2.Size = new Size(219, 249);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 46;
             pictureBox2.TabStop = false;
             // 
-            // button2
+            // btn_salir
             // 
-            button2.BackColor = Color.White;
-            button2.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(1013, 12);
-            button2.Margin = new Padding(4, 3, 4, 3);
-            button2.Name = "button2";
-            button2.Size = new Size(35, 27);
-            button2.TabIndex = 47;
-            button2.Text = "X";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click_1;
+            btn_salir.BackColor = Color.White;
+            btn_salir.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_salir.Location = new Point(1158, 16);
+            btn_salir.Margin = new Padding(5, 4, 5, 4);
+            btn_salir.Name = "btn_salir";
+            btn_salir.Size = new Size(40, 36);
+            btn_salir.TabIndex = 47;
+            btn_salir.Text = "X";
+            btn_salir.UseVisualStyleBackColor = false;
+            btn_salir.Click += OnSalir_Click;
+            // 
+            // btn_buscar
+            // 
+            btn_buscar.BackColor = Color.DarkOrange;
+            btn_buscar.Cursor = Cursors.Hand;
+            btn_buscar.FlatStyle = FlatStyle.Popup;
+            btn_buscar.Font = new Font("Lucida Bright", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_buscar.Location = new Point(1074, 316);
+            btn_buscar.Name = "btn_buscar";
+            btn_buscar.Size = new Size(108, 49);
+            btn_buscar.TabIndex = 48;
+            btn_buscar.Text = "Buscar";
+            btn_buscar.UseVisualStyleBackColor = false;
+            btn_buscar.Click += OnBuscar_Click;
             // 
             // Detalle_De_Factura
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(1213, 591);
-            Controls.Add(button2);
+            Controls.Add(btn_buscar);
+            Controls.Add(btn_salir);
             Controls.Add(pictureBox2);
-            Controls.Add(TotalPagar);
-            Controls.Add(Codigo);
-            Controls.Add(Cliente);
-            Controls.Add(Fecha);
-            Controls.Add(Regresar);
-            Controls.Add(dataGridView1);
+            Controls.Add(txt_totalPagar);
+            Controls.Add(txt_codigo);
+            Controls.Add(txt_cliente);
+            Controls.Add(txt_fecha);
+            Controls.Add(btn_regresar);
+            Controls.Add(dgv_detalleFactura);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Detalle_De_Factura";
             Text = "Detalle_De_Factura";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_detalleFactura).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
@@ -208,18 +199,15 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Video;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio_Renta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Mora;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
-        private System.Windows.Forms.Button Regresar;
+        private System.Windows.Forms.DataGridView dgv_detalleFactura;
+        private System.Windows.Forms.Button btn_regresar;
         private PictureBox pictureBox1;
-        private TextBox Fecha;
-        private TextBox Cliente;
-        private TextBox Codigo;
-        private TextBox TotalPagar;
+        private TextBox txt_fecha;
+        private TextBox txt_cliente;
+        private TextBox txt_codigo;
+        private TextBox txt_totalPagar;
         private PictureBox pictureBox2;
-        private Button button2;
+        private Button btn_salir;
+        private Button btn_buscar;
     }
 }
