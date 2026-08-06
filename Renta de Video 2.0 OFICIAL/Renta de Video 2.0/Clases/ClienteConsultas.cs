@@ -7,7 +7,7 @@ namespace Renta_de_Video_2._0.Clases
     // manejo de conexion con MySQL workbench Andre Gonzalez 9959-23-3117
     internal class ClienteConsultas
     {
-        // inserción de cliente, generación de código de membresía MEM-0000 y obtención del ID generado Andre Gonzalez 9959-23-3117
+        // inserción de cliente, creación de membresía real y obtención del ID generado Andre Gonzalez 9959-23-3117
         public int AgregarCliente(MCliente cliente)
         {
             Cconexion objetoConexion = new Cconexion();
@@ -31,23 +31,29 @@ namespace Renta_de_Video_2._0.Clases
                 cmdCliente.ExecuteNonQuery();
 
                 // Obtener el ID autogenerado del cliente Andre Gonzalez 9959-23-3117
-                int idGenerado = Convert.ToInt32(cmdCliente.LastInsertedId);
+                long idCliente = cmdCliente.LastInsertedId;
 
-                // 2. Generación y actualización del código de membresía con formato MEM-0000 Andre Gonzalez 9959-23-3117
-                if (idGenerado > 0)
-                {
-                    string codigoMembresia = "MEM-" + idGenerado.ToString("D4");
-                    string updateCodigo = "UPDATE cliente SET codigo_membresia = @codigo WHERE id_cliente = @id;";
+                // 2. Crear la membresía real ligada a este cliente Andre Gonzalez 9959-23-3117
+                long idTipoMembresia = ObtenerOCrearTipoMembresia(conexion);
 
-                    MySqlCommand cmdUpdate = new MySqlCommand(updateCodigo, conexion);
-                    cmdUpdate.Parameters.Add(new MySqlParameter("@codigo", codigoMembresia));
-                    cmdUpdate.Parameters.Add(new MySqlParameter("@id", idGenerado));
-                    cmdUpdate.ExecuteNonQuery();
-                }
+                string insertMembresia = "INSERT INTO membresia (id_cliente, id_tipo_membresia, fecha_inicio, videos_acumulados) VALUES (@idCliente, @idTipo, CURDATE(), 0);";
+                MySqlCommand cmdMembresia = new MySqlCommand(insertMembresia, conexion);
+                cmdMembresia.Parameters.Add(new MySqlParameter("@idCliente", idCliente));
+                cmdMembresia.Parameters.Add(new MySqlParameter("@idTipo", idTipoMembresia));
+                cmdMembresia.ExecuteNonQuery();
+
+                long idMembresia = cmdMembresia.LastInsertedId;
+
+                // 3. Enlazar la membresía generada de vuelta al cliente Andre Gonzalez 9959-23-3117
+                string updateCliente = "UPDATE cliente SET id_membresia = @idMembresia WHERE id_cliente = @idCliente;";
+                MySqlCommand cmdUpdate = new MySqlCommand(updateCliente, conexion);
+                cmdUpdate.Parameters.Add(new MySqlParameter("@idMembresia", idMembresia));
+                cmdUpdate.Parameters.Add(new MySqlParameter("@idCliente", idCliente));
+                cmdUpdate.ExecuteNonQuery();
 
                 objetoConexion.cerrarConexion();
 
-                return idGenerado;
+                return (int)idMembresia;
             }
             catch (Exception ex)
             {
@@ -56,6 +62,22 @@ namespace Renta_de_Video_2._0.Clases
                     "Error de base de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 0;
             }
+        }
+
+        private long ObtenerOCrearTipoMembresia(MySqlConnection conexion)
+        {
+            string consultaTipo = "SELECT id_tipo_membresia FROM tipo_membresia LIMIT 1;";
+            MySqlCommand cmdConsulta = new MySqlCommand(consultaTipo, conexion);
+            object resultado = cmdConsulta.ExecuteScalar();
+
+            if (resultado != null)
+                return Convert.ToInt64(resultado);
+
+            string insertTipo = "INSERT INTO tipo_membresia (tipo, descuento_disponible) VALUES ('Básica', 0);";
+            MySqlCommand cmdInsertTipo = new MySqlCommand(insertTipo, conexion);
+            cmdInsertTipo.ExecuteNonQuery();
+
+            return cmdInsertTipo.LastInsertedId;
         }
     }
 }

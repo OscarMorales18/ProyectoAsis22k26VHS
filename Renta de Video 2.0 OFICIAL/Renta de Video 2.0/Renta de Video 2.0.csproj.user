@@ -19,6 +19,9 @@
     <Compile Update="Gestion Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="InicioDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="InventarioLista.cs">
       <SubType>Form</SubType>
     </Compile>
