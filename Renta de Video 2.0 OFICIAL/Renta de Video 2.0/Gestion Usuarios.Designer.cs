@@ -60,7 +60,7 @@
             cmb_rol.ForeColor = SystemColors.Info;
             cmb_rol.FormattingEnabled = true;
             cmb_rol.Items.AddRange(new object[] { "Empleado", "Administrador", "Auditor" });
-            cmb_rol.Location = new Point(61, 429);
+            cmb_rol.Location = new Point(61, 367);
             cmb_rol.Name = "cmb_rol";
             cmb_rol.Size = new Size(106, 23);
             cmb_rol.TabIndex = 29;
@@ -71,7 +71,7 @@
             cmb_estado.ForeColor = SystemColors.Info;
             cmb_estado.FormattingEnabled = true;
             cmb_estado.Items.AddRange(new object[] { "1", "0" });
-            cmb_estado.Location = new Point(61, 500);
+            cmb_estado.Location = new Point(61, 432);
             cmb_estado.Name = "cmb_estado";
             cmb_estado.Size = new Size(106, 23);
             cmb_estado.TabIndex = 31;
@@ -80,7 +80,7 @@
             // 
             dgv_usuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgv_usuarios.Columns.AddRange(new DataGridViewColumn[] { Usuario, Contraseña, CodigoEmpleado, Rol, Estado });
-            dgv_usuarios.Location = new Point(457, 175);
+            dgv_usuarios.Location = new Point(432, 168);
             dgv_usuarios.Name = "dgv_usuarios";
             dgv_usuarios.RowHeadersWidth = 51;
             dgv_usuarios.RowTemplate.Height = 24;
@@ -120,7 +120,7 @@
             btn_eliminar.BackColor = Color.FromArgb(247, 170, 28);
             btn_eliminar.FlatStyle = FlatStyle.Popup;
             btn_eliminar.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_eliminar.Location = new Point(61, 622);
+            btn_eliminar.Location = new Point(61, 541);
             btn_eliminar.Name = "btn_eliminar";
             btn_eliminar.Size = new Size(163, 41);
             btn_eliminar.TabIndex = 33;
@@ -133,7 +133,7 @@
             btn_guardar.BackColor = Color.FromArgb(247, 170, 28);
             btn_guardar.FlatStyle = FlatStyle.Popup;
             btn_guardar.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_guardar.Location = new Point(230, 622);
+            btn_guardar.Location = new Point(230, 541);
             btn_guardar.Name = "btn_guardar";
             btn_guardar.Size = new Size(161, 41);
             btn_guardar.TabIndex = 34;
@@ -146,7 +146,7 @@
             btn_agregar.BackColor = Color.FromArgb(247, 170, 28);
             btn_agregar.FlatStyle = FlatStyle.Popup;
             btn_agregar.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_agregar.Location = new Point(61, 575);
+            btn_agregar.Location = new Point(61, 494);
             btn_agregar.Name = "btn_agregar";
             btn_agregar.Size = new Size(163, 41);
             btn_agregar.TabIndex = 35;
@@ -159,7 +159,7 @@
             btn_editar.BackColor = Color.FromArgb(247, 170, 28);
             btn_editar.FlatStyle = FlatStyle.Popup;
             btn_editar.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_editar.Location = new Point(230, 575);
+            btn_editar.Location = new Point(230, 494);
             btn_editar.Name = "btn_editar";
             btn_editar.Size = new Size(161, 41);
             btn_editar.TabIndex = 36;
@@ -185,17 +185,17 @@
             txt_idempleado.BackColor = Color.FromArgb(42, 18, 11);
             txt_idempleado.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txt_idempleado.ForeColor = SystemColors.Info;
-            txt_idempleado.Location = new Point(61, 364);
+            txt_idempleado.Location = new Point(61, 309);
             txt_idempleado.Name = "txt_idempleado";
             txt_idempleado.Size = new Size(317, 27);
             txt_idempleado.TabIndex = 40;
-        
+            // 
             // txt_contrasena
-
+            // 
             txt_contrasena.BackColor = Color.FromArgb(42, 18, 11);
             txt_contrasena.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txt_contrasena.ForeColor = SystemColors.Info;
-            txt_contrasena.Location = new Point(61, 304);
+            txt_contrasena.Location = new Point(61, 260);
             txt_contrasena.Name = "txt_contrasena";
             txt_contrasena.Size = new Size(317, 27);
             txt_contrasena.TabIndex = 41;
@@ -205,7 +205,7 @@
             txt_usuario.BackColor = Color.FromArgb(42, 18, 11);
             txt_usuario.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txt_usuario.ForeColor = SystemColors.Info;
-            txt_usuario.Location = new Point(61, 235);
+            txt_usuario.Location = new Point(61, 201);
             txt_usuario.Name = "txt_usuario";
             txt_usuario.Size = new Size(317, 27);
             txt_usuario.TabIndex = 42;
@@ -226,7 +226,7 @@
             // 
             label1.BackColor = Color.FromArgb(30, 9, 7);
             label1.ForeColor = Color.FromArgb(247, 170, 28);
-            label1.Location = new Point(184, 500);
+            label1.Location = new Point(192, 432);
             label1.Name = "label1";
             label1.Size = new Size(81, 33);
             label1.TabIndex = 46;

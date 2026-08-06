@@ -125,6 +125,7 @@
             button5.TabIndex = 6;
             button5.Text = "      GESTIÓN DE USUARIOS";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // iconcerrar
             // 

@@ -30,7 +30,7 @@ namespace Renta_de_Video_2._0
             button3.Click += btnRentas_Click;
             button4.Click += btnFacturacion_Click;
             button5.Click += btnUsuarios_Click;
-            button1.Click += btnSeguridad_Click;
+            //button1.Click += btninicio_Click;
         }
 
         private void menu_Load(object sender, EventArgs e)
@@ -158,6 +158,7 @@ namespace Renta_de_Video_2._0
         {
             if (this.panelContenedor.Controls.Count > 0)
                 this.panelContenedor.Controls.RemoveAt(0);
+            AbrirFormInPanel(new InicioDashboard());
         }
 
         // 2 clientes (Victor Samayoa 0901-23-3424)
@@ -197,7 +198,8 @@ namespace Renta_de_Video_2._0
         }
 
         // Métodos secundarios dejados por compatibilidad
-        private void button1_Click(object sender, EventArgs e) { }
+        private void button1_Click(object sender, EventArgs e) {}
+
         private void button2_Click_1(object sender, EventArgs e) { }
         private void button2_Click(object sender, EventArgs e) { }
 
@@ -250,6 +252,11 @@ namespace Renta_de_Video_2._0
 
                 this.Close();
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
