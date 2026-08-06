@@ -1,0 +1,223 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\andre\\onedrive\\documents\\nuevo semestre ia\\analisis de sistemas ii\\renta de video 2.0 oficial\\renta de video 2.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\andre\\onedrive\\documents\\nuevo semestre ia\\analisis de sistemas ii\\renta de video 2.0 oficial\\renta de video 2.0\\detalle de factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\detalle de factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\andre\\onedrive\\documents\\nuevo semestre ia\\analisis de sistemas ii\\renta de video 2.0 oficial\\renta de video 2.0\\mora pendiente pc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\mora pendiente pc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\andre\\onedrive\\documents\\nuevo semestre ia\\analisis de sistemas ii\\renta de video 2.0 oficial\\renta de video 2.0\\nuevarenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\nuevarenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\nuevarenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\nuevarenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\devolucion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\devolucion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\detalle de factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\detalle de factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\gestion usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\gestion usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\mora pendiente pc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\mora pendiente pc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\lista facturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\lista facturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\buscarcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\buscarcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\renta de video 2.0\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|c:\\users\\andre\\onedrive\\documents\\nuevo semestre ia\\analisis de sistemas ii\\renta de video 2.0 oficial\\renta de video 2.0\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45461F83-6F7F-2531-3A1A-52B614AE41F9}|Renta de Video 2.0\\Renta de Video 2.0.csproj|solutionrelative:renta de video 2.0\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Detalle De Factura.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Detalle De Factura.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\Detalle De Factura.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Detalle De Factura.cs",
+              "RelativeToolTip": "Renta de Video 2.0\\Detalle De Factura.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAswEcAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-06T08:33:18.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Mora Pendiente PC.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Mora Pendiente PC.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\Mora Pendiente PC.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Mora Pendiente PC.cs",
+              "RelativeToolTip": "Renta de Video 2.0\\Mora Pendiente PC.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAgwA8AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-06T08:17:25.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Devolucion.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Devolucion.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\Devolucion.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Devolucion.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Renta de Video 2.0\\Devolucion.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-06T07:20:44.698Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Program.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\Program.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Program.cs",
+              "RelativeToolTip": "Renta de Video 2.0\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-06T07:23:20.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NuevaRenta.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\NuevaRenta.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\NuevaRenta.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\NuevaRenta.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Renta de Video 2.0\\NuevaRenta.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-06T08:00:46.466Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NuevaRenta.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\NuevaRenta.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\NuevaRenta.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\NuevaRenta.cs",
+              "RelativeToolTip": "Renta de Video 2.0\\NuevaRenta.cs",
+              "ViewState": "AgIAAMUAAAAAAAAAAAAgwNUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-06T08:02:08.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Detalle De Factura.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Detalle De Factura.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\Detalle De Factura.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Detalle De Factura.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Renta de Video 2.0\\Detalle De Factura.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-06T08:31:00.746Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Gestion Usuarios.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Gestion Usuarios.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\Gestion Usuarios.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Gestion Usuarios.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Renta de Video 2.0\\Gestion Usuarios.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-06T08:32:06.995Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Mora Pendiente PC.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Mora Pendiente PC.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\Mora Pendiente PC.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Mora Pendiente PC.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Renta de Video 2.0\\Mora Pendiente PC.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-06T07:20:05.399Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Lista Facturas.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Lista Facturas.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\Lista Facturas.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Lista Facturas.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Renta de Video 2.0\\Lista Facturas.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-06T08:30:55.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BuscarCliente.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\BuscarCliente.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\BuscarCliente.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\BuscarCliente.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Renta de Video 2.0\\BuscarCliente.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-06T08:01:53.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "menu.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\menu.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\menu.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\menu.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Renta de Video 2.0\\menu.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-06T07:31:12.919Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "menu.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\menu.cs",
+              "RelativeDocumentMoniker": "Renta de Video 2.0\\menu.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive\\Documents\\Nuevo Semestre IA\\Analisis de Sistemas II\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\menu.cs",
+              "RelativeToolTip": "Renta de Video 2.0\\menu.cs",
+              "ViewState": "AgIAAPMAAAAAAAAAAAAqwAcBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-06T07:31:15.745Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

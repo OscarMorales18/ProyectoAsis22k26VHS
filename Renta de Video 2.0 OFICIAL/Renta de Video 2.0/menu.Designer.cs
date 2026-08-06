@@ -69,9 +69,9 @@
             MenuVertical.Controls.Add(btninicio);
             MenuVertical.Dock = DockStyle.Left;
             MenuVertical.Location = new Point(0, 0);
-            MenuVertical.Margin = new Padding(4, 3, 4, 3);
+            MenuVertical.Margin = new Padding(6, 5, 6, 5);
             MenuVertical.Name = "MenuVertical";
-            MenuVertical.Size = new Size(250, 788);
+            MenuVertical.Size = new Size(371, 985);
             MenuVertical.TabIndex = 0;
             MenuVertical.Paint += MenuVertical_Paint;
             // 
@@ -87,20 +87,22 @@
             button1.ForeColor = Color.Black;
             button1.Image = (Image)resources.GetObject("button1.Image");
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(5, 474);
-            button1.Margin = new Padding(4, 3, 4, 3);
+            button1.Location = new Point(7, 790);
+            button1.Margin = new Padding(6, 5, 6, 5);
             button1.Name = "button1";
-            button1.Size = new Size(242, 42);
+            button1.Size = new Size(346, 70);
             button1.TabIndex = 8;
             button1.Text = "      SEGURIDAD DEL SISTEMA";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
             // 
             // iconmin
             // 
             iconmin.Image = (Image)resources.GetObject("iconmin.Image");
-            iconmin.Location = new Point(30, 675);
+            iconmin.Location = new Point(43, 1125);
+            iconmin.Margin = new Padding(4, 5, 4, 5);
             iconmin.Name = "iconmin";
-            iconmin.Size = new Size(25, 25);
+            iconmin.Size = new Size(36, 42);
             iconmin.SizeMode = PictureBoxSizeMode.StretchImage;
             iconmin.TabIndex = 7;
             iconmin.TabStop = false;
@@ -118,10 +120,10 @@
             button5.ForeColor = Color.Black;
             button5.Image = (Image)resources.GetObject("button5.Image");
             button5.ImageAlign = ContentAlignment.MiddleLeft;
-            button5.Location = new Point(5, 416);
-            button5.Margin = new Padding(4, 3, 4, 3);
+            button5.Location = new Point(7, 693);
+            button5.Margin = new Padding(6, 5, 6, 5);
             button5.Name = "button5";
-            button5.Size = new Size(242, 42);
+            button5.Size = new Size(346, 70);
             button5.TabIndex = 6;
             button5.Text = "      GESTIÓN DE USUARIOS";
             button5.UseVisualStyleBackColor = false;
@@ -130,9 +132,10 @@
             // iconcerrar
             // 
             iconcerrar.Image = (Image)resources.GetObject("iconcerrar.Image");
-            iconcerrar.Location = new Point(3, 675);
+            iconcerrar.Location = new Point(4, 1125);
+            iconcerrar.Margin = new Padding(4, 5, 4, 5);
             iconcerrar.Name = "iconcerrar";
-            iconcerrar.Size = new Size(25, 25);
+            iconcerrar.Size = new Size(36, 42);
             iconcerrar.SizeMode = PictureBoxSizeMode.StretchImage;
             iconcerrar.TabIndex = 6;
             iconcerrar.TabStop = false;
@@ -150,10 +153,10 @@
             button4.ForeColor = Color.Black;
             button4.Image = (Image)resources.GetObject("button4.Image");
             button4.ImageAlign = ContentAlignment.MiddleLeft;
-            button4.Location = new Point(5, 355);
-            button4.Margin = new Padding(4, 3, 4, 3);
+            button4.Location = new Point(7, 592);
+            button4.Margin = new Padding(6, 5, 6, 5);
             button4.Name = "button4";
-            button4.Size = new Size(242, 42);
+            button4.Size = new Size(346, 70);
             button4.TabIndex = 5;
             button4.Text = "       FACTURACIÓN/MORAS";
             button4.UseVisualStyleBackColor = false;
@@ -170,10 +173,10 @@
             button3.ForeColor = Color.Black;
             button3.Image = (Image)resources.GetObject("button3.Image");
             button3.ImageAlign = ContentAlignment.MiddleLeft;
-            button3.Location = new Point(4, 297);
-            button3.Margin = new Padding(4, 3, 4, 3);
+            button3.Location = new Point(6, 495);
+            button3.Margin = new Padding(6, 5, 6, 5);
             button3.Name = "button3";
-            button3.Size = new Size(242, 42);
+            button3.Size = new Size(346, 70);
             button3.TabIndex = 4;
             button3.Text = "        RENTAS/DEVOLUCIONES";
             button3.UseVisualStyleBackColor = false;
@@ -190,10 +193,10 @@
             button2.ForeColor = Color.Black;
             button2.Image = (Image)resources.GetObject("button2.Image");
             button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(4, 240);
-            button2.Margin = new Padding(4, 3, 4, 3);
+            button2.Location = new Point(6, 400);
+            button2.Margin = new Padding(6, 5, 6, 5);
             button2.Name = "button2";
-            button2.Size = new Size(242, 42);
+            button2.Size = new Size(346, 70);
             button2.TabIndex = 3;
             button2.Text = "INVENTARIO";
             button2.UseVisualStyleBackColor = false;
@@ -211,10 +214,10 @@
             button6.ForeColor = Color.Black;
             button6.Image = (Image)resources.GetObject("button6.Image");
             button6.ImageAlign = ContentAlignment.MiddleLeft;
-            button6.Location = new Point(3, 179);
-            button6.Margin = new Padding(4, 3, 4, 3);
+            button6.Location = new Point(4, 298);
+            button6.Margin = new Padding(6, 5, 6, 5);
             button6.Name = "button6";
-            button6.Size = new Size(242, 42);
+            button6.Size = new Size(346, 70);
             button6.TabIndex = 2;
             button6.Text = "         CLIENTES/MEMBRESIAS";
             button6.UseVisualStyleBackColor = false;
@@ -224,10 +227,10 @@
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Cursor = Cursors.Hand;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(5, 10);
-            pictureBox1.Margin = new Padding(4, 3, 4, 3);
+            pictureBox1.Location = new Point(7, 17);
+            pictureBox1.Margin = new Padding(6, 5, 6, 5);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(237, 76);
+            pictureBox1.Size = new Size(339, 127);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
@@ -244,10 +247,10 @@
             btninicio.ForeColor = Color.Black;
             btninicio.Image = (Image)resources.GetObject("btninicio.Image");
             btninicio.ImageAlign = ContentAlignment.MiddleLeft;
-            btninicio.Location = new Point(4, 122);
-            btninicio.Margin = new Padding(4, 3, 4, 3);
+            btninicio.Location = new Point(6, 203);
+            btninicio.Margin = new Padding(6, 5, 6, 5);
             btninicio.Name = "btninicio";
-            btninicio.Size = new Size(242, 42);
+            btninicio.Size = new Size(346, 70);
             btninicio.TabIndex = 1;
             btninicio.Text = "INICIO";
             btninicio.UseVisualStyleBackColor = false;
@@ -261,10 +264,10 @@
             BarraTitulo.Controls.Add(lblNombreUsuario);
             BarraTitulo.Controls.Add(btnSlide);
             BarraTitulo.Dock = DockStyle.Top;
-            BarraTitulo.Location = new Point(250, 0);
-            BarraTitulo.Margin = new Padding(4, 3, 4, 3);
+            BarraTitulo.Location = new Point(371, 0);
+            BarraTitulo.Margin = new Padding(6, 5, 6, 5);
             BarraTitulo.Name = "BarraTitulo";
-            BarraTitulo.Size = new Size(1136, 50);
+            BarraTitulo.Size = new Size(1362, 83);
             BarraTitulo.TabIndex = 1;
             BarraTitulo.Paint += BarraTitulo_Paint;
             BarraTitulo.MouseDown += BarraTitulo_MouseDown;
@@ -275,10 +278,10 @@
             button7.FlatStyle = FlatStyle.Flat;
             button7.Font = new Font("Lucida Bright", 11.25F, FontStyle.Bold);
             button7.ForeColor = SystemColors.ControlText;
-            button7.Location = new Point(892, 7);
-            button7.Margin = new Padding(3, 2, 3, 2);
+            button7.Location = new Point(1274, 12);
+            button7.Margin = new Padding(4, 3, 4, 3);
             button7.Name = "button7";
-            button7.Size = new Size(161, 35);
+            button7.Size = new Size(230, 58);
             button7.TabIndex = 2;
             button7.Text = "Cerrar Sesion";
             button7.UseVisualStyleBackColor = false;
@@ -289,9 +292,10 @@
             lblRol.AutoSize = true;
             lblRol.Font = new Font("Lucida Bright", 11.25F, FontStyle.Bold);
             lblRol.ForeColor = Color.FromArgb(246, 170, 28);
-            lblRol.Location = new Point(691, 31);
+            lblRol.Location = new Point(987, 52);
+            lblRol.Margin = new Padding(4, 0, 4, 0);
             lblRol.Name = "lblRol";
-            lblRol.Size = new Size(33, 17);
+            lblRol.Size = new Size(51, 26);
             lblRol.TabIndex = 0;
             lblRol.Text = "Rol";
             lblRol.Click += label1_Click_3;
@@ -301,9 +305,10 @@
             lblNombreUsuario.AutoSize = true;
             lblNombreUsuario.Font = new Font("Lucida Bright", 11.25F, FontStyle.Bold);
             lblNombreUsuario.ForeColor = Color.FromArgb(246, 170, 28);
-            lblNombreUsuario.Location = new Point(702, 7);
+            lblNombreUsuario.Location = new Point(1003, 12);
+            lblNombreUsuario.Margin = new Padding(4, 0, 4, 0);
             lblNombreUsuario.Name = "lblNombreUsuario";
-            lblNombreUsuario.Size = new Size(134, 17);
+            lblNombreUsuario.Size = new Size(205, 26);
             lblNombreUsuario.TabIndex = 1;
             lblNombreUsuario.Text = "Nombre Usuario";
             lblNombreUsuario.Click += label1_Click_2;
@@ -312,8 +317,8 @@
             // 
             btnSlide.BackColor = Color.Transparent;
             btnSlide.Image = (Image)resources.GetObject("btnSlide.Image");
-            btnSlide.Location = new Point(7, 10);
-            btnSlide.Margin = new Padding(4, 3, 4, 3);
+            btnSlide.Location = new Point(10, 17);
+            btnSlide.Margin = new Padding(6, 5, 6, 5);
             btnSlide.Name = "btnSlide";
             btnSlide.Size = new Size(30, 30);
             btnSlide.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -326,27 +331,29 @@
             panelContenedor.BackColor = Color.FromArgb(98, 23, 8);
             panelContenedor.Cursor = Cursors.Hand;
             panelContenedor.Dock = DockStyle.Fill;
-            panelContenedor.Location = new Point(250, 50);
-            panelContenedor.Margin = new Padding(4, 3, 4, 3);
+            panelContenedor.Location = new Point(371, 83);
+            panelContenedor.Margin = new Padding(6, 5, 6, 5);
             panelContenedor.Name = "panelContenedor";
-            panelContenedor.Size = new Size(1136, 738);
+            panelContenedor.Size = new Size(1362, 902);
             panelContenedor.TabIndex = 2;
             panelContenedor.Paint += panelContenedor_Paint;
             // 
             // menu
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            ClientSize = new Size(1386, 788);
+            ClientSize = new Size(1733, 985);
             Controls.Add(panelContenedor);
             Controls.Add(BarraTitulo);
             Controls.Add(MenuVertical);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(4, 3, 4, 3);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(6, 5, 6, 5);
             Name = "menu";
             StartPosition = FormStartPosition.Manual;
             Text = "Form1";
+            WindowState = FormWindowState.Maximized;
             MenuVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)iconmin).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconcerrar).EndInit();

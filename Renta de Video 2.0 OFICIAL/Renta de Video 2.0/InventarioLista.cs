@@ -192,9 +192,11 @@ namespace Renta_de_Video_2._0
             if (respuesta == DialogResult.Yes)
             {
                 Cvideos objetoVideo = new Cvideos();
-                objetoVideo.eliminarVideo(txtCodigo.Text);
+                bool seElimino = objetoVideo.eliminarVideo(txtCodigo.Text);
 
-                MessageBox.Show("Video eliminado correctamente.");
+                // si no se pudo eliminar de verdad, Cvideos ya mostró su propio mensaje
+                if (seElimino)
+                    MessageBox.Show("Video eliminado correctamente.");
 
                 txtCodigo.Text = "";
                 txtTitulo.Text = "";

@@ -14,7 +14,7 @@ namespace Renta_de_Video_2._0
             // see https://aka.ms/applicationconfiguration.
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             ApplicationConfiguration.Initialize();
-            Application.Run(new menu());
+            Application.Run(new Login());
         }
     }
 }

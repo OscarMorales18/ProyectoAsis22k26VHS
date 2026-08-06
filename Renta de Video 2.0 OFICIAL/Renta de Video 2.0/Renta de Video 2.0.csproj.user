@@ -4,19 +4,22 @@
     <Compile Update="Auditoria.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="BuscarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Detalle De Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DetalleCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Devolucion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormWalkthriught2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="FormWalkthriught3.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Gestion Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="InicioDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="InventarioLista.cs">

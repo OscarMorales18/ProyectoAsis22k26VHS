@@ -39,6 +39,7 @@
             pictureBox2 = new PictureBox();
             btn_salir = new Button();
             btn_buscar = new Button();
+            Buscar = new Button();
             ((System.ComponentModel.ISupportInitialize)dgv_detalleFactura).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -96,7 +97,7 @@
             txt_fecha.Location = new Point(88, 145);
             txt_fecha.Margin = new Padding(3, 4, 3, 4);
             txt_fecha.Name = "txt_fecha";
-            txt_fecha.Size = new Size(180, 32);
+            txt_fecha.Size = new Size(180, 27);
             txt_fecha.TabIndex = 40;
             // 
             // txt_cliente
@@ -107,7 +108,7 @@
             txt_cliente.Location = new Point(88, 105);
             txt_cliente.Margin = new Padding(3, 4, 3, 4);
             txt_cliente.Name = "txt_cliente";
-            txt_cliente.Size = new Size(180, 32);
+            txt_cliente.Size = new Size(180, 27);
             txt_cliente.TabIndex = 41;
             // 
             // txt_codigo
@@ -118,7 +119,7 @@
             txt_codigo.Location = new Point(88, 65);
             txt_codigo.Margin = new Padding(3, 4, 3, 4);
             txt_codigo.Name = "txt_codigo";
-            txt_codigo.Size = new Size(180, 32);
+            txt_codigo.Size = new Size(180, 27);
             txt_codigo.TabIndex = 42;
             // 
             // txt_totalPagar
@@ -130,7 +131,7 @@
             txt_totalPagar.Margin = new Padding(3, 4, 3, 4);
             txt_totalPagar.Name = "txt_totalPagar";
             txt_totalPagar.ReadOnly = true;
-            txt_totalPagar.Size = new Size(180, 32);
+            txt_totalPagar.Size = new Size(180, 27);
             txt_totalPagar.TabIndex = 43;
             // 
             // pictureBox2
@@ -172,10 +173,26 @@
             btn_buscar.UseVisualStyleBackColor = false;
             btn_buscar.Click += OnBuscar_Click;
             // 
+            // Buscar
+            // 
+            Buscar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            Buscar.BackColor = Color.DarkOrange;
+            Buscar.FlatStyle = FlatStyle.Popup;
+            Buscar.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Buscar.Location = new Point(904, 532);
+            Buscar.Margin = new Padding(3, 4, 3, 4);
+            Buscar.Name = "Buscar";
+            Buscar.Size = new Size(278, 46);
+            Buscar.TabIndex = 49;
+            Buscar.Text = "Pagar Mora";
+            Buscar.UseVisualStyleBackColor = false;
+            Buscar.Click += Buscar_Click;
+            // 
             // Detalle_De_Factura
             // 
             AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(1213, 591);
+            Controls.Add(Buscar);
             Controls.Add(btn_buscar);
             Controls.Add(btn_salir);
             Controls.Add(pictureBox2);
@@ -187,6 +204,7 @@
             Controls.Add(dgv_detalleFactura);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
             Name = "Detalle_De_Factura";
             Text = "Detalle_De_Factura";
@@ -209,5 +227,6 @@
         private PictureBox pictureBox2;
         private Button btn_salir;
         private Button btn_buscar;
+        private Button Buscar;
     }
 }

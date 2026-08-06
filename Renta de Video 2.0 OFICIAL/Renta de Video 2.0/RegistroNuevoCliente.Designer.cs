@@ -60,7 +60,7 @@
             // 
             DPI.BackColor = Color.FromArgb(70, 0, 0);
             DPI.ForeColor = Color.Transparent;
-            DPI.Location = new Point(41, 357);
+            DPI.Location = new Point(41, 317);
             DPI.Margin = new Padding(3, 4, 3, 4);
             DPI.Name = "DPI";
             DPI.Size = new Size(610, 27);
@@ -71,7 +71,7 @@
             // 
             Telefono.BackColor = Color.FromArgb(70, 0, 0);
             Telefono.ForeColor = Color.Transparent;
-            Telefono.Location = new Point(41, 473);
+            Telefono.Location = new Point(41, 407);
             Telefono.Margin = new Padding(3, 4, 3, 4);
             Telefono.Name = "Telefono";
             Telefono.Size = new Size(610, 27);
@@ -82,7 +82,7 @@
             // 
             Direccion.BackColor = Color.FromArgb(70, 0, 0);
             Direccion.ForeColor = Color.Transparent;
-            Direccion.Location = new Point(41, 611);
+            Direccion.Location = new Point(41, 509);
             Direccion.Margin = new Padding(3, 4, 3, 4);
             Direccion.Name = "Direccion";
             Direccion.Size = new Size(610, 27);
@@ -93,7 +93,7 @@
             // 
             Correo.BackColor = Color.FromArgb(70, 0, 0);
             Correo.ForeColor = Color.Transparent;
-            Correo.Location = new Point(41, 712);
+            Correo.Location = new Point(41, 618);
             Correo.Margin = new Padding(3, 4, 3, 4);
             Correo.Name = "Correo";
             Correo.Size = new Size(610, 27);
@@ -104,7 +104,7 @@
             // 
             Codigo_de_membresia.BackColor = Color.FromArgb(70, 0, 0);
             Codigo_de_membresia.ForeColor = Color.Transparent;
-            Codigo_de_membresia.Location = new Point(41, 827);
+            Codigo_de_membresia.Location = new Point(41, 725);
             Codigo_de_membresia.Margin = new Padding(3, 4, 3, 4);
             Codigo_de_membresia.Name = "Codigo_de_membresia";
             Codigo_de_membresia.Size = new Size(610, 27);
@@ -117,10 +117,10 @@
             Guardar_registro_cliente.Cursor = Cursors.Hand;
             Guardar_registro_cliente.FlatStyle = FlatStyle.Popup;
             Guardar_registro_cliente.Font = new Font("Lucida Bright", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Guardar_registro_cliente.Location = new Point(794, 854);
+            Guardar_registro_cliente.Location = new Point(725, 712);
             Guardar_registro_cliente.Margin = new Padding(3, 4, 3, 4);
             Guardar_registro_cliente.Name = "Guardar_registro_cliente";
-            Guardar_registro_cliente.Size = new Size(491, 85);
+            Guardar_registro_cliente.Size = new Size(479, 85);
             Guardar_registro_cliente.TabIndex = 23;
             Guardar_registro_cliente.Text = "Guardar";
             Guardar_registro_cliente.UseVisualStyleBackColor = false;
@@ -130,7 +130,7 @@
             // 
             pictureBox2.BackColor = Color.FromArgb(42, 0, 0);
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(915, 289);
+            pictureBox2.Location = new Point(837, 219);
             pictureBox2.Margin = new Padding(5, 4, 5, 4);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(261, 281);
@@ -142,7 +142,7 @@
             // 
             NombreCompleto.BackColor = Color.FromArgb(70, 0, 0);
             NombreCompleto.ForeColor = Color.Transparent;
-            NombreCompleto.Location = new Point(41, 229);
+            NombreCompleto.Location = new Point(41, 203);
             NombreCompleto.Margin = new Padding(3, 4, 3, 4);
             NombreCompleto.Name = "NombreCompleto";
             NombreCompleto.Size = new Size(610, 27);

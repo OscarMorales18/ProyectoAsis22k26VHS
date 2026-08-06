@@ -13,9 +13,9 @@ using Renta_de_Video_2._0.Resources;
 
 namespace Renta_de_Video_2._0
 {
-    public partial class FormWalkthriught2 : Form
+    public partial class BuscarCliente : Form
     {
-        public FormWalkthriught2()
+        public BuscarCliente()
         {
             InitializeComponent();
 
@@ -28,6 +28,7 @@ namespace Renta_de_Video_2._0
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // busca al cliente ligado a la membresia escrita en el cuadro de texto
             try
             {
                 string entrada = Codigo_Membresia.Text.Trim();
@@ -43,49 +44,32 @@ namespace Renta_de_Video_2._0
                     Codigo_Membresia.Text = codigoBuscado; // Auto-completa el cuadro de texto
                 }
 
+                int idMembresia;
+                if (codigoBuscado.StartsWith("MEM-", StringComparison.OrdinalIgnoreCase))
+                {
+                    if (!int.TryParse(codigoBuscado.Substring(4), out idMembresia))
+                        throw new Exception("El código de membresía no tiene un formato válido.");
+                }
+                else if (!int.TryParse(codigoBuscado, out idMembresia))
+                {
+                    throw new Exception("El código de membresía no tiene un formato válido.");
+                }
+
                 dataGridView1.Rows.Clear();
 
-                Cconexion c = new Cconexion();
-                MySqlConnection conn = c.establecerConexion();
+                ClienteConsultas consulta = new ClienteConsultas();
+                MClienteDetalle cliente = consulta.BuscarPorMembresia(idMembresia);
 
-                try
+                // si no aparece nada se le avisa al usuario en vez de dejar la tabla vacia sin explicar
+                if (cliente == null)
                 {
-                    string query = @"SELECT nombre, dpi, telefono, direccion, correo 
-                            FROM cliente 
-                            WHERE codigo_membresia = @codigo 
-                               OR id_cliente = @idNum";
-
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@codigo", codigoBuscado);
-                    cmd.Parameters.AddWithValue("@idNum", int.TryParse(entrada, out int id) ? id : 0);
-
-                    using (MySqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        bool encontrado = false;
-
-                        while (reader.Read())
-                        {
-                            encontrado = true;
-                            dataGridView1.Rows.Add(
-                                reader.IsDBNull(0) ? "" : reader.GetString("nombre"),
-                                reader.IsDBNull(1) ? "" : reader.GetString("dpi"),
-                                reader.IsDBNull(2) ? "" : reader.GetString("telefono"),
-                                reader.IsDBNull(3) ? "" : reader.GetString("direccion"),
-                                reader.IsDBNull(4) ? "" : reader.GetString("correo")
-                            );
-                        }
-
-                        if (!encontrado)
-                        {
-                            MessageBox.Show("No se encontró ningún cliente con la membresía " + codigoBuscado,
-                                            "Sin resultados", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                    }
+                    MessageBox.Show("No se encontró ningún cliente con la membresía " + codigoBuscado,
+                                    "Sin resultados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
                 }
-                finally
-                {
-                    c.cerrarConexion();
-                }
+
+                int indiceFila = dataGridView1.Rows.Add(cliente.Nombre, cliente.Dpi, cliente.Telefono, cliente.Direccion, cliente.Correo);
+                dataGridView1.Rows[indiceFila].Tag = cliente.IdCliente;
             }
             catch (Exception ex)
             {
@@ -116,7 +100,17 @@ namespace Renta_de_Video_2._0
 
         private void button3_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new FormWalkthriught3());
+            // se usa CurrentRow y no SelectedRows porque la tabla no está en modo FullRowSelect,
+            // asi que basta con hacer click en cualquier celda de la fila del cliente
+            if (dataGridView1.CurrentRow == null || dataGridView1.CurrentRow.Tag == null)
+            {
+                MessageBox.Show("Selecciona un cliente de la tabla para ver su detalle.",
+                                "Falta selección", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int idClienteSeleccionado = (int)dataGridView1.CurrentRow.Tag;
+            AbrirFormInPanel(new DetalleCliente(idClienteSeleccionado));
         }
 
         private void button2_Click(object sender, EventArgs e)
