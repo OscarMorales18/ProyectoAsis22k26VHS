@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+KiAp8iiUIk=",
+  "dgSpecHash": "qD5Sig4l7F4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sofia PC\\Downloads\\MAQUETA FINAL\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Renta de Video 2.0.csproj",
+  "projectFilePath": "C:\\Users\\Sofia PC\\Downloads\\completopop\\final\\Renta de Video 2.0 OFICIAL (4)\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Renta de Video 2.0.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sofia PC\\.nuget\\packages\\microsoft.bcl.cryptography\\9.0.13\\microsoft.bcl.cryptography.9.0.13.nupkg.sha512",
     "C:\\Users\\Sofia PC\\.nuget\\packages\\microsoft.data.sqlclient\\7.0.2\\microsoft.data.sqlclient.7.0.2.nupkg.sha512",
@@ -34,15 +34,5 @@
     "C:\\Users\\Sofia PC\\.nuget\\packages\\system.security.cryptography.pkcs\\9.0.13\\system.security.cryptography.pkcs.9.0.13.nupkg.sha512",
     "C:\\Users\\Sofia PC\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.13\\system.security.cryptography.protecteddata.9.0.13.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "message": "Error al obtener los datos de vulnerabilidad del paquete: No se puede cargar el índice de servicio del origen https://api.nuget.org/v3/index.json.",
-      "projectPath": "C:\\Users\\Sofia PC\\Downloads\\MAQUETA FINAL\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Renta de Video 2.0.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\Sofia PC\\Downloads\\MAQUETA FINAL\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Renta de Video 2.0.csproj",
-      "targetGraphs": []
-    }
-  ]
+  "logs": []
 }

@@ -1,6 +1,6 @@
 ﻿namespace Renta_de_Video_2._0
 {
-    partial class FormWalkthriught2
+    partial class BuscarCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormWalkthriught2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuscarCliente));
             button1 = new Button();
             pictureBox1 = new PictureBox();
             Codigo_Membresia = new TextBox();
@@ -52,7 +52,7 @@
             button1.Cursor = Cursors.Hand;
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(141, 402);
+            button1.Location = new Point(115, 330);
             button1.Name = "button1";
             button1.Size = new Size(113, 59);
             button1.TabIndex = 7;
@@ -67,7 +67,7 @@
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1068, 562);
+            pictureBox1.Size = new Size(994, 554);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 19;
             pictureBox1.TabStop = false;
@@ -77,7 +77,7 @@
             Codigo_Membresia.BackColor = Color.FromArgb(70, 0, 0);
             Codigo_Membresia.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Codigo_Membresia.ForeColor = Color.White;
-            Codigo_Membresia.Location = new Point(22, 318);
+            Codigo_Membresia.Location = new Point(18, 277);
             Codigo_Membresia.Name = "Codigo_Membresia";
             Codigo_Membresia.Size = new Size(242, 27);
             Codigo_Membresia.TabIndex = 20;
@@ -87,7 +87,7 @@
             // 
             pictureBox2.BackColor = Color.FromArgb(42, 0, 0);
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(115, 455);
+            pictureBox2.Location = new Point(91, 377);
             pictureBox2.Margin = new Padding(4, 3, 4, 3);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(169, 176);
@@ -99,10 +99,10 @@
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Nombre, DPI, Telefono, Direccion, Correo });
-            dataGridView1.Location = new Point(427, 330);
+            dataGridView1.Location = new Point(350, 277);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(588, 150);
+            dataGridView1.Size = new Size(591, 150);
             dataGridView1.TabIndex = 26;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -147,9 +147,9 @@
             button2.Cursor = Cursors.Hand;
             button2.FlatStyle = FlatStyle.Popup;
             button2.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(608, 63);
+            button2.Location = new Point(491, 56);
             button2.Name = "button2";
-            button2.Size = new Size(96, 54);
+            button2.Size = new Size(145, 54);
             button2.TabIndex = 27;
             button2.Text = "Registro Cliente";
             button2.UseVisualStyleBackColor = false;
@@ -161,20 +161,20 @@
             button3.Cursor = Cursors.Hand;
             button3.FlatStyle = FlatStyle.Popup;
             button3.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.Location = new Point(791, 63);
+            button3.Location = new Point(760, 56);
             button3.Name = "button3";
-            button3.Size = new Size(96, 54);
+            button3.Size = new Size(145, 54);
             button3.TabIndex = 28;
             button3.Text = "Detalle Cliente";
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
-            // FormWalkthriught2
+            // BuscarCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1068, 562);
+            ClientSize = new Size(994, 554);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(dataGridView1);
@@ -183,8 +183,9 @@
             Controls.Add(button1);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "FormWalkthriught2";
-            Text = "Form2";
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "BuscarCliente";
+            Text = "Buscar Cliente";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Renta_de_Video_2._0.Clases;
 
 namespace Renta_de_Video_2._0
 {
@@ -24,23 +25,52 @@ namespace Renta_de_Video_2._0
 
         private void Buscar_Click(object sender, EventArgs e)
         {
+            // trae las moras pendientes del cliente dueño de esa membresia
             try
             {
-                if (string.IsNullOrWhiteSpace(Buscar_cliente.Text))
-                    throw new Exception("Ingresa el nombre de un cliente para buscar.");
+                string entrada = Buscar_cliente.Text.Trim();
 
-                bool encontrado = false;
-                foreach (DataGridViewRow fila in dataGridView1.Rows)
+                if (string.IsNullOrWhiteSpace(entrada))
+                    throw new Exception("Ingresa el código de membresía del cliente.");
+
+                string codigoTexto = entrada.ToUpper();
+                string numeroTexto = codigoTexto.Replace("MEM-", "");
+
+                if (!int.TryParse(numeroTexto, out int idMembresia))
+                    throw new Exception("El código de membresía no es válido.");
+
+                RentaConsultas consultaRenta = new RentaConsultas();
+                MClienteRenta cliente = consultaRenta.BuscarClientePorMembresia(idMembresia);
+
+                if (cliente == null)
+                    throw new Exception("No se encontró ningún cliente con esa membresía.");
+
+                MoraConsultas consultaMora = new MoraConsultas();
+                List<MMoraPendiente> moras = consultaMora.CargarMorasPendientes(cliente.IdCliente);
+
+                dataGridView1.Rows.Clear();
+
+                if (moras.Count == 0)
+                    throw new Exception("Este cliente no tiene moras pendientes.");
+
+                string codigoMembresiaTexto = "MEM-" + idMembresia.ToString("D4");
+                decimal totalAcumulado = 0;
+
+                foreach (MMoraPendiente mora in moras)
                 {
-                    if (fila.Cells[0].Value == null) continue;
-                    bool coincide = fila.Cells[0].Value.ToString().ToLower().Contains(Buscar_cliente.Text.ToLower());
-                    fila.Visible = coincide;
-                    if (coincide) encontrado = true;
+                    int indiceFila = dataGridView1.Rows.Add(
+                        cliente.Nombre,
+                        codigoMembresiaTexto,
+                        "REN-" + mora.IdRenta.ToString("D4"),
+                        mora.DiasAtraso,
+                        "Q" + mora.Monto.ToString("0.00")
+                    );
+                    dataGridView1.Rows[indiceFila].Tag = mora.IdMora;
+
+                    totalAcumulado += mora.Monto;
                 }
 
-                if (!encontrado)
-                    throw new Exception("No se encontraron moras pendientes para ese cliente.");
-
+                totalmora.Text = "Q" + totalAcumulado.ToString("0.00");
             }
             catch (Exception ex)
             {
@@ -56,14 +86,23 @@ namespace Renta_de_Video_2._0
 
         private void Marcarpago_Click(object sender, EventArgs e)
         {
+            // marca la mora seleccionada como pagada en la base de datos
             try
             {
-                if (dataGridView1.SelectedRows.Count == 0)
-                    throw new Exception("Selecciona un cliente de la tabla para marcar su pago.");
+                if (dataGridView1.CurrentRow == null || dataGridView1.CurrentRow.Tag == null)
+                    throw new Exception("Selecciona una mora de la tabla para marcar su pago.");
 
-                DataGridViewRow filaSeleccionada = dataGridView1.SelectedRows[0];
-                filaSeleccionada.Cells[4].Value = "Q0.00";
+                int idMora = (int)dataGridView1.CurrentRow.Tag;
 
+                MoraConsultas consultaMora = new MoraConsultas();
+                bool actualizado = consultaMora.MarcarMoraPagada(idMora);
+
+                if (!actualizado)
+                    throw new Exception("No se pudo marcar la mora como pagada.");
+
+                dataGridView1.CurrentRow.Cells[4].Value = "Q0.00";
+
+                MessageBox.Show("Mora marcada como pagada.", "Listo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

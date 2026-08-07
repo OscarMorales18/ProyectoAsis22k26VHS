@@ -164,7 +164,7 @@ namespace Renta_de_Video_2._0
         // 2 clientes (Victor Samayoa 0901-23-3424)
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new FormWalkthriught2());
+            AbrirFormInPanel(new BuscarCliente());
         }
 
         // 3 inventario (Victor Samayoa 0901-23-3424)
@@ -198,7 +198,7 @@ namespace Renta_de_Video_2._0
         }
 
         // Métodos secundarios dejados por compatibilidad
-        private void button1_Click(object sender, EventArgs e) {}
+        private void button1_Click(object sender, EventArgs e) { }
 
         private void button2_Click_1(object sender, EventArgs e) { }
         private void button2_Click(object sender, EventArgs e) { }
@@ -255,6 +255,11 @@ namespace Renta_de_Video_2._0
         }
 
         private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
 
         }

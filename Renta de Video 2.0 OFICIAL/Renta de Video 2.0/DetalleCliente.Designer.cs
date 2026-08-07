@@ -1,6 +1,6 @@
 ﻿namespace Renta_de_Video_2._0
 {
-    partial class FormWalkthriught3
+    partial class DetalleCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormWalkthriught3));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetalleCliente));
             button1 = new Button();
             ContadordeRenta = new NumericUpDown();
             label8 = new Label();
@@ -53,9 +53,9 @@
             button1.Cursor = Cursors.Hand;
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Lucida Bright", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(687, 581);
+            button1.Location = new Point(610, 476);
             button1.Name = "button1";
-            button1.Size = new Size(404, 56);
+            button1.Size = new Size(360, 56);
             button1.TabIndex = 8;
             button1.Text = "Guardar";
             button1.UseVisualStyleBackColor = false;
@@ -67,7 +67,7 @@
             ContadordeRenta.Cursor = Cursors.Hand;
             ContadordeRenta.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ContadordeRenta.ForeColor = SystemColors.ButtonFace;
-            ContadordeRenta.Location = new Point(839, 53);
+            ContadordeRenta.Location = new Point(744, 48);
             ContadordeRenta.Name = "ContadordeRenta";
             ContadordeRenta.Size = new Size(92, 29);
             ContadordeRenta.TabIndex = 28;
@@ -87,7 +87,7 @@
             si.BackColor = Color.OliveDrab;
             si.CheckAlign = ContentAlignment.MiddleRight;
             si.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            si.Location = new Point(744, 149);
+            si.Location = new Point(682, 148);
             si.Name = "si";
             si.Size = new Size(58, 44);
             si.TabIndex = 31;
@@ -101,7 +101,7 @@
             No.BackColor = Color.Brown;
             No.CheckAlign = ContentAlignment.MiddleRight;
             No.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            No.Location = new Point(885, 152);
+            No.Location = new Point(822, 152);
             No.Name = "No";
             No.Size = new Size(72, 41);
             No.TabIndex = 32;
@@ -116,7 +116,7 @@
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1117, 562);
+            pictureBox1.Size = new Size(994, 554);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 35;
             pictureBox1.TabStop = false;
@@ -127,7 +127,7 @@
             DPI.BackColor = Color.FromArgb(70, 0, 0);
             DPI.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             DPI.ForeColor = Color.White;
-            DPI.Location = new Point(29, 263);
+            DPI.Location = new Point(29, 212);
             DPI.Name = "DPI";
             DPI.Size = new Size(448, 27);
             DPI.TabIndex = 37;
@@ -138,7 +138,7 @@
             Telefono.BackColor = Color.FromArgb(70, 0, 0);
             Telefono.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Telefono.ForeColor = Color.White;
-            Telefono.Location = new Point(29, 358);
+            Telefono.Location = new Point(29, 288);
             Telefono.Name = "Telefono";
             Telefono.Size = new Size(448, 27);
             Telefono.TabIndex = 38;
@@ -149,7 +149,7 @@
             Dirección.BackColor = Color.FromArgb(70, 0, 0);
             Dirección.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Dirección.ForeColor = Color.White;
-            Dirección.Location = new Point(29, 434);
+            Dirección.Location = new Point(29, 354);
             Dirección.Name = "Dirección";
             Dirección.Size = new Size(448, 27);
             Dirección.TabIndex = 39;
@@ -160,7 +160,7 @@
             Correo.BackColor = Color.FromArgb(70, 0, 0);
             Correo.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Correo.ForeColor = Color.White;
-            Correo.Location = new Point(29, 525);
+            Correo.Location = new Point(29, 427);
             Correo.Name = "Correo";
             Correo.Size = new Size(448, 27);
             Correo.TabIndex = 40;
@@ -171,7 +171,7 @@
             CodigodeMembresia.BackColor = Color.FromArgb(70, 0, 0);
             CodigodeMembresia.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             CodigodeMembresia.ForeColor = Color.White;
-            CodigodeMembresia.Location = new Point(29, 605);
+            CodigodeMembresia.Location = new Point(29, 495);
             CodigodeMembresia.Name = "CodigodeMembresia";
             CodigodeMembresia.Size = new Size(448, 27);
             CodigodeMembresia.TabIndex = 41;
@@ -181,7 +181,7 @@
             // 
             pictureBox2.BackColor = Color.FromArgb(42, 0, 0);
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(755, 238);
+            pictureBox2.Location = new Point(707, 236);
             pictureBox2.Margin = new Padding(4, 3, 4, 3);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(192, 187);
@@ -194,18 +194,18 @@
             NombreCompleto.BackColor = Color.FromArgb(70, 0, 0);
             NombreCompleto.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             NombreCompleto.ForeColor = Color.White;
-            NombreCompleto.Location = new Point(29, 176);
+            NombreCompleto.Location = new Point(29, 139);
             NombreCompleto.Name = "NombreCompleto";
             NombreCompleto.Size = new Size(448, 27);
             NombreCompleto.TabIndex = 43;
             NombreCompleto.TextChanged += NombreCompleto_TextChanged;
             // 
-            // FormWalkthriught3
+            // DetalleCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1117, 562);
+            ClientSize = new Size(994, 554);
             Controls.Add(NombreCompleto);
             Controls.Add(pictureBox2);
             Controls.Add(CodigodeMembresia);
@@ -220,8 +220,9 @@
             Controls.Add(button1);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "FormWalkthriught3";
-            Text = "FormWalkthriught3";
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "DetalleCliente";
+            Text = "Detalle de Cliente";
             ((System.ComponentModel.ISupportInitialize)ContadordeRenta).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

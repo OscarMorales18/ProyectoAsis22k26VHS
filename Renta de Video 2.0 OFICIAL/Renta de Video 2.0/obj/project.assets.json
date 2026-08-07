@@ -1394,11 +1394,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sofia PC\\Downloads\\MAQUETA FINAL\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Renta de Video 2.0.csproj",
+      "projectUniqueName": "C:\\Users\\Sofia PC\\Downloads\\completopop\\final\\Renta de Video 2.0 OFICIAL (4)\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Renta de Video 2.0.csproj",
       "projectName": "Renta de Video 2.0",
-      "projectPath": "C:\\Users\\Sofia PC\\Downloads\\MAQUETA FINAL\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Renta de Video 2.0.csproj",
+      "projectPath": "C:\\Users\\Sofia PC\\Downloads\\completopop\\final\\Renta de Video 2.0 OFICIAL (4)\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Renta de Video 2.0.csproj",
       "packagesPath": "C:\\Users\\Sofia PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sofia PC\\Downloads\\MAQUETA FINAL\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\obj\\",
+      "outputPath": "C:\\Users\\Sofia PC\\Downloads\\completopop\\final\\Renta de Video 2.0 OFICIAL (4)\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1474,13 +1474,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Error al obtener los datos de vulnerabilidad del paquete: No se puede cargar el índice de servicio del origen https://api.nuget.org/v3/index.json."
-    }
-  ]
+  }
 }

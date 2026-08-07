@@ -71,7 +71,7 @@
             MenuVertical.Location = new Point(0, 0);
             MenuVertical.Margin = new Padding(4, 3, 4, 3);
             MenuVertical.Name = "MenuVertical";
-            MenuVertical.Size = new Size(250, 788);
+            MenuVertical.Size = new Size(250, 473);
             MenuVertical.TabIndex = 0;
             MenuVertical.Paint += MenuVertical_Paint;
             // 
@@ -94,6 +94,7 @@
             button1.TabIndex = 8;
             button1.Text = "      SEGURIDAD DEL SISTEMA";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
             // 
             // iconmin
             // 
@@ -264,7 +265,7 @@
             BarraTitulo.Location = new Point(250, 0);
             BarraTitulo.Margin = new Padding(4, 3, 4, 3);
             BarraTitulo.Name = "BarraTitulo";
-            BarraTitulo.Size = new Size(1136, 50);
+            BarraTitulo.Size = new Size(720, 50);
             BarraTitulo.TabIndex = 1;
             BarraTitulo.Paint += BarraTitulo_Paint;
             BarraTitulo.MouseDown += BarraTitulo_MouseDown;
@@ -329,7 +330,7 @@
             panelContenedor.Location = new Point(250, 50);
             panelContenedor.Margin = new Padding(4, 3, 4, 3);
             panelContenedor.Name = "panelContenedor";
-            panelContenedor.Size = new Size(1136, 738);
+            panelContenedor.Size = new Size(720, 423);
             panelContenedor.TabIndex = 2;
             panelContenedor.Paint += panelContenedor_Paint;
             // 
@@ -338,15 +339,17 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            ClientSize = new Size(1386, 788);
+            ClientSize = new Size(970, 473);
             Controls.Add(panelContenedor);
             Controls.Add(BarraTitulo);
             Controls.Add(MenuVertical);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 3, 4, 3);
             Name = "menu";
             StartPosition = FormStartPosition.Manual;
             Text = "Form1";
+            WindowState = FormWindowState.Maximized;
             MenuVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)iconmin).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconcerrar).EndInit();

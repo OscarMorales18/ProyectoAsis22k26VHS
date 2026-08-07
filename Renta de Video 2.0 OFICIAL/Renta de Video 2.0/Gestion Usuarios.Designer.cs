@@ -278,6 +278,7 @@
             Controls.Add(cmb_rol);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Gestion_Empleados";
             Text = "Gestion_Empleados";
             ((System.ComponentModel.ISupportInitialize)dgv_usuarios).EndInit();

@@ -54,7 +54,7 @@
             dgv_facturas.Name = "dgv_facturas";
             dgv_facturas.RowHeadersWidth = 51;
             dgv_facturas.RowTemplate.Height = 24;
-            dgv_facturas.Size = new Size(1017, 227);
+            dgv_facturas.Size = new Size(886, 177);
             dgv_facturas.TabIndex = 13;
             // 
             // txt_porcliente
@@ -63,10 +63,10 @@
             txt_porcliente.BackColor = Color.FromArgb(42, 18, 11);
             txt_porcliente.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txt_porcliente.ForeColor = SystemColors.Window;
-            txt_porcliente.Location = new Point(933, 67);
+            txt_porcliente.Location = new Point(831, 73);
             txt_porcliente.Margin = new Padding(3, 4, 3, 4);
             txt_porcliente.Name = "txt_porcliente";
-            txt_porcliente.Size = new Size(294, 32);
+            txt_porcliente.Size = new Size(169, 32);
             txt_porcliente.TabIndex = 16;
             txt_porcliente.TextChanged += porcliente_TextChanged;
             // 
@@ -76,10 +76,10 @@
             btn_buscar.BackColor = Color.DarkOrange;
             btn_buscar.FlatStyle = FlatStyle.Popup;
             btn_buscar.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_buscar.Location = new Point(1233, 49);
+            btn_buscar.Location = new Point(1006, 55);
             btn_buscar.Margin = new Padding(3, 4, 3, 4);
             btn_buscar.Name = "btn_buscar";
-            btn_buscar.Size = new Size(118, 71);
+            btn_buscar.Size = new Size(90, 60);
             btn_buscar.TabIndex = 17;
             btn_buscar.Text = "Buscar";
             btn_buscar.UseVisualStyleBackColor = false;
@@ -92,10 +92,10 @@
             btn_verDetalle.Cursor = Cursors.Hand;
             btn_verDetalle.FlatStyle = FlatStyle.Popup;
             btn_verDetalle.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_verDetalle.Location = new Point(583, 139);
+            btn_verDetalle.Location = new Point(464, 139);
             btn_verDetalle.Margin = new Padding(3, 4, 3, 4);
             btn_verDetalle.Name = "btn_verDetalle";
-            btn_verDetalle.Size = new Size(259, 68);
+            btn_verDetalle.Size = new Size(200, 46);
             btn_verDetalle.TabIndex = 18;
             btn_verDetalle.Text = "Ver Detalle";
             btn_verDetalle.UseVisualStyleBackColor = false;
@@ -109,7 +109,7 @@
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1386, 788);
+            pictureBox1.Size = new Size(1136, 738);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 36;
             pictureBox1.TabStop = false;
@@ -120,10 +120,10 @@
             pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox2.BackColor = Color.FromArgb(42, 0, 0);
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(525, 493);
+            pictureBox2.Location = new Point(491, 473);
             pictureBox2.Margin = new Padding(5, 4, 5, 4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(318, 278);
+            pictureBox2.Size = new Size(173, 194);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 43;
             pictureBox2.TabStop = false;
@@ -132,7 +132,7 @@
             // 
             btn_salir.BackColor = Color.White;
             btn_salir.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_salir.Location = new Point(1346, 0);
+            btn_salir.Location = new Point(1096, 0);
             btn_salir.Margin = new Padding(5, 4, 5, 4);
             btn_salir.Name = "btn_salir";
             btn_salir.Size = new Size(40, 41);
@@ -145,7 +145,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1386, 788);
+            ClientSize = new Size(1136, 738);
             Controls.Add(btn_salir);
             Controls.Add(pictureBox2);
             Controls.Add(btn_verDetalle);

@@ -346,6 +346,7 @@
             ClientSize = new Size(1213, 591);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "InicioDashboard";
             Text = "InicioDashboard";
             panel1.ResumeLayout(false);
