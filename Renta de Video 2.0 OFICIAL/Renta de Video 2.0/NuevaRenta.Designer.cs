@@ -29,98 +29,98 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevaRenta));
-            fencharent = new TextBox();
-            membresia = new TextBox();
-            button8 = new Button();
+            txt_fechaRenta = new TextBox();
+            txt_membresia = new TextBox();
+            btn_buscar = new Button();
             panelContenedor = new Panel();
             pictureBox2 = new PictureBox();
-            totalapagar = new TextBox();
-            Subtotal = new TextBox();
-            fechalim = new TextBox();
-            Pelicula4 = new Panel();
-            checkBox4 = new CheckBox();
+            txt_totalapagar = new TextBox();
+            txt_subtotal = new TextBox();
+            txt_fechaLimite = new TextBox();
+            pnl_pelicula3 = new Panel();
+            chk_4 = new CheckBox();
             label1 = new Label();
             label3 = new Label();
             button2 = new Button();
-            Pelicula3 = new Panel();
-            checkBox3 = new CheckBox();
+            pnl_pelicula4 = new Panel();
+            chk_3 = new CheckBox();
             label16 = new Label();
             label17 = new Label();
-            Pelicula2 = new Panel();
-            checkBox2 = new CheckBox();
+            pnl_pelicula2 = new Panel();
+            chk_2 = new CheckBox();
             label9 = new Label();
             label15 = new Label();
-            button6 = new Button();
-            Pelicula1 = new Panel();
-            checkBox1 = new CheckBox();
+            btn_confirmar = new Button();
+            pnl_pelicula1 = new Panel();
+            chk_1 = new CheckBox();
             label5 = new Label();
             label2 = new Label();
-            button9 = new Button();
+            btn_devolucion = new Button();
             pictureBox1 = new PictureBox();
             panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            Pelicula4.SuspendLayout();
-            Pelicula3.SuspendLayout();
-            Pelicula2.SuspendLayout();
-            Pelicula1.SuspendLayout();
+            pnl_pelicula3.SuspendLayout();
+            pnl_pelicula4.SuspendLayout();
+            pnl_pelicula2.SuspendLayout();
+            pnl_pelicula1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // fencharent
+            // txt_fechaRenta
             // 
-            fencharent.BackColor = Color.FromArgb(64, 0, 0);
-            fencharent.Font = new Font("Segoe UI", 8.25F);
-            fencharent.ForeColor = Color.White;
-            fencharent.Location = new Point(997, 383);
-            fencharent.Margin = new Padding(5, 4, 5, 4);
-            fencharent.Name = "fencharent";
-            fencharent.Size = new Size(100, 26);
-            fencharent.TabIndex = 19;
-            fencharent.TextChanged += fencharent_TextChanged;
+            txt_fechaRenta.BackColor = Color.FromArgb(64, 0, 0);
+            txt_fechaRenta.Font = new Font("Segoe UI", 8.25F);
+            txt_fechaRenta.ForeColor = Color.White;
+            txt_fechaRenta.Location = new Point(997, 383);
+            txt_fechaRenta.Margin = new Padding(5, 4, 5, 4);
+            txt_fechaRenta.Name = "txt_fechaRenta";
+            txt_fechaRenta.Size = new Size(100, 26);
+            txt_fechaRenta.TabIndex = 19;
+            txt_fechaRenta.TextChanged += fencharent_TextChanged;
             // 
-            // membresia
+            // txt_membresia
             // 
-            membresia.BackColor = Color.FromArgb(64, 0, 0);
-            membresia.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            membresia.ForeColor = Color.White;
-            membresia.Location = new Point(5, 189);
-            membresia.Margin = new Padding(5, 4, 5, 4);
-            membresia.Name = "membresia";
-            membresia.Size = new Size(194, 42);
-            membresia.TabIndex = 18;
-            membresia.TextChanged += membresia_TextChanged;
+            txt_membresia.BackColor = Color.FromArgb(64, 0, 0);
+            txt_membresia.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_membresia.ForeColor = Color.White;
+            txt_membresia.Location = new Point(5, 189);
+            txt_membresia.Margin = new Padding(5, 4, 5, 4);
+            txt_membresia.Name = "txt_membresia";
+            txt_membresia.Size = new Size(194, 42);
+            txt_membresia.TabIndex = 18;
+            txt_membresia.TextChanged += membresia_TextChanged;
             // 
-            // button8
+            // btn_buscar
             // 
-            button8.BackColor = Color.DarkOrange;
-            button8.FlatStyle = FlatStyle.Popup;
-            button8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button8.Location = new Point(204, 187);
-            button8.Margin = new Padding(5, 4, 5, 4);
-            button8.Name = "button8";
-            button8.Size = new Size(88, 57);
-            button8.TabIndex = 17;
-            button8.Text = "BUSCAR";
-            button8.UseVisualStyleBackColor = false;
-            button8.Click += button8_Click;
+            btn_buscar.BackColor = Color.DarkOrange;
+            btn_buscar.FlatStyle = FlatStyle.Popup;
+            btn_buscar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_buscar.Location = new Point(204, 187);
+            btn_buscar.Margin = new Padding(5, 4, 5, 4);
+            btn_buscar.Name = "btn_buscar";
+            btn_buscar.Size = new Size(88, 57);
+            btn_buscar.TabIndex = 17;
+            btn_buscar.Text = "BUSCAR";
+            btn_buscar.UseVisualStyleBackColor = false;
+            btn_buscar.Click += OnBuscar_Click;
             // 
             // panelContenedor
             // 
             panelContenedor.BackColor = Color.White;
             panelContenedor.Controls.Add(pictureBox2);
-            panelContenedor.Controls.Add(totalapagar);
-            panelContenedor.Controls.Add(Subtotal);
-            panelContenedor.Controls.Add(fechalim);
-            panelContenedor.Controls.Add(Pelicula4);
+            panelContenedor.Controls.Add(txt_totalapagar);
+            panelContenedor.Controls.Add(txt_subtotal);
+            panelContenedor.Controls.Add(txt_fechaLimite);
+            panelContenedor.Controls.Add(pnl_pelicula3);
             panelContenedor.Controls.Add(button2);
-            panelContenedor.Controls.Add(Pelicula3);
-            panelContenedor.Controls.Add(Pelicula2);
-            panelContenedor.Controls.Add(fencharent);
-            panelContenedor.Controls.Add(membresia);
-            panelContenedor.Controls.Add(button8);
-            panelContenedor.Controls.Add(button6);
-            panelContenedor.Controls.Add(Pelicula1);
-            panelContenedor.Controls.Add(button9);
+            panelContenedor.Controls.Add(pnl_pelicula4);
+            panelContenedor.Controls.Add(pnl_pelicula2);
+            panelContenedor.Controls.Add(txt_fechaRenta);
+            panelContenedor.Controls.Add(txt_membresia);
+            panelContenedor.Controls.Add(btn_buscar);
+            panelContenedor.Controls.Add(btn_confirmar);
+            panelContenedor.Controls.Add(pnl_pelicula1);
+            panelContenedor.Controls.Add(btn_devolucion);
             panelContenedor.Controls.Add(pictureBox1);
             panelContenedor.Dock = DockStyle.Fill;
             panelContenedor.Location = new Point(0, 0);
@@ -141,63 +141,63 @@
             pictureBox2.TabIndex = 44;
             pictureBox2.TabStop = false;
             // 
-            // totalapagar
+            // txt_totalapagar
             // 
-            totalapagar.BackColor = Color.FromArgb(64, 0, 0);
-            totalapagar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            totalapagar.ForeColor = Color.White;
-            totalapagar.Location = new Point(997, 487);
-            totalapagar.Margin = new Padding(5, 4, 5, 4);
-            totalapagar.Name = "totalapagar";
-            totalapagar.Size = new Size(100, 34);
-            totalapagar.TabIndex = 43;
-            totalapagar.TextChanged += totalapagar_TextChanged;
+            txt_totalapagar.BackColor = Color.FromArgb(64, 0, 0);
+            txt_totalapagar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_totalapagar.ForeColor = Color.White;
+            txt_totalapagar.Location = new Point(997, 487);
+            txt_totalapagar.Margin = new Padding(5, 4, 5, 4);
+            txt_totalapagar.Name = "txt_totalapagar";
+            txt_totalapagar.Size = new Size(100, 34);
+            txt_totalapagar.TabIndex = 43;
+            txt_totalapagar.TextChanged += totalapagar_TextChanged;
             // 
-            // Subtotal
+            // txt_subtotal
             // 
-            Subtotal.BackColor = Color.FromArgb(64, 0, 0);
-            Subtotal.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Subtotal.ForeColor = Color.White;
-            Subtotal.Location = new Point(997, 445);
-            Subtotal.Margin = new Padding(5, 4, 5, 4);
-            Subtotal.Name = "Subtotal";
-            Subtotal.Size = new Size(100, 34);
-            Subtotal.TabIndex = 42;
-            Subtotal.TextChanged += Subtotal_TextChanged;
+            txt_subtotal.BackColor = Color.FromArgb(64, 0, 0);
+            txt_subtotal.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_subtotal.ForeColor = Color.White;
+            txt_subtotal.Location = new Point(997, 445);
+            txt_subtotal.Margin = new Padding(5, 4, 5, 4);
+            txt_subtotal.Name = "txt_subtotal";
+            txt_subtotal.Size = new Size(100, 34);
+            txt_subtotal.TabIndex = 42;
+            txt_subtotal.TextChanged += Subtotal_TextChanged;
             // 
-            // fechalim
+            // txt_fechaLimite
             // 
-            fechalim.BackColor = Color.FromArgb(64, 0, 0);
-            fechalim.Font = new Font("Segoe UI", 8.25F);
-            fechalim.ForeColor = Color.White;
-            fechalim.Location = new Point(997, 411);
-            fechalim.Margin = new Padding(5, 4, 5, 4);
-            fechalim.Name = "fechalim";
-            fechalim.Size = new Size(100, 26);
-            fechalim.TabIndex = 41;
-            fechalim.TextChanged += fechalim_TextChanged;
+            txt_fechaLimite.BackColor = Color.FromArgb(64, 0, 0);
+            txt_fechaLimite.Font = new Font("Segoe UI", 8.25F);
+            txt_fechaLimite.ForeColor = Color.White;
+            txt_fechaLimite.Location = new Point(997, 411);
+            txt_fechaLimite.Margin = new Padding(5, 4, 5, 4);
+            txt_fechaLimite.Name = "txt_fechaLimite";
+            txt_fechaLimite.Size = new Size(100, 26);
+            txt_fechaLimite.TabIndex = 41;
+            txt_fechaLimite.TextChanged += fechalim_TextChanged;
             // 
-            // Pelicula4
+            // pnl_pelicula3
             // 
-            Pelicula4.Controls.Add(checkBox4);
-            Pelicula4.Controls.Add(label1);
-            Pelicula4.Controls.Add(label3);
-            Pelicula4.Location = new Point(414, 379);
-            Pelicula4.Margin = new Padding(5, 4, 5, 4);
-            Pelicula4.Name = "Pelicula4";
-            Pelicula4.Size = new Size(378, 128);
-            Pelicula4.TabIndex = 28;
-            Pelicula4.Paint += Pelicula4_Paint;
+            pnl_pelicula3.Controls.Add(chk_4);
+            pnl_pelicula3.Controls.Add(label1);
+            pnl_pelicula3.Controls.Add(label3);
+            pnl_pelicula3.Location = new Point(414, 379);
+            pnl_pelicula3.Margin = new Padding(5, 4, 5, 4);
+            pnl_pelicula3.Name = "pnl_pelicula3";
+            pnl_pelicula3.Size = new Size(378, 128);
+            pnl_pelicula3.TabIndex = 28;
+            pnl_pelicula3.Paint += Pelicula4_Paint;
             // 
-            // checkBox4
+            // chk_4
             // 
-            checkBox4.AutoSize = true;
-            checkBox4.Location = new Point(355, 4);
-            checkBox4.Margin = new Padding(5, 4, 5, 4);
-            checkBox4.Name = "checkBox4";
-            checkBox4.Size = new Size(18, 17);
-            checkBox4.TabIndex = 27;
-            checkBox4.UseVisualStyleBackColor = true;
+            chk_4.AutoSize = true;
+            chk_4.Location = new Point(355, 4);
+            chk_4.Margin = new Padding(5, 4, 5, 4);
+            chk_4.Name = "chk_4";
+            chk_4.Size = new Size(18, 17);
+            chk_4.TabIndex = 27;
+            chk_4.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -230,29 +230,29 @@
             button2.TabIndex = 27;
             button2.Text = "X";
             button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            button2.Click += OnSalir_Click;
             // 
-            // Pelicula3
+            // pnl_pelicula4
             // 
-            Pelicula3.Controls.Add(checkBox3);
-            Pelicula3.Controls.Add(label16);
-            Pelicula3.Controls.Add(label17);
-            Pelicula3.Location = new Point(414, 526);
-            Pelicula3.Margin = new Padding(5, 4, 5, 4);
-            Pelicula3.Name = "Pelicula3";
-            Pelicula3.Size = new Size(378, 126);
-            Pelicula3.TabIndex = 26;
-            Pelicula3.Paint += Pelicula3_Paint;
+            pnl_pelicula4.Controls.Add(chk_3);
+            pnl_pelicula4.Controls.Add(label16);
+            pnl_pelicula4.Controls.Add(label17);
+            pnl_pelicula4.Location = new Point(414, 526);
+            pnl_pelicula4.Margin = new Padding(5, 4, 5, 4);
+            pnl_pelicula4.Name = "pnl_pelicula4";
+            pnl_pelicula4.Size = new Size(378, 126);
+            pnl_pelicula4.TabIndex = 26;
+            pnl_pelicula4.Paint += Pelicula3_Paint;
             // 
-            // checkBox3
+            // chk_3
             // 
-            checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(355, 4);
-            checkBox3.Margin = new Padding(5, 4, 5, 4);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(18, 17);
-            checkBox3.TabIndex = 27;
-            checkBox3.UseVisualStyleBackColor = true;
+            chk_3.AutoSize = true;
+            chk_3.Location = new Point(355, 4);
+            chk_3.Margin = new Padding(5, 4, 5, 4);
+            chk_3.Name = "chk_3";
+            chk_3.Size = new Size(18, 17);
+            chk_3.TabIndex = 27;
+            chk_3.UseVisualStyleBackColor = true;
             // 
             // label16
             // 
@@ -274,27 +274,27 @@
             label17.TabIndex = 22;
             label17.Text = "PELICULA DE EJEMPLO";
             // 
-            // Pelicula2
+            // pnl_pelicula2
             // 
-            Pelicula2.Controls.Add(checkBox2);
-            Pelicula2.Controls.Add(label9);
-            Pelicula2.Controls.Add(label15);
-            Pelicula2.Location = new Point(23, 526);
-            Pelicula2.Margin = new Padding(5, 4, 5, 4);
-            Pelicula2.Name = "Pelicula2";
-            Pelicula2.Size = new Size(381, 126);
-            Pelicula2.TabIndex = 25;
-            Pelicula2.Paint += Pelicula2_Paint;
+            pnl_pelicula2.Controls.Add(chk_2);
+            pnl_pelicula2.Controls.Add(label9);
+            pnl_pelicula2.Controls.Add(label15);
+            pnl_pelicula2.Location = new Point(23, 526);
+            pnl_pelicula2.Margin = new Padding(5, 4, 5, 4);
+            pnl_pelicula2.Name = "pnl_pelicula2";
+            pnl_pelicula2.Size = new Size(381, 126);
+            pnl_pelicula2.TabIndex = 25;
+            pnl_pelicula2.Paint += Pelicula2_Paint;
             // 
-            // checkBox2
+            // chk_2
             // 
-            checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(358, 4);
-            checkBox2.Margin = new Padding(5, 4, 5, 4);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(18, 17);
-            checkBox2.TabIndex = 26;
-            checkBox2.UseVisualStyleBackColor = true;
+            chk_2.AutoSize = true;
+            chk_2.Location = new Point(358, 4);
+            chk_2.Margin = new Padding(5, 4, 5, 4);
+            chk_2.Name = "chk_2";
+            chk_2.Size = new Size(18, 17);
+            chk_2.TabIndex = 26;
+            chk_2.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -316,41 +316,41 @@
             label15.TabIndex = 22;
             label15.Text = "PELICULA DE EJEMPLO";
             // 
-            // button6
+            // btn_confirmar
             // 
-            button6.BackColor = Color.DarkOrange;
-            button6.FlatStyle = FlatStyle.Popup;
-            button6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button6.Location = new Point(851, 529);
-            button6.Margin = new Padding(5, 4, 5, 4);
-            button6.Name = "button6";
-            button6.Size = new Size(246, 57);
-            button6.TabIndex = 2;
-            button6.Text = "Confirmar RENTA generar FACTURA";
-            button6.UseVisualStyleBackColor = false;
-            button6.Click += RentaFactura_Click;
+            btn_confirmar.BackColor = Color.DarkOrange;
+            btn_confirmar.FlatStyle = FlatStyle.Popup;
+            btn_confirmar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_confirmar.Location = new Point(851, 529);
+            btn_confirmar.Margin = new Padding(5, 4, 5, 4);
+            btn_confirmar.Name = "btn_confirmar";
+            btn_confirmar.Size = new Size(246, 57);
+            btn_confirmar.TabIndex = 2;
+            btn_confirmar.Text = "Confirmar RENTA generar FACTURA";
+            btn_confirmar.UseVisualStyleBackColor = false;
+            btn_confirmar.Click += OnRenta_Factura_Click;
             // 
-            // Pelicula1
+            // pnl_pelicula1
             // 
-            Pelicula1.Controls.Add(checkBox1);
-            Pelicula1.Controls.Add(label5);
-            Pelicula1.Controls.Add(label2);
-            Pelicula1.Location = new Point(23, 379);
-            Pelicula1.Margin = new Padding(5, 4, 5, 4);
-            Pelicula1.Name = "Pelicula1";
-            Pelicula1.Size = new Size(381, 128);
-            Pelicula1.TabIndex = 23;
-            Pelicula1.Paint += Pelicula1_Paint;
+            pnl_pelicula1.Controls.Add(chk_1);
+            pnl_pelicula1.Controls.Add(label5);
+            pnl_pelicula1.Controls.Add(label2);
+            pnl_pelicula1.Location = new Point(23, 379);
+            pnl_pelicula1.Margin = new Padding(5, 4, 5, 4);
+            pnl_pelicula1.Name = "pnl_pelicula1";
+            pnl_pelicula1.Size = new Size(381, 128);
+            pnl_pelicula1.TabIndex = 23;
+            pnl_pelicula1.Paint += Pelicula1_Paint;
             // 
-            // checkBox1
+            // chk_1
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(358, 4);
-            checkBox1.Margin = new Padding(5, 4, 5, 4);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(18, 17);
-            checkBox1.TabIndex = 25;
-            checkBox1.UseVisualStyleBackColor = true;
+            chk_1.AutoSize = true;
+            chk_1.Location = new Point(358, 4);
+            chk_1.Margin = new Padding(5, 4, 5, 4);
+            chk_1.Name = "chk_1";
+            chk_1.Size = new Size(18, 17);
+            chk_1.TabIndex = 25;
+            chk_1.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -372,19 +372,19 @@
             label2.TabIndex = 22;
             label2.Text = "PELICULA DE EJEMPLO";
             // 
-            // button9
+            // btn_devolucion
             // 
-            button9.BackColor = Color.DarkOrange;
-            button9.FlatStyle = FlatStyle.Popup;
-            button9.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button9.Location = new Point(876, 13);
-            button9.Margin = new Padding(5, 4, 5, 4);
-            button9.Name = "button9";
-            button9.Size = new Size(246, 57);
-            button9.TabIndex = 45;
-            button9.Text = "Ir a Devolución";
-            button9.UseVisualStyleBackColor = false;
-            button9.Click += button9_Click;
+            btn_devolucion.BackColor = Color.DarkOrange;
+            btn_devolucion.FlatStyle = FlatStyle.Popup;
+            btn_devolucion.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_devolucion.Location = new Point(876, 13);
+            btn_devolucion.Margin = new Padding(5, 4, 5, 4);
+            btn_devolucion.Name = "btn_devolucion";
+            btn_devolucion.Size = new Size(246, 57);
+            btn_devolucion.TabIndex = 45;
+            btn_devolucion.Text = "Ir a Devolución";
+            btn_devolucion.UseVisualStyleBackColor = false;
+            btn_devolucion.Click += OnDevolucion_Click;
             // 
             // pictureBox1
             // 
@@ -413,47 +413,47 @@
             panelContenedor.ResumeLayout(false);
             panelContenedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            Pelicula4.ResumeLayout(false);
-            Pelicula4.PerformLayout();
-            Pelicula3.ResumeLayout(false);
-            Pelicula3.PerformLayout();
-            Pelicula2.ResumeLayout(false);
-            Pelicula2.PerformLayout();
-            Pelicula1.ResumeLayout(false);
-            Pelicula1.PerformLayout();
+            pnl_pelicula3.ResumeLayout(false);
+            pnl_pelicula3.PerformLayout();
+            pnl_pelicula4.ResumeLayout(false);
+            pnl_pelicula4.PerformLayout();
+            pnl_pelicula2.ResumeLayout(false);
+            pnl_pelicula2.PerformLayout();
+            pnl_pelicula1.ResumeLayout(false);
+            pnl_pelicula1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox fencharent;
-        private System.Windows.Forms.TextBox membresia;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.TextBox txt_fechaRenta;
+        private System.Windows.Forms.TextBox txt_membresia;
+        private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.Panel panelContenedor;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Panel Pelicula3;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.Button btn_confirmar;
+        private System.Windows.Forms.Panel pnl_pelicula4;
+        private System.Windows.Forms.CheckBox chk_3;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Panel Pelicula2;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Panel pnl_pelicula2;
+        private System.Windows.Forms.CheckBox chk_2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Panel Pelicula1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Panel pnl_pelicula1;
+        private System.Windows.Forms.CheckBox chk_1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private Button button2;
         private PictureBox pictureBox1;
-        private TextBox fechalim;
-        private Panel Pelicula4;
-        private CheckBox checkBox4;
+        private TextBox txt_fechaLimite;
+        private Panel pnl_pelicula3;
+        private CheckBox chk_4;
         private Label label1;
         private Label label3;
-        private TextBox totalapagar;
-        private TextBox Subtotal;
+        private TextBox txt_totalapagar;
+        private TextBox txt_subtotal;
         private PictureBox pictureBox2;
-        private Button button9;
+        private Button btn_devolucion;
     }
 }

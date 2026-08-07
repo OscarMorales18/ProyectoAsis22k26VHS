@@ -23,84 +23,81 @@ namespace Renta_de_Video_2._0
 
         }
 
-        private void Buscar_Click(object sender, EventArgs e)
-        {
-            // trae las moras pendientes del cliente dueño de esa membresia
-            try
-            {
-                string entrada = Buscar_cliente.Text.Trim();
-
-                if (string.IsNullOrWhiteSpace(entrada))
-                    throw new Exception("Ingresa el código de membresía del cliente.");
-
-                string codigoTexto = entrada.ToUpper();
-                string numeroTexto = codigoTexto.Replace("MEM-", "");
-
-                if (!int.TryParse(numeroTexto, out int idMembresia))
-                    throw new Exception("El código de membresía no es válido.");
-
-                RentaConsultas consultaRenta = new RentaConsultas();
-                MClienteRenta cliente = consultaRenta.BuscarClientePorMembresia(idMembresia);
-
-                if (cliente == null)
-                    throw new Exception("No se encontró ningún cliente con esa membresía.");
-
-                MoraConsultas consultaMora = new MoraConsultas();
-                List<MMoraPendiente> moras = consultaMora.CargarMorasPendientes(cliente.IdCliente);
-
-                dataGridView1.Rows.Clear();
-
-                if (moras.Count == 0)
-                    throw new Exception("Este cliente no tiene moras pendientes.");
-
-                string codigoMembresiaTexto = "MEM-" + idMembresia.ToString("D4");
-                decimal totalAcumulado = 0;
-
-                foreach (MMoraPendiente mora in moras)
-                {
-                    int indiceFila = dataGridView1.Rows.Add(
-                        cliente.Nombre,
-                        codigoMembresiaTexto,
-                        "REN-" + mora.IdRenta.ToString("D4"),
-                        mora.DiasAtraso,
-                        "Q" + mora.Monto.ToString("0.00")
-                    );
-                    dataGridView1.Rows[indiceFila].Tag = mora.IdMora;
-
-                    totalAcumulado += mora.Monto;
-                }
-
-                totalmora.Text = "Q" + totalAcumulado.ToString("0.00");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error de búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-        }
-
         private void totalmora_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void Marcarpago_Click(object sender, EventArgs e)
+        private void OnBuscar_Click(object sender, EventArgs e)
         {
-            // marca la mora seleccionada como pagada en la base de datos
             try
             {
-                if (dataGridView1.CurrentRow == null || dataGridView1.CurrentRow.Tag == null)
-                    throw new Exception("Selecciona una mora de la tabla para marcar su pago.");
+                string sEntrada = txt_buscarCliente.Text.Trim();
 
-                int idMora = (int)dataGridView1.CurrentRow.Tag;
+                if (string.IsNullOrWhiteSpace(sEntrada))
+                    throw new Exception("Ingresa el código de membresía del cliente.");
+
+                string sCodigoTexto = sEntrada.ToUpper();
+                string sNumeroTexto = sCodigoTexto.Replace("MEM-", "");
+
+                if (!int.TryParse(sNumeroTexto, out int iIdMembresia))
+                    throw new Exception("El código de membresía no es válido.");
+
+                RentaConsultas objConsultaRenta = new RentaConsultas();
+                MClienteRenta objCliente = objConsultaRenta.BuscarClientePorMembresia(iIdMembresia);
+
+                if (objCliente == null)
+                    throw new Exception("No se encontró ningún cliente con esa membresía.");
 
                 MoraConsultas consultaMora = new MoraConsultas();
-                bool actualizado = consultaMora.MarcarMoraPagada(idMora);
+                List<MMoraPendiente> lst_Moras = consultaMora.CargarMorasPendientes(objCliente.IdCliente);
 
-                if (!actualizado)
+                dgv_moras.Rows.Clear();
+
+                if (lst_Moras.Count == 0)
+                    throw new Exception("Este cliente no tiene moras pendientes.");
+
+                string sCodigoMembresia = "MEM-" + iIdMembresia.ToString("D4");
+                decimal deTotalAcumulado = 0;
+
+                foreach (MMoraPendiente mora in lst_Moras)
+                {
+                    int indiceFila = dgv_moras.Rows.Add(
+                        objCliente.Nombre,
+                        sCodigoMembresia,
+                        "REN-" + mora.IdRenta.ToString("D4"),
+                        mora.DiasAtraso,
+                        "Q" + mora.Monto.ToString("0.00")
+                    );
+                    dgv_moras.Rows[indiceFila].Tag = mora.IdMora;
+
+                    deTotalAcumulado += mora.Monto;
+                }
+
+                txt_totalMora.Text = "Q" + deTotalAcumulado.ToString("0.00");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error de búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void OnMarcarpago_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgv_moras.CurrentRow == null || dgv_moras.CurrentRow.Tag == null)
+                    throw new Exception("Selecciona una mora de la tabla para marcar su pago.");
+
+                int iIdMora = (int)dgv_moras.CurrentRow.Tag;
+
+                MoraConsultas objConsultaMora = new MoraConsultas();
+                bool bActualizado = objConsultaMora.MarcarMoraPagada(iIdMora);
+
+                if (!bActualizado)
                     throw new Exception("No se pudo marcar la mora como pagada.");
 
-                dataGridView1.CurrentRow.Cells[4].Value = "Q0.00";
+                dgv_moras.CurrentRow.Cells[4].Value = "Q0.00";
 
                 MessageBox.Show("Mora marcada como pagada.", "Listo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -108,10 +105,9 @@ namespace Renta_de_Video_2._0
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void OnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

@@ -29,356 +29,358 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menu));
-            MenuVertical = new Panel();
-            button1 = new Button();
+            menuVertical = new Panel();
+            btn_seguridad = new Button();
             iconmin = new PictureBox();
-            button5 = new Button();
+            btn_gestionUsuarios = new Button();
             iconcerrar = new PictureBox();
-            button4 = new Button();
-            button3 = new Button();
-            button2 = new Button();
-            button6 = new Button();
-            pictureBox1 = new PictureBox();
-            btninicio = new Button();
-            BarraTitulo = new Panel();
-            button7 = new Button();
-            lblRol = new Label();
-            lblNombreUsuario = new Label();
-            btnSlide = new PictureBox();
-            panelContenedor = new Panel();
-            MenuVertical.SuspendLayout();
+            btn_facturasMoras = new Button();
+            btn_rentasDevoluciones = new Button();
+            btn_inventario = new Button();
+            btn_clientesMembresias = new Button();
+            pic_popflix = new PictureBox();
+            btn_inicio = new Button();
+            pnl_barraTitulo = new Panel();
+            btn_cerrar = new Button();
+            lbl_rol = new Label();
+            lbl_nombreUsuario = new Label();
+            btn_slide = new PictureBox();
+            pnl_contenedor = new Panel();
+            menuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconmin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconcerrar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            BarraTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)btnSlide).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic_popflix).BeginInit();
+            pnl_barraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)btn_slide).BeginInit();
             SuspendLayout();
             // 
-            // MenuVertical
+            // menuVertical
             // 
-            MenuVertical.BackColor = Color.FromArgb(34, 9, 1);
-            MenuVertical.Controls.Add(button1);
-            MenuVertical.Controls.Add(iconmin);
-            MenuVertical.Controls.Add(button5);
-            MenuVertical.Controls.Add(iconcerrar);
-            MenuVertical.Controls.Add(button4);
-            MenuVertical.Controls.Add(button3);
-            MenuVertical.Controls.Add(button2);
-            MenuVertical.Controls.Add(button6);
-            MenuVertical.Controls.Add(pictureBox1);
-            MenuVertical.Controls.Add(btninicio);
-            MenuVertical.Dock = DockStyle.Left;
-            MenuVertical.Location = new Point(0, 0);
-            MenuVertical.Margin = new Padding(4, 3, 4, 3);
-            MenuVertical.Name = "MenuVertical";
-            MenuVertical.Size = new Size(250, 473);
-            MenuVertical.TabIndex = 0;
-            MenuVertical.Paint += MenuVertical_Paint;
+            menuVertical.BackColor = Color.FromArgb(34, 9, 1);
+            menuVertical.Controls.Add(btn_seguridad);
+            menuVertical.Controls.Add(iconmin);
+            menuVertical.Controls.Add(btn_gestionUsuarios);
+            menuVertical.Controls.Add(iconcerrar);
+            menuVertical.Controls.Add(btn_facturasMoras);
+            menuVertical.Controls.Add(btn_rentasDevoluciones);
+            menuVertical.Controls.Add(btn_inventario);
+            menuVertical.Controls.Add(btn_clientesMembresias);
+            menuVertical.Controls.Add(pic_popflix);
+            menuVertical.Controls.Add(btn_inicio);
+            menuVertical.Dock = DockStyle.Left;
+            menuVertical.Location = new Point(0, 0);
+            menuVertical.Margin = new Padding(5, 4, 5, 4);
+            menuVertical.Name = "menuVertical";
+            menuVertical.Size = new Size(290, 788);
+            menuVertical.TabIndex = 0;
+            menuVertical.Paint += MenuVertical_Paint;
             // 
-            // button1
+            // btn_seguridad
             // 
-            button1.BackColor = Color.FromArgb(246, 170, 28);
-            button1.FlatAppearance.BorderColor = Color.FromArgb(246, 170, 28);
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseDownBackColor = Color.Black;
-            button1.FlatAppearance.MouseOverBackColor = Color.White;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Lucida Bright", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.Black;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(5, 474);
-            button1.Margin = new Padding(4, 3, 4, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(242, 42);
-            button1.TabIndex = 8;
-            button1.Text = "      SEGURIDAD DEL SISTEMA";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click_1;
+            btn_seguridad.BackColor = Color.FromArgb(246, 170, 28);
+            btn_seguridad.FlatAppearance.BorderColor = Color.FromArgb(246, 170, 28);
+            btn_seguridad.FlatAppearance.BorderSize = 0;
+            btn_seguridad.FlatAppearance.MouseDownBackColor = Color.Black;
+            btn_seguridad.FlatAppearance.MouseOverBackColor = Color.White;
+            btn_seguridad.FlatStyle = FlatStyle.Flat;
+            btn_seguridad.Font = new Font("Lucida Bright", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_seguridad.ForeColor = Color.Black;
+            btn_seguridad.Image = (Image)resources.GetObject("btn_seguridad.Image");
+            btn_seguridad.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_seguridad.Location = new Point(6, 632);
+            btn_seguridad.Margin = new Padding(5, 4, 5, 4);
+            btn_seguridad.Name = "btn_seguridad";
+            btn_seguridad.Size = new Size(277, 56);
+            btn_seguridad.TabIndex = 8;
+            btn_seguridad.Text = "      SEGURIDAD DEL SISTEMA";
+            btn_seguridad.UseVisualStyleBackColor = false;
+            btn_seguridad.Click += button1_Click_1;
             // 
             // iconmin
             // 
             iconmin.Image = (Image)resources.GetObject("iconmin.Image");
-            iconmin.Location = new Point(30, 675);
+            iconmin.Location = new Point(34, 900);
+            iconmin.Margin = new Padding(3, 4, 3, 4);
             iconmin.Name = "iconmin";
-            iconmin.Size = new Size(25, 25);
+            iconmin.Size = new Size(29, 34);
             iconmin.SizeMode = PictureBoxSizeMode.StretchImage;
             iconmin.TabIndex = 7;
             iconmin.TabStop = false;
             iconmin.Click += iconmin_Click;
             // 
-            // button5
+            // btn_gestionUsuarios
             // 
-            button5.BackColor = Color.FromArgb(246, 170, 28);
-            button5.FlatAppearance.BorderColor = Color.FromArgb(246, 170, 28);
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatAppearance.MouseDownBackColor = Color.Black;
-            button5.FlatAppearance.MouseOverBackColor = Color.White;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Lucida Bright", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button5.ForeColor = Color.Black;
-            button5.Image = (Image)resources.GetObject("button5.Image");
-            button5.ImageAlign = ContentAlignment.MiddleLeft;
-            button5.Location = new Point(5, 416);
-            button5.Margin = new Padding(4, 3, 4, 3);
-            button5.Name = "button5";
-            button5.Size = new Size(242, 42);
-            button5.TabIndex = 6;
-            button5.Text = "      GESTIÓN DE USUARIOS";
-            button5.UseVisualStyleBackColor = false;
-            button5.Click += button5_Click;
+            btn_gestionUsuarios.BackColor = Color.FromArgb(246, 170, 28);
+            btn_gestionUsuarios.FlatAppearance.BorderColor = Color.FromArgb(246, 170, 28);
+            btn_gestionUsuarios.FlatAppearance.BorderSize = 0;
+            btn_gestionUsuarios.FlatAppearance.MouseDownBackColor = Color.Black;
+            btn_gestionUsuarios.FlatAppearance.MouseOverBackColor = Color.White;
+            btn_gestionUsuarios.FlatStyle = FlatStyle.Flat;
+            btn_gestionUsuarios.Font = new Font("Lucida Bright", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_gestionUsuarios.ForeColor = Color.Black;
+            btn_gestionUsuarios.Image = (Image)resources.GetObject("btn_gestionUsuarios.Image");
+            btn_gestionUsuarios.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_gestionUsuarios.Location = new Point(6, 554);
+            btn_gestionUsuarios.Margin = new Padding(5, 4, 5, 4);
+            btn_gestionUsuarios.Name = "btn_gestionUsuarios";
+            btn_gestionUsuarios.Size = new Size(277, 56);
+            btn_gestionUsuarios.TabIndex = 6;
+            btn_gestionUsuarios.Text = "      GESTIÓN DE USUARIOS";
+            btn_gestionUsuarios.UseVisualStyleBackColor = false;
+            btn_gestionUsuarios.Click += button5_Click;
             // 
             // iconcerrar
             // 
             iconcerrar.Image = (Image)resources.GetObject("iconcerrar.Image");
-            iconcerrar.Location = new Point(3, 675);
+            iconcerrar.Location = new Point(3, 900);
+            iconcerrar.Margin = new Padding(3, 4, 3, 4);
             iconcerrar.Name = "iconcerrar";
-            iconcerrar.Size = new Size(25, 25);
+            iconcerrar.Size = new Size(29, 34);
             iconcerrar.SizeMode = PictureBoxSizeMode.StretchImage;
             iconcerrar.TabIndex = 6;
             iconcerrar.TabStop = false;
             iconcerrar.Click += iconcerrar_Click;
             // 
-            // button4
+            // btn_facturasMoras
             // 
-            button4.BackColor = Color.FromArgb(246, 170, 28);
-            button4.FlatAppearance.BorderColor = Color.FromArgb(246, 170, 28);
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatAppearance.MouseDownBackColor = Color.Black;
-            button4.FlatAppearance.MouseOverBackColor = Color.White;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Lucida Bright", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.ForeColor = Color.Black;
-            button4.Image = (Image)resources.GetObject("button4.Image");
-            button4.ImageAlign = ContentAlignment.MiddleLeft;
-            button4.Location = new Point(5, 355);
-            button4.Margin = new Padding(4, 3, 4, 3);
-            button4.Name = "button4";
-            button4.Size = new Size(242, 42);
-            button4.TabIndex = 5;
-            button4.Text = "       FACTURACIÓN/MORAS";
-            button4.UseVisualStyleBackColor = false;
+            btn_facturasMoras.BackColor = Color.FromArgb(246, 170, 28);
+            btn_facturasMoras.FlatAppearance.BorderColor = Color.FromArgb(246, 170, 28);
+            btn_facturasMoras.FlatAppearance.BorderSize = 0;
+            btn_facturasMoras.FlatAppearance.MouseDownBackColor = Color.Black;
+            btn_facturasMoras.FlatAppearance.MouseOverBackColor = Color.White;
+            btn_facturasMoras.FlatStyle = FlatStyle.Flat;
+            btn_facturasMoras.Font = new Font("Lucida Bright", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_facturasMoras.ForeColor = Color.Black;
+            btn_facturasMoras.Image = (Image)resources.GetObject("btn_facturasMoras.Image");
+            btn_facturasMoras.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_facturasMoras.Location = new Point(6, 474);
+            btn_facturasMoras.Margin = new Padding(5, 4, 5, 4);
+            btn_facturasMoras.Name = "btn_facturasMoras";
+            btn_facturasMoras.Size = new Size(277, 56);
+            btn_facturasMoras.TabIndex = 5;
+            btn_facturasMoras.Text = "       FACTURACIÓN/MORAS";
+            btn_facturasMoras.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btn_rentasDevoluciones
             // 
-            button3.BackColor = Color.FromArgb(246, 170, 28);
-            button3.FlatAppearance.BorderColor = Color.FromArgb(246, 170, 28);
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatAppearance.MouseDownBackColor = Color.Black;
-            button3.FlatAppearance.MouseOverBackColor = Color.White;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Lucida Bright", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.ForeColor = Color.Black;
-            button3.Image = (Image)resources.GetObject("button3.Image");
-            button3.ImageAlign = ContentAlignment.MiddleLeft;
-            button3.Location = new Point(4, 297);
-            button3.Margin = new Padding(4, 3, 4, 3);
-            button3.Name = "button3";
-            button3.Size = new Size(242, 42);
-            button3.TabIndex = 4;
-            button3.Text = "        RENTAS/DEVOLUCIONES";
-            button3.UseVisualStyleBackColor = false;
+            btn_rentasDevoluciones.BackColor = Color.FromArgb(246, 170, 28);
+            btn_rentasDevoluciones.FlatAppearance.BorderColor = Color.FromArgb(246, 170, 28);
+            btn_rentasDevoluciones.FlatAppearance.BorderSize = 0;
+            btn_rentasDevoluciones.FlatAppearance.MouseDownBackColor = Color.Black;
+            btn_rentasDevoluciones.FlatAppearance.MouseOverBackColor = Color.White;
+            btn_rentasDevoluciones.FlatStyle = FlatStyle.Flat;
+            btn_rentasDevoluciones.Font = new Font("Lucida Bright", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_rentasDevoluciones.ForeColor = Color.Black;
+            btn_rentasDevoluciones.Image = (Image)resources.GetObject("btn_rentasDevoluciones.Image");
+            btn_rentasDevoluciones.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_rentasDevoluciones.Location = new Point(5, 396);
+            btn_rentasDevoluciones.Margin = new Padding(5, 4, 5, 4);
+            btn_rentasDevoluciones.Name = "btn_rentasDevoluciones";
+            btn_rentasDevoluciones.Size = new Size(277, 56);
+            btn_rentasDevoluciones.TabIndex = 4;
+            btn_rentasDevoluciones.Text = "        RENTAS/DEVOLUCIONES";
+            btn_rentasDevoluciones.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btn_inventario
             // 
-            button2.BackColor = Color.FromArgb(246, 170, 28);
-            button2.FlatAppearance.BorderColor = Color.FromArgb(246, 170, 28);
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseDownBackColor = Color.Black;
-            button2.FlatAppearance.MouseOverBackColor = Color.White;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.Black;
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(4, 240);
-            button2.Margin = new Padding(4, 3, 4, 3);
-            button2.Name = "button2";
-            button2.Size = new Size(242, 42);
-            button2.TabIndex = 3;
-            button2.Text = "INVENTARIO";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click_1;
+            btn_inventario.BackColor = Color.FromArgb(246, 170, 28);
+            btn_inventario.FlatAppearance.BorderColor = Color.FromArgb(246, 170, 28);
+            btn_inventario.FlatAppearance.BorderSize = 0;
+            btn_inventario.FlatAppearance.MouseDownBackColor = Color.Black;
+            btn_inventario.FlatAppearance.MouseOverBackColor = Color.White;
+            btn_inventario.FlatStyle = FlatStyle.Flat;
+            btn_inventario.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_inventario.ForeColor = Color.Black;
+            btn_inventario.Image = (Image)resources.GetObject("btn_inventario.Image");
+            btn_inventario.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_inventario.Location = new Point(5, 320);
+            btn_inventario.Margin = new Padding(5, 4, 5, 4);
+            btn_inventario.Name = "btn_inventario";
+            btn_inventario.Size = new Size(277, 56);
+            btn_inventario.TabIndex = 3;
+            btn_inventario.Text = "INVENTARIO";
+            btn_inventario.UseVisualStyleBackColor = false;
+            btn_inventario.Click += button2_Click_1;
             // 
-            // button6
+            // btn_clientesMembresias
             // 
-            button6.BackColor = Color.FromArgb(246, 170, 28);
-            button6.FlatAppearance.BorderColor = Color.FromArgb(246, 170, 28);
-            button6.FlatAppearance.BorderSize = 0;
-            button6.FlatAppearance.MouseDownBackColor = Color.Black;
-            button6.FlatAppearance.MouseOverBackColor = Color.White;
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button6.ForeColor = Color.Black;
-            button6.Image = (Image)resources.GetObject("button6.Image");
-            button6.ImageAlign = ContentAlignment.MiddleLeft;
-            button6.Location = new Point(3, 179);
-            button6.Margin = new Padding(4, 3, 4, 3);
-            button6.Name = "button6";
-            button6.Size = new Size(242, 42);
-            button6.TabIndex = 2;
-            button6.Text = "         CLIENTES/MEMBRESIAS";
-            button6.UseVisualStyleBackColor = false;
+            btn_clientesMembresias.BackColor = Color.FromArgb(246, 170, 28);
+            btn_clientesMembresias.FlatAppearance.BorderColor = Color.FromArgb(246, 170, 28);
+            btn_clientesMembresias.FlatAppearance.BorderSize = 0;
+            btn_clientesMembresias.FlatAppearance.MouseDownBackColor = Color.Black;
+            btn_clientesMembresias.FlatAppearance.MouseOverBackColor = Color.White;
+            btn_clientesMembresias.FlatStyle = FlatStyle.Flat;
+            btn_clientesMembresias.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_clientesMembresias.ForeColor = Color.Black;
+            btn_clientesMembresias.Image = (Image)resources.GetObject("btn_clientesMembresias.Image");
+            btn_clientesMembresias.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_clientesMembresias.Location = new Point(3, 238);
+            btn_clientesMembresias.Margin = new Padding(5, 4, 5, 4);
+            btn_clientesMembresias.Name = "btn_clientesMembresias";
+            btn_clientesMembresias.Size = new Size(277, 56);
+            btn_clientesMembresias.TabIndex = 2;
+            btn_clientesMembresias.Text = "         CLIENTES/MEMBRESIAS";
+            btn_clientesMembresias.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // pic_popflix
             // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Cursor = Cursors.Hand;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(5, 10);
-            pictureBox1.Margin = new Padding(4, 3, 4, 3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(237, 76);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
+            pic_popflix.BackColor = Color.Transparent;
+            pic_popflix.Cursor = Cursors.Hand;
+            pic_popflix.Image = (Image)resources.GetObject("pic_popflix.Image");
+            pic_popflix.Location = new Point(6, 14);
+            pic_popflix.Margin = new Padding(5, 4, 5, 4);
+            pic_popflix.Name = "pic_popflix";
+            pic_popflix.Size = new Size(271, 102);
+            pic_popflix.TabIndex = 0;
+            pic_popflix.TabStop = false;
+            pic_popflix.Click += pictureBox1_Click;
             // 
-            // btninicio
+            // btn_inicio
             // 
-            btninicio.BackColor = Color.FromArgb(246, 170, 28);
-            btninicio.FlatAppearance.BorderColor = Color.FromArgb(246, 170, 28);
-            btninicio.FlatAppearance.BorderSize = 0;
-            btninicio.FlatAppearance.MouseDownBackColor = Color.Black;
-            btninicio.FlatAppearance.MouseOverBackColor = Color.White;
-            btninicio.FlatStyle = FlatStyle.Flat;
-            btninicio.Font = new Font("Lucida Bright", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btninicio.ForeColor = Color.Black;
-            btninicio.Image = (Image)resources.GetObject("btninicio.Image");
-            btninicio.ImageAlign = ContentAlignment.MiddleLeft;
-            btninicio.Location = new Point(4, 122);
-            btninicio.Margin = new Padding(4, 3, 4, 3);
-            btninicio.Name = "btninicio";
-            btninicio.Size = new Size(242, 42);
-            btninicio.TabIndex = 1;
-            btninicio.Text = "INICIO";
-            btninicio.UseVisualStyleBackColor = false;
-            btninicio.Click += button1_Click;
+            btn_inicio.BackColor = Color.FromArgb(246, 170, 28);
+            btn_inicio.FlatAppearance.BorderColor = Color.FromArgb(246, 170, 28);
+            btn_inicio.FlatAppearance.BorderSize = 0;
+            btn_inicio.FlatAppearance.MouseDownBackColor = Color.Black;
+            btn_inicio.FlatAppearance.MouseOverBackColor = Color.White;
+            btn_inicio.FlatStyle = FlatStyle.Flat;
+            btn_inicio.Font = new Font("Lucida Bright", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_inicio.ForeColor = Color.Black;
+            btn_inicio.Image = (Image)resources.GetObject("btn_inicio.Image");
+            btn_inicio.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_inicio.Location = new Point(5, 162);
+            btn_inicio.Margin = new Padding(5, 4, 5, 4);
+            btn_inicio.Name = "btn_inicio";
+            btn_inicio.Size = new Size(277, 56);
+            btn_inicio.TabIndex = 1;
+            btn_inicio.Text = "INICIO";
+            btn_inicio.UseVisualStyleBackColor = false;
+            btn_inicio.Click += button1_Click;
             // 
-            // BarraTitulo
+            // pnl_barraTitulo
             // 
-            BarraTitulo.BackColor = Color.FromArgb(34, 9, 1);
-            BarraTitulo.Controls.Add(button7);
-            BarraTitulo.Controls.Add(lblRol);
-            BarraTitulo.Controls.Add(lblNombreUsuario);
-            BarraTitulo.Controls.Add(btnSlide);
-            BarraTitulo.Dock = DockStyle.Top;
-            BarraTitulo.Location = new Point(250, 0);
-            BarraTitulo.Margin = new Padding(4, 3, 4, 3);
-            BarraTitulo.Name = "BarraTitulo";
-            BarraTitulo.Size = new Size(720, 50);
-            BarraTitulo.TabIndex = 1;
-            BarraTitulo.Paint += BarraTitulo_Paint;
-            BarraTitulo.MouseDown += BarraTitulo_MouseDown;
+            pnl_barraTitulo.BackColor = Color.FromArgb(34, 9, 1);
+            pnl_barraTitulo.Controls.Add(btn_cerrar);
+            pnl_barraTitulo.Controls.Add(lbl_rol);
+            pnl_barraTitulo.Controls.Add(lbl_nombreUsuario);
+            pnl_barraTitulo.Controls.Add(btn_slide);
+            pnl_barraTitulo.Dock = DockStyle.Top;
+            pnl_barraTitulo.Location = new Point(290, 0);
+            pnl_barraTitulo.Margin = new Padding(5, 4, 5, 4);
+            pnl_barraTitulo.Name = "pnl_barraTitulo";
+            pnl_barraTitulo.Size = new Size(1096, 66);
+            pnl_barraTitulo.TabIndex = 1;
+            pnl_barraTitulo.Paint += BarraTitulo_Paint;
+            pnl_barraTitulo.MouseDown += BarraTitulo_MouseDown;
             // 
-            // button7
+            // btn_cerrar
             // 
-            button7.BackColor = Color.FromArgb(246, 170, 28);
-            button7.FlatStyle = FlatStyle.Flat;
-            button7.Font = new Font("Lucida Bright", 11.25F, FontStyle.Bold);
-            button7.ForeColor = SystemColors.ControlText;
-            button7.Location = new Point(892, 7);
-            button7.Margin = new Padding(3, 2, 3, 2);
-            button7.Name = "button7";
-            button7.Size = new Size(161, 35);
-            button7.TabIndex = 2;
-            button7.Text = "Cerrar Sesion";
-            button7.UseVisualStyleBackColor = false;
-            button7.Click += button7_Click;
+            btn_cerrar.BackColor = Color.FromArgb(246, 170, 28);
+            btn_cerrar.FlatStyle = FlatStyle.Flat;
+            btn_cerrar.Font = new Font("Lucida Bright", 11.25F, FontStyle.Bold);
+            btn_cerrar.ForeColor = SystemColors.ControlText;
+            btn_cerrar.Location = new Point(1019, 10);
+            btn_cerrar.Margin = new Padding(3, 2, 3, 2);
+            btn_cerrar.Name = "btn_cerrar";
+            btn_cerrar.Size = new Size(184, 46);
+            btn_cerrar.TabIndex = 2;
+            btn_cerrar.Text = "Cerrar Sesion";
+            btn_cerrar.UseVisualStyleBackColor = false;
+            btn_cerrar.Click += button7_Click;
             // 
-            // lblRol
+            // lbl_rol
             // 
-            lblRol.AutoSize = true;
-            lblRol.Font = new Font("Lucida Bright", 11.25F, FontStyle.Bold);
-            lblRol.ForeColor = Color.FromArgb(246, 170, 28);
-            lblRol.Location = new Point(691, 31);
-            lblRol.Name = "lblRol";
-            lblRol.Size = new Size(33, 17);
-            lblRol.TabIndex = 0;
-            lblRol.Text = "Rol";
-            lblRol.Click += label1_Click_3;
+            lbl_rol.AutoSize = true;
+            lbl_rol.Font = new Font("Lucida Bright", 11.25F, FontStyle.Bold);
+            lbl_rol.ForeColor = Color.FromArgb(246, 170, 28);
+            lbl_rol.Location = new Point(790, 42);
+            lbl_rol.Name = "lbl_rol";
+            lbl_rol.Size = new Size(43, 22);
+            lbl_rol.TabIndex = 0;
+            lbl_rol.Text = "Rol";
+            lbl_rol.Click += label1_Click_3;
             // 
-            // lblNombreUsuario
+            // lbl_nombreUsuario
             // 
-            lblNombreUsuario.AutoSize = true;
-            lblNombreUsuario.Font = new Font("Lucida Bright", 11.25F, FontStyle.Bold);
-            lblNombreUsuario.ForeColor = Color.FromArgb(246, 170, 28);
-            lblNombreUsuario.Location = new Point(702, 7);
-            lblNombreUsuario.Name = "lblNombreUsuario";
-            lblNombreUsuario.Size = new Size(134, 17);
-            lblNombreUsuario.TabIndex = 1;
-            lblNombreUsuario.Text = "Nombre Usuario";
-            lblNombreUsuario.Click += label1_Click_2;
+            lbl_nombreUsuario.AutoSize = true;
+            lbl_nombreUsuario.Font = new Font("Lucida Bright", 11.25F, FontStyle.Bold);
+            lbl_nombreUsuario.ForeColor = Color.FromArgb(246, 170, 28);
+            lbl_nombreUsuario.Location = new Point(802, 10);
+            lbl_nombreUsuario.Name = "lbl_nombreUsuario";
+            lbl_nombreUsuario.Size = new Size(168, 22);
+            lbl_nombreUsuario.TabIndex = 1;
+            lbl_nombreUsuario.Text = "Nombre Usuario";
+            lbl_nombreUsuario.Click += label1_Click_2;
             // 
-            // btnSlide
+            // btn_slide
             // 
-            btnSlide.BackColor = Color.Transparent;
-            btnSlide.Image = (Image)resources.GetObject("btnSlide.Image");
-            btnSlide.Location = new Point(7, 10);
-            btnSlide.Margin = new Padding(4, 3, 4, 3);
-            btnSlide.Name = "btnSlide";
-            btnSlide.Size = new Size(30, 30);
-            btnSlide.SizeMode = PictureBoxSizeMode.AutoSize;
-            btnSlide.TabIndex = 0;
-            btnSlide.TabStop = false;
-            btnSlide.Click += btnSlide_Click;
+            btn_slide.BackColor = Color.Transparent;
+            btn_slide.Image = (Image)resources.GetObject("btn_slide.Image");
+            btn_slide.Location = new Point(8, 14);
+            btn_slide.Margin = new Padding(5, 4, 5, 4);
+            btn_slide.Name = "btn_slide";
+            btn_slide.Size = new Size(30, 30);
+            btn_slide.SizeMode = PictureBoxSizeMode.AutoSize;
+            btn_slide.TabIndex = 0;
+            btn_slide.TabStop = false;
+            btn_slide.Click += btnSlide_Click;
             // 
-            // panelContenedor
+            // pnl_contenedor
             // 
-            panelContenedor.BackColor = Color.FromArgb(98, 23, 8);
-            panelContenedor.Cursor = Cursors.Hand;
-            panelContenedor.Dock = DockStyle.Fill;
-            panelContenedor.Location = new Point(250, 50);
-            panelContenedor.Margin = new Padding(4, 3, 4, 3);
-            panelContenedor.Name = "panelContenedor";
-            panelContenedor.Size = new Size(720, 423);
-            panelContenedor.TabIndex = 2;
-            panelContenedor.Paint += panelContenedor_Paint;
+            pnl_contenedor.BackColor = Color.FromArgb(98, 23, 8);
+            pnl_contenedor.Cursor = Cursors.Hand;
+            pnl_contenedor.Dock = DockStyle.Fill;
+            pnl_contenedor.Location = new Point(290, 66);
+            pnl_contenedor.Margin = new Padding(5, 4, 5, 4);
+            pnl_contenedor.Name = "pnl_contenedor";
+            pnl_contenedor.Size = new Size(1096, 722);
+            pnl_contenedor.TabIndex = 2;
+            pnl_contenedor.Paint += panelContenedor_Paint;
             // 
             // menu
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            ClientSize = new Size(970, 473);
-            Controls.Add(panelContenedor);
-            Controls.Add(BarraTitulo);
-            Controls.Add(MenuVertical);
+            ClientSize = new Size(1386, 788);
+            Controls.Add(pnl_contenedor);
+            Controls.Add(pnl_barraTitulo);
+            Controls.Add(menuVertical);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(4, 3, 4, 3);
+            Margin = new Padding(5, 4, 5, 4);
             Name = "menu";
             StartPosition = FormStartPosition.Manual;
             Text = "Form1";
             WindowState = FormWindowState.Maximized;
-            MenuVertical.ResumeLayout(false);
+            menuVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)iconmin).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconcerrar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            BarraTitulo.ResumeLayout(false);
-            BarraTitulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)btnSlide).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic_popflix).EndInit();
+            pnl_barraTitulo.ResumeLayout(false);
+            pnl_barraTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)btn_slide).EndInit();
             ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel MenuVertical;
-        private System.Windows.Forms.Panel BarraTitulo;
-        private System.Windows.Forms.Panel panelContenedor;
-        private System.Windows.Forms.PictureBox btnSlide;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btninicio;
+        private System.Windows.Forms.Panel menuVertical;
+        private System.Windows.Forms.Panel pnl_barraTitulo;
+        private System.Windows.Forms.Panel pnl_contenedor;
+        private System.Windows.Forms.PictureBox btn_slide;
+        private System.Windows.Forms.PictureBox pic_popflix;
+        private System.Windows.Forms.Button btn_inicio;
         private PictureBox iconmin;
         private PictureBox iconcerrar;
-        private Button button6;
-        private Button button3;
-        private Button button2;
-        private Button button4;
-        private Button button5;
-        private Button button1;
-        private Label lblNombreUsuario;
-        private Label lblRol;
-        private Button button7;
+        private Button btn_clientesMembresias;
+        private Button btn_rentasDevoluciones;
+        private Button btn_inventario;
+        private Button btn_facturasMoras;
+        private Button btn_gestionUsuarios;
+        private Button btn_seguridad;
+        private Label lbl_nombreUsuario;
+        private Label lbl_rol;
+        private Button btn_cerrar;
     }
 }

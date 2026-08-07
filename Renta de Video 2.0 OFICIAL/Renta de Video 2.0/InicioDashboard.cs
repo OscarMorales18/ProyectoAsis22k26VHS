@@ -16,6 +16,7 @@ namespace Renta_de_Video_2._0
 {
     public partial class InicioDashboard : Form
     {
+        // Inicio de código de "Óscar Emilio Morales Lemus" con carné: "9959-23-3070" en la fecha de: "05/08/2026"
         public InicioDashboard()
         {
             InitializeComponent(); CargarKPIs();
@@ -26,37 +27,37 @@ namespace Renta_de_Video_2._0
 
         }
 
-        MySqlCommand cmd;
-        MySqlDataReader dr;
+        MySqlCommand objCmd;
+        MySqlDataReader objDr;
 
         // Clase para cargar los KPIs del Dashboard en los labels - Oscar Morales 9959-23-3070
         private void CargarKPIs()
         {
-            Cconexion c = new Cconexion();
-            MySqlConnection conexion = c.establecerConexion();
+            Cconexion objConexion = new Cconexion();
+            MySqlConnection objMysqlConexion = objConexion.establecerConexion();
 
             try
             {
-                cmd = new MySqlCommand("DashboardDatos", conexion);
-                cmd.CommandType = CommandType.StoredProcedure;
+                objCmd = new MySqlCommand("DashboardDatos", objMysqlConexion);
+                objCmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.Add("totalventas", MySqlDbType.Float).Direction = ParameterDirection.Output;
-                cmd.Parameters.Add("totalstock", MySqlDbType.Float).Direction = ParameterDirection.Output;
-                cmd.Parameters.Add("numclientes", MySqlDbType.Float).Direction = ParameterDirection.Output;
-                cmd.Parameters.Add("numusuarios", MySqlDbType.Float).Direction = ParameterDirection.Output;
-                cmd.Parameters.Add("numepleados", MySqlDbType.Float).Direction = ParameterDirection.Output;
-                cmd.Parameters.Add("numvideos", MySqlDbType.Float).Direction = ParameterDirection.Output;
-                cmd.Parameters.Add("numdevoluciones", MySqlDbType.Float).Direction = ParameterDirection.Output;
+                objCmd.Parameters.Add("totalventas", MySqlDbType.Float).Direction = ParameterDirection.Output;
+                objCmd.Parameters.Add("totalstock", MySqlDbType.Float).Direction = ParameterDirection.Output;
+                objCmd.Parameters.Add("numclientes", MySqlDbType.Float).Direction = ParameterDirection.Output;
+                objCmd.Parameters.Add("numusuarios", MySqlDbType.Float).Direction = ParameterDirection.Output;
+                objCmd.Parameters.Add("numepleados", MySqlDbType.Float).Direction = ParameterDirection.Output;
+                objCmd.Parameters.Add("numvideos", MySqlDbType.Float).Direction = ParameterDirection.Output;
+                objCmd.Parameters.Add("numdevoluciones", MySqlDbType.Float).Direction = ParameterDirection.Output;
 
-                cmd.ExecuteNonQuery();
+                objCmd.ExecuteNonQuery();
 
-                lbl_totalventas.Text = Convert.ToSingle(cmd.Parameters["totalventas"].Value).ToString("N0");
-                lbl_totalstock.Text = Convert.ToSingle(cmd.Parameters["totalstock"].Value).ToString("N0");
-                lbl_numclientes.Text = Convert.ToSingle(cmd.Parameters["numclientes"].Value).ToString("N0");
-                lbl_numusuarios.Text = Convert.ToSingle(cmd.Parameters["numusuarios"].Value).ToString("N0");
-                lbl_numepleados.Text = Convert.ToSingle(cmd.Parameters["numepleados"].Value).ToString("N0");
-                lbl_numvideos.Text = Convert.ToSingle(cmd.Parameters["numvideos"].Value).ToString("N0");
-                lbl_numdevoluciones.Text = Convert.ToSingle(cmd.Parameters["numdevoluciones"].Value).ToString("N0");
+                lbl_totalVentas.Text = Convert.ToSingle(objCmd.Parameters["totalventas"].Value).ToString("N0");
+                lbl_totalStock.Text = Convert.ToSingle(objCmd.Parameters["totalstock"].Value).ToString("N0");
+                lbl_numClientes.Text = Convert.ToSingle(objCmd.Parameters["numclientes"].Value).ToString("N0");
+                lbl_numUsuarios.Text = Convert.ToSingle(objCmd.Parameters["numusuarios"].Value).ToString("N0");
+                lbl_numEmpleados.Text = Convert.ToSingle(objCmd.Parameters["numepleados"].Value).ToString("N0");
+                lbl_numVideos.Text = Convert.ToSingle(objCmd.Parameters["numvideos"].Value).ToString("N0");
+                lbl_numDevoluciones.Text = Convert.ToSingle(objCmd.Parameters["numdevoluciones"].Value).ToString("N0");
             }
             catch (Exception ex)
             {
@@ -64,7 +65,7 @@ namespace Renta_de_Video_2._0
             }
             finally
             {
-                c.cerrarConexion();
+                objConexion.cerrarConexion();
             }
         }
 
@@ -78,4 +79,5 @@ namespace Renta_de_Video_2._0
 
         }
     }
+    // Fin de código de "Óscar Emilio Morales Lemus" con carné: "9959-23-3070" en la fecha de: "05/08/2026"
 }

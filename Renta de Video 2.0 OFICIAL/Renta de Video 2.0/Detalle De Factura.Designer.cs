@@ -97,7 +97,7 @@
             txt_fecha.Location = new Point(88, 145);
             txt_fecha.Margin = new Padding(3, 4, 3, 4);
             txt_fecha.Name = "txt_fecha";
-            txt_fecha.Size = new Size(180, 27);
+            txt_fecha.Size = new Size(180, 32);
             txt_fecha.TabIndex = 40;
             // 
             // txt_cliente
@@ -108,7 +108,7 @@
             txt_cliente.Location = new Point(88, 105);
             txt_cliente.Margin = new Padding(3, 4, 3, 4);
             txt_cliente.Name = "txt_cliente";
-            txt_cliente.Size = new Size(180, 27);
+            txt_cliente.Size = new Size(180, 32);
             txt_cliente.TabIndex = 41;
             // 
             // txt_codigo
@@ -119,7 +119,7 @@
             txt_codigo.Location = new Point(88, 65);
             txt_codigo.Margin = new Padding(3, 4, 3, 4);
             txt_codigo.Name = "txt_codigo";
-            txt_codigo.Size = new Size(180, 27);
+            txt_codigo.Size = new Size(180, 32);
             txt_codigo.TabIndex = 42;
             // 
             // txt_totalPagar
@@ -131,7 +131,7 @@
             txt_totalPagar.Margin = new Padding(3, 4, 3, 4);
             txt_totalPagar.Name = "txt_totalPagar";
             txt_totalPagar.ReadOnly = true;
-            txt_totalPagar.Size = new Size(180, 27);
+            txt_totalPagar.Size = new Size(180, 32);
             txt_totalPagar.TabIndex = 43;
             // 
             // pictureBox2
@@ -186,7 +186,7 @@
             Buscar.TabIndex = 49;
             Buscar.Text = "Pagar Mora";
             Buscar.UseVisualStyleBackColor = false;
-            Buscar.Click += Buscar_Click;
+            Buscar.Click += OnMora_Click;
             // 
             // Detalle_De_Factura
             // 
