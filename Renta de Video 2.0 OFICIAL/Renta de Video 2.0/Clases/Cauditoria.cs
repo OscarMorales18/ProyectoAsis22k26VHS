@@ -11,14 +11,13 @@ namespace Renta_de_Video_2._0.Clases
         {
             try
             {
-                // Validar que no envíe una cadena vacía
-                string usuario = string.IsNullOrWhiteSpace(SesionUsuario.Usuario) ? "Sistema" : SesionUsuario.Usuario;
+                string sUsuario= string.IsNullOrWhiteSpace(SesionUsuario.Usuario) ? "Sistema" : SesionUsuario.Usuario;
 
-                string query = "SET @app_usuario = @usuario;";
-                using (MySqlCommand cmd = new MySqlCommand(query, conexion))
+                string sQuery = "SET @app_usuario = @usuario;";
+                using (MySqlCommand objCmd = new MySqlCommand(sQuery, conexion))
                 {
-                    cmd.Parameters.AddWithValue("@usuario", usuario);
-                    cmd.ExecuteNonQuery();
+                    objCmd.Parameters.AddWithValue("@usuario", sUsuario);
+                    objCmd.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)
@@ -30,8 +29,8 @@ namespace Renta_de_Video_2._0.Clases
         {
             try
             {
-                Cconexion objetoConexion = new Cconexion();
-                string query = @"SELECT 
+                Cconexion objConexion = new Cconexion();
+                string sQuery = @"SELECT 
                     id_auditoria AS 'ID',
                     tabla_afectada AS 'Tabla',
                     operacion AS 'Operación',
@@ -44,12 +43,12 @@ namespace Renta_de_Video_2._0.Clases
                     FROM auditoria 
                     ORDER BY fecha_hora DESC;";
 
-                MySqlDataAdapter da = new MySqlDataAdapter(query, objetoConexion.establecerConexion());
-                DataTable dt = new DataTable();
-                da.Fill(dt);
+                MySqlDataAdapter objDa = new MySqlDataAdapter(sQuery, objConexion.establecerConexion());
+                DataTable objDt = new DataTable();
+                objDa.Fill(objDt);
 
-                tabla.DataSource = dt;
-                objetoConexion.cerrarConexion();
+                tabla.DataSource = objDt;
+                objConexion.cerrarConexion();
             }
             catch (Exception ex)
             {
@@ -61,8 +60,8 @@ namespace Renta_de_Video_2._0.Clases
         {
             try
             {
-                Cconexion objetoConexion = new Cconexion();
-                string query = @"SELECT 
+                Cconexion objConexion = new Cconexion();
+                string sQuery = @"SELECT 
                     id_auditoria AS 'ID',
                     tabla_afectada AS 'Tabla',
                     operacion AS 'Operación',
@@ -78,15 +77,15 @@ namespace Renta_de_Video_2._0.Clases
                        OR usuario_app LIKE @busqueda 
                     ORDER BY fecha_hora DESC;";
 
-                MySqlCommand cmd = new MySqlCommand(query, objetoConexion.establecerConexion());
-                cmd.Parameters.AddWithValue("@busqueda", "%" + busqueda + "%");
+                MySqlCommand objCmd = new MySqlCommand(sQuery, objConexion.establecerConexion());
+                objCmd.Parameters.AddWithValue("@busqueda", "%" + busqueda + "%");
 
-                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
+                MySqlDataAdapter objDa = new MySqlDataAdapter(objCmd);
+                DataTable objDt = new DataTable();
+                objDa.Fill(objDt);
 
-                tabla.DataSource = dt;
-                objetoConexion.cerrarConexion();
+                tabla.DataSource = objDt;
+                objConexion.cerrarConexion();
             }
             catch (Exception ex)
             {

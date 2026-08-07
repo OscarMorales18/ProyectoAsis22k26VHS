@@ -9,12 +9,12 @@ namespace Renta_de_Video_2._0.Clases
     internal class Cusuario
     {
         // Usar UInt64 para coincidir con columnas AUTO_INCREMENT UNSIGNED (BIGINT UNSIGNED)
-        public ulong id { get; set; }
-        public string usuario { get; set; }
-        public string contrasena { get; set; }
-        public ulong id_empleado { get; set; }
-        public string rol {  get; set; }
-        public char estado { get; set; }
+        public ulong Id{ get; set; }
+        public string Usuario { get; set; }
+        public string Contrasena { get; set; }
+        public ulong IdEmpleado { get; set; }
+        public string Rol {  get; set; }
+        public char Estado { get; set; }
         
     }
 }

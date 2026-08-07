@@ -10,35 +10,35 @@ namespace Renta_de_Video_2._0.Clases
     {
         public List<MMoraPendiente> CargarMorasPendientes(int idCliente)
         {
-            List<MMoraPendiente> moras = new List<MMoraPendiente>();
-            Cconexion objetoConexion = new Cconexion();
+            List<MMoraPendiente> lst_Moras = new List<MMoraPendiente>();
+            Cconexion objConexion = new Cconexion();
 
             try
             {
                 // trae las moras sin pagar de este cliente
-            MySqlCommand cmd = new MySqlCommand(
+            MySqlCommand objCmd = new MySqlCommand(
                     @"SELECT mo.id_mora, r.id_renta, mo.dias_atraso, mo.monto
                       FROM mora mo
                       INNER JOIN devolucion d ON mo.id_devolucion = d.id_devolucion
                       INNER JOIN renta r ON d.id_renta = r.id_renta
                       WHERE r.id_cliente = @idCliente AND mo.estado_pago = 'pendiente';",
-                    objetoConexion.establecerConexion());
-                cmd.Parameters.Add(new MySqlParameter("@idCliente", idCliente));
+                    objConexion.establecerConexion());
+                objCmd.Parameters.Add(new MySqlParameter("@idCliente", idCliente));
 
-                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-                adapter.Fill(dt);
+                MySqlDataAdapter objAdapter = new MySqlDataAdapter(objCmd);
+            DataTable objDt = new DataTable();
+                objAdapter.Fill(objDt);
 
-                objetoConexion.cerrarConexion();
+                objConexion.cerrarConexion();
 
-                foreach (DataRow fila in dt.Rows)
+                foreach (DataRow objFila in objDt.Rows)
                 {
-                    moras.Add(new MMoraPendiente
+                    lst_Moras.Add(new MMoraPendiente
                     {
-                        IdMora = Convert.ToInt32(fila["id_mora"]),
-                        IdRenta = Convert.ToInt32(fila["id_renta"]),
-                    DiasAtraso = Convert.ToInt32(fila["dias_atraso"]),
-                        Monto = Convert.ToDecimal(fila["monto"])
+                        IdMora = Convert.ToInt32(objFila["id_mora"]),
+                        IdRenta = Convert.ToInt32(objFila["id_renta"]),
+                    DiasAtraso = Convert.ToInt32(objFila["dias_atraso"]),
+                        Monto = Convert.ToDecimal(objFila["monto"])
                     });
                 }
             }
@@ -49,23 +49,23 @@ namespace Renta_de_Video_2._0.Clases
                     "Error de base de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            return moras;
+            return lst_Moras;
         }
 
         public bool MarcarMoraPagada(int idMora)
         {
-            Cconexion objetoConexion = new Cconexion();
+            Cconexion objConexion = new Cconexion();
 
             try
             {
             // actualiza el estado de la mora a pagado
-                MySqlCommand cmd = new MySqlCommand(
+                MySqlCommand objCmd = new MySqlCommand(
                     "UPDATE mora SET estado_pago = 'pagado' WHERE id_mora = @idMora;",
-                    objetoConexion.establecerConexion());
-                cmd.Parameters.Add(new MySqlParameter("@idMora", idMora));
-                cmd.ExecuteNonQuery();
+                    objConexion.establecerConexion());
+                objCmd.Parameters.Add(new MySqlParameter("@idMora", idMora));
+                objCmd.ExecuteNonQuery();
 
-                objetoConexion.cerrarConexion();
+                objConexion.cerrarConexion();
                 return true;
             }
             // no se pudo actualizar el pago

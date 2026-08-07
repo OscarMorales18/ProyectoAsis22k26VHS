@@ -1,4 +1,4 @@
-﻿using Renta_de_Video_2._0.Clases;       // Referencia a la clase SesionUsuario
+﻿using Renta_de_Video_2._0.Clases;       
 using Renta_de_Video_2._0.Resources;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.InteropServices;  // Librería para mover ventana por la barra de título
+using System.Runtime.InteropServices;  
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,14 +23,13 @@ namespace Renta_de_Video_2._0
             AplicarPermisos();
             CargarDatosUsuario();
 
-            // 2. Vincula los eventos Clic de todos los botones con sus correspondientes formularios
-            btninicio.Click += btninicio_Click;
-            button6.Click += btnClientes_Click;
-            button2.Click += btnInventario_Click;
-            button3.Click += btnRentas_Click;
-            button4.Click += btnFacturacion_Click;
-            button5.Click += btnUsuarios_Click;
-            //button1.Click += btninicio_Click;
+           
+            btn_inicio.Click += btninicio_Click;
+            btn_clientesMembresias.Click += btnClientes_Click;
+            btn_inventario.Click += btnInventario_Click;
+            btn_rentasDevoluciones.Click += btnRentas_Click;
+            btn_facturasMoras.Click += btnFacturacion_Click;
+            btn_gestionUsuarios.Click += btnUsuarios_Click;
         }
 
         private void menu_Load(object sender, EventArgs e)
@@ -41,46 +40,46 @@ namespace Renta_de_Video_2._0
 
         private void CargarDatosUsuario()
         {
-            lblNombreUsuario.Text = SesionUsuario.Usuario;
-            lblRol.Text = SesionUsuario.Rol;
+            lbl_nombreUsuario.Text = SesionUsuario.Usuario;
+            lbl_rol.Text = SesionUsuario.Rol;
         }
 
         // Método para ocultar/mostrar botones del menú según el rol (Victor Samayoa 0901-23-3424)
         private void AplicarPermisos()
         {
-            string rol = SesionUsuario.Rol;
+            string sRol = SesionUsuario.Rol;
 
-            switch (rol)
+            switch (sRol)
             {
                 case "Empleado":
-                    btninicio.Enabled = true; // inicio
-                    button6.Enabled = true;   // clientes y membresias
-                    button2.Enabled = true;   // inventario
-                    button3.Enabled = true;   // rentas y devoluciones
-                    button4.Enabled = true;   // facturacion y mora
-                    button5.Enabled = false;  // gestion de usuarios (desactivado)
-                    button1.Enabled = false;  // seguridad del sistema (desactivado)
+                    btn_inicio.Enabled = true; 
+                    btn_clientesMembresias.Enabled = true;   
+                    btn_inventario.Enabled = true;  
+                    btn_rentasDevoluciones.Enabled = true;   
+                    btn_facturasMoras.Enabled = true;   
+                    btn_gestionUsuarios.Enabled = false;  
+                    btn_seguridad.Enabled = false;  
 
                     break;
 
                 case "Administrador":
-                    btninicio.Enabled = true; // inicio
-                    button6.Enabled = true;   // clientes y membresias
-                    button2.Enabled = true;   // inventario
-                    button3.Enabled = true;   // rentas y devoluciones
-                    button4.Enabled = true;   // facturacion y mora
-                    button5.Enabled = true;   // gestion de usuarios 
-                    button1.Enabled = false;  // seguridad del sistema (desactivado)
+                    btn_inicio.Enabled = true; 
+                    btn_clientesMembresias.Enabled = true;   
+                    btn_inventario.Enabled = true;   
+                    btn_rentasDevoluciones.Enabled = true;   
+                    btn_facturasMoras.Enabled = true;   
+                    btn_gestionUsuarios.Enabled = true;   
+                    btn_seguridad.Enabled = false;  
                     break;
 
                 case "Auditor":
-                    btninicio.Enabled = true; // inicio
-                    button6.Enabled = true;   // clientes y membresias
-                    button2.Enabled = true;   // inventario
-                    button3.Enabled = true;   // rentas y devoluciones
-                    button4.Enabled = true;   // facturacion y mora
-                    button5.Enabled = true;   // gestion de usuarios 
-                    button1.Enabled = true;   // seguridad del sistema 
+                    btn_inicio.Enabled = true; 
+                    btn_clientesMembresias.Enabled = true;  
+                    btn_inventario.Enabled = true;   
+                    btn_rentasDevoluciones.Enabled = true;  
+                    btn_facturasMoras.Enabled = true;   
+                    btn_gestionUsuarios.Enabled = true;   
+                    btn_seguridad.Enabled = true;   
                     break;
 
                 default:
@@ -97,13 +96,13 @@ namespace Renta_de_Video_2._0
         // Evento del menú hamburguesa - (Evelyn Andrade 9959-23-1224)
         private void btnSlide_Click(object sender, EventArgs e)
         {
-            if (MenuVertical.Width == 250)
+            if (menuVertical.Width == 290)
             {
-                MenuVertical.Width = 64;
+                menuVertical.Width = 64;
             }
             else
             {
-                MenuVertical.Width = 250;
+                menuVertical.Width = 290;
             }
 
             CentrarFormulario();
@@ -112,20 +111,20 @@ namespace Renta_de_Video_2._0
         // Método para cargar formularios dentro del Panel Contenedor (Evelyn Andrade 9959-23-1224)
         public void AbrirFormInPanel(Form formulario)
         {
-            panelContenedor.Controls.Clear();
+            pnl_contenedor.Controls.Clear();
 
             formulario.TopLevel = false;
             formulario.FormBorderStyle = FormBorderStyle.None;
             formulario.StartPosition = FormStartPosition.Manual;
 
-            panelContenedor.Controls.Add(formulario);
+            pnl_contenedor.Controls.Add(formulario);
 
             formulario.Location = new Point(
-                (panelContenedor.Width - formulario.Width) / 2,
-                (panelContenedor.Height - formulario.Height) / 2
+                (pnl_contenedor.Width - formulario.Width) / 2,
+                (pnl_contenedor.Height - formulario.Height) / 2
             );
 
-            panelContenedor.Tag = formulario;
+            pnl_contenedor.Tag = formulario;
 
             formulario.Show();
         }
@@ -134,30 +133,25 @@ namespace Renta_de_Video_2._0
 
         private void CentrarFormulario()
         {
-            if (panelContenedor.Controls.Count > 0)
+            if (pnl_contenedor.Controls.Count > 0)
             {
-                Form frm = panelContenedor.Controls[0] as Form;
+                Form frm = pnl_contenedor.Controls[0] as Form;
 
                 if (frm != null)
                 {
                     frm.Location = new Point(
-                        (panelContenedor.Width - frm.Width) / 2,
-                        (panelContenedor.Height - frm.Height) / 2
+                        (pnl_contenedor.Width - frm.Width) / 2,
+                        (pnl_contenedor.Height - frm.Height) / 2
                     );
                 }
             }
         }
 
-
-
-
-
-
         // 1 inicio (Victor Samayoa 0901-23-3424)
         private void btninicio_Click(object sender, EventArgs e)
         {
-            if (this.panelContenedor.Controls.Count > 0)
-                this.panelContenedor.Controls.RemoveAt(0);
+            if (this.pnl_contenedor.Controls.Count > 0)
+                this.pnl_contenedor.Controls.RemoveAt(0);
             AbrirFormInPanel(new InicioDashboard());
         }
 
@@ -197,7 +191,6 @@ namespace Renta_de_Video_2._0
             AbrirFormInPanel(new Auditoria());
         }
 
-        // Métodos secundarios dejados por compatibilidad
         private void button1_Click(object sender, EventArgs e) { }
 
         private void button2_Click_1(object sender, EventArgs e) { }
@@ -229,20 +222,20 @@ namespace Renta_de_Video_2._0
         private void MenuVertical_Paint(object sender, PaintEventArgs e) { }
         private void label1_Click_1(object sender, EventArgs e) { }
 
-        // Métodos requeridos por las referencias en menu.Designer.cs
+
         private void label1_Click_2(object sender, EventArgs e) { }
         private void label1_Click_3(object sender, EventArgs e) { }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            DialogResult confirmacion = MessageBox.Show(
+            DialogResult dlgConfirmacion = MessageBox.Show(
                 "¿Está seguro de que desea cerrar la sesión actual?",
                 "Cerrar Sesión",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question
             );
 
-            if (confirmacion == DialogResult.Yes)
+            if (dlgConfirmacion == DialogResult.Yes)
             {
                 SesionUsuario.Usuario = string.Empty;
                 SesionUsuario.Rol = string.Empty;

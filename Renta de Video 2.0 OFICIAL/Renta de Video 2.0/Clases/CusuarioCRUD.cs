@@ -20,15 +20,15 @@ namespace Renta_de_Video_2._0.Clases
 
         public List<Cusuario> getUsuarios(string filtro)
         {
-            string QUERY = "SELECT * FROM usuario ";
+            string sQuery = "SELECT * FROM usuario ";
             mUsuarios.Clear();
-            MySqlDataReader mReader = null;
+            MySqlDataReader objReader= null;
 
             try
             {
                 if (!string.IsNullOrEmpty(filtro))
                 {
-                    QUERY += " WHERE " +
+                    sQuery += " WHERE " +
                         "CONCAT(id_usuario) LIKE '%" + filtro + "%' OR " +
                         "usuario LIKE '%" + filtro + "%' OR " +
                         "contrasena LIKE '%" + filtro + "%' OR " +
@@ -37,37 +37,37 @@ namespace Renta_de_Video_2._0.Clases
                         "estado LIKE '%" + filtro + "%'";
                 }
 
-                System.Diagnostics.Debug.WriteLine("CusuarioCRUD.getUsuarios - QUERY: " + QUERY);
+                System.Diagnostics.Debug.WriteLine("CusuarioCRUD.getUsuarios - QUERY: " + sQuery);
 
-                MySqlCommand mComando = new MySqlCommand(QUERY);
+                MySqlCommand mComando = new MySqlCommand(sQuery);
                 mComando.Connection = conexionMysql.establecerConexion();
-                mReader = mComando.ExecuteReader();
+                objReader= mComando.ExecuteReader();
 
                 Cusuario mUsuario = null;
-                while (mReader.Read())
+                while (objReader.Read())
                 {
                     mUsuario = new Cusuario();
 
-                    int idxId = mReader.GetOrdinal("id_usuario");
-                    int idxUsuario = mReader.GetOrdinal("usuario");
-                    int idxContrasena = mReader.GetOrdinal("contrasena");
-                    int idxIdEmpleado = mReader.GetOrdinal("id_empleado");
-                    int idxRol = mReader.GetOrdinal("rol");
+                    int idxId = objReader.GetOrdinal("id_usuario");
+                    int idxUsuario = objReader.GetOrdinal("usuario");
+                    int idxContrasena = objReader.GetOrdinal("contrasena");
+                    int idxIdEmpleado = objReader.GetOrdinal("id_empleado");
+                    int idxRol = objReader.GetOrdinal("rol");
 
-                    mUsuario.id = mReader.GetUInt64(idxId);
-                    mUsuario.usuario = mReader.IsDBNull(idxUsuario) ? string.Empty : mReader.GetString(idxUsuario);
-                    mUsuario.contrasena = mReader.IsDBNull(idxContrasena) ? string.Empty : mReader.GetString(idxContrasena);
-                    mUsuario.id_empleado = mReader.GetUInt64(idxIdEmpleado);
-                    mUsuario.rol = mReader.IsDBNull(idxRol) ? string.Empty : mReader.GetString(idxRol);
+                    mUsuario.Id = objReader.GetUInt64(idxId);
+                    mUsuario.Usuario = objReader.IsDBNull(idxUsuario) ? string.Empty : objReader.GetString(idxUsuario);
+                    mUsuario.Contrasena = objReader.IsDBNull(idxContrasena) ? string.Empty : objReader.GetString(idxContrasena);
+                    mUsuario.IdEmpleado = objReader.GetUInt64(idxIdEmpleado);
+                    mUsuario.Rol = objReader.IsDBNull(idxRol) ? string.Empty : objReader.GetString(idxRol);
 
-                    object estadoVal = mReader.GetValue(mReader.GetOrdinal("estado"));
+                    object estadoVal = objReader.GetValue(objReader.GetOrdinal("estado"));
                     string estadoStr = estadoVal != null ? estadoVal.ToString() : string.Empty;
-                    mUsuario.estado = !string.IsNullOrEmpty(estadoStr) ? estadoStr[0] : '\0';
+                    mUsuario.Estado = !string.IsNullOrEmpty(estadoStr) ? estadoStr[0] : '\0';
 
                     mUsuarios.Add(mUsuario);
                 }
 
-                mReader.Close();
+                objReader.Close();
                 conexionMysql.cerrarConexion();
             }
             catch (Exception)
@@ -83,24 +83,24 @@ namespace Renta_de_Video_2._0.Clases
         {
             try
             {
-                string INSERT = "INSERT INTO usuario (usuario, contrasena, id_empleado, rol, estado) VALUES (@usuario, @contrasena, @id_empleado, @rol, @estado)";
+                string sInsert = "INSERT INTO usuario (usuario, contrasena, id_empleado, rol, estado) VALUES (@usuario, @contrasena, @id_empleado, @rol, @estado)";
 
-                MySqlCommand mCommand = new MySqlCommand(INSERT, conexionMysql.establecerConexion());
-                mCommand.Parameters.AddWithValue("@usuario", mUsuario.usuario);
-                mCommand.Parameters.AddWithValue("@contrasena", mUsuario.contrasena);
-                mCommand.Parameters.AddWithValue("@id_empleado", mUsuario.id_empleado);
-                mCommand.Parameters.AddWithValue("@rol", mUsuario.rol);
+                MySqlCommand objCommand = new MySqlCommand(sInsert, conexionMysql.establecerConexion());
+                objCommand.Parameters.AddWithValue("@usuario", mUsuario.Usuario);
+                objCommand.Parameters.AddWithValue("@contrasena", mUsuario.Contrasena);
+                objCommand.Parameters.AddWithValue("@id_empleado", mUsuario.IdEmpleado);
+                objCommand.Parameters.AddWithValue("@rol", mUsuario.Rol);
 
-                var pEstado = mCommand.CreateParameter();
+                var pEstado = objCommand.CreateParameter();
                 pEstado.ParameterName = "@estado";
                 pEstado.DbType = System.Data.DbType.Byte;
-                pEstado.Value = (mUsuario.estado == '1') ? (byte)1 : (byte)0;
-                mCommand.Parameters.Add(pEstado);
+                pEstado.Value = (mUsuario.Estado == '1') ? (byte)1 : (byte)0;
+                objCommand.Parameters.Add(pEstado);
 
-                bool resultado = mCommand.ExecuteNonQuery() > 0;
+                bool bResultado= objCommand.ExecuteNonQuery() > 0;
                 conexionMysql.cerrarConexion();
 
-                return resultado;
+                return bResultado;
             }
             catch (Exception)
             {
@@ -115,28 +115,27 @@ namespace Renta_de_Video_2._0.Clases
 
             try
             {
-                MySqlCommand mComando = new MySqlCommand(QUERY, conexionMysql.establecerConexion());
-                mComando.Parameters.AddWithValue("@usuario", usuarioIngresado);
-                mComando.Parameters.AddWithValue("@contrasena", contrasenaIngresada);
+                MySqlCommand objComando = new MySqlCommand(QUERY, conexionMysql.establecerConexion());
+                objComando.Parameters.AddWithValue("@usuario", usuarioIngresado);
+                objComando.Parameters.AddWithValue("@contrasena", contrasenaIngresada);
 
-                MySqlDataReader mReader = mComando.ExecuteReader();
+                MySqlDataReader objReader= objComando.ExecuteReader();
 
-                if (mReader.Read())
+                if (objReader.Read())
                 {
-                    // Llenar las propiedades de la clase estática SesionUsuario
-                    SesionUsuario.IdUsuario = mReader.GetUInt64(mReader.GetOrdinal("id_usuario"));
-                    SesionUsuario.Usuario = mReader.IsDBNull(mReader.GetOrdinal("usuario")) ? string.Empty : mReader.GetString(mReader.GetOrdinal("usuario"));
-                    SesionUsuario.Rol = mReader.IsDBNull(mReader.GetOrdinal("rol")) ? string.Empty : mReader.GetString(mReader.GetOrdinal("rol"));
-                    SesionUsuario.IdEmpleado = mReader.GetUInt64(mReader.GetOrdinal("id_empleado"));
+                    SesionUsuario.IdUsuario = objReader.GetUInt64(objReader.GetOrdinal("id_usuario"));
+                    SesionUsuario.Usuario = objReader.IsDBNull(objReader.GetOrdinal("usuario")) ? string.Empty : objReader.GetString(objReader.GetOrdinal("usuario"));
+                    SesionUsuario.Rol = objReader.IsDBNull(objReader.GetOrdinal("rol")) ? string.Empty : objReader.GetString(objReader.GetOrdinal("rol"));
+                    SesionUsuario.IdEmpleado = objReader.GetUInt64(objReader.GetOrdinal("id_empleado"));
 
-                    mReader.Close();
+                    objReader.Close();
                     conexionMysql.cerrarConexion();
-                    return true; // Usuario autenticado
+                    return true; 
                 }
 
-                mReader.Close();
+                objReader.Close();
                 conexionMysql.cerrarConexion();
-                return false; // Credenciales incorrectas o usuario inactivo
+                return false; 
             }
             catch (Exception ex)
             {

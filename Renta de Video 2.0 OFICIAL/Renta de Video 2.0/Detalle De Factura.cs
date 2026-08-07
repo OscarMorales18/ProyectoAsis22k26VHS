@@ -28,10 +28,10 @@ namespace Renta_de_Video_2._0
 
                 MessageBox.Show("No se pudo regresar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
         private void OnBuscar_Click(object sender, EventArgs e)
         {
-
             try
             {
 
@@ -50,8 +50,7 @@ namespace Renta_de_Video_2._0
 
             catch (FormatException)
             {
-
-                MessageBox.Show("El ID debe ser un número.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El código debe tener el formato FACT-0000", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             catch (Exception ex)
@@ -65,10 +64,6 @@ namespace Renta_de_Video_2._0
             Application.Exit();
         }
 
-        private void Buscar_Click(object sender, EventArgs e)
-        {
-            AbrirFormInPanel(new Mora_Pendiente_PC());
-        }
         private void AbrirFormInPanel(Form formulario)
         {
             menu menuPrincipal = Application.OpenForms.OfType<menu>().FirstOrDefault();
@@ -77,6 +72,11 @@ namespace Renta_de_Video_2._0
             {
                 menuPrincipal.AbrirFormInPanel(formulario);
             }
+        }
+
+        private void OnMora_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new Mora_Pendiente_PC());
         }
         // Fin de código de "Andy Alfonso Garcia Lopez" con carné: "9959-23-1494" en la fecha de: "04/08/2026"
     }

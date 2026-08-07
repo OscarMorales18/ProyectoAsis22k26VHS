@@ -17,8 +17,8 @@ namespace Renta_de_Video_2._0
         {
             InitializeComponent();
             //base de datos  (Evelyn Andrade 9959-23-1224)
-            Clases.Cvideos objetoVideos = new Clases.Cvideos();
-            objetoVideos.mostrarVideos(dgwVideo);
+            Clases.Cvideos objetoVideo = new Clases.Cvideos();
+            objetoVideo.mostrarVideos(dgv_video);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -49,17 +49,17 @@ namespace Renta_de_Video_2._0
         // llenado de texbox - (Evelyn Andrade 9959-23-1224)
         private void dgwVideo_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgwVideo.SelectedRows.Count > 0)
+            if (dgv_video.SelectedRows.Count > 0)
             {
-                DataGridViewRow fila = dgwVideo.SelectedRows[0];
+                DataGridViewRow fila = dgv_video.SelectedRows[0];
 
-                txtCodigo.Text = fila.Cells["codigo"].Value.ToString();
-                txtTitulo.Text = fila.Cells["titulo"].Value.ToString();
-                txtGenero.Text = fila.Cells["genero"].Value.ToString();
-                txtDirector.Text = fila.Cells["director"].Value.ToString();
-                txtAnio.Text = fila.Cells["anio"].Value.ToString();
-                txtCopias.Text = fila.Cells["stock"].Value.ToString();
-                txtEstado.Text = fila.Cells["estado"].Value.ToString();
+                txt_codigo.Text = fila.Cells["codigo"].Value.ToString();
+                txt_titulo.Text = fila.Cells["titulo"].Value.ToString();
+                txt_genero.Text = fila.Cells["genero"].Value.ToString();
+                txt_director.Text = fila.Cells["director"].Value.ToString();
+                txt_anio.Text = fila.Cells["anio"].Value.ToString();
+                txt_copias.Text = fila.Cells["stock"].Value.ToString();
+                txt_estado.Text = fila.Cells["estado"].Value.ToString();
             }
         }
 
@@ -67,7 +67,7 @@ namespace Renta_de_Video_2._0
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             Cvideos objetoVideo = new Cvideos();
-            objetoVideo.buscarVideo(dgwVideo, txtBuscar.Text);
+            objetoVideo.buscarVideo(dgv_video, txt_buscar.Text);
             actualizarConteo(); //conteo videos
         }
 
@@ -76,13 +76,13 @@ namespace Renta_de_Video_2._0
         {
             Cvideos objetoVideo = new Cvideos();
 
-            if (cmbClasificacion.SelectedItem.ToString() == "clasificacion")
+            if (cmb_clasificacion.SelectedItem.ToString() == "clasificacion")
             {
-                objetoVideo.mostrarVideos(dgwVideo);
+                objetoVideo.mostrarVideos(dgv_video);
             }
             else
             {
-                objetoVideo.filtrarPorClasificacion(dgwVideo, cmbClasificacion.SelectedItem.ToString());
+                objetoVideo.filtrarPorClasificacion(dgv_video, cmb_clasificacion.SelectedItem.ToString());
                 actualizarConteo();
             }
         }
@@ -90,101 +90,104 @@ namespace Renta_de_Video_2._0
         private void InventarioLista_Load(object sender, EventArgs e)
         {
             Cvideos objetoVideo = new Cvideos();
-            objetoVideo.mostrarVideos(dgwVideo);
+            objetoVideo.mostrarVideos(dgv_video);
             // contador de videos (Evelyn Andrade 9959-23-1224)
             actualizarConteo();
 
-            cmbClasificacion.SelectedIndex = 0;
-            cmbGenero.SelectedIndex = 0;
+            cmb_clasificacion.SelectedIndex = 0;
+            cmb_genero.SelectedIndex = 0;
 
             //texbox desabilitados  (Evelyn Andrade 9959-23-1224)
-            txtCodigo.Enabled = false;
-            txtTitulo.Enabled = false;
-            txtGenero.Enabled = false;
-            txtDirector.Enabled = false;
-            txtAnio.Enabled = false;
-            txtCopias.Enabled = false;
-            txtEstado.Enabled = false;
+            txt_codigo.Enabled = false;
+            txt_titulo.Enabled = false;
+            txt_genero.Enabled = false;
+            txt_director.Enabled = false;
+            txt_anio.Enabled = false;
+            txt_copias.Enabled = false;
+            txt_estado.Enabled = false;
         }
 
         private void cmbGenero_SelectedIndexChanged(object sender, EventArgs e)
         {
             Cvideos objetoVideo = new Cvideos();
 
-            if (cmbGenero.SelectedItem.ToString() == "Todos los géneros")
+            if (cmb_genero.SelectedItem.ToString() == "Todos los géneros")
             {
-                objetoVideo.mostrarVideos(dgwVideo);
+                objetoVideo.mostrarVideos(dgv_video);
             }
             else
             {
-                objetoVideo.filtrarPorGenero(dgwVideo, cmbGenero.SelectedItem.ToString());
+                objetoVideo.filtrarPorGenero(dgv_video, cmb_genero.SelectedItem.ToString());
                 actualizarConteo();
             }
         }
 
-        //actualizar el conteo de videos mostrados (Evelyn Andrade 9959-23-1224)
         private void actualizarConteo()
         {
-            int total = dgwVideo.Rows.Count - 1;
+            int total = dgv_video.Rows.Count - 1;
             lblConteo.Text = "MOSTRANDO " + total + " VIDEOS";
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+
+        private void lblConteo_Click(object sender, EventArgs e)
         {
-            txtTitulo.Enabled = true;
-            txtGenero.Enabled = true;
-            txtDirector.Enabled = true;
-            txtAnio.Enabled = true;
-            txtCopias.Enabled = true;
-            txtEstado.Enabled = true;
-            //visibilidad
-            btnGuardar.Visible = true;
-            btnEditar.Visible = false;
+
         }
 
-        //boton guardar cambios Evelyn Andrade 9959-23-1224
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void OnGuardar_Click(object sender, EventArgs e)
         {
             Cvideos objetoVideo = new Cvideos();
 
             objetoVideo.editarVideo(
-                txtCodigo.Text,
-                txtTitulo.Text,
-                txtGenero.Text,
-                txtDirector.Text,
-                int.Parse(txtAnio.Text),
-                int.Parse(txtCopias.Text),
-                txtEstado.Text
+                txt_codigo.Text,
+                txt_titulo.Text,
+                txt_genero.Text,
+                txt_director.Text,
+                int.Parse(txt_anio.Text),
+                int.Parse(txt_copias.Text),
+                txt_estado.Text
             );
 
             MessageBox.Show("Video actualizado correctamente.");
 
-            txtCodigo.Enabled = false;
-            txtTitulo.Enabled = false;
-            txtGenero.Enabled = false;
-            txtDirector.Enabled = false;
-            txtAnio.Enabled = false;
-            txtCopias.Enabled = false;
-            txtEstado.Enabled = false;
+            txt_codigo.Enabled = false;
+            txt_titulo.Enabled = false;
+            txt_genero.Enabled = false;
+            txt_director.Enabled = false;
+            txt_anio.Enabled = false;
+            txt_copias.Enabled = false;
+            txt_estado.Enabled = false;
 
-            btnGuardar.Visible = false;
-            btnEditar.Visible = true;
+            btn_guardar.Visible = false;
+            btn_editar.Visible = true;
 
-            objetoVideo.mostrarVideos(dgwVideo);
+            objetoVideo.mostrarVideos(dgv_video);
             actualizarConteo();
         }
 
-        //boton eliminar video Evelyn Sofia Andrade Luna 9959-23-1224
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void OnEditar_Click(object sender, EventArgs e)
         {
-            if (txtCodigo.Text == "")
+            txt_titulo.Enabled = true;
+            txt_genero.Enabled = true;
+            txt_director.Enabled = true;
+            txt_anio.Enabled = true;
+            txt_copias.Enabled = true;
+            txt_estado.Enabled = true;
+            //visibilidad
+            btn_guardar.Visible = true;
+            btn_editar.Visible = false;
+        }
+
+        private void OnEliminar_Click(object sender, EventArgs e)
+        {
+            if (txt_codigo.Text == "")
             {
                 MessageBox.Show("Selecciona un video primero.");
                 return;
             }
 
             DialogResult respuesta = MessageBox.Show(
-                "¿Seguro que quieres eliminar el video " + txtTitulo.Text + "?",
+                "¿Seguro que quieres eliminar el video " + txt_titulo.Text + "?",
                 "Confirmar eliminación",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Warning);
@@ -192,27 +195,25 @@ namespace Renta_de_Video_2._0
             if (respuesta == DialogResult.Yes)
             {
                 Cvideos objetoVideo = new Cvideos();
-                bool seElimino = objetoVideo.eliminarVideo(txtCodigo.Text);
+                bool seElimino = objetoVideo.eliminarVideo(txt_codigo.Text);
 
-                // si no se pudo eliminar de verdad, Cvideos ya mostró su propio mensaje
                 if (seElimino)
                     MessageBox.Show("Video eliminado correctamente.");
 
-                txtCodigo.Text = "";
-                txtTitulo.Text = "";
-                txtGenero.Text = "";
-                txtDirector.Text = "";
-                txtAnio.Text = "";
-                txtCopias.Text = "";
-                txtEstado.Text = "";
+                txt_codigo.Text = "";
+                txt_titulo.Text = "";
+                txt_genero.Text = "";
+                txt_director.Text = "";
+                txt_anio.Text = "";
+                txt_copias.Text = "";
+                txt_estado.Text = "";
 
-                objetoVideo.mostrarVideos(dgwVideo);
+                objetoVideo.mostrarVideos(dgv_video);
                 actualizarConteo();
             }
         }
 
-        //abre form InventarioRegistro Evelyn Andrade 9959-23-1224
-        private void btnNuevoVideo_Click(object sender, EventArgs e)
+        private void OnNuevoVideo_Click(object sender, EventArgs e)
         {
             Form menuPrincipal = Application.OpenForms["menu"];
             if (menuPrincipal is menu formMenu)
@@ -220,10 +221,6 @@ namespace Renta_de_Video_2._0
                 formMenu.AbrirFormInPanel(new InventarioRegistro());
             }
         }
-
-        private void lblConteo_Click(object sender, EventArgs e)
-        {
-
-        }
     }
+    
 }

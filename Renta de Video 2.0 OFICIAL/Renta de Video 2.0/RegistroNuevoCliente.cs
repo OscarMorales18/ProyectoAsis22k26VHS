@@ -65,64 +65,61 @@ namespace Renta_de_Video_2._0.Resources
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        // Inicio de código de "André De Jesús González Camey" con carné: "9959-23-3117" en la fecha de: "04/08/2026"
+        private void OnGuardar_Click(object sender, EventArgs e)
         {
             try
             {
-                // manejo de errores de cada campo Andre Gonzalez 9959-23-3117
-                if (string.IsNullOrWhiteSpace(NombreCompleto.Text))
+                if (string.IsNullOrWhiteSpace(txt_nombreCompleto.Text))
                         throw new Exception("El nombre completo es obligatorio.");
 
-                string dpiLimpio = DPI.Text.Replace(" ", "");
+                string sDpiLimpio = txt_dpi.Text.Replace(" ", "");
              
-                if (dpiLimpio.Length != 13 || !dpiLimpio.All(char.IsDigit))
+                if (sDpiLimpio.Length != 13 || !sDpiLimpio.All(char.IsDigit))
                 throw new Exception("El DPI debe tener 13 dígitos numéricos.");
 
-                    string telLimpio = Telefono.Text.Replace("-", "");
+                    string sTelLimpio= txt_telefono.Text.Replace("-", "");
            
-                if (telLimpio.Length != 8 || !telLimpio.All(char.IsDigit))
+                if (sTelLimpio.Length != 8 || !sTelLimpio.All(char.IsDigit))
                     throw new Exception("El teléfono debe tener 8 dígitos.");
 
                
-                if (string.IsNullOrWhiteSpace(Direccion.Text))
+                if (string.IsNullOrWhiteSpace(txt_direccion.Text))
                         throw new Exception("La dirección es obligatoria.");
 
             
-                if (!Regex.IsMatch(Correo.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+                if (!Regex.IsMatch(txt_correo.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
                     throw new Exception("Ingresa un correo electrónico válido.");
 
-                // encadenacion form con Base de datose del cliente Andre Gonzalez 9959-23-3117
-                MCliente nuevoCliente = new MCliente
+                MCliente objNuevoCliente = new MCliente
                 {
-                    Nombre = NombreCompleto.Text,
-                    Dpi = dpiLimpio,
-                    Telefono = telLimpio,
-                    Direccion = Direccion.Text,
-                    Correo = Correo.Text
+                    Nombre = txt_nombreCompleto.Text,
+                    Dpi = sDpiLimpio,
+                    Telefono = sTelLimpio,
+                    Direccion = txt_direccion.Text,
+                    Correo = txt_correo.Text
                 };
 
               
-                ClienteConsultas consultas = new ClienteConsultas();
-                    int idMembresia = consultas.AgregarCliente(nuevoCliente);
+                ClienteConsultas objConsultas = new ClienteConsultas();
+                    int iIdMembresia= objConsultas.AgregarCliente(objNuevoCliente);
 
-                // manejo de error guardado en base de datos Andre Gonzalez 9959-23-3117
-                if (idMembresia <= 0)
+                if (iIdMembresia<= 0)
                 throw new Exception("No se pudo guardar el cliente en la base de datos.");
 
 
-                string nuevoCodigo = "MEM-" + idMembresia.ToString("D4");
-                Codigo_de_membresia.Text = nuevoCodigo;
+                string sNuevoCodigo= "MEM-" + iIdMembresia.ToString("D4");
+                txt_codigoMembresia.Text = sNuevoCodigo;
 
-                MessageBox.Show("Cliente registrado correctamente en la base de datos.\nCódigo de membresía: " + nuevoCodigo,
+                MessageBox.Show("Cliente registrado correctamente en la base de datos.\nCódigo de membresía: " + sNuevoCodigo,
                     "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            // manejo de error Andre Gonzalez 9959-23-3117
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
         }
+        // Fin de código de "André De Jesús González Camey" con carné: "9959-23-3117" en la fecha de: "04/08/2026"
 
 
         private void DPI_TextChanged(object sender, EventArgs e)

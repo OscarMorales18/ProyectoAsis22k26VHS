@@ -13,7 +13,7 @@ namespace Renta_de_Video_2._0
 {
     public partial class InventarioRegistro : Form
     {
-        private bool actualizando = false;
+        private bool bActualizando = false;
 
         public InventarioRegistro()
         {
@@ -27,23 +27,22 @@ namespace Renta_de_Video_2._0
 
         private void InventarioRegistro_Load(object sender, EventArgs e)
         {
-            //genera codigo automatico - (Evelyn Andrade 9959-23-1224)
             Cvideos objetoVideo = new Cvideos();
-            txtCodigo.Text = objetoVideo.generarCodigo();
-            txtCodigo.Enabled = false;
-            //combo
-            cmbGenero.SelectedIndex = 0;
-            cmbClasificacion.SelectedIndex = 0;
-            //vista previa
-            prevtitulo.Enabled = false;
-            prevdirea.Enabled = false;
-            prevco.Enabled = false;
-            preves.Enabled = false;
-            // Estado siempre inicia en disponible
-            preves.Text = "DISPONIBLE";
+            txt_codigo.Text = objetoVideo.generarCodigo();
+            txt_codigo.Enabled = false;
+
+            cmb_genero.SelectedIndex = 0;
+            cmb_clasificacion.SelectedIndex = 0;
+
+            txt_previoTitulo.Enabled = false;
+            txt_prevAnio.Enabled = false;
+            txt_previoCopias.Enabled = false;
+            txt_previoEstado.Enabled = false;
+
+            txt_previoEstado.Text = "DISPONIBLE";
         }
 
-        // Regresar a la lista dentro del mismo panel del menú
+
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Form menuPrincipal = Application.OpenForms["menu"];
@@ -70,33 +69,33 @@ namespace Renta_de_Video_2._0
 
         private void txtTitulo_Leave(object sender, EventArgs e)
         {
-            if (txtTitulo.Text == "")
+            if (txt_titulo.Text == "")
             {
                 MessageBox.Show("El título no puede estar vacío.");
-                txtTitulo.Focus();
+                txt_titulo.Focus();
                 return;
             }
 
-            if (txtTitulo.Text.Length < 2)
+            if (txt_titulo.Text.Length < 2)
             {
                 MessageBox.Show("El título es demasiado corto.");
-                txtTitulo.Focus();
+                txt_titulo.Focus();
                 return;
             }
 
-            if (txtTitulo.Text.All(char.IsDigit))
+            if (txt_titulo.Text.All(char.IsDigit))
             {
                 MessageBox.Show("El título no puede ser solo números.");
-                txtTitulo.Focus();
+                txt_titulo.Focus();
                 return;
             }
 
             Cvideos objetoVideo = new Cvideos();
-            if (objetoVideo.tituloExiste(txtTitulo.Text))
+            if (objetoVideo.tituloExiste(txt_titulo.Text))
             {
                 MessageBox.Show("Ya existe una película con ese título.");
-                txtTitulo.Clear();
-                txtTitulo.Focus();
+                txt_titulo.Clear();
+                txt_titulo.Focus();
                 return;
             }
         }
@@ -108,44 +107,44 @@ namespace Renta_de_Video_2._0
 
         private void cmbGenero_Leave(object sender, EventArgs e)
         {
-            if (cmbGenero.SelectedIndex == 0)
+            if (cmb_genero.SelectedIndex == 0)
             {
                 MessageBox.Show("Debes seleccionar un género.");
-                cmbGenero.Focus();
+                cmb_genero.Focus();
                 return;
             }
         }
 
         private void txtDirector_Leave(object sender, EventArgs e)
         {
-            if (txtDirector.Text == "")
+            if (txt_director.Text == "")
             {
                 MessageBox.Show("El director no puede estar vacío.");
-                txtDirector.Focus();
+                txt_director.Focus();
                 return;
             }
 
-            if (txtDirector.Text.Length < 3)
+            if (txt_director.Text.Length < 3)
             {
                 MessageBox.Show("El nombre del director es demasiado corto.");
-                txtDirector.Focus();
+                txt_director.Focus();
                 return;
             }
 
-            if (txtDirector.Text.All(char.IsDigit))
+            if (txt_director.Text.All(char.IsDigit))
             {
                 MessageBox.Show("El director no puede ser solo números.");
-                txtDirector.Focus();
+                txt_director.Focus();
                 return;
             }
 
-            foreach (char letra in txtDirector.Text)
+            foreach (char letra in txt_director.Text)
             {
                 if (!char.IsLetter(letra) && letra != ' ' && letra != '.')
                 {
                     MessageBox.Show("El director solo puede contener letras.");
-                    txtDirector.Clear();
-                    txtDirector.Focus();
+                    txt_director.Clear();
+                    txt_director.Focus();
                     return;
                 }
             }
@@ -159,19 +158,19 @@ namespace Renta_de_Video_2._0
         //ingresar año pelicula
         private void nudAnio_Leave(object sender, EventArgs e)
         {
-            if (nudAnio.Value < 1888)
+            if (nud_anio.Value < 1888)
             {
                 MessageBox.Show("El año no puede ser antes de 1888.");
-                nudAnio.Value = 1888;
-                nudAnio.Focus();
+                nud_anio.Value = 1888;
+                nud_anio.Focus();
                 return;
             }
 
-            if (nudAnio.Value > 2025)
+            if (nud_anio.Value > 2025)
             {
                 MessageBox.Show("El año no puede ser mayor al año actual.");
-                nudAnio.Value = 2026;
-                nudAnio.Focus();
+                nud_anio.Value = 2026;
+                nud_anio.Focus();
                 return;
             }
         }
@@ -181,22 +180,21 @@ namespace Renta_de_Video_2._0
             actualizarVistaPrevia();
         }
 
-        //disponibilidad de copias
         private void nudCopias_Leave(object sender, EventArgs e)
         {
-            if (nudCopias.Value < 1)
+            if (nud_copias.Value < 1)
             {
                 MessageBox.Show("Debe haber al menos 1 copia disponible.");
-                nudCopias.Value = 1;
-                nudCopias.Focus();
+                nud_copias.Value = 1;
+                nud_copias.Focus();
                 return;
             }
 
-            if (nudCopias.Value > 100)
+            if (nud_copias.Value > 100)
             {
                 MessageBox.Show("No se pueden registrar más de 100 copias.");
-                nudCopias.Value = 100;
-                nudCopias.Focus();
+                nud_copias.Value = 100;
+                nud_copias.Focus();
                 return;
             }
         }
@@ -206,61 +204,90 @@ namespace Renta_de_Video_2._0
             actualizarVistaPrevia();
         }
 
-        // duracion de la pelicula en minutos
         private void nudDuracion_Leave(object sender, EventArgs e)
         {
-            if (nudDuracion.Value < 1)
+            if (nud_duracion.Value < 1)
             {
                 MessageBox.Show("La duración debe ser mayor a 0 minutos.");
-                nudDuracion.Value = 1;
-                nudDuracion.Focus();
+                nud_duracion.Value = 1;
+                nud_duracion.Focus();
                 return;
             }
         }
 
-        // clasificacion de la pelicula
         private void cmbClasificacion_Leave(object sender, EventArgs e)
         {
-            if (cmbClasificacion.SelectedIndex == 0)
+            if (cmb_clasificacion.SelectedIndex == 0)
             {
                 MessageBox.Show("Debes seleccionar una clasificación.");
-                cmbClasificacion.Focus();
+                cmb_clasificacion.Focus();
                 return;
             }
         }
 
-        // precio de renta de la pelicula
         private void nudPrecio_Leave(object sender, EventArgs e)
         {
-            if (nudPrecio.Value < 1)
+            if (nud_precio.Value < 1)
             {
                 MessageBox.Show("El precio debe ser mayor a Q1.00.");
-                nudPrecio.Value = 1;
-                nudPrecio.Focus();
+                nud_precio.Value = 1;
+                nud_precio.Focus();
                 return;
             }
         }
 
-        // actualiza vista previa en tiempo real
         private void actualizarVistaPrevia()
         {
-            if (actualizando) return;
+            if (bActualizando) return;
 
-            actualizando = true;
+            bActualizando = true;
 
-            prevtitulo.Text = txtTitulo.Text;
-            prevdirea.Text = txtDirector.Text + " - " + nudAnio.Value.ToString();
-            prevco.Text = nudCopias.Value.ToString();
-            preves.Text = "disponible";
+            txt_previoTitulo.Text = txt_titulo.Text;
+            txt_prevAnio.Text = txt_director.Text + " - " + nud_anio.Value.ToString();
+            txt_previoCopias.Text = nud_copias.Value.ToString();
+            txt_previoEstado.Text = "disponible";
 
-            actualizando = false;
+            bActualizando = false;
         }
 
-        private void GuardarVideo_Click(object sender, EventArgs e)
+
+        private void btncancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult dlgRespuesta = MessageBox.Show(
+        "¿Seguro que quieres cancelar el registro?\nSe perderán los datos ingresados.",
+        "Confirmar cancelación",
+        MessageBoxButtons.YesNo,
+        MessageBoxIcon.Warning);
+
+            if (dlgRespuesta == DialogResult.Yes)
+            {
+                // limpiar todos los campos
+                txt_titulo.Clear();
+                txt_director.Clear();
+                cmb_genero.SelectedIndex = 0;
+                cmb_clasificacion.SelectedIndex = 0;
+                nud_anio.Value = 2000;
+                nud_copias.Value = 1;
+                nud_duracion.Value = 1;
+                nud_precio.Value = 1;
+
+                // limpiar vista previa
+                txt_previoTitulo.Text = "";
+                txt_prevAnio.Text = "";
+                txt_previoCopias.Text = "";
+                txt_previoEstado.Text = "disponible";
+
+                // regenerar codigo
+                Cvideos objetoVideo = new Cvideos();
+                txt_codigo.Text = objetoVideo.generarCodigo();
+            }
+        }
+
+        private void OnGuardar_Video_Click(object sender, EventArgs e)
         {
             // validar que no haya campos vacíos
-            if (txtTitulo.Text == "" || txtDirector.Text == "" ||
-                cmbGenero.SelectedIndex == 0 || cmbClasificacion.SelectedIndex == 0)
+            if (txt_titulo.Text == "" || txt_director.Text == "" ||
+                cmb_genero.SelectedIndex == 0 || cmb_clasificacion.SelectedIndex == 0)
             {
                 MessageBox.Show("Por favor completa todos los campos antes de guardar.");
                 return;
@@ -269,15 +296,15 @@ namespace Renta_de_Video_2._0
             Cvideos objetoVideo = new Cvideos();
 
             objetoVideo.insertarVideo(
-                txtCodigo.Text,
-                txtTitulo.Text,
-                cmbGenero.SelectedItem.ToString(),
-                txtDirector.Text,
-                (int)nudAnio.Value,
-                nudPrecio.Value,
-                (int)nudCopias.Value,
-                cmbClasificacion.SelectedItem.ToString(),
-                (int)nudDuracion.Value
+                txt_codigo.Text,
+                txt_titulo.Text,
+                cmb_genero.SelectedItem.ToString(),
+                txt_director.Text,
+                (int)nud_anio.Value,
+                nud_precio.Value,
+                (int)nud_copias.Value,
+                cmb_clasificacion.SelectedItem.ToString(),
+                (int)nud_duracion.Value
             );
 
             MessageBox.Show("Video guardado correctamente.");
@@ -287,39 +314,6 @@ namespace Renta_de_Video_2._0
             if (menuPrincipal is menu formMenu)
             {
                 formMenu.AbrirFormInPanel(new InventarioLista());
-            }
-        }
-
-        // boton cancelar , regresa al inventario
-        private void btncancelari_Click(object sender, EventArgs e)
-        {
-            DialogResult respuesta = MessageBox.Show(
-        "¿Seguro que quieres cancelar el registro?\nSe perderán los datos ingresados.",
-        "Confirmar cancelación",
-        MessageBoxButtons.YesNo,
-        MessageBoxIcon.Warning);
-
-            if (respuesta == DialogResult.Yes)
-            {
-                // limpiar todos los campos
-                txtTitulo.Clear();
-                txtDirector.Clear();
-                cmbGenero.SelectedIndex = 0;
-                cmbClasificacion.SelectedIndex = 0;
-                nudAnio.Value = 2000;
-                nudCopias.Value = 1;
-                nudDuracion.Value = 1;
-                nudPrecio.Value = 1;
-
-                // limpiar vista previa
-                prevtitulo.Text = "";
-                prevdirea.Text = "";
-                prevco.Text = "";
-                preves.Text = "disponible";
-
-                // regenerar codigo
-                Cvideos objetoVideo = new Cvideos();
-                txtCodigo.Text = objetoVideo.generarCodigo();
             }
         }
     }

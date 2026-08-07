@@ -13,7 +13,7 @@ namespace Renta_de_Video_2._0
 {
     public partial class Devolucion : Form
     {
-        private bool limpiando = false;
+        private bool _bLimpiando = false;
 
         public Devolucion()
         {
@@ -25,165 +25,162 @@ namespace Renta_de_Video_2._0
 
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            if (txtMembresia.Text == "")
-            {
-                MessageBox.Show("Ingresa un código de membresía.");
-                txtMembresia.Focus();
-                return;
-            }
-
-            if (!txtMembresia.Text.All(char.IsDigit))
-            {
-                MessageBox.Show("El código de membresía solo puede contener números.");
-                txtMembresia.Clear();
-                txtMembresia.Focus();
-                return;
-            }
-
-            CCliente objetoCliente = new CCliente();
-            DataTable dt = objetoCliente.funBuscarCliente(int.Parse(txtMembresia.Text));
-
-            if (dt.Rows.Count == 0)
-            {
-                MessageBox.Show("No se encontró ningún cliente con ese código de membresía.");
-                txtMembresia.Clear();
-                txtMembresia.Focus();
-                return;
-            }
-
-            txtNombreCliente.Text = dt.Rows[0]["Nombre_C"].ToString();
-
-            // cargar videos rentados
-            DataTable dtVideos = objetoCliente.funVideosRentados(int.Parse(txtMembresia.Text));
-
-            if (dtVideos.Rows.Count == 0)
-            {
-                MessageBox.Show("Este cliente no tiene videos rentados activos.");
-                dgwVideod.DataSource = null;
-                return;
-            }
-
-            dgwVideod.DataSource = dtVideos;
-        }
-
         private void dtpDevolucion_ValueChanged(object sender, EventArgs e)
         {
-            if (limpiando) return;
+            if (_bLimpiando) return;
 
-            if (dgwVideod.Rows.Count <= 1)
+            if (dgv_video.Rows.Count <= 1)
             {
                 MessageBox.Show("Primero busca un cliente con videos rentados.");
                 return;
             }
 
-            DateTime fechaDevolucion = dtpDevolucion.Value.Date;
-            DateTime fechaLimite = Convert.ToDateTime(dgwVideod.Rows[0].Cells["Fecha_Limite"].Value);
+            DateTime dFechaDevolucion= dtpDevolucion.Value.Date;
+            DateTime dFechaLimite= Convert.ToDateTime(dgv_video.Rows[0].Cells["Fecha_Limite"].Value);
 
-            if (fechaDevolucion < fechaLimite.AddDays(-30))
+            if (dFechaDevolucion< dFechaLimite.AddDays(-30))
             {
                 MessageBox.Show("La fecha de devolución no puede ser tan antigua.");
                 dtpDevolucion.Value = DateTime.Today;
                 return;
             }
 
-            // calcular dias de atraso
-            int diasAtraso = 0;
-            if (fechaDevolucion > fechaLimite)
+            int iDiasAtraso= 0;
+            if (dFechaDevolucion> dFechaLimite)
             {
-                diasAtraso = (fechaDevolucion - fechaLimite).Days;
+                iDiasAtraso= (dFechaDevolucion- dFechaLimite).Days;
             }
 
-            // calcular subtotal sumando precios de todos los videos
-            decimal subtotal = 0;
-            foreach (DataGridViewRow fila in dgwVideod.Rows)
+            decimal deSubtotal= 0;
+            foreach (DataGridViewRow fila in dgv_video.Rows)
             {
                 if (fila.Cells["Precio"].Value != null && fila.Cells["Precio"].Value.ToString() != "")
                 {
-                    subtotal += Convert.ToDecimal(fila.Cells["Precio"].Value);
+                    deSubtotal+= Convert.ToDecimal(fila.Cells["Precio"].Value);
                 }
             }
 
-            // mora es Q5 por dia de atraso
-            decimal mora = diasAtraso * 5;
-            decimal total = subtotal + mora;
+            decimal deMora= iDiasAtraso* 5;
+            decimal deTotal = deSubtotal+ deMora;
 
-            // mostrar resultados
-            lblFechaLimite.Text = fechaLimite.ToString("dd/MM/yyyy");
-            lblFechaDevolucion.Text = fechaDevolucion.ToString("dd/MM/yyyy");
-            lblDiasAtraso.Text = diasAtraso.ToString() + " días";
-            lblSubtotal.Text = "Q" + subtotal.ToString("F2");
-            lblMora.Text = "Q" + mora.ToString("F2");
-            lblTotal.Text = "Q" + total.ToString("F2");
+            lbl_fechaLimite.Text = dFechaLimite.ToString("dd/MM/yyyy");
+            lbl_fechaDevolucion.Text = dFechaDevolucion.ToString("dd/MM/yyyy");
+            lbl_diasAtraso.Text = iDiasAtraso.ToString() + " días";
+            lbl_subtotal.Text = "Q" + deSubtotal.ToString("F2");
+            lbl_mora.Text = "Q" + deMora.ToString("F2");
+            lbl_total.Text = "Q" + deTotal.ToString("F2");
         }
 
-        private void btnConfirmar_Click(object sender, EventArgs e)
+        private void OnBuscar_Click(object sender, EventArgs e)
         {
-            if (dgwVideod.Rows.Count <= 1)
+            if (txt_membresia.Text == "")
+            {
+                MessageBox.Show("Ingresa un código de membresía.");
+                txt_membresia.Focus();
+                return;
+            }
+
+            if (!txt_membresia.Text.All(char.IsDigit))
+            {
+                MessageBox.Show("El código de membresía solo puede contener números.");
+                txt_membresia.Clear();
+                txt_membresia.Focus();
+                return;
+            }
+
+            CCliente objCliente= new CCliente();
+            DataTable objDt= objCliente.funBuscarCliente(int.Parse(txt_membresia.Text));
+
+            if (objDt.Rows.Count == 0)
+            {
+                MessageBox.Show("No se encontró ningún cliente con ese código de membresía.");
+                txt_membresia.Clear();
+                txt_membresia.Focus();
+                return;
+            }
+
+            txt_nombreCliente.Text = objDt.Rows[0]["Nombre_C"].ToString();
+
+            // cargar videos rentados
+            DataTable objDtVideos= objCliente.funVideosRentados(int.Parse(txt_membresia.Text));
+
+            if (objDtVideos.Rows.Count == 0)
+            {
+                MessageBox.Show("Este cliente no tiene videos rentados activos.");
+                dgv_video.DataSource = null;
+                return;
+            }
+
+            dgv_video.DataSource = objDtVideos;
+        }
+
+        private void OnConfirmar_Click(object sender, EventArgs e)
+        {
+            if (dgv_video.Rows.Count <= 1)
             {
                 MessageBox.Show("No hay videos para devolver.");
                 return;
             }
 
-            if (lblTotal.Text == "")
+            if (lbl_total.Text == "")
             {
                 MessageBox.Show("Selecciona una fecha de devolución primero.");
                 return;
             }
 
-            DialogResult respuesta = MessageBox.Show(
-                "¿Confirmas la devolución?\nTotal a pagar: " + lblTotal.Text,
+            DialogResult dlgRespuesta= MessageBox.Show(
+                "¿Confirmas la devolución?\nTotal a pagar: " + lbl_total.Text,
                 "Confirmar devolución",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
 
-            if (respuesta == DialogResult.Yes)
+            if (dlgRespuesta== DialogResult.Yes)
             {
-                int idRenta = Convert.ToInt32(dgwVideod.Rows[0].Cells["Id_Renta"].Value);
-                int diasAtraso = int.Parse(lblDiasAtraso.Text.Replace(" días", ""));
-                decimal mora = decimal.Parse(lblMora.Text.Replace("Q", ""));
-                int idEmpleado = 1; // aquí pon el id del empleado de sesión
+                int iIdRenta= Convert.ToInt32(dgv_video.Rows[0].Cells["Id_Renta"].Value);
+                int iDiasAtraso= int.Parse(lbl_diasAtraso.Text.Replace(" días", ""));
+                decimal deMora= decimal.Parse(lbl_mora.Text.Replace("Q", ""));
+                int iIdEmpleado= 1;
 
-                Cdevolucion objetoDevolucion = new Cdevolucion();
-                objetoDevolucion.registrarDevolucion(
-                    idRenta,
-                    idEmpleado,
+                Cdevolucion objDevolucion= new Cdevolucion();
+                objDevolucion.registrarDevolucion(
+                    iIdRenta,
+                    iIdEmpleado,
                     dtpDevolucion.Value.Date,
-                    diasAtraso,
-                    mora
+                    iDiasAtraso,
+                    deMora
                 );
 
                 // actualizar stock de cada video
-                Cvideos objetoVideo = new Cvideos();
-                foreach (DataGridViewRow fila in dgwVideod.Rows)
+                Cvideos objVideo= new Cvideos();
+                foreach (DataGridViewRow fila in dgv_video.Rows)
                 {
                     if (fila.Cells["Id_Video"].Value != null &&
                         fila.Cells["Id_Video"].Value.ToString() != "")
                     {
-                        int idVideo = Convert.ToInt32(fila.Cells["Id_Video"].Value);
-                        objetoVideo.actualizarStock(idVideo);
+                        int iIdVideo= Convert.ToInt32(fila.Cells["Id_Video"].Value);
+                        objVideo.actualizarStock(iIdVideo);
                     }
                 }
 
                 MessageBox.Show("Devolución registrada correctamente.");
 
                 // limpiar el form
-                limpiando = true;
+                _bLimpiando = true;
 
-                txtMembresia.Clear();
-                txtNombreCliente.Clear();
-                dgwVideod.DataSource = null;
-                lblFechaLimite.Text = "";
-                lblFechaDevolucion.Text = "";
-                lblDiasAtraso.Text = "";
-                lblSubtotal.Text = "";
-                lblMora.Text = "";
-                lblTotal.Text = "";
+                txt_membresia.Clear();
+                txt_nombreCliente.Clear();
+                dgv_video.DataSource = null;
+                lbl_fechaLimite.Text = "";
+                lbl_fechaDevolucion.Text = "";
+                lbl_diasAtraso.Text = "";
+                lbl_subtotal.Text = "";
+                lbl_mora.Text = "";
+                lbl_total.Text = "";
                 dtpDevolucion.Value = DateTime.Today;
 
-                limpiando = false;
+                _bLimpiando = false;
             }
         }
     }
+
 }

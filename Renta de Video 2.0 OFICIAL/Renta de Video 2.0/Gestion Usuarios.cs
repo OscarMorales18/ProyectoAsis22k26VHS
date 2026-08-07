@@ -15,7 +15,7 @@ namespace Renta_de_Video_2._0
     public partial class Gestion_Empleados : Form
     {
         // Variable para almacenar el usuario en edición - Oscar Morales 9959-23-3070
-        private string usuarioEnEdicion = null;
+        private string _sUsuarioEnEdicion = null;
 
         public Gestion_Empleados()
         {
@@ -32,14 +32,14 @@ namespace Renta_de_Video_2._0
 
         private void CargarDatosUsuario()
         {
-            lblNombreUsuario.Text = SesionUsuario.Usuario;
-            lblRol.Text = SesionUsuario.Rol;
+            lbl_nombreUsuario.Text = SesionUsuario.Usuario;
+            lbl_rol.Text = SesionUsuario.Rol;
         }
 
         private void AplicarPermisos()
         {
-            string rol = SesionUsuario.Rol;
-            switch (rol)
+            string sRol = SesionUsuario.Rol;
+            switch (sRol)
             {
                 case "Administrador":
                     btn_eliminar.Enabled = false;
@@ -60,24 +60,24 @@ namespace Renta_de_Video_2._0
         {
             dgv_usuarios.Rows.Clear();
 
-            Cconexion c = new Cconexion();
-            MySqlConnection conn = c.establecerConexion();
+            Cconexion objConexion = new Cconexion();
+            MySqlConnection objConn = objConexion.establecerConexion();
 
             try
             {
-                string query = "SELECT usuario, contrasena, id_empleado, rol, estado FROM usuario";
-                MySqlCommand cmd = new MySqlCommand(query, conn);
+                string sQuery = "SELECT usuario, contrasena, id_empleado, rol, estado FROM usuario";
+                MySqlCommand objCmd = new MySqlCommand(sQuery, objConn);
 
-                using (MySqlDataReader reader = cmd.ExecuteReader())
+                using (MySqlDataReader objReader = objCmd.ExecuteReader())
                 {
-                    while (reader.Read())
+                    while (objReader.Read())
                     {
                         dgv_usuarios.Rows.Add(
-                            reader.GetString("usuario"),
-                            reader.GetString("contrasena"),
-                            reader.GetInt32("id_empleado"),
-                            reader.GetString("rol"),
-                            reader.GetBoolean("estado") ? "1" : "0"
+                            objReader.GetString("usuario"),
+                            objReader.GetString("contrasena"),
+                            objReader.GetInt32("id_empleado"),
+                            objReader.GetString("rol"),
+                            objReader.GetBoolean("estado") ? "1" : "0"
                         );
                     }
                 }
@@ -88,7 +88,7 @@ namespace Renta_de_Video_2._0
             }
             finally
             {
-                c.cerrarConexion();
+                objConexion.cerrarConexion();
             }
         }
 
@@ -99,7 +99,7 @@ namespace Renta_de_Video_2._0
                 throw new Exception("El usuario es obligatorio.");
             if (string.IsNullOrWhiteSpace(txt_contrasena.Text))
                 throw new Exception("La contraseña es obligatoria.");
-            if (string.IsNullOrWhiteSpace(txt_idempleado.Text))
+            if (string.IsNullOrWhiteSpace(txt_idEmpleado.Text))
                 throw new Exception("El código de empleado es obligatorio.");
             if (cmb_rol.SelectedItem == null)
                 throw new Exception("Selecciona un rol.");
@@ -108,49 +108,62 @@ namespace Renta_de_Video_2._0
             return true;
         }
 
-        // Boton para aceptar el registro de un usuario - Oscar Morales 9959-23-3070
-        private void agregar_Click(object sender, EventArgs e)
+        // Método para limpiar los campos del formulario - Oscar Morales 9959-23-3070
+        private void LimpiarCampos()
+        {
+            txt_usuario.Clear();
+            txt_contrasena.Clear();
+            txt_idEmpleado.Clear();
+            cmb_rol.SelectedIndex = -1;
+            cmb_estado.SelectedIndex = -1;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OnAgregar_Click(object sender, EventArgs e)
         {
             try
             {
                 ValidarCampos();
 
-                if (!int.TryParse(txt_idempleado.Text, out int idEmpleado))
+                if (!int.TryParse(txt_idEmpleado.Text, out int iIdEmpleado))
                 {
                     MessageBox.Show("El código de empleado debe ser un número.", "Dato inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
                 Cconexion c = new Cconexion();
-                MySqlConnection conn = c.establecerConexion();
+                MySqlConnection objConn = c.establecerConexion();
 
-                // CONFIGURAR USUARIO DE AUDITORÍA PARA MYSQL
-                Cauditoria.ConfigurarUsuarioBD(conn);
+                Cauditoria.ConfigurarUsuarioBD(objConn);
 
                 try
                 {
-                    string queryCheck = "SELECT COUNT(*) FROM empleado WHERE id_empleado = @id";
-                    MySqlCommand cmdCheck = new MySqlCommand(queryCheck, conn);
-                    cmdCheck.Parameters.AddWithValue("@id", idEmpleado);
-                    long existe = (long)cmdCheck.ExecuteScalar();
+                    string sQueryCheck = "SELECT COUNT(*) FROM empleado WHERE id_empleado = @id";
+                    MySqlCommand objCmdCheck = new MySqlCommand(sQueryCheck, objConn);
+                    objCmdCheck.Parameters.AddWithValue("@id", iIdEmpleado);
+                    long lExiste = (long)objCmdCheck.ExecuteScalar();
 
-                    if (existe == 0)
+                    if (lExiste == 0)
                     {
                         MessageBox.Show("No existe ningún empleado con ese código.", "Empleado no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
 
-                    string query = @"INSERT INTO usuario (usuario, contrasena, id_empleado, rol, estado) 
+                    string sQuery = @"INSERT INTO usuario (usuario, contrasena, id_empleado, rol, estado) 
                                   VALUES (@usuario, @contrasena, @id_empleado, @rol, @estado)";
 
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@usuario", txt_usuario.Text);
-                    cmd.Parameters.AddWithValue("@contrasena", txt_contrasena.Text);
-                    cmd.Parameters.AddWithValue("@id_empleado", idEmpleado);
-                    cmd.Parameters.AddWithValue("@rol", cmb_rol.Text);
-                    cmd.Parameters.AddWithValue("@estado", cmb_estado.Text == "1");
+                    MySqlCommand objCmd = new MySqlCommand(sQuery, objConn);
+                    objCmd.Parameters.AddWithValue("@usuario", txt_usuario.Text);
+                    objCmd.Parameters.AddWithValue("@contrasena", txt_contrasena.Text);
+                    objCmd.Parameters.AddWithValue("@id_empleado", iIdEmpleado);
+                    objCmd.Parameters.AddWithValue("@rol", cmb_rol.Text);
+                    objCmd.Parameters.AddWithValue("@estado", cmb_estado.Text == "1");
 
-                    cmd.ExecuteNonQuery();
+                    objCmd.ExecuteNonQuery();
 
                     MessageBox.Show("Usuario agregado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -168,8 +181,7 @@ namespace Renta_de_Video_2._0
             }
         }
 
-        // Boton para seleccionar el registro de un usuario - Oscar Morales 9959-23-3070
-        private void editar_Click(object sender, EventArgs e)
+        private void OnEditar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -178,11 +190,11 @@ namespace Renta_de_Video_2._0
 
                 DataGridViewRow fila = dgv_usuarios.SelectedRows[0];
 
-                usuarioEnEdicion = fila.Cells["Usuario"].Value.ToString();
+                _sUsuarioEnEdicion = fila.Cells["Usuario"].Value.ToString();
 
                 txt_usuario.Text = fila.Cells["Usuario"].Value.ToString();
                 txt_contrasena.Text = fila.Cells["Contraseña"].Value.ToString();
-                txt_idempleado.Text = fila.Cells["CodigoEmpleado"].Value.ToString();
+                txt_idEmpleado.Text = fila.Cells["CodigoEmpleado"].Value.ToString();
                 cmb_rol.Text = fila.Cells["Rol"].Value.ToString();
                 cmb_estado.Text = fila.Cells["Estado"].Value.ToString();
 
@@ -194,30 +206,28 @@ namespace Renta_de_Video_2._0
             }
         }
 
-        // Boton para eliminar el registro de un usuario - Oscar Morales 9959-23-3070
-        private void eliminar_Click(object sender, EventArgs e)
+        private void OnEliminar_Click(object sender, EventArgs e)
         {
             try
             {
                 if (dgv_usuarios.SelectedRows.Count == 0)
                     throw new Exception("Selecciona un usuario de la tabla para eliminar.");
 
-                DialogResult respuesta = MessageBox.Show("¿Seguro que quieres eliminar este usuario?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (respuesta == DialogResult.Yes)
+                DialogResult dlgRespuesta = MessageBox.Show("¿Seguro que quieres eliminar este usuario?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dlgRespuesta == DialogResult.Yes)
                 {
-                    string Seleccionusu = dgv_usuarios.SelectedRows[0].Cells["Usuario"].Value.ToString();
+                    string sSeleccionUsu = dgv_usuarios.SelectedRows[0].Cells["Usuario"].Value.ToString();
                     Cconexion c = new Cconexion();
-                    MySqlConnection conn = c.establecerConexion();
+                    MySqlConnection objConn = c.establecerConexion();
 
-                    // CONFIGURAR USUARIO DE AUDITORÍA PARA MYSQL
-                    Cauditoria.ConfigurarUsuarioBD(conn);
+                    Cauditoria.ConfigurarUsuarioBD(objConn);
 
                     try
                     {
-                        string query = "DELETE FROM usuario WHERE usuario = @usuario";
-                        MySqlCommand cmd = new MySqlCommand(query, conn);
-                        cmd.Parameters.AddWithValue("@usuario", Seleccionusu);
-                        cmd.ExecuteNonQuery();
+                        string sQuery = "DELETE FROM usuario WHERE usuario = @usuario";
+                        MySqlCommand objCmd = new MySqlCommand(sQuery, objConn);
+                        objCmd.Parameters.AddWithValue("@usuario", sSeleccionUsu);
+                        objCmd.ExecuteNonQuery();
 
                         MessageBox.Show("Usuario eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         CargarUsuarios();
@@ -234,60 +244,60 @@ namespace Renta_de_Video_2._0
             }
         }
 
-        private void guardar_Click(object sender, EventArgs e)
+        private void OnGuardar_Click(object sender, EventArgs e)
         {
             try
             {
                 ValidarCampos();
 
-                if (usuarioEnEdicion == null)
+                if (_sUsuarioEnEdicion == null)
                 {
                     MessageBox.Show("Primero selecciona un usuario de la tabla y presiona Editar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                if (!int.TryParse(txt_idempleado.Text, out int idEmpleado))
+                if (!int.TryParse(txt_idEmpleado.Text, out int iIdEmpleado))
                 {
                     MessageBox.Show("El código de empleado debe ser un número.", "Dato inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
                 Cconexion c = new Cconexion();
-                MySqlConnection conn = c.establecerConexion();
+                MySqlConnection objConn = c.establecerConexion();
 
                 // configuramos el usuario de auditoría para MySQL - Oscar Morales 9959-23-3070
-                Cauditoria.ConfigurarUsuarioBD(conn);
+                Cauditoria.ConfigurarUsuarioBD(objConn);
 
                 try
                 {
-                    string queryCheck = "SELECT COUNT(*) FROM empleado WHERE id_empleado = @id";
-                    MySqlCommand cmdCheck = new MySqlCommand(queryCheck, conn);
-                    cmdCheck.Parameters.AddWithValue("@id", idEmpleado);
-                    long existe = (long)cmdCheck.ExecuteScalar();
+                    string sQueryCheck = "SELECT COUNT(*) FROM empleado WHERE id_empleado = @id";
+                    MySqlCommand objCmdCheck = new MySqlCommand(sQueryCheck, objConn);
+                    objCmdCheck.Parameters.AddWithValue("@id", iIdEmpleado);
+                    long lExiste = (long)objCmdCheck.ExecuteScalar();
 
-                    if (existe == 0)
+                    if (lExiste == 0)
                     {
                         MessageBox.Show("No existe ningún empleado con ese código.", "Empleado no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
 
-                    string query = @"UPDATE usuario 
+                    string sQuery = @"UPDATE usuario 
                                   SET usuario = @usuario, contrasena = @contrasena, id_empleado = @id_empleado, rol = @rol, estado = @estado
                                   WHERE usuario = @usuarioOriginal";
 
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@usuario", txt_usuario.Text);
-                    cmd.Parameters.AddWithValue("@contrasena", txt_contrasena.Text);
-                    cmd.Parameters.AddWithValue("@id_empleado", idEmpleado);
-                    cmd.Parameters.AddWithValue("@rol", cmb_rol.Text);
-                    cmd.Parameters.AddWithValue("@estado", cmb_estado.Text == "1");
-                    cmd.Parameters.AddWithValue("@usuarioOriginal", usuarioEnEdicion);
+                    MySqlCommand objCmd = new MySqlCommand(sQuery, objConn);
+                    objCmd.Parameters.AddWithValue("@usuario", txt_usuario.Text);
+                    objCmd.Parameters.AddWithValue("@contrasena", txt_contrasena.Text);
+                    objCmd.Parameters.AddWithValue("@id_empleado", iIdEmpleado);
+                    objCmd.Parameters.AddWithValue("@rol", cmb_rol.Text);
+                    objCmd.Parameters.AddWithValue("@estado", cmb_estado.Text == "1");
+                    objCmd.Parameters.AddWithValue("@usuarioOriginal", _sUsuarioEnEdicion);
 
-                    cmd.ExecuteNonQuery();
+                    objCmd.ExecuteNonQuery();
 
                     MessageBox.Show("Los cambios se guardaron correctamente.", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    usuarioEnEdicion = null;
+                    _sUsuarioEnEdicion = null;
                     LimpiarCampos();
                     CargarUsuarios();
                     btn_eliminar.Enabled = true;
@@ -301,21 +311,6 @@ namespace Renta_de_Video_2._0
             {
                 MessageBox.Show(ex.Message, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-        }
-
-        // Método para limpiar los campos del formulario - Oscar Morales 9959-23-3070
-        private void LimpiarCampos()
-        {
-            txt_usuario.Clear();
-            txt_contrasena.Clear();
-            txt_idempleado.Clear();
-            cmb_rol.SelectedIndex = -1;
-            cmb_estado.SelectedIndex = -1;
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

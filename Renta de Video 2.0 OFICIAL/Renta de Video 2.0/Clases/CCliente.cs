@@ -5,13 +5,13 @@ namespace Renta_de_Video_2._0.Clases
 {
     internal class CCliente
     {
-        Cconexion conexion = new Cconexion();
+        Cconexion objConexion = new Cconexion();
 
         public DataTable funBuscarCliente(int membresia)
         {
-            DataTable dt = new DataTable();
+            DataTable objDt = new DataTable();
 
-            string consulta = @"
+            string sConsulta = @"
              SELECT
               cliente.nombre AS Nombre_C,
                cliente.dpi AS DPI,
@@ -25,26 +25,26 @@ namespace Renta_de_Video_2._0.Clases
              ON cliente.id_cliente = membresia.id_cliente
             WHERE membresia.id_membresia = @membresia;";
 
-            MySqlCommand cmd = new MySqlCommand(
-                consulta,
-                conexion.establecerConexion()
+            MySqlCommand objCmd = new MySqlCommand(
+                sConsulta,
+                objConexion.establecerConexion()
             );
 
-            cmd.Parameters.AddWithValue("@membresia", membresia);
+            objCmd.Parameters.AddWithValue("@membresia", membresia);
 
-            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            da.Fill(dt);
+            MySqlDataAdapter objDa = new MySqlDataAdapter(objCmd);
+            objDa.Fill(objDt);
 
-            conexion.cerrarConexion();
+            objConexion.cerrarConexion();
 
-            return dt;
+            return objDt;
         }
 
         public DataTable funVideosRentados(int idMembresia)
         {
-            DataTable dt = new DataTable();
+            DataTable objDt = new DataTable();
 
-            string consulta = @"
+            string sConsulta = @"
         SELECT 
             v.id_video         AS Id_Video,
             v.titulo           AS Titulo,
@@ -60,19 +60,19 @@ namespace Renta_de_Video_2._0.Clases
         WHERE m.id_membresia = @idMembresia
         AND r.estado = 'activa';";
 
-            MySqlCommand cmd = new MySqlCommand(
-                consulta,
-                conexion.establecerConexion()
+            MySqlCommand objCmd = new MySqlCommand(
+                sConsulta,
+                objConexion.establecerConexion()
             );
 
-            cmd.Parameters.AddWithValue("@idMembresia", idMembresia);
+            objCmd.Parameters.AddWithValue("@idMembresia", idMembresia);
 
-            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            da.Fill(dt);
+            MySqlDataAdapter objDa = new MySqlDataAdapter(objCmd);
+            objDa.Fill(objDt);
 
-            conexion.cerrarConexion();
+            objConexion.cerrarConexion();
 
-            return dt;
+            return objDt;
         }
     }
 }

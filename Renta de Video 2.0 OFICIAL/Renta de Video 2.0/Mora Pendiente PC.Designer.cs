@@ -29,52 +29,52 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mora_Pendiente_PC));
-            Buscar = new Button();
-            dataGridView1 = new DataGridView();
+            btn_buscar = new Button();
+            dgv_moras = new DataGridView();
             Cliente = new DataGridViewTextBoxColumn();
             Codigo_Membresia = new DataGridViewTextBoxColumn();
             Codigo_Renta = new DataGridViewTextBoxColumn();
             Días_De_Atraso = new DataGridViewTextBoxColumn();
             Mora_Pendiente = new DataGridViewTextBoxColumn();
-            label2 = new Label();
-            Marcarpago = new Button();
+            lbl_totalMora = new Label();
+            btn_marcarPago = new Button();
             pictureBox1 = new PictureBox();
-            totalmora = new TextBox();
-            Buscar_cliente = new TextBox();
-            pictureBox2 = new PictureBox();
+            txt_totalMora = new TextBox();
+            txt_buscarCliente = new TextBox();
+            pic_mascota = new PictureBox();
             button2 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_moras).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic_mascota).BeginInit();
             SuspendLayout();
             // 
-            // Buscar
+            // btn_buscar
             // 
-            Buscar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            Buscar.BackColor = Color.DarkOrange;
-            Buscar.FlatStyle = FlatStyle.Popup;
-            Buscar.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Buscar.Location = new Point(567, 140);
-            Buscar.Margin = new Padding(3, 4, 3, 4);
-            Buscar.Name = "Buscar";
-            Buscar.Size = new Size(108, 46);
-            Buscar.TabIndex = 23;
-            Buscar.Text = "Buscar";
-            Buscar.UseVisualStyleBackColor = false;
-            Buscar.Click += Buscar_Click;
+            btn_buscar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btn_buscar.BackColor = Color.DarkOrange;
+            btn_buscar.FlatStyle = FlatStyle.Popup;
+            btn_buscar.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_buscar.Location = new Point(567, 140);
+            btn_buscar.Margin = new Padding(3, 4, 3, 4);
+            btn_buscar.Name = "btn_buscar";
+            btn_buscar.Size = new Size(108, 46);
+            btn_buscar.TabIndex = 23;
+            btn_buscar.Text = "Buscar";
+            btn_buscar.UseVisualStyleBackColor = false;
+            btn_buscar.Click += OnBuscar_Click;
             // 
-            // dataGridView1
+            // dgv_moras
             // 
-            dataGridView1.BackgroundColor = Color.FromArgb(41, 0, 0);
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Cliente, Codigo_Membresia, Codigo_Renta, Días_De_Atraso, Mora_Pendiente });
-            dataGridView1.Location = new Point(12, 194);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 24;
-            dataGridView1.Size = new Size(677, 188);
-            dataGridView1.TabIndex = 24;
+            dgv_moras.BackgroundColor = Color.FromArgb(41, 0, 0);
+            dgv_moras.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_moras.Columns.AddRange(new DataGridViewColumn[] { Cliente, Codigo_Membresia, Codigo_Renta, Días_De_Atraso, Mora_Pendiente });
+            dgv_moras.Location = new Point(12, 194);
+            dgv_moras.Margin = new Padding(3, 4, 3, 4);
+            dgv_moras.Name = "dgv_moras";
+            dgv_moras.RowHeadersWidth = 51;
+            dgv_moras.RowTemplate.Height = 24;
+            dgv_moras.Size = new Size(677, 188);
+            dgv_moras.TabIndex = 24;
             // 
             // Cliente
             // 
@@ -111,32 +111,32 @@
             Mora_Pendiente.Name = "Mora_Pendiente";
             Mora_Pendiente.Width = 125;
             // 
-            // label2
+            // lbl_totalMora
             // 
-            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label2.AutoSize = true;
-            label2.BackColor = Color.FromArgb(42, 0, 0);
-            label2.Font = new Font("Lucida Bright", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.Goldenrod;
-            label2.Location = new Point(886, 158);
-            label2.Name = "label2";
-            label2.Size = new Size(202, 39);
-            label2.TabIndex = 25;
-            label2.Text = "Total Mora";
+            lbl_totalMora.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lbl_totalMora.AutoSize = true;
+            lbl_totalMora.BackColor = Color.FromArgb(42, 0, 0);
+            lbl_totalMora.Font = new Font("Lucida Bright", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbl_totalMora.ForeColor = Color.Goldenrod;
+            lbl_totalMora.Location = new Point(886, 158);
+            lbl_totalMora.Name = "lbl_totalMora";
+            lbl_totalMora.Size = new Size(202, 39);
+            lbl_totalMora.TabIndex = 25;
+            lbl_totalMora.Text = "Total Mora";
             // 
-            // Marcarpago
+            // btn_marcarPago
             // 
-            Marcarpago.BackColor = Color.DarkOrange;
-            Marcarpago.FlatStyle = FlatStyle.Popup;
-            Marcarpago.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Marcarpago.Location = new Point(944, 334);
-            Marcarpago.Margin = new Padding(3, 4, 3, 4);
-            Marcarpago.Name = "Marcarpago";
-            Marcarpago.Size = new Size(131, 48);
-            Marcarpago.TabIndex = 27;
-            Marcarpago.Text = "Marcar Pago";
-            Marcarpago.UseVisualStyleBackColor = false;
-            Marcarpago.Click += Marcarpago_Click;
+            btn_marcarPago.BackColor = Color.DarkOrange;
+            btn_marcarPago.FlatStyle = FlatStyle.Popup;
+            btn_marcarPago.Font = new Font("Lucida Bright", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_marcarPago.Location = new Point(944, 334);
+            btn_marcarPago.Margin = new Padding(3, 4, 3, 4);
+            btn_marcarPago.Name = "btn_marcarPago";
+            btn_marcarPago.Size = new Size(131, 48);
+            btn_marcarPago.TabIndex = 27;
+            btn_marcarPago.Text = "Marcar Pago";
+            btn_marcarPago.UseVisualStyleBackColor = false;
+            btn_marcarPago.Click += OnMarcarpago_Click;
             // 
             // pictureBox1
             // 
@@ -151,41 +151,41 @@
             pictureBox1.TabIndex = 37;
             pictureBox1.TabStop = false;
             // 
-            // totalmora
+            // txt_totalMora
             // 
-            totalmora.BackColor = Color.FromArgb(42, 18, 11);
-            totalmora.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            totalmora.ForeColor = Color.White;
-            totalmora.Location = new Point(875, 264);
-            totalmora.Margin = new Padding(3, 4, 3, 4);
-            totalmora.Name = "totalmora";
-            totalmora.Size = new Size(234, 32);
-            totalmora.TabIndex = 38;
-            totalmora.TextChanged += totalmora_TextChanged;
+            txt_totalMora.BackColor = Color.FromArgb(42, 18, 11);
+            txt_totalMora.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_totalMora.ForeColor = Color.White;
+            txt_totalMora.Location = new Point(875, 264);
+            txt_totalMora.Margin = new Padding(3, 4, 3, 4);
+            txt_totalMora.Name = "txt_totalMora";
+            txt_totalMora.Size = new Size(234, 32);
+            txt_totalMora.TabIndex = 38;
+            txt_totalMora.TextChanged += totalmora_TextChanged;
             // 
-            // Buscar_cliente
+            // txt_buscarCliente
             // 
-            Buscar_cliente.BackColor = Color.FromArgb(42, 18, 11);
-            Buscar_cliente.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Buscar_cliente.ForeColor = Color.White;
-            Buscar_cliente.Location = new Point(17, 146);
-            Buscar_cliente.Margin = new Padding(3, 4, 3, 4);
-            Buscar_cliente.Name = "Buscar_cliente";
-            Buscar_cliente.Size = new Size(362, 32);
-            Buscar_cliente.TabIndex = 39;
-            Buscar_cliente.TextChanged += Buscar_cliente_TextChanged;
+            txt_buscarCliente.BackColor = Color.FromArgb(42, 18, 11);
+            txt_buscarCliente.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_buscarCliente.ForeColor = Color.White;
+            txt_buscarCliente.Location = new Point(17, 146);
+            txt_buscarCliente.Margin = new Padding(3, 4, 3, 4);
+            txt_buscarCliente.Name = "txt_buscarCliente";
+            txt_buscarCliente.Size = new Size(362, 32);
+            txt_buscarCliente.TabIndex = 39;
+            txt_buscarCliente.TextChanged += Buscar_cliente_TextChanged;
             // 
-            // pictureBox2
+            // pic_mascota
             // 
-            pictureBox2.BackColor = Color.FromArgb(42, 0, 0);
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(903, 411);
-            pictureBox2.Margin = new Padding(5, 4, 5, 4);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(219, 249);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 44;
-            pictureBox2.TabStop = false;
+            pic_mascota.BackColor = Color.FromArgb(42, 0, 0);
+            pic_mascota.Image = (Image)resources.GetObject("pic_mascota.Image");
+            pic_mascota.Location = new Point(903, 411);
+            pic_mascota.Margin = new Padding(5, 4, 5, 4);
+            pic_mascota.Name = "pic_mascota";
+            pic_mascota.Size = new Size(219, 249);
+            pic_mascota.SizeMode = PictureBoxSizeMode.StretchImage;
+            pic_mascota.TabIndex = 44;
+            pic_mascota.TabStop = false;
             // 
             // button2
             // 
@@ -198,7 +198,7 @@
             button2.TabIndex = 45;
             button2.Text = "X";
             button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            button2.Click += OnSalir_Click;
             // 
             // Mora_Pendiente_PC
             // 
@@ -206,40 +206,40 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1136, 738);
             Controls.Add(button2);
-            Controls.Add(pictureBox2);
-            Controls.Add(Buscar_cliente);
-            Controls.Add(totalmora);
-            Controls.Add(Marcarpago);
-            Controls.Add(label2);
-            Controls.Add(dataGridView1);
-            Controls.Add(Buscar);
+            Controls.Add(pic_mascota);
+            Controls.Add(txt_buscarCliente);
+            Controls.Add(txt_totalMora);
+            Controls.Add(btn_marcarPago);
+            Controls.Add(lbl_totalMora);
+            Controls.Add(dgv_moras);
+            Controls.Add(btn_buscar);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
             Name = "Mora_Pendiente_PC";
             Text = "Mora_Pendiente_PC";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_moras).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic_mascota).EndInit();
             ResumeLayout(false);
             PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button Buscar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btn_buscar;
+        private System.Windows.Forms.DataGridView dgv_moras;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo_Membresia;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo_Renta;
         private System.Windows.Forms.DataGridViewTextBoxColumn Días_De_Atraso;
         private System.Windows.Forms.DataGridViewTextBoxColumn Mora_Pendiente;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button Marcarpago;
+        private System.Windows.Forms.Label lbl_totalMora;
+        private System.Windows.Forms.Button btn_marcarPago;
         private PictureBox pictureBox1;
-        private TextBox totalmora;
-        private TextBox Buscar_cliente;
-        private PictureBox pictureBox2;
+        private TextBox txt_totalMora;
+        private TextBox txt_buscarCliente;
+        private PictureBox pic_mascota;
         private Button button2;
     }
 }

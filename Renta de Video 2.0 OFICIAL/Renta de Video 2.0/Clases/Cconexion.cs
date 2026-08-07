@@ -9,37 +9,35 @@ namespace Renta_de_Video_2._0.Clases
     {
         private MySqlConnection conex = new MySqlConnection();
 
-        static String servidor = "localhost";
-        static String bd = "RentaVideoVHS";
-        static String usuario = "video";
-        static String contrasenia = "12345";
+        static String sServidor= "localhost";
+        static String sBd= "RentaVideoVHS";
+        static String sUsuario = "video";
+        static String sContrasenia= "12345";
 
      
-        private String cadenaConexion =
-            "Server=" + servidor + ";" +
-            "Database=" + bd + ";" +
-            "User ID=" + usuario + ";" +
-            "Password=" + contrasenia + ";" +
+        private String sCadenaConexion=
+            "Server=" + sServidor+ ";" +
+            "Database=" + sBd+ ";" +
+            "User ID=" + sUsuario + ";" +
+            "Password=" + sContrasenia+ ";" +
             "Allow User Variables=True;";
 
         public MySqlConnection establecerConexion()
         {
             try
             {
-                // Se abre la conexión si no está abierta
                 if (conex.State != ConnectionState.Open)
                 {
-                    conex.ConnectionString = cadenaConexion;
+                    conex.ConnectionString = sCadenaConexion;
                     conex.Open();
                 }
 
-                // se asigna el usuario actual en la sesión a la variable de MySQL
-                string usuarioActual = string.IsNullOrWhiteSpace(SesionUsuario.Usuario) ? "Sistema" : SesionUsuario.Usuario;
+                string sUsuarioActual= string.IsNullOrWhiteSpace(SesionUsuario.Usuario) ? "Sistema" : SesionUsuario.Usuario;
 
-                using (MySqlCommand cmdUser = new MySqlCommand("SET @app_usuario = @usr;", conex))
+                using (MySqlCommand objCmdUser = new MySqlCommand("SET @app_usuario = @usr;", conex))
                 {
-                    cmdUser.Parameters.AddWithValue("@usr", usuarioActual);
-                    cmdUser.ExecuteNonQuery();
+                    objCmdUser.Parameters.AddWithValue("@usr", sUsuarioActual);
+                    objCmdUser.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)

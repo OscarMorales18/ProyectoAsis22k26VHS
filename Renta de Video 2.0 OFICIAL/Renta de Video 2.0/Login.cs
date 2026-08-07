@@ -18,12 +18,10 @@ namespace Renta_de_Video_2._0
         {
             InitializeComponent();
 
-            // 1. Fuerza el ocultamiento con asteriscos (*) desde el inicio
-            textBox2.PasswordChar = '*';
+            txt_password.PasswordChar = '*';
 
-            // 2. Vinculación de eventos
             pictureBox5.Click += pictureBox5_Click;
-            button2.Click += button2_Click;
+            btn_salir.Click += OnSalir_Click;
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -41,27 +39,39 @@ namespace Renta_de_Video_2._0
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string usuarioInput = textBox1.Text.Trim(); // TextBox de Usuario
-            string passInput = textBox2.Text.Trim();    // TextBox de Contraseña
 
-            if (string.IsNullOrEmpty(usuarioInput) || string.IsNullOrEmpty(passInput))
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            if (txt_password.PasswordChar == '*')
+            {
+                txt_password.PasswordChar = '\0';
+            }
+            else
+            {
+                txt_password.PasswordChar = '*';
+            }
+        }
+
+        private void OnSesion_Click(object sender, EventArgs e)
+        {
+            string sUsuarioInput = txt_usuario.Text.Trim();
+            string sPassInput = txt_password.Text.Trim();
+
+            if (string.IsNullOrEmpty(sUsuarioInput) || string.IsNullOrEmpty(sPassInput))
             {
                 MessageBox.Show("Por favor ingresa usuario y contraseña.", "Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            CusuarioCRUD usuarioCrud = new CusuarioCRUD();
+            CusuarioCRUD objUsuarioCrud = new CusuarioCRUD();
 
-            if (usuarioCrud.ValidarUsuario(usuarioInput, passInput))
+            if (objUsuarioCrud.ValidarUsuario(sUsuarioInput, sPassInput))
             {
                 MessageBox.Show($"Bienvenido {SesionUsuario.Usuario} ({SesionUsuario.Rol})", "Acceso Concedido", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Abrir el Dashboard / Menú Principal
-                menu formMenu = new menu();
-                formMenu.Show();
-                this.Hide(); // Oculta el Login
+                menu objFormMenu = new menu();
+                objFormMenu.Show();
+                this.Hide();
             }
             else
             {
@@ -69,21 +79,7 @@ namespace Renta_de_Video_2._0
             }
         }
 
-        // Alterna entre '*' (oculto) y '\0' (texto visible)
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            if (textBox2.PasswordChar == '*')
-            {
-                textBox2.PasswordChar = '\0'; // Muestra la contraseña en texto plano
-            }
-            else
-            {
-                textBox2.PasswordChar = '*';  // Oculta la contraseña con ******
-            }
-        }
-
-        // Cierra completamente la aplicación
-        private void button2_Click(object sender, EventArgs e)
+        private void OnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

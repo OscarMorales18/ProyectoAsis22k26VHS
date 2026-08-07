@@ -10,21 +10,21 @@ namespace Renta_de_Video_2._0.Clases
     {
         public MClienteRenta BuscarClientePorMembresia(int idMembresia)
         {
-            Cconexion objetoConexion = new Cconexion();
+            Cconexion objConexion = new Cconexion();
 
             try
             {
             // trae el cliente ligado a esa membresia
                 MySqlCommand cmd = new MySqlCommand(
                     "SELECT c.id_cliente, c.nombre FROM cliente c INNER JOIN membresia m ON c.id_membresia = m.id_membresia WHERE m.id_membresia = @idMembresia;",
-                    objetoConexion.establecerConexion());
+                    objConexion.establecerConexion());
                 cmd.Parameters.Add(new MySqlParameter("@idMembresia", idMembresia));
 
             MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
 
-                objetoConexion.cerrarConexion();
+                objConexion.cerrarConexion();
 
                 if (dt.Rows.Count == 0)
                 return null;
@@ -49,21 +49,21 @@ namespace Renta_de_Video_2._0.Clases
         public List<MVideoCatalogo> CargarCatalogo(int cantidad)
         {
             List<MVideoCatalogo> videos = new List<MVideoCatalogo>();
-            Cconexion objetoConexion = new Cconexion();
+            Cconexion objConexion = new Cconexion();
 
             try
             {
                 // trae los videos disponibles para los checkbox
             MySqlCommand cmd = new MySqlCommand(
                     "SELECT id_video, titulo, genero, anio, precio_renta FROM video WHERE estado = 'disponible' LIMIT @cantidad;",
-                    objetoConexion.establecerConexion());
+                    objConexion.establecerConexion());
                 cmd.Parameters.Add(new MySqlParameter("@cantidad", cantidad));
 
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
             DataTable dt = new DataTable();
                 adapter.Fill(dt);
 
-                objetoConexion.cerrarConexion();
+                objConexion.cerrarConexion();
 
                 foreach (DataRow fila in dt.Rows)
                 {
@@ -89,44 +89,44 @@ namespace Renta_de_Video_2._0.Clases
 
         public bool RegistrarRenta(int idCliente, List<MVideoCatalogo> videosSeleccionados, DateTime fechaRenta, DateTime fechaLimite, decimal subtotal, decimal total)
         {
-            Cconexion objetoConexion = new Cconexion();
+            Cconexion objConexion = new Cconexion();
 
             try
             {
             // guarda la renta, sus detalles y la factura en cadena
-                MySqlConnection conexion = objetoConexion.establecerConexion();
+                MySqlConnection conexion = objConexion.establecerConexion();
 
                 int idEmpleado = ObtenerOCrearEmpleadoPorDefecto(conexion);
 
-                string insertRenta = "INSERT INTO renta (fecha_renta, fecha_limite, estado, id_cliente, id_empleado) VALUES (@fechaRenta, @fechaLimite, 'activa', @idCliente, @idEmpleado);";
-                MySqlCommand cmdRenta = new MySqlCommand(insertRenta, conexion);
-                cmdRenta.Parameters.Add(new MySqlParameter("@fechaRenta", fechaRenta.Date));
-                cmdRenta.Parameters.Add(new MySqlParameter("@fechaLimite", fechaLimite.Date));
-                cmdRenta.Parameters.Add(new MySqlParameter("@idCliente", idCliente));
-                cmdRenta.Parameters.Add(new MySqlParameter("@idEmpleado", idEmpleado));
-                cmdRenta.ExecuteNonQuery();
+                string sInsertRenta = "INSERT INTO renta (fecha_renta, fecha_limite, estado, id_cliente, id_empleado) VALUES (@fechaRenta, @fechaLimite, 'activa', @idCliente, @idEmpleado);";
+                MySqlCommand objCmdRenta = new MySqlCommand(sInsertRenta, conexion);
+                objCmdRenta.Parameters.Add(new MySqlParameter("@fechaRenta", fechaRenta.Date));
+                objCmdRenta.Parameters.Add(new MySqlParameter("@fechaLimite", fechaLimite.Date));
+                objCmdRenta.Parameters.Add(new MySqlParameter("@idCliente", idCliente));
+                objCmdRenta.Parameters.Add(new MySqlParameter("@idEmpleado", idEmpleado));
+                objCmdRenta.ExecuteNonQuery();
 
-                long idRenta = cmdRenta.LastInsertedId;
+                long idRenta = objCmdRenta.LastInsertedId;
 
                 foreach (MVideoCatalogo video in videosSeleccionados)
                 {
                     string insertDetalle = "INSERT INTO detalle_renta (id_renta, id_video, cantidad, precio_unitario, subtotal) VALUES (@idRenta, @idVideo, 1, @precio, @precio);";
-                    MySqlCommand cmdDetalle = new MySqlCommand(insertDetalle, conexion);
-                    cmdDetalle.Parameters.Add(new MySqlParameter("@idRenta", idRenta));
-                    cmdDetalle.Parameters.Add(new MySqlParameter("@idVideo", video.IdVideo));
-                    cmdDetalle.Parameters.Add(new MySqlParameter("@precio", video.PrecioRenta));
-                    cmdDetalle.ExecuteNonQuery();
+                    MySqlCommand objCmdDetalle = new MySqlCommand(insertDetalle, conexion);
+                    objCmdDetalle.Parameters.Add(new MySqlParameter("@idRenta", idRenta));
+                    objCmdDetalle.Parameters.Add(new MySqlParameter("@idVideo", video.IdVideo));
+                    objCmdDetalle.Parameters.Add(new MySqlParameter("@precio", video.PrecioRenta));
+                    objCmdDetalle.ExecuteNonQuery();
                 }
 
                 string insertFactura = "INSERT INTO factura (id_renta, fecha, subtotal, descuento, total) VALUES (@idRenta, @fecha, @subtotal, 0, @total);";
-                MySqlCommand cmdFactura = new MySqlCommand(insertFactura, conexion);
-                cmdFactura.Parameters.Add(new MySqlParameter("@idRenta", idRenta));
-                cmdFactura.Parameters.Add(new MySqlParameter("@fecha", fechaRenta.Date));
-                cmdFactura.Parameters.Add(new MySqlParameter("@subtotal", subtotal));
-                cmdFactura.Parameters.Add(new MySqlParameter("@total", total));
-                cmdFactura.ExecuteNonQuery();
+                MySqlCommand objCmdFactura = new MySqlCommand(insertFactura, conexion);
+                objCmdFactura.Parameters.Add(new MySqlParameter("@idRenta", idRenta));
+                objCmdFactura.Parameters.Add(new MySqlParameter("@fecha", fechaRenta.Date));
+                objCmdFactura.Parameters.Add(new MySqlParameter("@subtotal", subtotal));
+                objCmdFactura.Parameters.Add(new MySqlParameter("@total", total));
+                objCmdFactura.ExecuteNonQuery();
 
-                objetoConexion.cerrarConexion();
+                objConexion.cerrarConexion();
 
                 return true;
             }
@@ -141,18 +141,18 @@ namespace Renta_de_Video_2._0.Clases
 
         private int ObtenerOCrearEmpleadoPorDefecto(MySqlConnection conexion)
         {
-            string consulta = "SELECT id_empleado FROM empleado LIMIT 1;";
-            MySqlCommand cmdConsulta = new MySqlCommand(consulta, conexion);
-            object resultado = cmdConsulta.ExecuteScalar();
+            string sConsulta= "SELECT id_empleado FROM empleado LIMIT 1;";
+            MySqlCommand cmdConsulta = new MySqlCommand(sConsulta, conexion);
+            object objResultado = cmdConsulta.ExecuteScalar();
 
-            if (resultado != null)
-                return Convert.ToInt32(resultado);
+            if (objResultado != null)
+                return Convert.ToInt32(objResultado);
 
-            string insertEmpleado = "INSERT INTO empleado (nombre, puesto) VALUES ('Empleado Sistema', 'Cajero');";
-            MySqlCommand cmdInsert = new MySqlCommand(insertEmpleado, conexion);
-            cmdInsert.ExecuteNonQuery();
+            string sInsertEmpleado = "INSERT INTO empleado (nombre, puesto) VALUES ('Empleado Sistema', 'Cajero');";
+            MySqlCommand objCmdInsert = new MySqlCommand(sInsertEmpleado, conexion);
+            objCmdInsert.ExecuteNonQuery();
 
-            return (int)cmdInsert.LastInsertedId;
+            return (int)objCmdInsert.LastInsertedId;
         }
     }
 }
