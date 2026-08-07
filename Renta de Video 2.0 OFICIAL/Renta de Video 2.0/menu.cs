@@ -23,13 +23,14 @@ namespace Renta_de_Video_2._0
             AplicarPermisos();
             CargarDatosUsuario();
 
-           
+
             btn_inicio.Click += btninicio_Click;
             btn_clientesMembresias.Click += btnClientes_Click;
             btn_inventario.Click += btnInventario_Click;
             btn_rentasDevoluciones.Click += btnRentas_Click;
             btn_facturasMoras.Click += btnFacturacion_Click;
             btn_gestionUsuarios.Click += btnUsuarios_Click;
+            btn_reportes.Click += btnReportes_Click;
         }
 
         private void menu_Load(object sender, EventArgs e)
@@ -52,34 +53,37 @@ namespace Renta_de_Video_2._0
             switch (sRol)
             {
                 case "Empleado":
-                    btn_inicio.Enabled = true; 
-                    btn_clientesMembresias.Enabled = true;   
-                    btn_inventario.Enabled = true;  
-                    btn_rentasDevoluciones.Enabled = true;   
-                    btn_facturasMoras.Enabled = true;   
-                    btn_gestionUsuarios.Enabled = false;  
-                    btn_seguridad.Enabled = false;  
+                    btn_inicio.Enabled = true;
+                    btn_clientesMembresias.Enabled = true;
+                    btn_inventario.Enabled = true;
+                    btn_rentasDevoluciones.Enabled = true;
+                    btn_facturasMoras.Enabled = true;
+                    btn_gestionUsuarios.Enabled = false;
+                    btn_seguridad.Enabled = false;
+                    btn_reportes.Enabled = false;
 
                     break;
 
                 case "Administrador":
-                    btn_inicio.Enabled = true; 
-                    btn_clientesMembresias.Enabled = true;   
-                    btn_inventario.Enabled = true;   
-                    btn_rentasDevoluciones.Enabled = true;   
-                    btn_facturasMoras.Enabled = true;   
-                    btn_gestionUsuarios.Enabled = true;   
-                    btn_seguridad.Enabled = false;  
+                    btn_inicio.Enabled = true;
+                    btn_clientesMembresias.Enabled = true;
+                    btn_inventario.Enabled = true;
+                    btn_rentasDevoluciones.Enabled = true;
+                    btn_facturasMoras.Enabled = true;
+                    btn_gestionUsuarios.Enabled = true;
+                    btn_seguridad.Enabled = false;
+                    btn_reportes.Enabled = false;
                     break;
 
                 case "Auditor":
-                    btn_inicio.Enabled = true; 
-                    btn_clientesMembresias.Enabled = true;  
-                    btn_inventario.Enabled = true;   
-                    btn_rentasDevoluciones.Enabled = true;  
-                    btn_facturasMoras.Enabled = true;   
-                    btn_gestionUsuarios.Enabled = true;   
-                    btn_seguridad.Enabled = true;   
+                    btn_inicio.Enabled = true;
+                    btn_clientesMembresias.Enabled = true;
+                    btn_inventario.Enabled = true;
+                    btn_rentasDevoluciones.Enabled = true;
+                    btn_facturasMoras.Enabled = true;
+                    btn_gestionUsuarios.Enabled = true;
+                    btn_seguridad.Enabled = true;
+                    btn_reportes.Enabled = true;
                     break;
 
                 default:
@@ -191,6 +195,11 @@ namespace Renta_de_Video_2._0
             AbrirFormInPanel(new Auditoria());
         }
 
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new Reportes_Generales());
+        }
+
         private void button1_Click(object sender, EventArgs e) { }
 
         private void button2_Click_1(object sender, EventArgs e) { }
@@ -253,6 +262,11 @@ namespace Renta_de_Video_2._0
         }
 
         private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
         {
 
         }

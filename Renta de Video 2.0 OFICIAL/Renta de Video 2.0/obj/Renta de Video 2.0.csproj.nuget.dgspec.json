@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andyg\\Desktop\\final\\Renta de Video 2.0 OFICIAL (4)\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Renta de Video 2.0.csproj": {}
+    "C:\\Users\\Oscar\\Desktop\\REPOSITORIO RENTAS DE VIDEO VHS\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Renta de Video 2.0.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andyg\\Desktop\\final\\Renta de Video 2.0 OFICIAL (4)\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Renta de Video 2.0.csproj": {
+    "C:\\Users\\Oscar\\Desktop\\REPOSITORIO RENTAS DE VIDEO VHS\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Renta de Video 2.0.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andyg\\Desktop\\final\\Renta de Video 2.0 OFICIAL (4)\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Renta de Video 2.0.csproj",
+        "projectUniqueName": "C:\\Users\\Oscar\\Desktop\\REPOSITORIO RENTAS DE VIDEO VHS\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Renta de Video 2.0.csproj",
         "projectName": "Renta de Video 2.0",
-        "projectPath": "C:\\Users\\andyg\\Desktop\\final\\Renta de Video 2.0 OFICIAL (4)\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Renta de Video 2.0.csproj",
-        "packagesPath": "C:\\Users\\andyg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andyg\\Desktop\\final\\Renta de Video 2.0 OFICIAL (4)\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\obj\\",
+        "projectPath": "C:\\Users\\Oscar\\Desktop\\REPOSITORIO RENTAS DE VIDEO VHS\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\Renta de Video 2.0.csproj",
+        "packagesPath": "C:\\Users\\Oscar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Oscar\\Desktop\\REPOSITORIO RENTAS DE VIDEO VHS\\ProyectoAsis22k26VHS\\Renta de Video 2.0 OFICIAL\\Renta de Video 2.0\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\andyg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Oscar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
